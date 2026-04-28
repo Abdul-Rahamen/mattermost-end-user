@@ -73,6 +73,15 @@
   --sl-color-black: var(--color-gray-25);
 }
 
+/* كلاس مخصص للصور داخل التوثيق للحفاظ على الحجم الخاص بلقطات الشاشة الخاصة بالهاتف */
+.phone-screenshots {
+  width: 310px !important;
+  height: 620px !important;
+  max-width: 100% !important;
+  display: block;
+  margin: 1.5rem auto !important;
+  object-fit: contain;
+}
 
 
 
