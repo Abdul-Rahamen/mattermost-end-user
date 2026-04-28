@@ -3,29 +3,22 @@ title: "تعيين تذكير (Set a reminder)"
 description: "تعرف على كيفية تعيين تذكير للرسائل في Mattermost لمتابعتها لاحقًا."
 ---
 
+import { Tabs, TabItem, Steps,Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import FAIcon from '../../../../components/FAIcon.astro';
 
 بدءًا من الإصدار v7.10 من Mattermost، وباستخدام Mattermost في متصفح الويب أو تطبيق سطح المكتب، يمكنك تعيين تذكير واحد محدد بوقت على منشور تم إجراؤه في قناة، أو رسالة مباشرة، أو رسالة جماعية. القدرة على إعداد تذكيرات متكررة غير مدعومة حالياً.
 
 لتعيين تذكير، اتبع الخطوات التالية:
 
 1. مرّر مؤشر الفأرة فوق الرسالة التي تريد تذكرها.
-2. اختر أيقونة **المزيد** [\|more-icon\|](##SUBST##|more-icon|).
+2. اختر أيقونة **المزيد** <FAIcon name="ellipsis-vertical" />.
 3. اختر **تذكير**. 
 4. اختر فترة زمنية محددة مسبقاً أو أدخل تاريخًا ووقتًا مخصصين. 
 
 ستتلقى رسالة مباشرة من النظام في الوقت الذي اخترته، تحتوي على محتوى الرسالة الأصلية التي طلبت التذكير بها. بمجرد إرسال التذكير، لن تتلقى تنبيهاً آخر ما لم تقم بتعيين تذكير جديد لتلك الرسالة.
 
-<div style={{ 
-  borderInlineStart: '4px solid #ffffff', 
-  backgroundColor: 'rgba(0, 152, 126, 0.1)', 
-  padding: '1rem', 
-  margin: '1.5rem 0',
-  borderRadius: '0.25rem',
-  color: '#ffffff'
-}}>
-  <strong style={{ display: 'block', marginBottom: '0.5rem' ,color: 'var(--sl-color-white)' }}>ℹ️ ملاحظة</strong>
-  <span style={{ color: 'var(--sl-color-white)' }}>
-    بدءًا من الإصدار v10.3 من Mattermost، يمكنك أيضًا جدولة رسائل التذكير ليتم إرسالها في المستقبل. راجع وثائق [جدولة الرسائل](/end-user-guide/collaborate/schedule-messages) لمزيد من التفاصيل.
-  </span>
-</div>
+<Aside type="note">   
+ بدءًا من الإصدار v10.3 من Mattermost، يمكنك أيضًا جدولة رسائل التذكير ليتم إرسالها في المستقبل. راجع وثائق [جدولة الرسائل](/end-user-guide/collaborate/schedule-messages) لمزيد من التفاصيل.
+</Aside>
+ 

@@ -10,7 +10,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "SOFA",
+      title: "Workspace ",
       logo: {
         src: "./src/assets/logo-light.jpg",
         alt: "Mattermost Logo",
@@ -493,13 +493,13 @@ export default defineConfig({
               slug: "customize-your-preferences/manage-your-plugin-preferences",
             },
             {
+             label: "الاتصال بمساحات عمل متعددة",
+             slug: "customize-your-preferences/connect-to-multiple-workspaces",
+           },
+            {
               label: "تخصيص تجربة تطبيق سطح المكتب",
               slug: "customize-your-preferences/customize-your-desktop-app-experience",
-            },
-            {
-              label: "الاتصال بمساحات عمل متعددة",
-              slug: "customize-your-preferences/connect-to-multiple-workspaces",
-            },
+            }
           ],
           collapsed: true,
         },

@@ -1,33 +1,34 @@
 ---
-title: "توسيع Mattermost باستخدام التكاملات (Extend Mattermost with integrations)"
-description: "توسيع وظائف Mattermost من خلال التكاملات"
+title: "توسيع إمكانيات ماترموست عبر التكاملات البرمجية"
+description: "عزز إنتاجية فريقك عبر ربط ماترموست بأدوات العمليات والـ DevOps، واستفد من التنبيهات اللحظية وتدفقات العمل المؤتمتة داخل قنواتك."
 ---
 
-import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from "@astrojs/starlight/components";
 
-تأكد من بقاء فرقك على اطلاع دائم بالأحداث المهمة عبر تكاملات Mattermost التشغيلية وDevOps. عزّز التواصل وادمج سير العمل الخارجي لضمان أمان وامتثال أفضل وبيئة عمل أكثر كفاءة.
+اضمن بقاء فرقك على اطلاع دائم بأهم الأحداث، وتغييرات الحالة، والمواعيد النهائية، أو الأولويات عبر تكاملات (Integrations) ماترموست المخصصة للعمليات والـ DevOps. يساهم الربط بين ماترموست وسير العمل الخارجي في تعزيز التواصل، وضمان الامتثال والأمن، وخلق بيئة عمل أكثر كفاءة وتعاوناً من خلال استخدام أدوات الاتصال والخدمات الكبرى التي توفر تنبيهات وتحديثات وإشعارات لحظية مباشرة داخل القنوات.
 
-## التشغيل البيني مع التكاملات المعبأة مسبقًا
+## التوافقية مع التكاملات الجاهزة
 
-يمكن لمسؤول النظام تثبيت التكاملات المعبأة مسبقًا من متجر Mattermost (Marketplace)، ثم تمكينها وتكوينها عبر وحدة تحكم النظام.
+يمكن لمسؤول النظام (System Administrator) تثبيت التكاملات الجاهزة التالية عبر متجر ماترموست (Mattermost Marketplace)، ثم تفعيلها وتكوين إعداداتها من خلال "لوحة تحكم النظام" (System Console).
 
-### ميزات Mattermost
+### ميزات ماترموست المدمجة
 
-- [وكلاء الذكاء الاصطناعي (AI Agents)](/end-user-guide/agents)
-- [تصدير بيانات قناة Mattermost](/administration-guide/comply/export-mattermost-channel-data)
-- [مراقبة مقاييس الأداء](/administration-guide/scale/collect-performance-metrics)
-- [إجراء عمليات الحجز القانوني (legal holds)](/administration-guide/comply/legal-hold)
+- [وكلاء الذكاء الاصطناعي (AI Agents)](/ai-agents/ai-agents).
+- تصدير بيانات القنوات (channels).
+- مراقبة مقاييس الأداء (Performance Metrics).
+- إجراء عمليات الاحتفاظ القانوني (Legal Holds).
 
-### التشغيل البيني لـ Mattermost
+### التوافق مع الأنظمة الخارجية
 
-- [GitHub](/integrations-guide/github)
-- [GitLab](/integrations-guide/gitlab)
-- [Jira](/integrations-guide/jira)
-- [Microsoft Teams](/integrations-guide/microsoft-teams-sync)
-- [ServiceNow](/integrations-guide/servicenow)
-- [Zoom](/integrations-guide/zoom)
+- GitHub
+- GitLab
+- Jira
+- Microsoft Teams
+- ServiceNow
+- Zoom
 
-<Aside type="note">
-- قم بزيارة متجر Mattermost (Marketplace) للعثور على تكاملات مدعومة من المجتمع لأدوات المطورين والإنتاجية.
-- للاطلاع على إشعارات التكاملات الجديدة، راجع وثائق [الأسئلة الشائعة حول التكاملات](/integrations-guide/faq).
-</Aside>
+:::tip[نصيحة]
+
+- تفضل بزيارة [متجر ماترموست (Mattermost Marketplace)](https://mattermost.com/marketplace/) للعثور على تكاملات مفتوحة المصدر ومدعومة من المجتمع لأدوات المطورين الشائعة مثل `CircleCI` و `Opsgenie` و `PagerDuty Notifier`؛ وأدوات الإنتاجية مثل `Autolink` و `ToDo` و `WelcomeBot`؛ بالإضافة إلى الأدوات الاجتماعية مثل `Memes` و `GIFs` المتاحة مجاناً للاستخدام والتخصيص.
+- هل تبحث عن طريقة لتلقي إشعارات بالتكاملات الجديدة في متجر ماترموست مباشرة داخل قنواتك؟ راجع توثيق الأسئلة الشائعة حول التكاملات لمزيد من التفاصيل.
+  :::

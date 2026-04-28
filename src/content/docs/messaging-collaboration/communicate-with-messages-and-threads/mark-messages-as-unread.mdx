@@ -10,12 +10,13 @@ import { Image } from 'astro:assets';
 import messageMore from '../../../../images/message-more.png';
 import markAsUnreadImg from '../../../../images/mark-message-as-unread.png';
 import mobileMarkUnreadGif from '../../../../images/mobile-mark-a-message-as-unread.gif';
+import FAIcon from "../../../../components/FAIcon.astro";
 
 إذا قرأت رسالة ولكن ليس لديك وقت للتعامل معها فورًا، يمكنك تمييزها كغير مقروءة. يؤدي تمييز الرسالة كغير مقروءة إلى عرض اسم القناة بخط عريض في الشريط الجانبي وتجميع الرسالة مع باقي الرسائل غير المقروءة.
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    مرّر مؤشر الفأرة فوق الرسالة، واختر أيقونة **المزيد** [\|more-icon\|](##SUBST##|more-icon|) ثم اختر **تمييز كغير مقروء**.
+    مرّر مؤشر الفأرة فوق الرسالة، واختر أيقونة **المزيد** <FAIcon name="ellipsis-vertical" /> ثم اختر **تمييز كغير مقروء**.
 
     <Image 
       src={messageMore} 

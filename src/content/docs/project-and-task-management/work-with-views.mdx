@@ -1,62 +1,28 @@
 ---
-title: Work with saved views
+title: "العمل مع طرق العرض"
+description: "تعرف على كيفية استخدام طرق عرض اللوحة، الجدول، المعرض، والتقويم في لوحات ماترموست لتنظيم مهامك وتصورها."
 ---
 
-.. If used with include::, note the paths for images
+يمكنك تغيير طرق عرض اللوحة لضبط كيفية تمثيل بطاقاتك. لإضافة عرض جديد إلى لوحة، من رأس اللوحة، اختر القائمة الموجودة بجانب اسم العرض الحالي. قم بالتمرير لأسفل واختر **+ Add view**، ثم اختر التصور الجديد الذي ترغب في استخدامه.
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/) (not available on Professional)
-</Aside>
+## عرض اللوحة (Board view)
 
+هذا هو عرض كانبان (Kanban) حيث يتم تجميع البطاقات في أعمدة. تعمل مجموعات الأعمدة فقط مع خصائص **الاختيار (Select)** أو **الشخص (Person)** وتعرض جميع البطاقات التي تشترك في نفس القيمة من الخاصية المحددة. أسماء الأعمدة قابلة للتحرير، وتطبق أي تغييرات على أسماء الأعمدة أيضاً على قيمة الخاصية. يمكن سحب البطاقات بين الأعمدة، مما سيؤدي تلقائياً إلى تحديث القيمة المعينة للخاصية على البطاقة.
 
-You can change board views to adjust how your cards are represented. To
-add a new view to a board, from the board header, select the menu next
-to the current view name. Scroll down and select **+ Add view**, then
-select the new visualization you’d like to use.
+## عرض الجدول (Table view)
 
-# Board view
+يعرض البطاقات في تنسيق جدول مع صفوف وأعمدة. استخدم هذا العرض للحصول على نظرة عامة على جميع مهام مشروعك. يمكنك بسهولة عرض ومقارنة حالة جميع الخصائص عبر جميع البطاقات دون الحاجة إلى فتح البطاقات الفردية. يتوافق كل عمود مع خاصية من خصائص البطاقة. يمكنك تحرير الخلايا مباشرة أو يمكنك اختيار **Open** لفتح عرض البطاقة لذلك الصف.
 
-This is a kanban view where cards are grouped into columns. Column
-groups only work with the **Select** or **Person** properties and
-display all cards that share the same value from the specified property.
-The column names are editable, and any changes to the column names are
-also applied to the value from the property. Cards can be dragged
-between columns, which will automatically update the property’s assigned
-value on the card.
+## عرض المعرض (Gallery view)
 
-# Table view
+يعرض البطاقات في تنسيق معرض، بحيث يمكنك إدارة وتنظيم البطاقات التي تحتوي على مرفقات صور. يعرض عرض المعرض معاينة لأول صورة مرفقة في البطاقة. بالنسبة للبطاقات التي لا تحتوي على مرفقات صور، سيتم عرض معاينة لأول كتلة وصف بدلاً من ذلك.
 
-Displays cards in a table format with rows and columns. Use this view to
-get an overview of all your project tasks. Easily view and compare the
-state of all properties across all cards without needing to open
-individual cards. Each column corresponds to a card property. You can
-edit cells directly or you can select **Open** to open the card view for
-that row.
+## عرض التقويم (Calendar view)
 
-# Gallery view
+لاستخدام هذا العرض، يجب إضافة خاصية **التاريخ (Date)** إلى البطاقات.
 
-Displays cards in a gallery format, so you can manage and organize cards
-with image attachments. Gallery view displays a preview of the first
-image attached on the card. For cards with no image attachments, a
-preview of the first description block will be displayed instead.
+إذا لم تحتوي البطاقات على خاصية تاريخ مخصصة، فسيتم فرزها وعرضها حسب تاريخ إنشاء البطاقة (افتراضي). لا يمكن تحريك هذه البطاقات حول اللوحة حتى يتم إضافة خاصية تاريخ مخصصة. إذا كانت بطاقاتك تحتوي على خاصية تاريخ ولا يمكنك تحريكها، فقد تكون تعرضها حسب **وقت الإنشاء (Created Time)** أو **وقت آخر تحديث (Last Updated Time)**.
 
-# Calendar view
-
-To use this view, cards need to have the **Date** property added.
-
-If cards don’t have a custom **Date** property, they’ll be sorted and
-displayed by the card creation date (default). These cards can’t be
-moved around the board until a custom **Date** property is added. If
-your cards do have a **Date** property and you’re not able to move them
-around, you may be displaying them by **Created Time** or **Last Updated
-Time**.
-
-- To add a new card, select the **+** option in the top-left corner of
-  the relevant date.
-- To create a date range event, select a start date and then drag to the
-  end date to create a card for that date range event.
-- To add a date range to an existing card, hover over the side of the
-  card to display the arrow and drag to the left or right to create a
-  date range.
+- لإضافة بطاقة جديدة، اختر خيار **+** في الزاوية العلوية اليسرى من التاريخ ذي الصلة.
+- لإنشاء حدث بنطاق زمني، اختر تاريخ البدء ثم اسحب إلى تاريخ الانتهاء لإنشاء بطاقة لهذا الحدث.
+- لإضافة نطاق زمني إلى بطاقة موجودة، قم بتمرير المؤشر فوق جانب البطاقة لإظهار السهم واسحب لليسار أو لليمين لإنشاء نطاق زمني.

@@ -1,306 +1,139 @@
 ---
-title: Work with cards
+title: "العمل مع البطاقات"
+description: "تعلم كيفية إنشاء البطاقات، إضافة الخصائص، إرفاق الملفات، استخدام قوالب البطاقات، والتعاون مع فريقك باستخدام التعليقات والإشارات."
 ---
 
-.. If used with include::, note the paths for images
+import FAIcon from "../../../components/FAIcon.astro";
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/) (not available on Professional)
-</Aside>
+تتكون البطاقة (Card) من:
 
+- **مجموعة من الخصائص**: الخصائص مشتركة بين جميع البطاقات في اللوحة. يمكن لطرق عرض اللوحة تجميع البطاقات حسب خصائص من نوع "Select" في أعمدة مختلفة.
+- **قائمة من التعليقات**: التعليقات مفيدة لتدوين التغييرات المهمة أو المحطات الرئيسية.
+- **مجموعة من المحتويات**: يمكن أن يتكون محتوى البطاقة من نص Markdown، وخانات اختيار، وصور. استخدم هذا لتسجيل المواصفات التفصيلية أو قرارات التصميم لعنصر ما على سبيل المثال.
 
-A card consists of:
+قم بسحب البطاقات من عمود إلى آخر لتغيير خاصية "التجميع حسب" الخاصة بها. على سبيل المثال، إذا تم تجميع البطاقات حسب "الحالة" في عرض اللوحة، فاسحب بطاقة إلى عمود **Completed** لوضع علامة مكتمل عليها. عندما تكون اللوحة غير مرتبة، يمكنك سحب بطاقة لأعلى ولأسفل داخل العمود لفرز بطاقاتك بشكل مخصص.
 
-- **A set of properties**: Properties are common to all cards in a
-  board. Board views can group cards by “Select” type properties into
-  different columns.
-- **A list of comments**: Comments are useful for noting important
-  changes or milestones.
-- **A set of content**: The content of a card can consist of Markdown
-  text, checkboxes, and images. Use this to record detailed specs or
-  design decisions for an item for example.
+بالنسبة للوحات المرتبة، سيؤدي سحب بطاقة إلى عمود ما إلى فرزها تلقائياً باستخدام إعدادات الفرز المحددة. لا تتوفر ميزة نقل البطاقات بين اللوحات حالياً.
 
-Drag cards from one column to another to change their group-by property.
-For example, if cards are grouped by “Status” on board view, drag a card
-to the **Completed** column to mark it as completed. When a board is
-unsorted, you can drag a card up and down within a column to custom sort
-your cards.
+توفر قوالب اللوحات القياسية لدينا بعض خصائص البطاقات الافتراضية التي يمكن تخصيصها أو إزالتها. في قالب "خارطة الطريق" (Roadmap)، نقوم بتضمين خاصية **Type**، بينما في قالب "مهام المشروع" (Project Tasks)، نقوم بتضمين خاصية **Estimated Hours**. هذه الخصائص ليست حصرية لأي قالب ويمكن إعادة إنشائها بسهولة في أي من القوالب المقدمة.
 
-For sorted boards, dragging a card to a column will auto-sort it using
-the specified sort settings. The ability to move cards between boards
-isn't supported.
+## أوصاف البطاقة (Card descriptions)
 
-Our standard board templates provide some default card properties that
-can be customized or removed. In the Roadmap template, we include
-**Type** property, whereas in the Project Tasks template, we include an
-**Estimated Hours** property. These properties are not exclusive to any
-template and can be easily re-created in any of the templates provided.
+يمكن أن تتضمن أوصاف البطاقة نصوصاً بتنسيق Markdown، وخانات اختيار، وعناصر مرئية مثل الصور أو ملفات GIF، ويمكن تقسيمها إلى كتل من المحتوى. لإضافة وصف، افتح بطاقة، واختر **Add a description** أسفل قسم **Comments**، وابدأ في كتابة محتواك.
 
-# Card descriptions
+لإضافة كتلة محتوى جديدة في قسم الوصف، قم بتمرير المؤشر فوق القسم واختر **Add content**. ثم اختر من بين الخيارات التالية:
 
-Card descriptions can include text with Markdown formatting, checkboxes,
-and visual elements such as images or GIFs, and can be separated into
-blocks of content. To add a description, open a card, select **Add a
-description** below the **Comments** section, and start typing in your
-content.
+- **النص (Text)**: يضيف كتلة نصية جديدة يمكن تنسيقها باستخدام Markdown.
+- **الصورة (Image)**: اختر ملف صورة لدمجه في كتلة المحتوى. تنسيقات الصور التالية مدعومة حالياً: GIF و JPEG و PNG.
+- **الفصل (Divider)**: يضيف كتلة فاصلة أسفل الكتلة السابقة.
+- **خانة اختيار (Checkbox)**: يضيف كتلة خانة اختيار. اضغط على Enter بعد كتابة المحتوى لإضافة خانة اختيار أخرى داخل نفس الكتلة. يرجى ملاحظة أن تنسيق Markdown غير مدعوم داخل كتلة "خانة الاختيار".
 
-To add a new content block in the description section, hover over the
-section and select **Add content**. Then choose from any of the
-following options:
+لإدارة كتل محتوى الوصف في البطاقة، قم بتمرير المؤشر فوق أي كتلة موجودة واختر قائمة الخيارات (النقاط الثلاث) <FAIcon name="ellipsis" />  لنقل الكتلة للأعلى أو للأسفل، أو إدراج كتلة جديدة أعلاه، أو حذف الكتلة الحالية. بدلاً من ذلك، يمكنك تمرير المؤشر فوق أي كتلة موجودة، ثم الضغط مع الاستمرار على زر الشبكة لسحبها وإفلاتها في موضع جديد داخل قسم الوصف.
 
-- **Text**: Adds a new text block that can be formatted with Markdown.
-- **Image**: Select and embed an image file into the content block. The
-  following image formats are currently supported: GIF, JPEG, and PNG.
-- **Divider**: Adds a divider content block below the previous block.
-- **Checkbox**: Adds a checkbox content block. Press Enter/Return after
-  typing in content for your checkbox to add another checkbox within the
-  same block. Please note, Markdown formatting isn't supported within
-  the **Checkbox** content block.
+## خصائص البطاقة (Card properties)
 
-To manage the description content blocks on a card, hover over any
-existing block and select the options menu
-[\|more-icon\|](##SUBST##|more-icon|) to move the block up or down,
-insert a new block above, or delete the current block. Alternatively,
-you can hover over any existing block, then select and hold the grid
-button to drag and drop it to a new position within the description
-section.
+يمكن أن تحتوي البطاقات على حقول بيانات مختلفة اعتماداً على الغرض من اللوحة. باستخدام خصائص البطاقة، يمكنك تخصيص حقول البيانات هذه لتناسب احتياجاتك وتتبع المعلومات الأكثر أهمية بالنسبة لك. على سبيل المثال، في لوحة **Roadmap**، تتضمن البطاقات حقل **Type** حيث يمكنك إضافة فئات مثل **Bug** و **Epic** وما إلى ذلك. في لوحة **Project Task**، تتضمن البطاقات حقل **Estimated Hours** بدلاً من ذلك.
 
-# Card properties
+## إضافة الخصائص
 
-Cards can contain different data fields depending on the purpose of the
-board. Using card properties, you can customize these data fields to fit
-your needs and track the information most important to you. For example,
-in a **Roadmap** board, cards include a **Type** field where you can add
-categories such as **Bug**, **Epic**, etc. In a **Project Task** board,
-cards include the **Estimated Hours** field instead.
+لإنشاء حقل خاصية جديد، افتح بطاقة واختر **Add a property**. ثم اختر نوع الخاصية من القائمة المنسدلة. يحدد نوع الخاصية نوع البيانات التي تخطط لالتقاطها داخل ذلك الحقل. عند إنشاء خصائص بطاقة جديدة، يتم إضافتها إلى جميع البطاقات الجديدة والموجودة حالياً في اللوحة الحالية.
 
-# Add properties
+تتم إضافة الخصائص تلقائياً إلى قائمة تصفية اللوحة في أعلى الصفحة، لذا تأكد من تخصيص جميع أسماء الخصائص لتسهيل تصفية اللوحة حسب خصائص محددة لاحقاً.
 
-To create a new property field open a card and select **Add a
-property**. Then select the type of property from the drop-down menu.
-The property type specifies the type of data you plan to capture within
-that field. When you create new card properties, they're added to all
-new and all existing cards on the current board.
+### أنواع الخصائص
 
-Properties are automatically added to the board filter list at the top
-of the page, so ensure you customize all property names to make it easy
-to filter your board by specific properties later.
+تدعم اللوحات مجموعة واسعة من أنواع الخصائص القابلة للتخصيص بالكامل:
 
-## Work with property types
+- **النص (Text)**: يمكن استخدامه لإضافة ملاحظات قصيرة إلى البطاقة. الميزة في خاصية النص هي أنه يمكن إظهارها على اللوحة دون الحاجة لفتح البطاقة.
+- **الأرقام (Numbers)**: مفيدة لالتقاط المقاييس مثل حجم المهمة أو تقديرات الجهد. استخدمها مع "الحسابات" (Calculations) لتحقيق أقصى استفادة منها.
+- **البريد الإلكتروني (Email)** و **الهاتف (Phone)**: يمكن استخدامهما لتسجيل معلومات الاتصال.
+- **الرابط (URL)**: يمكن استخدامه لتوفير رابط لطلب سحب (Pull Request) أو موقع ويب ذي صلة. سيؤدي النقر فوق مربع خاصية URL إلى فتح الرابط تلقائياً في تبويب جديد في متصفحك.
+- **الاختيار (Select)** و **الاختيار المتعدد (Multi-select)**: تتيح لك إنشاء قائمة محددة مسبقاً من الخيارات التي يمكن ترميزها بالألوان وعرضها كشارات على البطاقة للإشارة إلى أشياء مثل الحالة والأولوية.
+- **التواريخ (Dates)**: مفيدة لتعيين وتتبع تواريخ الاستحقاق أو المحطات الرئيسية. استخدم خاصية التاريخ لجعل البطاقة تظهر في [عرض التقويم](/project-and-task-management/work-with-views#عرض-التقويم).
+- **الشخص (Person)** و **عدة أشخاص (Multi-person)**: توفر طريقة سريعة لتعيين المستخدمين للمهام.
+- **خانة اختيار (Checkbox)**: خاصية تبديل يمكن استخدامها لخيارات ثنائية بسيطة مثل صح/خطأ أو نعم/لا.
+- **وقت الإنشاء/أنشئ بواسطة/وقت آخر تحديث/حدثه بواسطة**: خصائص نظام محددة مسبقاً لمساعدتك في تدقيق التغييرات على البطاقة. أسماء هذه الخصائص قابلة للتخصيص، ولكن القيم ليست كذلك.
 
-Boards supports a wide range of fully customizable property types:
+### إعادة تسمية خاصية
 
-- **Text** can be used to add short notes to a card. An advantage of the
-  text property over card descriptions is that it can be [shown on the
-  board](#toggle-properties-shown-on-a-board) without needing to open
-  the card.
-- **Numbers** are useful to capture metrics such as task sizing or
-  effort estimates. Use in conjunction with calculations to get the most
-  out of the number property type.
-- **Email** and **Phone** can be used to record contact information.
-- **URL** can be used to provide a link to a pull request or relevant
-  website. Clicking on the box of a URL property will automatically open
-  the link in a new tab on your browser. Hover over the box to surface
-  options to copy or edit the URL.
-- **Select** and **Multi-select** allows you to create a predefined list
-  of options that can be color-coded and displayed as badges on the card
-  to indicate things like status and priority.
-- **Dates** are useful to set and track due dates or milestones. Use the
-  date property to make a card appear on the
-  `Calendar view <end-user-guide/project-management/work-with-views:calendar view>`.
-  Set a single date or toggle on the **End date** to set a date range.
-- **Person** and **Multi-person** provides a quick way to capture user
-  assignments.
-- **Checkbox** is a toggle property that can be used for assigning
-  simple binary options on a card such as True/False or Yes/No.
-- **Created time/Created by/Last updated time/Last updated by** are
-  predefined system properties to help you audit changes on a card. The
-  names of these properties are customizable, but the values are not.
+الاسم الافتراضي للخاصية الجديدة هو اسم نوع الخاصية (مثل **Date** أو **URL**). لإعادة تسمية حقل خاصية، افتح بطاقة واختر اسم الخاصية لفتح حقل قابل للتحرير. أدخل الاسم الجديد، وسيتم حفظ التغيير فوراً وتطبيقه عبر جميع البطاقات في اللوحة الحالية.
 
-# Rename a property
+### تغيير نوع الخاصية
 
-The default name for a new property is the name of the property type
-(e.g. **Date**, **URL**). To rename a property field, open up a card and
-select the property name to open an editable field. Enter the new name
-in the field provided. The change is saved immediately and applied
-across all cards on the current board.
+لتغيير نوع الخاصية، اختر الخاصية ثم افتح قائمة **Type** واختر نوعاً جديداً. سيُطلب منك تأكيد التغيير. قد يؤدي تغيير النوع لخاصية موجودة إلى التأثير على القيم عبر جميع البطاقات وفقدان البيانات.
 
-# Change a property type
+### حذف خاصية
 
-To change a property type, select the property then open the **Type**
-menu and choose a new property type. You’ll be asked to confirm the
-change from every card on the current board. Changing the type for an
-existing property will affect values across all cards on the board and
-may result in data loss.
+لحذف الخصائص التي لم تعد بحاجة إليها، اختر الخاصية ثم اختر **Delete**. سيُطلب منك تأكيد الحذف. يتم عرض الخصائص بالترتيب الذي أنشئت به ولا يمكن إعادة ترتيبها حالياً.
 
-# Delete a property
+### تعريف خاصية "Select" أو "Multi-select"
 
-To delete properties you no longer need, select the property, then
-choose **Delete**. You’ll be asked to confirm that you want to remove
-that property from every card on the current board. Properties are
-displayed in the order they were created and cannot be re-ordered at
-this time.
+تظهر الخيارات في هذه الأنواع كتاغات (Tags) ملونة على البطاقة. لإضافة وتهيئة الخيارات:
 
-# Define a "Select" or "Multi-select" property
+1. اختر بطاقة لفتح عرض البطاقة.
+2. أضف خاصية جديدة، وقم بتسميتها، واضبط نوعها على **Select** (أو **Multi-Select**).
+3. اختر مربع الحقل للخاصية، وابدأ في كتابة اسم خيار جديد. اضغط Enter للقبول. كرر ذلك لإضافة خيارات إضافية.
 
-The options on a **Select** and **Multi-select** property type appear as
-color-coded tags on a card. To add and configure the options on these
-types:
+- لتعيين لون أو حذف خيار، اختر القيمة واختر قائمة الخيارات **(...)** بجانب كل اسم خيار.
+- لإزالة خيار من الخاصية في البطاقة، اختر علامة `X` بجانب اسم الخيار.
 
-1.  Select a card to open the card view.
-2.  Add a new property, give it a name, and set its type to **Select**
-    (or **Multi-Select**).
-3.  Select the field box for the property, and start typing the name of
-    a new option. Press Enter to accept. Repeat this step to add
-    additional options.
+يمكنك أيضاً إضافة خيارات جديدة مباشرة من اللوحة:
 
-- To assign a color to or delete an option, select the value and select
-  the options menu **(...)** next to each option name.
-- To select an option on the property, select the box and choose one of
-  the values from the menu.
-- To remove an option on the property, select the box and chooose the
-  <span class="title-ref">X</span> next to the option name you want to
-  remove.
+1. افتح عرض اللوحة.
+2. قم بالتجميع حسب خاصية **Select**.
+3. قم بالتمرير إلى يمين اللوحة واختر **+ Add a group**.
 
-Alternatively, you can also add new options directly from a board:
+## إظهار الخصائص على اللوحة
 
-1.  Open a board view.
-2.  Group by a **Select** property.
-3.  Scroll to the right of the board and select **+ Add a group**.
+بمجرد تحديد خصائص البطاقة، يمكنك التحكم في الخصائص التي تظهر على اللوحة كمعاينة دون الحاجة لفتح البطاقة. اختر **Properties** في أعلى اللوحة، ثم قم بتفعيل الخصائص التي تريد رؤيتها بنظرة سريعة.
 
-This will add a new column, which corresponds to a new value option for
-the Select property. Options in a **Select** or **Multi-Select**
-property list are sorted in the order they were created and cannot be
-re-ordered or renamed at this time.
+## إرفاق الملفات (Attach files)
 
-# Toggle properties shown on a board
+يمكنك إرفاق ملفات ببطاقاتك ليتمكن أعضاء اللوحة الآخرون من تنزيلها. لا توجد قيود على أنواع الملفات التي يمكنك تحميلها.
 
-Once you have card properties defined, you have full control over which
-properties are shown on the board as a preview without having to open
-the card. Select **Properties** at the top of the board, then enable all
-properties you want to see at a glance, and hide all properties you
-don’t want to see.
+لتحميل ملف ضع المؤشر على <FAIcon name="ellipsis-vertical" /> في أعلى الشاشة ، اختر **Attach** في الزاوية العلوية اليمنى من البطاقة. بمجرد التحميل، ستجده في قسم **Attachments**. لحذف ملف، قم بتمرير المؤشر فوقه واختر قائمة الخيارات (النقاط الثلاث) <FAIcon name="ellipsis-vertical" />  ثم **Delete**.
 
-# Attach files
+## شارات البطاقة (Card badges)
 
-You can attach files to your cards that other board members can
-download. There are no limitations to the file types that you can
-upload.
+شارات البطاقة هي طريقة سريعة لعرض تفاصيل البطاقة دون فتحها. لإضافتها، اختر **Properties > Comments and Description**. ستظهر الأيقونات المتعلقة بوصف البطاقة والتعليقات وخانات الاختيار على البطاقات:
 
-To upload a file to a card, select **Attach** in the top-right corner of
-the card. Then select the file you'd like to upload. When your file has
-been uploaded, you can find it in the **Attachments** section of the
-card. Select the **+** sign to add additional files to your card.
+- أيقونة الوصف تشير إلى وجود وصف نصي.
+- أيقونة التعليق تعرض رقماً يشير إلى عدد التعليقات.
+- أيقونة خانة الاختيار تعرض عدد العناصر المنجزة بالنسبة للعدد الإجمالي.
 
-To delete a file, hover over it and select the
-[\|more-icon-vertical\|](##SUBST##|more-icon-vertical|) menu. Then
-select **Delete**. To download the file, select the download icon.
+## التعليق على بطاقة
 
-# Card badges
+تتيح لك التعليقات تقديم ملاحظات وطرح أسئلة تتعلق بعنصر العمل في البطاقة. لإضافة تعليق، افتح البطاقة واكتب في حقل **Add a comment...** ثم اضغط **Send**. سيتلقى جميع أعضاء الفريق الذين يتابعون البطاقة إشعاراً.
 
-Card badges are a quick way to view card details without opening up a
-card. To add them, select **Properties \> Comments and Description**.
-Icons related to the card description, comments, and checkboxes will be
-displayed on cards with the respective content. Open the card to view
-the details.
+## الإشارة إلى الأشخاص (Mention people)
 
-- The description icon indicates that a card has a text description.
-- The comment icon displays a number indicating how many comments have
-  been added to a card. When a new comment is added, that number is
-  updated.
-- The checkbox icon displays the number of items checked off relative to
-  the total number of checkboxes within the card. When an item is
-  checked off, the icon is automatically updated.
+يمكنك تضمين عضو في الفريق في بطاقة عن طريق [ذكرهم](/messaging-collaboration/communicate-with-messages-and-threads/mention-people) بنفس الطريقة التي تفعلها في القنوات. يتم دعم الإشارات في أقسام التعليقات والوصف. سيتلقى العضو الذي تذكره رسالة مباشرة من بوت اللوحات مع رابط للبطاقة.
 
-# Comment on a card
+## تلقي التحديثات
 
-Comments allow you to provide feedback and ask questions relevant to the
-specific work item on the card.
+عندما تنشئ بطاقة، فإنك تتابعها تلقائياً. يمكنك متابعة البطاقات يدوياً باستخدام خيار **Follow** في الزاوية العلوية اليمنى. عندما يتم إجراء تحديثات على بطاقة تتابعها، ستتلقى رسالة مباشرة من بوت اللوحات مع ملخص للتغيير ورابط للبطاقة.
 
-To add a comment, select a card to open the card view, then click on
-**Add a comment…** to type in your comment, and press **Send** to save
-the comment to the card. All team members who are [following the
-card](#receive-updates) will receive a notification with a preview of
-your comment in Mattermost Channels.
+## البحث في البطاقات
 
-Only board members with the *Commenter* role or higher can comment on a
-card. Board members assigned the *Viewer* role can view, but not comment
-on, a card.
+يمكنك البحث في جميع البطاقات في اللوحة. افتح اللوحة التي تريد البحث فيها، ثم اختر حقل **Search cards** في أعلى يمين اللوحة.
 
-# Mention people
+## قوالب البطاقات (Card templates)
 
-You can include a team member on a card by
-`mentioning them on a card </end-user-guide/collaborate/mention-people>`
-the same way you would in Channels. Mentions are supported in the
-[Comments](#comment-on-a-card) and [Description](#card-descriptions)
-sections within a card. The team member you mention will receive a
-direct message notification from the boards bot with a link to the card
-you mentioned them on. To mention multiple team members, separate each
-name with a comma.
+تساعد قوالب البطاقات في تقليل الإدخال اليدوي المتكرر. لإنشاء قالب بطاقة جديد:
 
-# Receive updates
+0. حدد قائمة الخيارات ,وانقر على أيقونة المزيد <FAIcon name="ellipsis" />  للوصول إلى خيارات الرسائل الإضافية في الزاوية العلوية اليمنى من البطاقة.
+1. افتح اللوحة التي تريد إضافة القالب إليها.
+2. اختر السهم الموجود بجانب **New**، ثم اختر **New template**.
+3. أضف عنواناً للقالب وعين القيم للخصائص والوصف.
+4. أغلق البطاقة باستخدام `X`.
+5. اختر السهم المنسدل بجانب (New)، ثم اختر القالب الذي قمت بإنشائه للتو.
 
-When you create a card, you automatically follow it. You can @mention
-someone on a card to add them as a follower. This can be a card you've
-created or someone else's card. Lastly, you can also follow cards
-manually using the **Follow** option on the top-right corner of a card.
-To unfollow a card, select **Following**.
+لتعيين قالب بطاقة افتراضي لجميع البطاقات الجديدة:
 
-When updates are made to a card you're following, you'll receive a
-direct message from the boards bot with a summary of the change (e.g.
-Bob changed status from **In progress** to **Done**) and a link to the
-card for more detailed information. You won't get a notification of your
-own changes made to a card, even if you're following that card.
+1. اختر السهم بجانب **New**.
+2. افتح قائمة الخيارات <FAIcon name="ellipsis" />  بجانب قالب البطاقة الذي تختاره.
+3. اختر **Set as default**.
 
-# Search cards
-
-You can search through all the cards on a board to find what you’re
-looking for. Open the board you want to search, then select the **Search
-cards** field in the top-right of the board.
-
-# Card templates
-
-Card templates can help reduce repetitive manual input for similar types
-of work items. Each board can have any number of card templates. To
-create a new card template:
-
-1.  Open the board where you want to add the card template.
-2.  Select the drop-down arrow next to **New**, then select **New
-    template**.
-3.  Add a title to the card template.
-4.  Then assign values to any properties and add a description you wish
-    to have pre-populated when a card is created from the template.
-5.  Close the card using the **X** in the top left corner.
-6.  Select the drop-down arrow next to **New**, then select the template
-    you just created.
-
-Alternatively, you can turn any existing card into a template:
-
-1.  Open the card you want to use as a template.
-2.  Select the options menu [\|more-icon\|](##SUBST##|more-icon|) in the
-    top-right corner of the card.
-3.  Select **New template from card**.
-4.  Edit the card as needed, including a helpful name.
-5.  Close the card using the **X** in the top left corner.
-6.  Select the drop-down arrow next to **New**, then select the template
-    you just created.
-
-To set a default card template for all new cards created on the board:
-
-1.  Select the drop-down arrow next to **New**.
-2.  Open the options menu [\|more-icon\|](##SUBST##|more-icon|) next to
-    the card template of your choosing.
-3.  Select **Set as default**.
-
-<Aside type="note">
-The card template is applicable only to the board in which it’s
-created and isn’t available in other boards in your team workspace.
-Comments on a template don't get populated on to new cards.
-Additionally, properties can't be hidden from a card template at this
-time. All cards on a board share the same properties, so adding or
-deleting a property on a template will also apply to all cards on a
-board.
-</Aside>
-
+:::note[ملاحظة]
+ينطبق قالب البطاقة فقط على اللوحة التي تم إنشاؤه فيها. لا يتم نقل التعليقات الموجودة على القالب إلى البطاقات الجديدة. تشترك جميع البطاقات في اللوحة في نفس الخصائص، لذا فإن إضافة أو حذف خاصية في القالب سيتم تطبيقه على جميع بطاقات اللوحة.
+:::

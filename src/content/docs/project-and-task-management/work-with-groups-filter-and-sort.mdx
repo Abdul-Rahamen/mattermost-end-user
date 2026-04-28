@@ -1,142 +1,82 @@
 ---
-title: Work with groups, filter, and sort
+title: "المجموعات والفرز والتصفية"
+description: "تعرف على كيفية تنظيم بطاقاتك باستخدام المجموعات، الفلاتر، وخيارات الفرز المختلفة في لوحات ماترموست للحصول على رؤى أفضل."
 ---
 
-.. If used with include::, note the paths for images
+import FAIcon from "../../../components/FAIcon.astro";
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/) (not available on Professional)
-</Aside>
+يمكن تجميع اللوحة وتصفيتها وفرزها في طرق عرض مختلفة باستخدام مجموعة من الخصائص. يمنحك هذا طريقة قوية لتتبع العمل من منظورات مختلفة. عند استخدامه بالاشتراك مع [طرق العرض المحفوظة](/project-and-task-management/work-with-views)، يمكنك إنشاء طرق عرض متعددة بمجموعات وفلاتر مختلفة للوصول السريع إليها دون الحاجة إلى إعادة تطبيق الإعدادات في كل مرة.
 
+على سبيل المثال، يمكنك بسهولة العثور على المهام المعينة لك أو لعضو في الفريق باستخدام فلاتر "الشخص"، وتتبع المهام القادمة باستخدام فلاتر التاريخ.
 
-Your board can be grouped, filtered, and sorted into different views
-using a range of properties. This gives you a powerful way to track work
-from various perspectives. When used in conjunction with
-`saved views <end-user-guide/project-management/work-with-views:work with saved views>`,
-you can create multiple views with different groupings and filters for
-quick access without having to reapply the groupings and filters every
-time.
+## تجميع البطاقات (Group cards)
 
-For example, easily find tasks assigned to you or a team member using
-the person or multi-person filters, and keep track of upcoming tasks
-with date filters.
+يمكنك تجميع البطاقات في لوحتك إذا كانت تستخدم خاصية **الاختيار (Select)** أو **الشخص (Person)**. يتوفر تجميع البطاقات فقط في عرض اللوحة وعرض الجدول، ويجب أن يكون لديك خاصية واحدة على الأقل من نوع "Select" أو "Person" ليعمل التجميع.
 
-# Group cards
+### تطبيق التجميع
 
-You can group cards on your board if they utilize the **Select** or
-**Person** property. Card grouping is only available in board and table
-views and you must have at least one **Select** or **Person** property
-on your board for grouping to work.
+لتطبيق التجميع، اختر خيار **Group by** في أعلى اللوحة، ثم اختر أي خاصية متاحة من نوع **Select** أو **Person** لتجميع بطاقاتك بناءً عليها.
 
-## Apply a group
+- في [عرض اللوحة](/project-and-task-management/work-with-views#عرض-اللوحة)، يتم تجميع البطاقات تلقائياً في أعمدة حسب قيم الخاصية المحددة.
+- في [عرض الجدول](/project-and-task-management/work-with-views#عرض-الجدول)، ستظهر البطاقات المجمعة في أقسام فردية بناءً على قيم الخاصية المحددة. اختر السهم الموجود على يسار اسم المجموعة لتوسيع أو طي البطاقات في المجموعة.
 
-To apply a group, select the **Group by** option at the top of the
-board, then select any available **Select** or **Person** property to
-group your cards by.
+### إخفاء وإظهار المجموعات
 
-- In the
-  `boards view <end-user-guide/project-management/work-with-views:board view>`,
-  cards are automatically grouped into columns by the values from the
-  specified property.
-- In the <span class="title-ref">table view
-  \<end-user-guide/project-management/work-with-views:board
-  view\></span>, grouped cards will appear in individual sections based
-  on the values from the specified property. Select the arrow to the
-  left of the group name to expand or collapse cards in the group.
+- لإخفاء مجموعة، اختر قائمة الخيارات (النقاط الثلاث) <FAIcon name="ellipsis" />  على يمين أي اسم مجموعة، ثم اختر **Hide**. بالإضافة إلى ذلك، في عرض الجدول فقط، يمكنك إخفاء المجموعات الفارغة عن طريق اختيار خيار **Group by** في أعلى اللوحة، ثم اختيار **Hide empty groups**.
+- لإظهار مجموعة، انتقل إلى قسم الأعمدة المخفية (Hidden columns) جهة اليمين في عرض اللوحة، اختر المجموعة التي تريد إظهارها، ثم اختر **Show**. في عرض الجدول، اختر خيار **Group by** في أعلى اللوحة، ثم اختر **Show hidden groups**.
 
-## Hide and unhide groups
+### إلغاء تجميع البطاقات
 
-- To hide a group, select the options menu **(...)** to the right of any
-  group name, then select **Hide**. Additionally, in table view only,
-  you can hide empty groups by selecting the **Group by** option at the
-  top of the board, then selecting **Hide empty groups**.
-- To unhide a group, go to the hidden column section towards the right
-  of a board view, select the group you want to unhide, then select
-  **Show**. On table view, select the **Group by** option at the top of
-  the board, then select **Show hidden groups**.
+لإلغاء تجميع البطاقات في عرض الجدول، اختر خيار **Group by** في أعلى اللوحة، ثم اختر **Ungroup** من أعلى القائمة. سيعيد هذا جدولك إلى حالته الافتراضية. يمكن إلغاء التجميع في عرض الجدول فقط؛ بينما لا يمكن ذلك في عرض اللوحة لأن المجموعات هي التي تحدد كيفية العرض.
 
-## Ungroup cards
+## التصفية (Filters)
 
-To ungroup cards on table view, select the **Group by** option at the
-top of the board, then select **Ungroup** from the top of the menu. This
-will return your table to its default state. Cards can be ungrouped in
-table view only. Ungrouping is not possible on board view since groups
-are used to determine what to display.
+يمكنك تصفية البطاقات في لوحتك إذا كانت تستخدم أي من أنواع الخصائص التالية:
 
-# Filters
+- الاختيار (Select)
+- النص (Text)
+- البريد الإلكتروني (Email)
+- الهاتف (Phone)
+- الرابط (URL)
+- التاريخ (Date)
+- الشخص (Person)
+- عدة أشخاص (Multi-person)
+- وقت الإنشاء/أنشئ بواسطة
+- وقت آخر تحديث/حدثه بواسطة
 
-You can filter cards on your board if they utilize any of the following
-property types:
+لاستخدام الفلاتر، يجب أن تكون أنواع الخصائص المذكورة أعلاه مضافة بالفعل إلى لوحتك. انتقل إلى **Filter > Add filter**، واختر الخاصية التي ترغب في التصفية بناءً عليها. يمكنك استخدام المعدلات للحصول على نتائج أكثر دقة.
 
-- Select
-- Text
-- Email
-- Phone
-- URL
-- Date
-- Person
-- Multi-person
-- Created time
-- Created by
-- Last updated time
-- Last updated by
+### إضافة الفلاتر
 
-To use filters, you must have the above property types already added to
-your board. Go to **Filter \> Add filter**, and select the property you
-wish to filter by. You can use the modifiers to get even more granular
-results.
+لإضافة فلتر، اختر خيار **Filter** في أعلى اللوحة، ثم اختر **+ Add filter**. لتغيير الخاصية التي يتم التصفية بناءً عليها، اختر اسم الخاصية الأولى، ثم اختر خاصية أخرى من القائمة.
 
-## Add filters
+**تحديد معايير التصفية:**
 
-To add a filter, select the **Filter** option at the top of the board,
-then select **+ Add filter**. To change the property to filter by,
-select the name of the first property, then select another property (if
-available) from the menu.
+- **يتضمن (Includes)**: عرض البطاقات التي تحتوي على أي من القيم المحددة.
+- **لا يتضمن (Doesn’t include)**: عرض جميع البطاقات التي لا تحتوي على أي من القيم المحددة.
+- **فارغ (Is empty)**: عرض البطاقات التي لم يتم تعيين قيم لها في الخاصية.
+- **ليس فارغاً (Is not empty)**: عرض البطاقات التي تحتوي على أي قيمة في الخاصية.
 
-**Specify the filtering criteria**
+لإضافة طبقة تصفية أخرى، كرر الخطوات أعلاه مع خاصية أخرى لتحسين نتائج التصفية. ستؤدي إضافة طبقة أخرى إلى عرض البطاقات التي تطابق معايير الطبقة الأولى والطبقة الثانية معاً.
 
-- **Includes**: Display cards with any of the specified values.
-- **Doesn’t include**: Display all cards without any of the specified
-  values.
-- **Is empty**: Display cards with no values assigned to a property.
-- **Is not empty**: Display cards with any value assigned to a property.
+### حذف الفلاتر
 
-To add another filtering layer, repeat the steps above with another
-property to refine your filtering results. Adding another layer will
-display cards that only match the criteria from the first layer and the
-second layer.
+لحذف فلتر، اختر خيار **Filter** في أعلى اللوحة، ثم اختر **Delete** (أيقونة السلة) بجانب كل طبقة تصفية. احذف جميع طبقات التصفية لإزالة الفلاتر تماماً من اللوحة.
 
-## Delete filters
+## فرز البطاقات (Sorting cards)
 
-To delete a filter, select the **Filter** option at the top of the
-board, then select **Delete** to the right of each filtering layer.
-Delete all filtering layers to completely remove filters from the board.
+يمكن فرز البطاقات حسب اسم البطاقة أو حسب أي خاصية متاحة فيها.
 
-# Sorting cards
+:::note[ملاحظة]
+يتوفر الفرز فقط في عرض اللوحة، وعرض الجدول، وعرض المعرض.
+:::
 
-Cards can be sorted by the card name or by any property available on the
-card.
+### تطبيق الفرز
 
-<Aside type="note">
-Sorting is only available in boards, table, and gallery views.
-</Aside>
+لتطبيق الفرز، اختر خيار **Sort** في أعلى اللوحة، ثم اختر خياراً من القائمة. سيتم فرز البطاقات بترتيب تصاعدي (Ascending) بشكل افتراضي بناءً على الخيار المحدد، وستعرض قائمة **Sort** سهماً يشير للأعلى بجانب الخيار المحدد.
 
+لتغيير ترتيب الفرز إلى تنازلي (Descending)، اختر نفس الخيار مرة أخرى من قائمة **Sort**. سيتم الآن فرز البطاقات بترتيب تنازلي وسيعرض المنيو سهماً يشير للأسفل بجانب الخيار.
 
-## Apply sorting
+### مسح الفرز
 
-To apply a sort, select the **Sort** option at the top of the board,
-then select an option from the menu. The cards will be sorted in
-ascending order by default based on the selected option and the **Sort**
-menu will display an upward pointing arrow next to the selected option.
-
-To change the sort order to descending order, select the same option
-again from the **Sort** menu. The cards will now be sorted in descending
-order and the menu will display a downward pointing arrow next to the
-selected option.
-
-## Clear sorting
-
-To clear a sort, select the **Sort** option at the top of the board,
-then select the **Manual** option from the top of the menu.
+لمسح الفرز، اختر خيار **Sort** في أعلى اللوحة، ثم اختر خيار **Manual** من أعلى القائمة.

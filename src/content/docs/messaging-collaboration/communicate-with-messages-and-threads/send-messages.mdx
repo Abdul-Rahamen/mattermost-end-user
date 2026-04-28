@@ -3,290 +3,180 @@ title: "إرسال الرسائل (Send messages)"
 description: "تعرف على كيفية إرسال الرسائل وتحريرها في Mattermost، وكيفية استخدام ميزات الذكاء الاصطناعي لإعادة الصياغة."
 ---
 
-import { Tabs, TabItem, Steps,Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import FAIcon from "../../../../components/FAIcon.astro";
 
-{/* استيراد الصور */}
+{/* استيراد الصور المحلية */}
 import mobileTypeMessage from '../../../../images/mobile-type-a-message-in-a-channel.jpg';
 import mobileSendingGif from '../../../../images/mobile-sending-a-message.gif';
 import globalDraftsGif from '../../../../images/Global-Drafts-Animated-GIF.gif';
 import mobileDraftGif from '../../../../images/mobile-draft-a-message.gif';
 import moreActionsImg from '../../../../images/more-actions.png';
 
-يمكنك إرسال رسائل في القنوات العامة والخاصة، وكذلك إلى مستخدمين آخرين في Mattermost. اعتمادًا على توقيت إنشاء الرسالة، يمكنك إرسالها فورًا، أو [جدولتها لاحقاً](/end-user-guide/collaborate/schedule-messages)، أو [تعيين أولوية الرسالة](/end-user-guide/collaborate/message-priority).
+يمكنك إرسال رسائل في القنوات العامة والخاصة، وكذلك إلى مستخدمين آخرين في Mattermost. اعتماداً على توقيت إنشاء الرسالة، يمكنك إرسالها فوراً، أو [جدولتها لاحقاً](/end-user-guide/collaborate/schedule-messages)، أو [تعيين أولوية الرسالة](/end-user-guide/collaborate/message-priority).
 
-قد يعرض Mattermost تحذيرًا عند محاولة إرسال رسالة لمستلم وضع حالته على [عدم الإزعاج](/end-user-guide/preferences/set-your-status-availability#set-your-availability) وكان الوقت المحلي للمستلم خارج ساعات العمل (بين الساعة 10 مساءً و 6 صباحًا). يظهر هذا التحذير فوق حقل كتابة الرسالة.
+<Aside type="tip" title="تنبيهات التواجد">
+قد يعرض Mattermost تحذيراً عند محاولة إرسال رسالة لمستلم وضع حالته على [عدم الإزعاج](/end-user-guide/preferences/set-your-status-availability#set-your-availability) وكان الوقت المحلي للمستلم خارج ساعات العمل (بين الساعة 10 مساءً و 6 صباحاً). يظهر هذا التحذير فوق حقل كتابة الرسالة.
+</Aside>
 
 <Aside type="note">
-    بدءًا من الإصدار v11.5 من Mattermost، يمكنك الوصول إلى موارد المساعدة الخاصة بتنسيق الرسائل عبر رابط **مساعدة** أسفل حقل إدخال الرسالة.
+بدءاً من الإصدار **v11.5** من Mattermost، يمكنك الوصول إلى موارد المساعدة الخاصة بتنسيق الرسائل عبر رابط **مساعدة** أسفل حقل إدخال الرسالة.
 </Aside>
+
+---
+
+## كيفية إرسال رسالة
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    أدخل رسالتك في حقل النص، ثم اختر **إرسال** [\|send-icon\|](##SUBST##|send-icon|) لإرسالها.
+    <Steps>
+    1. أدخل رسالتك في حقل النص في أسفل القناة.
+    2. اختر أيقونة **إرسال** <i class="fa-solid fa-paper-plane" style="color: #1c63ed;"></i> لإرسالها.
+    </Steps>
 
-    <div style={{ 
-      borderInlineStart: '4px solid #ffffff', 
-      backgroundColor: 'rgba(0, 152, 126, 0.1)', 
-      padding: '1rem', 
-      margin: '1.5rem 0',
-      borderRadius: '0.25rem',
-      color: '#ffffff'
-    }}>
-      <strong style={{ display: 'block', marginBottom: '0.5rem' ,color: 'var(--sl-color-white)' }}>ℹ️ ملاحظة</strong>
-      <span style={{ color: 'var(--sl-color-white)' }}>
-        يمكنك أيضًا استخدام لوحة المفاتيح لإرسال الرسائل:
-        <ul style={{ listStyleType: 'disc', paddingInlineStart: '1.5rem', marginTop: '0.5rem' }}>
-          <li>اضغط على `Enter` على Windows أو Linux، أو `↵` على Mac.</li>
-          <li>يمكنك تهيئة Mattermost ليتطلب `Shift`+`Enter` على Windows أو Linux، أو `⇧`+`↵` على Mac لإرسال رسائل متعددة الأسطر. اختر أيقونة **الترس** [\|gear\|](##SUBST##|gear|) للذهاب إلى **الإعدادات** ثم **متقدم > إرسال الرسائل باستخدام CTRL+ENTER**.</li>
-        </ul>
-      </span>
-    </div>
+    <Aside type="note" title="استخدام لوحة المفاتيح">
+      * اضغط على `Enter` على Windows أو Linux، أو `↵` على Mac للإرسال.
+      * لتمكين `Shift`+`Enter` (أو `⇧`+`↵` على Mac) للأسطر الجديدة: اذهب إلى **الإعدادات** <i class="fa-solid fa-gear"></i> > **متقدم** > **إرسال الرسائل باستخدام CTRL+ENTER**.
+    </Aside>
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
     1. اضغط على حقل النص في أسفل تطبيق Mattermost لكتابة رسالة.
-       <Image src={mobileTypeMessage} alt="اكتب رسالة في مربع النص" width={300} />
+       <Image 
+         src={mobileTypeMessage} 
+         alt="واجهة كتابة الرسالة على الهاتف" 
+         height="450" 
+         style={{ width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '20px auto' }} 
+       />
 
-    2. اضغط على **إرسال** [\|send-icon\|](##SUBST##|send-icon|) لإرسالها في القناة.
-       <Image src={mobileSendingGif} alt="إرسال الرسالة" width={300} />
+    2. اضغط على **إرسال** <i class="fa-solid fa-paper-plane" style="color: #1c63ed;"></i> لإرسالها في القناة.
+       <Image 
+         src={mobileSendingGif} 
+         alt="عملية إرسال الرسالة من الهاتف" 
+         height="450" 
+         style={{ width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '20px auto' }} 
+       />
     </Steps>
   </TabItem>
 </Tabs>
 
-## إعادة صياغة الرسائل باستخدام الذكاء الاصطناعي (AI Message Rewriting)
+---
+
+## إعادة صياغة الرسائل بالذكاء الاصطناعي (AI Rewrite)
 
 يمكنك استخدام الذكاء الاصطناعي لتحسين رسائلك قبل إرسالها — مثل تحسين الأسلوب، تصحيح الأخطاء الإملائية، تعديل الطول، أو تحويل النص وفق احتياجات محددة.
 
-بدءًا من الإصدار v11.5 من Mattermost، عند استخدام ميزة "إعادة الصياغة بالذكاء الاصطناعي" (AI Rewrite) أثناء كتابة رد في سلسلة، يأخذ الذكاء الاصطناعي سياق السلسلة بعين الاعتبار لتوليد اقتراحات مناسبة.
+<Aside type="note" title="توفر الميزة">
+  <Badge text="v11.5+" variant="note" /> عند كتابة رد في سلسلة، يأخذ الذكاء الاصطناعي سياق السلسلة (Thread) بعين الاعتبار لتوليد اقتراحات مناسبة. يجب على مسؤول النظام [تكوين وكلاء الذكاء الاصطناعي](/administration-guide/configure/agents-admin-guide) لتفعيل الخيار.
+</Aside>
 
-على الويب/سطح المكتب أو الجوال:
-
+<Steps>
 1. اكتب رسالتك في حقل التأليف.
-2. اختر خيار **إعادة صياغة (Rewrite)** [\|ai-rewrite\|](##SUBST##|ai-rewrite|) من إجراءات الرسالة.
+2. اختر خيار **إعادة صياغة (Rewrite)** <i class="fa-solid fa-wand-magic-sparkles"></i> من إجراءات الرسالة.
 3. اختر وكيل الذكاء الاصطناعي (AI agent) المتاح.
 4. اختر أحد خيارات إعادة الصياغة المتاحة:
-   - **تحسين الكتابة (Improve writing)**: تحسين الوضوح والاحترافية.
-   - **تصحيح الإملاء (Fix spelling)**: تصحيح الأخطاء الإملائية والنحوية.
-   - **تقصير (Shorten)**: اختصار النص.
-   - **توسع (Elaborate)**: إضافة مزيد من التفاصيل والسياق.
-   - **تبسيط (Simplify)**: تبسيط اللغة لتكون أوضح.
-   - **تلخيص (Summarize)**: تلخيص النقاط الأساسية.
+   - **تحسين الكتابة**: لزيادة الوضوح والاحترافية.
+   - **تصحيح الإملاء**: لمعالجة الأخطاء النحوية.
+   - **تقصير / توسع**: للتحكم في طول النص.
+   - **تبسيط / تلخيص**: لتبسيط اللغة أو استخراج النقاط الأساسية.
    - **موجه مخصص (Custom prompt)**: تحديد تعليمات مخصصة.
-5. راجع الاقتراح المولد؛ اختر **إعادة توليد (Regenerate)** لتجربة اقتراح جديد أو **تجاهل (Discard)** للعودة للنص الأصلي.
-6. اختر **إرسال (Send)** [\|send-icon\|](##SUBST##|send-icon|).
+5. راجع الاقتراح؛ اختر **إعادة توليد (Regenerate)** لتجربة اقتراح جديد أو **تجاهل (Discard)** للعودة للنص الأصلي.
+6. اختر **إرسال (Send)** <i class="fa-solid fa-paper-plane" style="color: #1c63ed;"></i>.
+</Steps>
 
-:::note
-الرسائل التي تمت إعادة صياغتها باستخدام الذكاء الاصطناعي يتم وسمها تلقائيًا كمحتوى مُنتَج بواسطة AI لأغراض الشفافية. يجب على مسؤول النظام [تكوين وكلاء الذكاء الاصطناعي](/administration-guide/configure/agents-admin-guide) ليكون الخيار متاحًا.
-:::
+<Aside type="note">
+الرسائل التي تمت إعادة صياغتها يتم وسمها تلقائياً كمحتوى مُنتَج بواسطة AI لأغراض الشفافية.
+</Aside>
 
-## إرسال رسائل مخفية حتى القراءة (Burn-on-read messages)
+---
 
-:::note
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) متاح في خطط [Entry و Enterprise Advanced](https://mattermost.com/pricing/)
-:::
+## رسائل "المسح عند القراءة" (Burn-on-read)
 
-بدءًا من الإصدار v11.3 من Mattermost، تبقى الرسائل المخفية حتى يختار المستلم كشفها، وبعد ذلك تُحذف لدى ذلك المستلم عند انتهاء المؤقت. لا يمكن الرد على رسائل "المسح عند القراءة" (burn-on-read) أو تعديلها. يمكنك إرسال هذه الرسائل ما لم يقم مسؤول النظام بـ [تعطيل القدرة على القيام بذلك](/administration-guide/configure/site-configuration-settings#enable-burn-on-read-messages).
+<Aside type="note" title="توفر الخطط">
+  متوفر في خطط: <Badge text="Entry" variant="note" /> <Badge text="Enterprise Advanced" variant="note" />
+</Aside>
 
-<div class="tab">
-
-الويب/سطح المكتب (Web/Desktop)
-
-1. اكتب رسالتك.
-2. اختر أيقونة **المسح عند القراءة (Burn-on-read)** [\|burn-on-read-icon\|](##SUBST##|burn-on-read-icon|) في شريط أدوات الرسالة.
-3. اختر **إرسال (Send)** [\|send-icon\|](##SUBST##|send-icon|).
-
-</div>
-
-<div class="tab">
-
-الهاتف المحمول (Mobile)
-
-بدءًا من الإصدار v2.38.0 لتطبيق Mattermost المحمول، يمكنك إرسال رسائل "المسح عند القراءة" من التطبيق.
-
-1. اكتب رسالتك.
-2. اضغط على أيقونة **المسح عند القراءة (Burn-on-read)** [\|burn-on-read-icon\|](##SUBST##|burn-on-read-icon|).
-3. اضغط على **إرسال (Send)** [\|send-icon\|](##SUBST##|send-icon|).
-
-</div>
-
-يرى المستلم عنصر نائب مخفي مع خيار **كشف (Reveal)**؛ بعد الكشف، يظهر مؤقت يبيّن متى ستُحذف الرسالة.
-
-يمكن للمرسل تمرير المؤشر فوق أيقونة **المسح عند القراءة (Burn-on-read)** [\|burn-on-read-icon\|](##SUBST##|burn-on-read-icon|) لرؤية عدد المستلمين الذين قرأوا الرسالة. يمكنك حذف رسالة "المسح عند القراءة" لجميع المستلمين قبل انتهاء المؤقت عن طريق اختيار نفس الأيقونة أعلى الرسالة.
-
-## المسودات (Drafts)
-
-بدءًا من الإصدار v7.7 من Mattermost، عند كتابة رسالة جديدة يمكنك العودة إلى مسودة محفوظة لاحقًا ما لم يقم مسؤول النظام بـ [تعطيل المسودات العالمية](/administration-guide/configure/site-configuration-settings#enable-server-syncing-of-message-drafts).
-
-بشكل افتراضي، تتم مزامنة مسودات الرسائل على خادم Mattermost وتصبح متاحة في أي مكان تصل فيه إلى Mattermost. لتقييد المسودات على العميل الحالي فقط، اذهب إلى **الإعدادات (Settings) > متقدم (Advanced) > السماح بمزامنة مسودات الرسائل مع الخادم (Allow message drafts to sync with the server)** وأوقف مزامنة المسودات.
-
-<div class="tab">
-
-الويب/سطح المكتب (Web/Desktop)
-
-تُضاف المسودات إلى عرض **المسودات (Drafts)** في أعلى الشريط الجانبي للقنوات.
-
-<img src="../../images/Global-Drafts-Animated-GIF.gif" width="700" alt="المسودات العالمية تسهل عليك العثور على جميع الرسائل قيد التنفيذ." />
-
-</div>
-
-<div class="tab">
-
-الهاتف المحمول (Mobile)
-
-عند تأليف رسالة، يمكنك الاختيار لإكمالها لاحقًا؛ تبقى المسودة في حقل النص ويظهر خيار **تحرير (Edit)** [\|edit-icon\|](##SUBST##|edit-icon|) بجانب اسم القناة.
-
-بدءًا من الإصدار v10.5 من Mattermost، ستجد المسودات المحلية تحت **المسودات (Drafts)**. ستظهر المسودات المتزامنة مع الخادم تحت **المسودات (Drafts)** في إصدار جوال لاحق.
-
-![يمكنك مزامنة مسودة رسالة عن طريق الخروج من القناة في منتصف الطريق أثناء تأليف الرسالة.](../../../../images/mobile-draft-a-message.gif)
-
-</div>
-
-## تحرير الرسائل (Edit messages)
-
-يمكن لجميع المستخدمين تحرير رسائلهم المرسلة ما لم يقم مسؤول النظام بـ [تقييد القدرة على القيام بذلك](/administration-guide/onboard/advanced-permissions).
-
-<div class="tab">
-
-الويب/سطح المكتب (Web/Desktop)
-
-1. في المتصفح أو تطبيق سطح المكتب، اختر أيقونة **المزيد (More)** [\|more-icon\|](##SUBST##|more-icon|) بجانب الرسالة المرسلة.
-
-> ![اختر خيار المزيد لتحرير أو حذف رسالة مرسلة.](../../../../images/more-actions.png)
-
-2. اختر **تحرير (Edit)** لتعديل رسالتك؛ لن تؤدي عملية التحرير إلى تشغيل إشعارات [@mention](/end-user-guide/collaborate/mention-people) جديدة أو إشعارات سطح المكتب.
-
-:::note
-بدءًا من الإصدار v10.5 من Mattermost، يمكن تعديل أو إزالة مرفقات الرسائل عند تحريرها على الويب وسطح المكتب.
-:::
-
-</div>
-
-## حذف الرسائل (Delete messages)
-
-يمكن لجميع المستخدمين حذف رسائلهم المرسلة ما لم يقم مسؤول النظام بـ [تقييد القدرة على القيام بذلك](/administration-guide/onboard/advanced-permissions).
-
-1. اختر أيقونة **المزيد (More)** [\|more-icon\|](##SUBST##|more-icon|) بجانب الرسالة المرسلة.
-2. اختر **حذف (Delete)**.
-3. اختر **حذف (Delete)** مرة أخرى للتأكيد.
-=======
-2. اختر خيار **إعادة صياغة** [\|ai-rewrite\|](##SUBST##|ai-rewrite|) من إجراءات الرسالة.
-3. اختر وكيل الذكاء الاصطناعي المتاح.
-4. اختر أحد خيارات إعادة الصياغة المتاحة:
-   - **تحسين الكتابة**: تحسين الوضوح والاحترافية.
-   - **تصحيح الإملاء**: تصحيح الأخطاء الإملائية والنحوية.
-   - **تقصير**: اختصار النص.
-   - **توسع**: إضافة مزيد من التفاصيل والسياق.
-   - **تبسيط**: تبسيط اللغة لتكون أوضح.
-   - **تلخيص**: تلخيص النقاط الأساسية.
-   - **موجه مخصص**: تحديد تعليمات مخصصة.
-5. راجع الاقتراح المولد؛ اختر **إعادة توليد** لتجربة اقتراح جديد أو **تجاهل** للعودة للنص الأصلي.
-6. اختر **إرسال** [\|send-icon\|](##SUBST##|send-icon|).
-
-<div style={{ 
-  borderInlineStart: '4px solid #ffffff', 
-  backgroundColor: 'rgba(0, 152, 126, 0.1)', 
-  padding: '1rem', 
-  margin: '1.5rem 0',
-  borderRadius: '0.25rem',
-  color: '#ffffff'
-}}>
-  <strong style={{ display: 'block', marginBottom: '0.5rem' ,color: 'var(--sl-color-white)' }}>ℹ️ ملاحظة</strong>
-  <span style={{ color: 'var(--sl-color-white)' }}>
-    الرسائل التي تمت إعادة صياغتها باستخدام الذكاء الاصطناعي يتم وسمها تلقائيًا كمحتوى مُنتَج بواسطة AI لأغراض الشفافية. يجب على مسؤول النظام تكوين وكلاء الذكاء الاصطناعي ليكون الخيار متاحًا.
-  </span>
-</div>
-
-## إرسال رسائل مخفية حتى القراءة (Burn-on-read messages)
-
-<div style={{ 
-  borderInlineStart: '4px solid #ffffff', 
-  backgroundColor: 'rgba(0, 152, 126, 0.1)', 
-  padding: '1rem', 
-  margin: '1.5rem 0',
-  borderRadius: '0.25rem',
-  color: '#ffffff'
-}}>
-  <strong style={{ display: 'block', marginBottom: '0.5rem' ,color: 'var(--sl-color-white)' }}>ℹ️ ملاحظة</strong>
-  <span style={{ color: 'var(--sl-color-white)' }}>
-    [\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) متاح في خطط Entry و Enterprise Advanced.
-  </span>
-</div>
-
-بدءًا من الإصدار v11.3 من Mattermost، تبقى الرسائل المخفية حتى يختار المستلم كشفها، وبعد ذلك تُحذف لدى ذلك المستلم عند انتهاء المؤقت. لا يمكن الرد على رسائل "المسح عند القراءة" أو تعديلها. يمكنك إرسال هذه الرسائل ما لم يقم مسؤول النظام بتعطيل القدرة على القيام بذلك.
+بدءاً من الإصدار **v11.3**، تبقى هذه الرسائل مخفية حتى يختار المستلم كشفها، وبعد ذلك تُحذف تلقائياً عند انتهاء المؤقت. لا يمكن الرد عليها أو تعديلها.
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
+    <Steps>
     1. اكتب رسالتك.
-    2. اختر أيقونة **المسح عند القراءة** [\|burn-on-read-icon\|](##SUBST##|burn-on-read-icon|) في شريط أدوات الرسالة.
-    3. اختر **إرسال** [\|send-icon\|](##SUBST##|send-icon|).
+    2. اختر أيقونة **المسح عند القراءة** <i class="fa-solid fa-checked" ></i> في شريط أدوات الرسالة.
+    3. اختر **إرسال**.
+    </Steps>
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
-    بدءًا من الإصدار v2.38.0 لتطبيق Mattermost المحمول، يمكنك إرسال رسائل "المسح عند القراءة" من التطبيق.
+    <Aside type="note">بدءاً من الإصدار **v2.38.0** لتطبيق الجوال.</Aside>
+    <Steps>
     1. اكتب رسالتك.
-    2. اضغط على أيقونة **المسح عند القراءة** [\|burn-on-read-icon\|](##SUBST##|burn-on-read-icon|).
-    3. اضغط على **إرسال** [\|send-icon\|](##SUBST##|send-icon|).
+    2. اضغط على أيقونة **المسح عند القراءة** .
+    3. اضغط على **إرسال**.
+    </Steps>
   </TabItem>
 </Tabs>
 
-يرى المستلم عنصر نائب مخفي مع خيار **كشف**؛ بعد الكشف، يظهر مؤقت يبيّن متى ستُحذف الرسالة.
+يرى المستلم عنصر نائب مخفي مع خيار **كشف (Reveal)**؛ بعد الكشف، يظهر مؤقت يبيّن متى ستُحذف الرسالة. يمكن للمرسل حذف الرسالة لجميع المستلمين يدوياً قبل انتهاء المؤقت عن طريق اختيار نفس الأيقونة أعلى الرسالة.
 
-يمكن للمرسل تمرير المؤشر فوق أيقونة **المسح عند القراءة** لرؤية عدد المستلمين الذين قرأوا الرسالة. يمكنك حذف رسالة "المسح عند القراءة" لجميع المستلمين قبل انتهاء المؤقت عن طريق اختيار نفس الأيقونة أعلى الرسالة.
+---
 
 ## المسودات (Drafts)
 
-بدءًا من الإصدار v7.7 من Mattermost، عند كتابة رسالة جديدة يمكنك العودة إلى مسودة محفوظة لاحقًا ما لم يقم مسؤول النظام بتعطيل المسودات العالمية.
+بدءاً من الإصدار **v7.7** من Mattermost، تتم مزامنة مسودات الرسائل على الخادم افتراضياً وتصبح متاحة في أي مكان تصل فيه إلى حسابك.
 
-بشكل افتراضي، تتم مزامنة مسودات الرسائل على خادم Mattermost وتصبح متاحة في أي مكان تصل فيه إلى Mattermost. لتقييد المسودات على العميل الحالي فقط، اذهب إلى **الإعدادات > متقدم > السماح بمزامنة مسودات الرسائل مع الخادم** وأوقف مزامنة المسودات.
+<Aside type="tip" title="تعطيل المزامنة">
+لتقييد المسودات على الجهاز الحالي فقط: اذهب إلى **الإعدادات** > **متقدم** > **السماح بمزامنة مسودات الرسائل مع الخادم** وأوقف الخيار.
+</Aside>
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    تُضاف المسودات إلى عرض **المسودات** في أعلى الشريط الجانبي للقنوات.
-    <Image src={globalDraftsGif} width={700} alt="المسودات العالمية" />
+    تُضاف المسودات إلى عرض **المسودات (Drafts)** في أعلى الشريط الجانبي للقنوات.
+    <Image 
+      src={globalDraftsGif} 
+      alt="عرض المسودات العالمية" 
+      style={{ width: '100%', maxWidth: '700px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
+    />
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
-    عند تأليف رسالة، يمكنك الاختيار لإكمالها لاحقًا؛ تبقى المسودة في حقل النص ويظهر خيار **تحرير** [\|edit-icon\|](##SUBST##|edit-icon|) بجانب اسم القناة.
-
-    بدءًا من الإصدار v10.5 من Mattermost، ستجد المسودات المحلية تحت **المسودات**. ستظهر المسودات المتزامنة مع الخادم تحت **المسودات** في إصدار جوال لاحق.
-    <Image src={mobileDraftGif} width={300} alt="مسودة الهاتف" />
+    عند تأليف رسالة والخروج، تبقى المسودة في حقل النص مع خيار **تحرير (Edit)**. بدءاً من **v10.5**، ستجد المسودات المحلية تحت قسم **المسودات**.
+    <Image 
+      src={mobileDraftGif} 
+      alt="المسودات على الهاتف" 
+      height="450" 
+      style={{ width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '20px auto' }} 
+    />
   </TabItem>
 </Tabs>
 
-## تحرير الرسائل (Edit messages)
+---
 
-يمكن لجميع المستخدمين تحرير رسائلهم المرسلة ما لم يقم مسؤول النظام بتقييد القدرة على القيام بذلك.
+## تحرير وحذف الرسائل
+
+يمكن لجميع المستخدمين إدارة رسائلهم ما لم يقم مسؤول النظام بتقييد هذه الأذونات.
 
 <Tabs>
-  <TabItem label="الويب/سطح المكتب" icon="laptop">
-    1. في المتصفح أو تطبيق سطح المكتب، اختر أيقونة **المزيد** [\|more-icon\|](##SUBST##|more-icon|) بجانب الرسالة المرسلة.
-       <Image src={moreActionsImg} alt="تحرير الرسالة" width={600} />
+  <TabItem label="تحرير الرسائل" icon="pencil">
+    <Steps>
+    1. اختر أيقونة **المزيد (More)** <i class="fa-solid fa-ellipsis-vertical"></i> بجانب الرسالة المرسلة.
+       <Image 
+         src={moreActionsImg} 
+         alt="خيارات تحرير الرسالة" 
+         style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '15px auto' }} 
+       />
+    2. اختر **تحرير (Edit)** لتعديل النص. (بدءاً من **v10.5**، يمكن تعديل أو إزالة المرفقات أيضاً).
+    </Steps>
+    <Aside type="note">تعديل الرسالة لا يرسل إشعارات إشارة (`@mention`) جديدة أو إشعارات سطح مكتب.</Aside>
+  </TabItem>
 
-    2. اختر **تحرير** لتعديل رسالتك؛ لن تؤدي عملية التحرير إلى تشغيل إشعارات الإشارة الجديدة أو إشعارات سطح المكتب.
-
-    <div style={{ 
-      borderInlineStart: '4px solid #ffffff', 
-      backgroundColor: 'rgba(0, 152, 126, 0.1)', 
-      padding: '1rem', 
-      margin: '1.5rem 0',
-      borderRadius: '0.25rem',
-      color: '#ffffff'
-    }}>
-      <strong style={{ display: 'block', marginBottom: '0.5rem' ,color: 'var(--sl-color-white)' }}>ℹ️ ملاحظة</strong>
-      <span style={{ color: 'var(--sl-color-white)' }}>
-        بدءًا من الإصدار v10.5 من Mattermost، يمكن تعديل أو إزالة مرفقات الرسائل عند تحريرها على الويب وسطح المكتب.
-      </span>
-    </div>
+  <TabItem label="حذف الرسائل" icon="trash">
+    <Steps>
+    1. اختر أيقونة **المزيد (More)** <i class="fa-solid fa-ellipsis-vertical"></i>.
+    2. اختر **حذف (Delete)**.
+    3. أكد العملية بالضغط على **حذف** مرة أخرى.
+    </Steps>
   </TabItem>
 </Tabs>
-
-## حذف الرسائل (Delete messages)
-
-يمكن لجميع المستخدمين حذف رسائلهم المرسلة ما لم يقم مسؤول النظام بتقييد القدرة على القيام بذلك.
-
-1. اختر أيقونة **المزيد** بجانب الرسالة المرسلة.
-2. اختر **حذف**.
-3. اختر **حذف** مرة أخرى للتأكيد.
->>>>>>> ee4a147 (Saving local documentation changes before merge)

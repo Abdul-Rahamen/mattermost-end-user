@@ -1,52 +1,33 @@
 ---
-title: Interact with playbooks
+title: "التفاعل مع أدلة العمل"
+description: "تعرف على كيفية التفاعل مع أدلة العمل (Playbooks) باستخدام الأوامر المائلة (Slash Commands)، وتطبيق الجوال، وواجهة REST API."
 ---
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Professional, Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/)
-</Aside>
+## الأوامر المائلة (Slash commands)
 
+تتوفر الأوامر المائلة للتفاعل مع أدلة العمل التعاونية. يتيح الأمر المائل `/playbook` التفاعل مع الحوادث عبر مربع نص المنشور على أجهزة سطح المكتب، والمتصفح، والجوال. لتشغيل دليل عمل، استخدم الأمر المائل `/playbook run` من أي قناة.
 
-# Slash commands
+تشمل الأوامر المائلة المتاحة ما يلي:
 
-Slash commands are available for collaborative playbooks. The
-`/playbook` slash command allows interaction with incidents via the post
-textbox on desktop, browser, and mobile. To run a playbook use the
-`/playbook run` slash command from any channel.
+- `/playbook run` - تشغيل دليل عمل.
+- `/playbook finish` - إنهاء دورة تشغيل دليل العمل في هذه القناة.
+- `/playbook update` - تقديم تحديث للحالة.
+- `/playbook check [checklist #] [item #]` - تحديد/إلغاء تحديد عنصر في قائمة المهام.
+- `/playbook checkadd [checklist #] [item text]` - إضافة عنصر إلى قائمة المهام.
+- `/playbook checkremove [checklist #] [item #]` - إزالة عنصر من قائمة المهام.
+- `/playbook owner [@username]` - إظهار أو تغيير المالك الحالي.
+- `/playbook info` - إظهار ملخص لدورة تشغيل دليل العمل الحالية.
+- `/playbook timeline` - إظهار الجدول الزمني لدورة تشغيل دليل العمل الحالية.
+- `/playbook todo` - الحصول على قائمة بالمهام المعينة لك.
+- `/playbook settings digest [on/off]` - تشغيل/إيقاف الموجز اليومي.
+- `/playbook settings weekly-digest [on/off]` - تشغيل/إيقاف الموجز الأسبوعي.
 
-Available slash commands include:
+## أدلة العمل أثناء التنقل (Playbooks on the go)
 
-- `/playbook run` - Run a playbook.
-- `/playbook finish` - Finish the playbook run in this channel.
-- `/playbook update` - Provide a status update.
-- `/playbook check [checklist #] [item #]` - Check/uncheck the checklist
-  item.
-- `/playbook checkadd [checklist #] [item text]` - Add a checklist item.
-- `/playbook checkremove [checklist #] [item #]` - Remove a checklist
-  item.
-- `/playbook owner [@username]` - Show or change the current owner.
-- `/playbook info` - Show a summary of the current playbook run.
-- `/playbook timeline` - Show the timeline for the current playbook run.
-- `/playbook todo` - Get a list of your assigned tasks.
-- `/playbook settings digest [on/off]` - Turn daily digest on/off.
-- `/playbook settings weekly-digest [on/off]` - Turn weekly digest
-  on/off.
+تعرف على كيفية [الوصول إلى أدلة العمل والعمل معها أثناء التنقل](/workflow-automation/workflow-automation) باستخدام تطبيق ماترموست للجوال.
 
-# Playbooks on the go
+## توثيق واجهة برمجة التطبيقات (API documentation)
 
-Learn how to [access and work with playbooks on the
-go](https://docs.mattermost.com/end-user-guide/workflow-automation.html#itab--Mobile--0_1-Mobile)
-with the Mattermost mobile app.
+للتفاعل مع نموذج البيانات برمجياً، قم بمراجعة [مواصفات REST API](https://github.com/mattermost/mattermost-plugin-incident-collaboration/blob/master/server/api/api.yaml) على GitHub.
 
-# <span dir="ltr"><span dir="ltr"><span dir="ltr"><span dir="ltr"><span dir="ltr">API</span></span></span></span></span> documentation
-
-To interact with the data model programmatically, consult the [REST <span dir="ltr"><span dir="ltr"><span dir="ltr"><span dir="ltr"><span dir="ltr">API</span></span></span></span></span>
-specification](https://github.com/mattermost/mattermost-plugin-incident-collaboration/blob/master/server/api/api.yaml).
-
-Playbooks help streamline and manage complex processes while decreasing
-the risk of forgotten steps or tasks. They also support tool
-integration, status updates in a dedicated channel, and can be edited on
-the fly. When a playbook run is finished, you can review the entire run
-to assess any areas of improvement for the next run.
+تساعد أدلة العمل في تبسيط وإدارة العمليات المعقدة مع تقليل مخاطر نسيان الخطوات أو المهام. كما أنها تدعم تكامل الأدوات، وتحديثات الحالة في قناة مخصصة، ويمكن تحريرها فوراً أثناء العمل. عند انتهاء دورة تشغيل دليل العمل، يمكنك مراجعة الدورة بأكملها لتقييم أي مجالات للتحسين في الدورة القادمة.

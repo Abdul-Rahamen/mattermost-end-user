@@ -1,0 +1,65 @@
+---
+import { library, icon } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+
+// إضافة الأيقونات للمكتبة (يمكنك تخصيص ما تحتاجه لتقليل الحجم)
+library.add(fas, fab, far);
+
+interface Props {
+  name: any;
+  prefix?: "fas" | "fab" | "far";
+  class?: string;
+  color?: string;
+}
+
+const { name, prefix = "fas", class: className, color } = Astro.props;
+const iconObj = icon({ prefix, iconName: name });
+
+// ✅ Handle cases where the icon is not found
+if (!iconObj) {
+  console.error(`FAIcon: Icon "${name}" with prefix "${prefix}" not found.`);
+}
+
+const width = iconObj?.icon[0] ?? 512;
+const height = iconObj?.icon[1] ?? 512;
+const svgPathData = iconObj?.icon[4] ?? "";
+---
+
+{
+  iconObj ? (
+    <svg
+      class:list={["fa-icon", className]}
+      viewBox={`0 0 ${width} ${height}`}
+      aria-hidden="true"
+      focusable="false"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      style={color ? `color: ${color};` : undefined}
+    >
+      {Array.isArray(svgPathData) ? (
+        svgPathData.map((path) => <path d={path} />)
+      ) : (
+        <path d={svgPathData} />
+      )}
+    </svg>
+  ) : (
+    <span title={`Icon ${name} not found`}>[{name}]</span>
+  )
+}
+
+<style is:global>
+  svg.fa-icon {
+    display: inline-block !important;
+    height: 1em;
+    width: auto;
+    vertical-align: -0.15em;
+    overflow: visible;
+    margin: 0 !important;
+    margin-block: 0 !important;
+    margin-inline: 0 !important;
+    padding: 0 !important;
+  }
+</style>

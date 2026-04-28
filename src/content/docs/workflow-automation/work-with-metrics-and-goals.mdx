@@ -1,108 +1,54 @@
 ---
-title: Metrics and goals
+title: "المقاييس والأهداف"
+description: "استخدم لوحات معلومات سير العمل (Workflow Dashboards) للحصول على رؤى حول أداء أدلة العمل، وقياس النتائج مقابل الأهداف والأداء التاريخي."
 ---
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Professional, Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/)
-</Aside>
+توفر لوحات معلومات سير العمل (Workflow dashboards) رؤى قيمة حول أداء تدفقات العمل عبر المؤسسة. وهي تقارن مقاييس المخرجات من دورات تشغيل مختلفة لأدلة العمل التعاونية مقابل الأهداف والأداء التاريخي. في كل مرة يتم فيها تشغيل دليل عمل تعاوني، يمكنك تحديث لوحة معلومات سير العمل ليراجعها الفريق وأصحاب المصلحة، حيث يتم تخصيص مكونات لوحة المعلومات لكل دليل عمل.
 
+من أمثلة لوحات معلومات سير العمل القائمة على المقاييس التي يمكن إعدادها لمراقبة الأداء: "وقت الكشف" (Time to detect)، و"وقت الحل" (Time to resolve) في تدفقات عمل الاستجابة للحوادث، ونسبة إنجاز خطة العمل لإصدارات البرمجيات الشهرية، ومعدل نجاح الإطلاق للعمليات اللوجستية التي تتضمن عمليات الإطلاق.
 
-Workflow dashboards unlock insights about the performance of workflows
-across organizations. They compare the output metrics from different
-runs of collaborative playbooks, against targets and historical
-performance. Each time a collaborative playbook is run, you can update
-the workflow dashboard for the team and stakeholders to review, where
-dashboard components are customized per playbook.
+## تهيئة المراجعات اللاحقة قبل بدء دورة التشغيل
 
-Examples of metrics-based workflow dashboards that can be set up to
-monitor and inform performance include: time to detect, time to resolve
-in incident response workflows, work plan completion percentage for
-monthly software releases management workflows, and launch success rate
-for logistical workflows involving launch operations.
+انتقل إلى تبويب **Playbooks** في ماترموست. ابحث عن دليل العمل الذي تريد تعديله، اختر أيقونة النقاط الثلاث **...** تحت **Actions** ثم اختر **Edit**. في الشاشة التالية، اختر **Retrospective**. قم بتفعيل خيار **Enable Retrospective**.
 
-# Configure retrospectives before a run
+يمكنك ضبط تذكير لملء المراجعة اللاحقة بعد انتهاء دورة التشغيل. يتم تعبئة القالب المهيأ مسبقاً في المراجعة اللاحقة لدورة التشغيل.
 
-Access the **Playbooks** tab in Mattermost. Locate the playbook you want
-to modify, select the **...** icon under **Actions** and then select
-**Edit**. In the next screen, select **Retrospective**. Move the toggle
-to **Enable Retrospective**.
+استخدم الجدول الزمني لدورة التشغيل (Run timeline) للمساعدة في كتابة مراجعة لاحقة دقيقة. تظهر أحداث مثل تغييرات المالك، وتحديثات الحالة، وتعيينات المهام تلقائياً. يمكن أيضاً إضافة منشورات مختارة إلى الجدول الزمني باستخدام قائمة سياق المنشور.
 
-You can set a reminder to fill out the retrospective after a run is
-finished. The configured template is pre-populated in the run's
-retrospective.
+<img
+  class="img-computer-screenshots"
+  src="https://docs.mattermost.com/_images/Retro.gif"
+  alt="إنشاء ونشر تقارير المراجعة اللاحقة."
+/>
 
-Use the run timeline to help write an accurate retrospective. Events
-such as owner changes, status updates, and task assignments appear
-automatically. Selected posts may also be added to the timeline by using
-the post context menu.
+## المقاييس (Metrics)
 
-![Create and publish retrospective reports.](../../../images/Retro.gif)
+استخدم المقاييس لتحديد المجالات الرئيسية التي ترغب في استخراج رؤى قيمة منها عن طريق قياس الأداء والتحسين. يتم تفعيل المقاييس عند تفعيل المراجعات اللاحقة. قم بمعايرة نوع المقياس الذي تريد قياسه، وبمجرد انتهاء دورة التشغيل يمكنك عرض النتائج في المراجعة اللاحقة. يمكنك تهيئة عدة مقاييس لكل دليل عمل وتحريرها في أي وقت. يمكن تهيئة المقاييس بناءً على إدخال رقمي أو وقت أو قيمة.
 
-# Metrics
+يمكن أن تكون هذه المقاييس أي شيء يهمك ويهم فريقك. على سبيل المثال، بالنسبة لدليل عمل إصدار البرمجيات، قد ترغب في الحصول على مقياس يتتبع عدد الأخطاء التي تم اكتشافها أثناء دورة التشغيل. يتم توفير مخرجات المقاييس التي أضفتها في المراجعة اللاحقة. وبمرور الوقت، يمكنك استخدام المقاييس عبر المراجعات اللاحقة لفحص الحالات الشاذة وتحسين الأهداف.
 
-Use metrics to identify key areas where you want to extract valuable
-insights by measuring performance and improvement. Metrics are enabled
-when you enable retrospectives. Calibrate the type of metric you want to
-measure, and once a run is finished you can view the output in the
-retrospective. You can have multiple metrics configured per playbook and
-you can edit them at any time. Metrics can be configured based on
-numeric, time, or value input.
+مثال آخر هو دليل عمل حوادث الدعم؛ حيث يمكن تطبيق مقياس "وقت الحل" واستخدامه لتحديد المجالات التي تحتاج إلى مزيد من التحسين، مثل المهام التي قد تعمل بشكل أفضل إذا تم تقسيمها بحيث يتم الوصول إلى الأهداف بشكل أسرع.
 
-These metrics can be anything that's of interest to you and your team.
-For example, for a software release playbook you might want to have a
-metric tracking how many bugs were detected during a run. The output of
-the metrics you've added is provided in the retrospective. Over time,
-you can use metrics across retrospectives to examine anomalies and
-refine goals.
+عند حذف مقاييس مهيأة من دليل عمل، لا يتم حذف البيانات، لكنك لن ترى تلك المقاييس بعد الآن في لوحة المعلومات. بالإضافة إلى ذلك، يتم إزالة حقل المقياس المقابل من نموذج المراجعة اللاحقة ومن المراجعات اللاحقة المنشورة.
 
-Another example is a support incident playbook. The time to resolution
-metric can be applied and used to identify areas that need more
-refinement, such as tasks that might work better if they're split up so
-goals are reached faster.
+## لوحة معلومات المقاييس
 
-When you delete configured metrics from a playbook, the data isn't
-deleted, but you no longer see those metrics in the dashboard. In
-addition, the corresponding metric field is removed from the
-retrospective form and from published retrospectives.
+لكل دورة تشغيل، يمكنك إدخال قيمة لكل مقياس تحت قسم المراجعة اللاحقة. يمكن أن تستند هذه القيمة إلى أي شيء تقيسه، مثل عدد الأخطاء التي تم العثور عليها في كل دورة تشغيل.
 
-## Metrics dashboard
+يمكنك تحرير هذه القيمة عدة مرات كما تشاء - على سبيل المثال للتأكد من حصولك على المعايير الصحيحة لمقياسك - حتى تقوم بنشر المراجعة اللاحقة، وعند هذه النقطة لن تعد المقاييس والتقرير قابلين للتحرير. لا تظهر القيمة النهائية في لوحة معلومات دليل العمل إلا بعد نشر المراجعة اللاحقة.
 
-For each run, you can enter a value per metric under the retrospective
-section. This value can be based on whatever you are measuring, such as
-number of bugs found per run.
+تعرض لوحة معلومات دليل العمل تقارير عن كل مقياس لجميع دورات التشغيل من خلال إظهار:
 
-You can edit this value as many times as you'd like - for example to
-ensure you have the correct parameters for your metric - until you've
-published the retrospective at which point both the metrics and report
-are no longer editable. The final value only shows up in the playbook
-dashboard once the retrospective has been published.
+- القيمة المتوسطة لجميع دورات التشغيل.
+- متوسط قيمة آخر 10 دورات والفرق مع متوسط الـ 10 دورات السابقة.
+- نطاق القيم لجميع دورات التشغيل.
+- القيمة المستهدفة.
+- مخطط القيم الفعلية لآخر 10 دورات تشغيل.
 
-The playbook dashboard reports on each metric for all runs by showing:
+يعرض النصف السفلي من الصفحة قائمة بالدورات المنتهية مع قيم المقاييس. يمكنك تصفية أو فرز القائمة حسب قيم المقاييس.
 
-- Average value for all runs
-- The last 10-run average value and difference with prev 10-run average
-- The value range for all runs
-- The target value
-- The actual values chart for last 10-runs
-
-The lower half of the page shows a list of finished runs with metrics
-values. You can filter or sort a list by metrics values.
-
-![View and assess metrics for your playbook.](../../../images/playbook-metrics.png)
-
-## Export channel data
-
-.. If used with include::, note the paths for images
-
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on
-[Enterprise and Enterprise Advanced
-plans](https://mattermost.com/pricing/)
-</Aside>
-
-
-See the
-`export channel data </administration-guide/comply/export-mattermost-channel-data>`
-documentation for details on working with channel export functionality.
+<img
+  class="img-computer-screenshots"
+  src="https://docs.mattermost.com/_images/playbook-metrics.png"
+  alt="عرض وتقييم المقاييس لدليل العمل الخاص بك."
+/>

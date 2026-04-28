@@ -1,118 +1,55 @@
 ---
-title: Learn about collaborative playbooks
+title: "تعرف على أدلة العمل التعاونية"
+description: "اكتشف كيف تساعدك أدلة العمل (Playbooks) في ماترموست على تنظيم العمليات المتكررة، أتمتة المهام، وتحقيق نتائج متوقعة لفرقك."
 ---
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Professional, Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/)
-</Aside>
+يُعد "دليل العمل التعاوني" (Collaborative playbook) عملية متكررة يتم قياسها وتحسينها بمرور الوقت. على سبيل المثال، يمكن تحويل الخطوات التي تتبعها عند التعامل مع انقطاع الخدمة، أو إصدار برمجيات جديدة، أو الترحيب بعضو جديد في فريقك إلى "دليل عمل".
 
+باستخدام أدلة العمل التعاونية، يمكن للفرق تنظيم سير العمل المقرر وتحديد العمليات المعقدة والمتكررة وتبسيطها وتوثيقها.
 
-A collaborative playbook is a repeatable process that is measured and
-refined over time. For example, the steps you follow when dealing with
-an outage, a software release, or welcoming a new member of your team
-can all be made into a playbook.
+يمثل كل دليل عمل نتيجة متكررة أو هدفاً محدداً يتعاون فريقك لتحقيقه، مثل استعادة الخدمة بعد الانقطاع أو تهيئة العملاء الجدد. تتكون أدلة العمل التعاونية من:
 
-Using collaborative playbooks, teams can orchestrate prescribed
-workflows and define, streamline, and document complex, recurring
-operations.
+- [قوائم المهام (Checklists)](/workflow-automation/work-with-collaborative-playbooks#make-checklists): قائمة بالمهام المطلوب إنجازها أثناء دورة التشغيل. يمكن تعديل هذه القوائم أثناء العمل، وبدءاً من إصدار Playbooks v2.6.0، يمكن إنشاء قوائم المهام وإدارتها مباشرة داخل القنوات العامة والخاصة.
+- [القوالب (Templates)](/workflow-automation/work-with-collaborative-playbooks#templates): تُستخدم للإجراءات المتكررة مثل التحديثات والتذكيرات. يمكنك إنشاء قوالبك الخاصة أو استخدام القوالب الافتراضية.
+- [إجراءات الأتمتة (Automation actions)](/workflow-automation/work-with-tasks#task-actions): تُستخدم لدعوة الأعضاء، وإنشاء "خطافات الويب" (Webhooks)، وتعديل رسائل الترحيب، والمزيد.
+- [الأذونات (Permissions)](/workflow-automation/share-and-collaborate): يمكنك إدارة الأذونات على مستوى القناة وعلى مستوى دليل العمل نفسه.
 
-Each playbook represents a recurring outcome or specific goal that your
-teams collaborate on to achieve, such as service outage recovery or
-customer onboarding. Collaborative playbooks are made up of:
+تقوم الفرق بتشغيل دليل العمل في كل مرة يرغبون فيها في تنسيق الجهود بين الأفراد والأدوات والبيانات لتحقيق النتيجة المرجوة بأسرع وقت ممكن، مع توفير رؤية واضحة لأصحاب المصلحة.
 
-- `Checklists <end-user-guide/workflow-automation/work-with-playbooks:make checklists>`:
-  The list of tasks to be completed for the run. Can be edited during a
-  run. From Playbooks v2.6.0, checklists can also be created and managed
-  directly within public and private channels.
-- `Templates <end-user-guide/workflow-automation/work-with-playbooks:templates>`:
-  Used for frequently-used actions such as updates and reminders. You
-  can create your own templates or use default ones.
-- `Automation actions <end-user-guide/workflow-automation/work-with-tasks:task actions>`:
-  Used for inviting members, creating webhooks, editing welcome
-  messages, and more.
-- `Permissions </end-user-guide/workflow-automation/share-and-collaborate>`:
-  Manage permissions at the channel and at the playbook level.
+- **للمشاركين:** تحدد أدلة العمل العمليات والإجراءات مثل قوائم المهام، وتحديثات الحالة، وتقارير المراجعة اللاحقة.
+- **للأدوات المتكاملة:** تقوم أدلة العمل بضبط "المحفزات" (Triggers) التي تنفذ الإجراءات المؤتمتة.
+- **لأصحاب المصلحة:** توفر أدلة العمل واجهة موحدة لمتابعة كل دورة تشغيل بالإضافة إلى الحصول على رؤى تراكمية بمرور الوقت.
 
-Teams run a playbook every time they want to orchestrate people, tools,
-and data to achieve that outcome as quickly as possible while providing
-visibility to stakeholders.
+## ما هي دورة التشغيل؟
 
-- For participants, playbooks prescribe processes and actions such as
-  task checklists, status updates, and retrospective reports.
-- For your integrated tools, playbooks configure the triggers that
-  execute automated actions.
-- For stakeholders, playbooks provide a single pane of glass for
-  visibility into each run as well as aggregate insights over time.
+"دورة التشغيل" (Run) هي التنفيذ الفعلي للخطوات المحددة في دليل العمل. عند بدء دورة تشغيل، تبدأ العملية داخل قناة مخصصة. يمكن لأعضاء دليل العمل متابعة التقدم في صفحة تفاصيل دورة التشغيل أو المشاركة مباشرة في القناة المرتبطة بها.
 
-# What's a run?
+للعثور على كافة دورات التشغيل، افتح **Product menu > Playbooks**، ثم اختر اسم دليل العمل. بعد ذلك، اختر **Runs** من شريط التنقل، ثم اختر دورة تشغيل معينة لعرض نظرة عامة عنها. انقر على **Go to channel** لفتح القناة الخاصة بدورة التشغيل.
 
-A run is the execution of the steps in a playbook. When a playbook is
-run, the process begins in a channel. Members of a playbook can view the
-run's progress in the run details page or they can participate in the
-run channel.
+عند اكتمال العملية، تنتهي دورة التشغيل، ويمكن حينها إجراء "مراجعة لاحقة" (Retrospective) وأرشفة القناة.
 
-To find all playbook runs, open **Product menu \> Playbooks**, and then
-select any playbook name. Next, select **Runs** from the navigation bar,
-then choose a run to view its overview. Select **Go to channel** to open
-the run’s channel.
+## الكلمات المفتاحية (Keywords)
 
-When the process is completed, the run is ended. A retrospective can be
-run and the channel can be archived.
+من الضروري تسهيل بدء دورات التشغيل، وإحدى الطرق لتحقيق ذلك هي إعداد "الكلمات المفتاحية". تطلب هذه الكلمات من المستخدم بدء دورة التشغيل فور استخدامها في المحادثة. في دليل عمل "الاستجابة للحوادث"، تكون الكلمات المفتاحية محددة للحوادث الحرجة، مثل `sev-1` و `#incident`. من المستبعد أن يستخدم الأشخاص هذه المصطلحات في المحادثات العامة، وحتى إذا فعلوا ذلك، يمكنهم اختيار عدم بدء دورة دليل العمل عند مطالبتهم بذلك.
 
-# Keywords
+## رسالة الترحيب
 
-It's important to make it easy to start a run. One way to do this is by
-setting up keywords. These keywords prompt a user to start the run when
-they're used. In the incident response playbook, the keywords are
-specific to critical incidents, for example `sev-1` and `#incident`.
-It's unlikely that someone would use those terms in general conversation
-and, even if they do, they can elect not to start the playbook run when
-prompted.
+قم بإنشاء رسالة ترحيب لضمان معرفة الأعضاء بمكان تواجدهم والمعلومات التي يحتاجونها فور انضمامهم لدورة التشغيل. هذا الأمر حيوي جداً في الحوادث التي تتطلب سرعة في التنفيذ لتقليل الارتباك ومساعدة الأعضاء على البدء فوراً.
 
-# Welcome message
+## المهام وقوائم المهام
 
-Create a welcome message so that when members join your run, it's easy
-for them to see where they're needed and where to find the relevant
-information. This is especially important during a time-sensitive
-incident to eliminate confusion and help members ramp up quickly.
+تُشكل المهام وقوائم المهام الركيزة الأساسية للقالب وسير العمل. في حالات الحوادث، من الضروري جمع أصحاب المصلحة بأسرع وقت، لذا قد تكون إحدى المهام الأولى هي إضافة "مهندس المناوبة" (On-call engineer) إلى القناة، تليها بدء مكالمة جماعية. يمكنك ربط هذه المهام بأوامر مائلة (Slash commands)، أو إشارات (@mentions)، أو تكاملات مع أدوات مثل Zoom لجعل العملية سلسة قدر الإمكان.
 
-# Tasks and checklists
+## تحديثات الحالة
 
-Tasks and checklists are the foundation of a template and a workflow. In
-an incident, it's critical to get stakeholders together as soon as
-possible, so one of the first tasks is to add the on-call engineer to
-the channel, followed by starting a bridge call. When you're setting up
-these tasks, you can add slash commands, @mentions, and integrations
-with tools such as Zoom to make the initiation as seamless as possible.
+تُعد التحديثات المنتظمة أدوات تواصل حيوية، خاصة أثناء الحوادث الكبرى مثل انقطاع الخدمة. قد تصبح القنوات مزدحمة ومربكة، وإذا كان لديك أكثر من حادث في وقت واحد، فغالباً ما يكون الأمر مزعجاً جداً لأصحاب المصلحة لمتابعة كل شيء.
 
-# Status updates
+استخدم خيار **Broadcast update to other channels** لنشر المعلومات الحرجة في قنوات مخصصة بعيداً عن ضجيج المحادثات الجانبية. بالإضافة إلى ذلك، قم بضبط مؤقت يصدر تذكيرات لمشاركة التحديثات.
 
-Regular updates are important communication tools, especially in the
-middle of an incident like an outage. Channels can get very busy and
-overwhelming, and if you have more than one incident at a time, it's
-often too noisy for stakeholders to keep track of everything.
+## المراجعة اللاحقة (Retrospective)
 
-Use the **Broadcast update to other channels** option to cut through the
-noise and share critical information with both channel members and other
-users in a dedicated channel.
+عند انتهاء الحادث، قم بإنشاء مراجعة لاحقة (Retrospective) لتوثيق أثر الحدث. يمكنك أيضاً إضافة مقاييس، مثل الوقت المستغرق لحل الحادث، ومقارنتها بحوادث مشابهة لتحسين وتبسيط سير العمل مستقبلاً.
 
-Additionally, set a timer that issues a reminder for updates to be
-shared.
-
-# Retrospective
-
-When an incident is over, create a retrospective that captures the
-impact of the event. You can also add metrics, such as how long it took
-to resolve the incident, which you can apply to other, similar incidents
-to see where you can improve and refine your workflows.
-
-<Aside type="note">
-Looking to optimize team productivity? Learn how to automate
-repeatable workflows with [this on-demand
-webinar](https://mattermost.com/webinar/4-strategies-to-improve-technical-teams-productivity/),
-then download our [Mattermost Playbooks
-datasheet](https://mattermost.com/mattermost-playbooks-datasheet/).
-</Aside>
-
+:::tip[نصيحة]
+هل تتطلع إلى تحسين إنتاجية فريقك؟ تعرف على كيفية أتمتة تدفقات العمل المتكررة من خلال [هذه الندوة عبر الويب (Webinar)](https://mattermost.com/webinar/4-strategies-to-improve-technical-teams-productivity/)، ثم قم بتنزيل [ورقة بيانات أدلة عمل ماترموست](https://mattermost.com/mattermost-playbooks-datasheet/).
+:::

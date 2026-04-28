@@ -1,12 +1,12 @@
 ---
-title: "تنظيم المحادثات باستخدام المناقشات المتسلسلة "
+title: "تنظيم المحادثات باستخدام المناقشات المتسلسلة"
 description: "تعرف على كيفية استخدام سلاسل الرسائل (threads) لتنظيم المحادثات في Mattermost وتقليل الضوضاء في القنوات."
 ---
 
-import { Tabs, TabItem, Steps,Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
-{/* استيراد الصور */}
+{/* استيراد الصور المحلية */}
 import collapsedThreadsGif from '../../../../images/collapsed-reply-threads.gif';
 import crtFollowingThread from '../../../../images/crt-following-thread.png';
 import crtFollowingThreadJpg from '../../../../images/crt-following-thread.jpg';
@@ -18,113 +18,122 @@ import mobileUnfollowGif from '../../../../images/mobile-unfollow-a-message-thre
 import mobileUnfollowTapGif from '../../../../images/mobile-unfollow-a-message-thread-by-tapping-following.gif';
 import crtThreadViewJpg from '../../../../images/crt-thread-view.jpg';
 
-تعد سلاسل الرسائل (Threads) جزءًا أساسيًا من تجربة المراسلة في Mattermost. تُستخدم لتنظيم المحادثات وتمكين المستخدمين من مناقشة الموضوعات دون إضافة ضوضاء إلى القنوات أو الرسائل المباشرة.
+تعد سلاسل الرسائل (**Threads**) جزءاً أساسياً من تجربة المراسلة في Mattermost. تُستخدم لتنظيم المحادثات وتمكين المستخدمين من مناقشة الموضوعات دون إضافة ضوضاء إلى القنوات أو الرسائل المباشرة.
 
-توفر المناقشات المتسلسلة تجربة محسنة للمستخدمين الذين يتواصلون في السلاسل والرد على الرسائل، والتي تتضمن صندوق وارد موحد للسلاسل لقراءة جميع المحادثات في عرض واحد. تعمل السلاسل على تحسين القدرة على معالجة محتوى القناة، والعثور على المحادثات ومتابعتها واستئنافها بسهولة أكبر، والحفاظ على تركيز المحادثات المتسلسلة.
+توفر المناقشات المتسلسلة تجربة محسنة تتضمن صندوق وارد موحد للسلاسل لقراءة جميع المحادثات في عرض واحد، مما يحسن القدرة على معالجة محتوى القناة والعثور على المحادثات واستئنافها بسهولة.
 
 <Image 
   src={collapsedThreadsGif} 
-  alt="تنظيم المحادثات باستخدام المناقشات المتسلسلة." 
-  width={600} 
+  alt="تنظيم المحادثات باستخدام المناقشات المتسلسلة" 
+  style={{ width: '100%', maxWidth: '600px', borderRadius: '10px', display: 'block', margin: '20px auto', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} 
 />
 
-<Aside type="note">
-    <ul style={{ listStyleType: 'disc', paddingInlineStart: '1.5rem' }}>
-      <li>بدءًا من الإصدار v7.0 من Mattermost، يتم تمكين المناقشات المتسلسلة افتراضيًا لجميع عمليات تثبيت Mattermost الجديدة. يمكن لجميع مستخدمي Mattermost إنشاء سلاسل جديدة، ما لم يقم مسؤول النظام بـ [تعطيل القدرة على القيام بذلك](/administration-guide/configure/site-configuration-settings#threaded-discussions).</li>
-      <li>يمكن لمسؤولي النظام [تكوين التوفر الافتراضي واختيار المستخدم للانضمام](/administration-guide/configure/site-configuration-settings#threaded-discussions) للمناقشات المتسلسلة.</li>
-    </ul>
+<Aside type="note" title="توفر الميزة">
+  * <i class="fa-solid fa-code-branch"></i> بدءاً من الإصدار **v7.0**، يتم تمكين المناقشات المتسلسلة افتراضياً.
+  * يمكن لجميع المستخدمين إنشاء سلاسل جديدة ما لم يقم المسؤول بـ [تعطيلها](/administration-guide/configure/site-configuration-settings#threaded-discussions).
 </Aside>
 
+---
 
+## بدء أو الرد على السلاسل
 
+يتم طي [الردود على الرسائل](/end-user-guide/collaborate/reply-to-messages) تحت الرسالة الأولى في السلسلة. يمكنك فتح السلسلة بالضغط على الرسالة أو عدد الردود.
 
-### بدء أو الرد على السلاسل 
+<Aside type="tip">
+  **جديد في v11.2:** يمكنك فتح السلاسل في نوافذ متصفح منفصلة عبر أيقونة **نافذة جديدة** <i class="fa-solid fa-arrow-up-right-from-square"></i> في ترويسة السلسلة لمتابعة محادثات متعددة في وقت واحد.
+</Aside>
 
-يتم طي [الردود على الرسائل](/end-user-guide/collaborate/reply-to-messages) تحت الرسالة الأولى في السلسلة. افتح سلسلة من خلال اختيار الرسالة أو عدد الردود.
+---
 
-بدءًا من الإصدار v11.2 من Mattermost، عند استخدام Mattermost في متصفح الويب، يمكنك فتح السلاسل في نوافذ متصفح منفصلة عن طريق اختيار أيقونة **نافذة جديدة** [\|new-window-icon\|](###SUBST###|new-window-icon|) في ترويسة السلسلة. يتيح لك ذلك عرض والمشاركة في سلاسل متعددة في وقت واحد دون فقدان السياق.
+## متابعة السلاسل والرسائل
 
-### متابعة السلاسل والرسائل 
-
-ستتابع تلقائيًا كل سلسلة تشارك فيها أو تُذكر فيها. يمكنك متابعة رسائل وسلاسل محددة يدويًا بحيث يؤدي أي نشاط رد إلى تشغيل [الإشعارات](/end-user-guide/preferences/manage-your-notifications). يمكنك متابعة أو إلغاء متابعة أي سلسلة في أي وقت. في القنوات، تعني النقطة الموجودة بجانب المشاركين في السلسلة وجود ردود غير مقروءة للسلاسل التي تتابعها.
+ستتابع تلقائياً كل سلسلة تشارك فيها أو تُذكر فيها. تضمن المتابعة تلقي [الإشعارات](/end-user-guide/preferences/manage-your-notifications) عند وجود نشاط جديد.
 
 <Image 
   src={crtFollowingThread} 
-  alt="تابع السلاسل لتبقى على اطلاع." 
-  width={600} 
+  alt="متابعة السلاسل" 
+  style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
 />
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    قم بتبديل خيار **متابعة** الخاص بالسلسلة، أو اختر **متابعة السلسلة** من أيقونة **مزيد من الإجراءات** [\|more-icon\|](####SUBST###|more-icon|).
-
-    <Image src={crtFollowingThreadJpg} alt="إلغاء متابعة السلاسل" width={600} />
-
+    <Steps>
+    1. قم بتبديل خيار **متابعة** في ترويسة السلسلة.
+    2. أو اختر **متابعة السلسلة** من قائمة **المزيد** <i class="fa-solid fa-ellipsis-vertical"></i>.
+    </Steps>
+    <Image src={crtFollowingThreadJpg} alt="إلغاء متابعة السلاسل" style={{ borderRadius: '8px', margin: '10px auto', display: 'block' }} />
     <Aside type="note">
-            <ul style={{ listStyleType: 'disc', paddingInlineStart: '1.5rem' }}>
-              <li>تابع الرسائل التي لا تحتوي على ردود من أيقونة **مزيد من الإجراءات** ليتم إخطارك إذا قام شخص ما بالرد على الرسالة لاحقًا.</li>
-              <li>يمكنك أيضًا استخدام مفاتيح الأسهم بلوحة المفاتيح للتنقل بين السلاسل في عرض **السلاسل**.</li>
-            </ul>
-
+      <i class="fa-solid fa-circle-info"></i> يمكنك متابعة الرسائل التي لا تحتوي على ردود ليتم إخطارك فور بدء نقاش عليها.
     </Aside>
-
-
-    
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
-    اضغط مطولاً على رسالة للوصول إلى خيارات الرسالة، ثم اضغط على **متابعة السلسلة**.
-    <Image src={mobileFollowGif} alt="متابعة السلسلة في الجوال" width={300} />
-
-    بدلاً من ذلك، يمكنك أيضًا الضغط على مؤشر **متابعة** أسفل سلسلة الرسائل لمتابعتها.
-    <Image src={mobileFollowTapGif} alt="تبديل مؤشر المتابعة" width={300} />
-
+    <Steps>
+    1. اضغط مطولاً على الرسالة، ثم اختر **متابعة السلسلة**.
+       <Image src={mobileFollowGif} alt="متابعة السلسلة جولة" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} />
+    2. بدلاً من ذلك، اضغط على مؤشر **متابعة** أسفل السلسلة.
+       <Image src={mobileFollowTapGif} alt="تبديل المتابعة" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} />
+    </Steps>
     <Aside type="note">
-        تابع الرسائل التي لا تحتوي على ردود من أيقونة **المزيد**  ليتم إخطارك لاحقاً.
-        <Image src={mobileFollowNoRepliesGif} alt="متابعة رسالة بدون ردود" width={300} />
-    
+      لمتابعة رسالة بدون ردود:
+      <Image src={mobileFollowNoRepliesGif} alt="بدون ردود" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} />
     </Aside>
-
-    
   </TabItem>
 </Tabs>
 
-### إلغاء متابعة السلاسل 
+---
 
-إذا لم تعد مهتمًا بسلسلة رسائل، فقم بإلغاء متابعتها للتوقف عن تلقي الإشعارات.
+##  إلغاء متابعة السلاسل
+
+إذا لم تعد مهتماً بنقاش معين، يمكنك إلغاء المتابعة للتوقف عن تلقي الإشعارات.
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    قم بتبديل مؤشر **متابع** الخاص بالسلسلة، أو اختر **إلغاء متابعة السلسلة** من أيقونة **مزيد من الإجراءات** <i class="fa-solid fa-window"></i> .
-    <Image src={desktopUnfollowJpg} alt="إلغاء المتابعة سطح المكتب" width={600} />
+    <Steps>
+    1. قم بتبديل مؤشر **متابع** في السلسلة.
+    2. أو اختر **إلغاء متابعة السلسلة** من قائمة **المزيد** <i class="fa-solid fa-ellipsis-vertical"></i>.
+    </Steps>
+    <Image src={desktopUnfollowJpg} alt="إلغاء المتابعة سطح المكتب" style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '15px auto' }} />
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
-    اضغط مطولاً على رسالة للوصول إلى خيارات الرسالة، ثم اضغط على **إلغاء متابعة السلسلة**.
-    <Image src={mobileUnfollowGif} alt="إلغاء المتابعة خيارات" width={300} />
-
-    بدلاً من ذلك، يمكنك الضغط على مؤشر **متابع** أسفل سلسلة الرسائل لإلغاء متابعتها.
-    <Image src={mobileUnfollowTapGif} alt="تبديل مؤشر المتابع" width={300} />
+    <Steps>
+    1. اضغط مطولاً على الرسالة واختر **إلغاء متابعة السلسلة**.
+       <Image src={mobileUnfollowGif} alt="إلغاء المتابعة" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} />
+    2. أو اضغط مباشرة على مؤشر **متابع** أسفل السلسلة.
+       <Image src={mobileUnfollowTapGif} alt="تبديل المتابع" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} />
+    </Steps>
   </TabItem>
 </Tabs>
 
-### عرض جميع السلاسل (View all threads)
+---
 
-اختر **السلاسل** في أعلى الشريط الجانبي للقناة لمرئية جميع السلاسل التي تتابعها في الفريق المحدد حاليًا. تظهر السلاسل التي تحتوي على أحدث الردود في أعلى القائمة.
+##  عرض جميع السلاسل (View all threads)
 
-اختر **غير مقروءة** لتصفية السلاسل التي تتابعها بحيث تظهر فقط السلاسل التي تحتوي على ردود غير مقروءة.
+اختر **السلاسل (Threads)** <i class="fa-solid fa-layer-group"></i> في أعلى الشريط الجانبي لرؤية جميع المحادثات التي تتابعها في الفريق الحالي. تظهر السلاسل ذات الردود الأحدث في المقدمة.
+
+<Aside type="tip">
+  استخدم تصفية **غير مقروءة** للتركيز فقط على المحادثات التي تحتوي على ردود جديدة لم ترها بعد.
+</Aside>
 
 <Image 
   src={crtThreadViewJpg} 
   alt="عرض السلاسل في الشريط الجانبي" 
-  width={600} 
+  style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
 />
 
-### فيديو تعليمي (Tutorial video)
+---
 
-<script src="https://fast.wistia.com/embed/medias/5gjgi10rr0.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style={{padding:'56.25% 0 0 0',position:'relative'}}><div class="wistia_responsive_wrapper" style={{height:'100%',left:0,position:'absolute',top:0,width:'100%'}}><div class="wistia_embed wistia_async_5gjgi10rr0 videoFoam=true" style={{height:'100%',position:'relative',width:'100%'}}><div class="wistia_swatch" style={{height:'100%',left:0,opacity:0,overflow:'hidden',position:'absolute',top:0,transition:'opacity 200ms',width:'100%'}}><img src="https://fast.wistia.com/embed/medias/5gjgi10rr0/swatch" style={{filter:'blur(5px)',height:'100%',objectFit:'contain',width:'100%'}} alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
-<br />
+## فيديو تعليمي
 
-### المشكلات المعروفة (Known issues)
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+  <iframe 
+    src="https://fast.wistia.net/embed/iframe/5gjgi10rr0" 
+    title="Threaded Discussions Tutorial" 
+    allow="autoplay; fullscreen" 
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+  ></iframe>
+</div>
 
-تم إصدار المناقشات المتسلسلة كإصدار عام في Mattermost v7.0، بما في ذلك تحسينات كبيرة في أداء الخادم وخيارات تكوين أكثر مرونة. نوصي بشدة بـ [ترقية Mattermost](/administration-guide/upgrade/upgrading-mattermost-server) للاستفادة من تحسينات التكوين والأداء.
+---
+

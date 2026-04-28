@@ -1,166 +1,86 @@
 ---
-title: Work with boards
+title: "العمل مع اللوحات"
+description: "تعرف على كيفية إنشاء اللوحات، اختيار القوالب الجاهزة، إنشاء قوالب مخصصة، وإدارتها في ماترموست."
 ---
 
-.. If used with include::, note the paths for images
+import { Tabs, TabItem } from "@astrojs/starlight/components";
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/) (not available on Professional)
-</Aside>
+ابدأ باختيار نوع اللوحة التي تريد استخدامها. تحتوي اللوحة على بطاقات (Cards)، والتي عادة ما تتبع المهام أو المواضيع، وطرق عرض (Views)، والتي تحدد كيفية عرض البطاقات أو مجموعة فرعية منها. يمكن لطرق العرض عرض البطاقات بتنسيق لوحة، أو جدول، أو تقويم، أو معرض، مع إمكانية تصفيتها وتجميعها حسب خاصية معينة (مثل الأولوية، الحالة، إلخ).
 
+## إضافة لوحات جديدة
 
-Start by selecting the type of board you want to use. A board contains
-cards, which typically track tasks or topics, and views, which define
-how to display the cards, or a subset of them. Views can display cards
-in a board, table, calendar, or gallery layout, optionally filtered and
-grouped by a property (e.g., priority, status, etc).
+لإضافة لوحة جديدة، اختر أيقونة الزائد **+** في أعلى الشريط الجانبي، ثم اختر **Create New Board** لفتح منتقي القوالب واختيار قالب أو لوحة فارغة.
 
-# Add new boards
+### تفاصيل اللوحة
 
-To add a new board, select the plus icon [\|plus\|](##SUBST##|plus|) at
-the top of the sidebar, then select **Create New Board** to open the
-template picker and select a template or blank board.
+- لتسمية لوحة أو إعادة تسميتها، اختر منطقة العنوان لتحريرها.
+- لعرض وصف اللوحة، قم بتمرير المؤشر فوق عنوان اللوحة واختر **Show description**. بمجرد ظهور حقل الوصف، اختر **Add a description** أسفل عنوان اللوحة مباشرة لإضافة الوصف أو تحريره.
+- يتم إنشاء اللوحات والبطاقات بأيقونات عشوائية افتراضياً. لتغيير الأيقونات أو إزالتها، اختر الأيقونة ثم اختر الإجراء المناسب.
+- يتم حفظ جميع التغييرات التي تجريها على اللوحات والبطاقات فوراً.
 
-## Board details
+## اختيار قالب للوحة
 
-To name or rename a board, select the title area to edit it.
+توفر لك القوالب هيكلية محددة مسبقاً لتتمكن من البدء بسرعة. لكل قالب وظيفة مختلفة، ولكن يمكن تخصيصه ليناسب حالة الاستخدام الخاصة بك. عندما تقوم بإنشاء لوحة جديدة من منتقي القوالب، اختر اسم كل قالب لمعاينته والتأكد من ملاءمته لمتطلباتك. بدلاً من ذلك، يمكنك إنشاء قوالب اللوحات الخاصة بك.
 
-To display board description, hover above the board’s title and select
-**Show description** to activate the show/hide toggle. Once the
-description field is displayed, select **Add a description** right below
-the board title to add or edit the description.
+### قوالب اللوحات القياسية
 
-Boards and cards are created with random icons by default. To change or
-remove icons, select the icon then choose the appropriate action.
+تشمل قوالب اللوحات القياسية ما يلي:
 
-All changes you make to boards and cards are saved immediately.
+- **تقويم المحتوى (Content Calendar)**: تخطيط وتنظيم جدول إنشاء المحتوى ونشره.
+- **أهداف الشركة والنتائج الرئيسية (Company Goals & OKRs)**: تخطيط أهداف الشركة وأهدافها بشكل أكثر كفاءة.
+- **التحليل التنافسي (Competitive Analysis)**: تتبع المنافسين والبقاء في المقدمة.
+- **جدول أعمال الاجتماع (Meeting Agenda)**: استخدم هذا القالب للاجتماعات المتكررة؛ لترتيب العناصر وتنظيم المناقشات.
+- **أهداف شخصية (Personal Goals)**: تصنيف وتخطيط أهدافك الشخصية.
+- **مهام شخصية (Personal Tasks)**: تنظيم حياتك وتتبع مهامك الشخصية.
+- **مهام المشروع (Project Tasks)**: البقاء على اطلاع بمهام مشروعك، وتتبع التقدم، وتحديد الأولويات.
+- **خارطة الطريق (Roadmap)**: تخطيط خارطة الطريق وإدارة الإصدارات بكفاءة أكبر.
+- **مخطط الدورات (Sprint Planner)**: تخطيط الدورات (Sprints) والإصدارات بكفاءة أكبر.
+- **مراجعة الفريق اللاحقة (Team Retrospective)**: تحديد ما سار بشكل جيد وما يمكن تحسينه في المستقبل.
+- **جلسات بحث المستخدم (User Research Sessions)**: إدارة وتتبع جميع جلسات بحث المستخدم الخاصة بك.
+- **مرحباً بك في اللوحات! (Welcome to Boards!)**: قالب تعليمي مع نقاط جولة إرشادية لمساعدتك على التعرف بسرعة على اللوحات.
 
-# Choose a board template
+### إنشاء لوحة فارغة
 
-Templates provide you with a predefined structure so that you can get
-started quickly. Each template has a different function, but can be
-customized to suit your use case. When you create a new board from the
-template picker, select each template’s name to preview it and make sure
-it suits your requirements. Alternatively, you can create your own board
-templates.
+إذا لم يكن أي من القوالب المتاحة يناسب متطلباتك، يمكنك إنشاء لوحة فارغة باستخدام خيار **Create empty board** من منتقي القوالب.
 
-## Board templates
+### إنشاء قالب جديد
 
-Standard board templates include:
+لإنشاء قالب لوحة جديد، اختر أيقونة الزائد **+** في أعلى الشريط الجانبي لفتح منتقي القوالب، اختر **Create New Board** ثم اختر **+ New template**.
 
-- **Content Calendar**: Plan and organize your content creation and
-  publication schedule.
-- **Company Goals & OKRs**: Plan your company goals and objectives more
-  efficiently.
-- **Competitive Analysis**: Track and stay ahead of the competition.
-- **Meeting Agenda**: Use this template for recurring meetings. Queue up
-  items, organize discussions, and plan what to revisit later.
-- **Personal Goals**: Categorize and plan your personal goals.
-- **Personal Tasks**: Organize your life and track your personal tasks.
-- **Project Tasks**: Stay on top of your project tasks, track progress,
-  and set priorities.
-- **Roadmap**: Plan your roadmap and manage your releases more
-  efficiently.
-- **Sprint Planner**: Plan your sprints and releases more efficiently.
-- **Team Retrospective**: Identify what worked well and what can be
-  improved for the future.
-- **User Research Sessions**: Manage and keep track of all your user
-  research sessions.
-- **Welcome to Boards!**: Onboarding template with guided tour points to
-  help you quickly ramp up on Boards.
+لتحويل لوحة موجودة إلى قالب، قم بتمرير المؤشر فوق عنوان اللوحة في الشريط الجانبي. اختر قائمة الخيارات (النقاط الثلاث)، ثم اختر **New template from board**.
 
-## Create a blank board
+## مشاركة قالب لوحة مخصص
 
-If none of the available templates suit your requirements, you can
-create a blank board using the **Create empty board** option from the
-template picker.
+<Tabs>
+  <TabItem label="من إصدار Boards v7.2 أو أحدث">
+    تدعم القوالب المخصصة التحكم في الأذونات، وتقتصر على منشئ القالب فقط بشكل افتراضي. منشئ القالب هو مسؤول (Admin) للقالب. لجعل القالب متاحاً للجميع في الفريق، اختر **Share** في محرر القالب، ثم اضبط دور الفريق على **Viewer**. سيتمكن جميع أعضاء الفريق الآن من رؤية واختيار القالب من منتقي القوالب.
 
-## Create a new template
+    يمكن لمسؤول القالب أيضاً منح أعضاء محددين في الفريق أذونات مرتفعة للقالب و/أو قصر الوصول على أعضاء محددين عن طريق ضبط دور الفريق على **None** وإضافة أعضاء بشكل فردي. يمكن تعيين الأدوار التالية للأعضاء في القالب:
+    - **مسؤول (Admin)**: يمكنه تعديل القالب وأذوناته، وحذف القالب.
+    - **محرر (Editor)**: يمكنه تعديل القالب ولكن لا يمكنه حذفه أو تغيير الأذونات.
+    - **مشاهد (Viewer)**: يمكنه عرض واختيار القالب.
 
-To create a new board template select the plus icon
-[\|plus\|](##SUBST##|plus|) at the top of the sidebar to open the
-template picker, select **Create New Board** and then select **+ New
-template**.
+  </TabItem>
+  <TabItem label="ما قبل إصدار Boards v7.2">
+    اللوحات والقوالب خاصة بالقنوات، لذا ستجد اللوحة أو القالب في القناة التي أنشأته فيها. إذا كنت ترغب في إعادة استخدام لوحة كقالب في مساحة عمل قناة أخرى، يمكنك تصديرها ثم استيراد ملف الأرشيف في القناة التي تختارها.
 
-To turn an existing board into a template, hover over the board title in
-the sidebar. Select the options menu
-[\|more-icon\|](##SUBST##|more-icon|), then select **New template from
-board**.
+    للقيام بذلك، اختر قائمة الخيارات (النقاط الثلاث) في شريط الأدوات بأعلى اللوحة. ثم اختر **Export** لتصدير أرشيف اللوحة. قم بتنزيل ملف الأرشيف. انتقل إلى القناة التي ترغب في إضافة اللوحة المصدرة إليها. اختر أيقونة الترس بجانب صورة ملفك الشخصي، ثم اختر **Import archive**. ستتم إضافة اللوحة التي أنشأتها إلى هذه القناة.
 
-## Share a custom board template
+  </TabItem>
+</Tabs>
 
-<div class="tab">
+## تحرير قوالب اللوحات
 
-From Boards v7.2 or later
+القوالب المخصصة قابلة للتحرير بالكامل، ولكن القوالب القياسية لا يمكن تحريرها أو حذفها. لفتح محرر القالب لقالب معين، انتقل إلى منتقي القوالب ثم قم بتمرير المؤشر فوق القالب المخصص واختر أيقونة القلم. سيتم حفظ أي تغييرات تجريها في محرر القالب تلقائياً وستكون مرئية لأعضاء الفريق الذين لديهم حق الوصول إلى القالب.
 
-Custom templates support permissions control, and are restricted to only
-the template creator by default. The template creator is an admin of the
-template. To make the template accessible to everyone on the team,
-select **Share** on the template editor, and then set the team role as
-**Viewer**. All members of the team will now be able to see and select
-the template from the template picker.
-
-The admin of the template can also grant specific team members elevated
-permissions to the template and/or limit access to selected team members
-by setting the team role as **None** and adding individual members to
-the template. Individual team members can be assigned the following
-roles on a template:
-
-- **Admin**: Can modify the template and its permissions, and delete the
-  template.
-- **Editor**: Can modify but not delete the template, nor change
-  permissions.
-- **Viewer**: Can view and select the template.
-
-</div>
-
-<div class="tab">
-
-Prior to Boards v7.2
-
-Boards and templates are channel-specific so whichever channel you
-create your board or template in, is where you’ll find it. If you’d like
-to re-use a board as a template on another channel workspace, you can
-export it and then import the archive file in the channel of your
-choosing.
-
-To do this, select the options menu
-[\|more-icon\|](##SUBST##|more-icon|) in the toolbar at the top of the
-board. Then select **Export** board archive. Download the archive file.
-Navigate to the channel where you’d like to add the exported board.
-Select the gear icon [\|gear\|](##SUBST##|gear|) next to your profile
-picture, then choose **Import archive**. The board you created will be
-added to this channel.
-
-</div>
-
-# Edit board templates
-
-Custom templates are fully editable, but standard templates cannot be
-edited or deleted. To open the template editor for a specific template,
-go to the template picker then hover over the custom template and select
-the pencil icon. Any changes made on the template editor will be
-automatically saved and visible to team members who have access to the
-template.
-
-<div class="tab">
-
-From Boards v7.2 or later
-
-Only admins and editors of a custom template can edit the template. If
-you don't see the pencil icon when hovering over the template, then you
-don't have the appropriate permissions to edit the template.
-
-</div>
-
-<div class="tab">
-
-Prior to Boards v7.2
-
-Any member of the channel workspace can edit a custom template in the
-channel. To limit access to the template, create or export the template
-to a private channel.
-
-</div>
+<Tabs>
+  <TabItem label="من إصدار Boards v7.2 أو أحدث">
+    يمكن للمسؤولين والمحررين فقط تحرير القالب المخصص. إذا لم تظهر أيقونة القلم
+    عند تمرير المؤشر فوق القالب، فهذا يعني أنك لا تملك الأذونات المناسبة
+    لتحريره.
+  </TabItem>
+  <TabItem label="ما قبل إصدار Boards v7.2">
+    يمكن لأي عضو في مساحة عمل القناة تحرير قالب مخصص في القناة. لتقييد الوصول
+    إلى القالب، قم بإنشاء القالب أو تصديره إلى قناة خاصة.
+  </TabItem>
+</Tabs>

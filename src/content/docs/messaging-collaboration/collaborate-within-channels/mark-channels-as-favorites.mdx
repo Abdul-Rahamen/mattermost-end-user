@@ -3,10 +3,10 @@ title: "تمييز القنوات كمفضلة (Mark channels as favorites)"
 description: "تعرف على كيفية تمييز القنوات والرسائل كقنوات مفضلة في Mattermost للوصول السريع إليها من الشريط الجانبي."
 ---
 
-import { Tabs, TabItem, Steps,Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import { Tabs, TabItem, Steps, Aside } from '@astrojs/starlight/components';
+import FAIcon from "../../../../components/FAIcon.astro";
 
-{/* استيراد الصور */}
 import favoritesSidebar from '../../../../images/favorites-list-sidebar.png';
 import favoriteDesktop from '../../../../images/favorite-channel-desktop.png';
 import mobileSelectChannel from '../../../../images/mobile-select-a-channel.jpg';
@@ -18,69 +18,83 @@ import mobileUnfavoriteWithin from '../../../../images/mobile-unfavorite-a-chann
 
 يمكنك تمييز القنوات العامة والخاصة، بالإضافة إلى الرسائل المباشرة والجماعية، كقنوات مفضلة ليسهل الوصول إليها لاحقًا. تظهر القنوات المفضلة في فئة **المفضلة (Favorites)** في الشريط الجانبي للقناة.
 
-<Image  
-  style={{ height: '650px', borderRadius: '15px', border: '1px solid #ddd', display: 'block' }}
+<Image 
+  style={{ height: 'auto', maxHeight: '650px', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '20px auto' }}
   src={favoritesSidebar} 
   alt="تظهر القنوات المفضلة في الشريط الجانبي للقناة." 
   width={300} 
 />
 
-لتمييز قناة كـ **مفضلة (Favorite)**:
+---
+
+## <i class="fa-solid fa-star"></i> كيفية تمييز قناة كمفضلة
+
+لتمييز قناة كـ **مفضلة (Favorite)**، اتبع التعليمات حسب نوع جهازك:
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب (Web/Desktop)" icon="laptop">
     <Steps>
-      1. افتح القناة.
-      2. انقر على أيقونة النجمة بجانب اسم القناة.
+      1. افتح القناة التي تريد تمييزها.
+      2. انقر على **أيقونة النجمة** بجانب اسم القناة في الجزء العلوي.
     </Steps>
 
-    في أعلى الصفحة، اختر أيقونة [\|favorite-icon\|](##SUBST##|favorite-icon|) بجانب اسم القناة.
+    بمجرد النقر، ستتحول الأيقونة إلى <FAIcon name="heart" /> (أو نجمة ممتلئة حسب السمة) بجانب اسم القناة.
 
     <Image 
       src={favoriteDesktop} 
-      alt="تميز القناة كقناة مفضلة." 
+      alt="تميز القناة كقناة مفضلة على سطح المكتب." 
       width={600} 
+      style={{ borderRadius: '8px', border: '1px solid #eee' }}
     />
 
-    لإزالة قناة من قائمة **المفضلة (Favorites)** الخاصة بك، اختر أيقونة [\|favorite-icon\|](##SUBST##|favorite-icon|) مرة أخرى.
-
-    بدلاً من ذلك، لتمييز القنوات كمفضلة، اختر اسم القناة، ثم اختر أيقونة **عرض المعلومات (View Info)** [\|channel-info\|](##SUBST##|channel-info|)، ثم اختر **مفضلة (Favorite)** في اللوحة اليمنى. اختر **مُفضلة (Favorited)** لإزالة القناة من قائمة المفضلة لديك.
+    <Aside type="tip">
+      * لإزالة قناة من المفضلة، انقر على الأيقونة مرة أخرى.
+      * **طريقة بديلة:** اختر اسم القناة > أيقونة **عرض المعلومات (View Info)** <i class="fa-solid fa-info-circle"></i> > ثم اختر **مفضلة (Favorite)** من اللوحة الجانبية اليمنى.
+    </Aside>
   </TabItem>
 
   <TabItem label="الهاتف المحمول (Mobile)" icon="mobile">
+    ### الطريقة الأولى: من قائمة الخيارات
     <Steps>
-      1. اضغط على القناة التي تريد تمييزها كقناة مفضلة.
-         <Image src={mobileSelectChannel} alt="اختر القناة التي تريد تمييزها كقناة مفضلة." width={300} />
+      1. اضغط على القناة التي تريد تمييزها.
+         <Image src={mobileSelectChannel} alt="اختر القناة." width={300} style={{ borderRadius: '10px' }} />
 
-      2. اضغط على أيقونة **المزيد (More)** [\|more-icon-vertical\|](##SUBST##|more-icon-vertical|) الموجودة في الزاوية العلوية اليمنى من التطبيق.
-         <Image src={mobileMoreOptions} alt="اضغط على المزيد للوصول إلى الخيارات المتاحة للقناة." width={300} />
+      2. اضغط على أيقونة **المزيد (More)** <FAIcon name="ellipsis-vertical" /> في الزاوية العلوية اليمنى.
+         <Image src={mobileMoreOptions} alt="قائمة المزيد." width={300} style={{ borderRadius: '10px' }} />
 
       3. اضغط على **مفضلة (Favorite)**.
-         <Image src={mobileViewInfo} alt="اضغط على مفضلة لتمييز القناة كواحدة من المفضلة." width={300} />
+         <Image src={mobileViewInfo} alt="تفعيل المفضلة." width={300} style={{ borderRadius: '10px' }} />
     </Steps>
 
-    بدلاً من ذلك، يمكنك تمييز القناة كقناة مفضلة كما يلي:
-
+    ### الطريقة الثانية: من داخل معلومات القناة
     <Steps>
-      1. داخل القناة، اضغط على اسم القناة في أعلى الشاشة.
-         <Image src={mobileMoreOptions} alt="اضغط على اسم القناة لعرض الخيارات المتاحة للقناة." width={300} />
+      1. داخل القناة، اضغط على **اسم القناة** في أعلى الشاشة.
+         <Image src={mobileMoreOptions} alt="الضغط على اسم القناة." width={300} style={{ borderRadius: '10px' }} />
 
       2. اضغط على **مفضلة (Favorite)**.
-         <Image src={mobileFavoriteWithin} alt="اضغط على مفضلة لتمييز القناة كواحدة من المفضلة." width={300} />
+         <Image src={mobileFavoriteWithin} alt="تمييز كمفضلة من الداخل." width={300} style={{ borderRadius: '10px' }} />
     </Steps>
   </TabItem>
 </Tabs>
 
-لإزالة قناة من قائمة **المفضلة (Favorites)**، اضغط على خيار **مُفضلة (Favorited)**.
+---
 
-<Image 
-  src={mobileUnfavorite} 
-  alt="اضغط على مُفضلة لإلغاء تفضيل القناة." 
-  width={300} 
-/>
+##  إزالة قناة من المفضلة (Mobile)
 
-<Image 
-  src={mobileUnfavoriteWithin} 
-  alt="اضغط على مُفضلة لإلغاء تفضيل القناة من داخل القناة." 
-  width={300} 
-/>
+لإزالة قناة من قائمة **المفضلة (Favorites)** على الهاتف المحمول، اضغط على خيار **مُفضلة (Favorited)** لإلغاء التفعيل.
+
+<div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'center' }}>
+  <Image 
+    src={mobileUnfavorite} 
+    alt="إلغاء تفضيل القناة." 
+    width={280} 
+    style={{ borderRadius: '10px' }}
+  />
+
+  <Image 
+    src={mobileUnfavoriteWithin} 
+    alt="إلغاء تفضيل القناة من داخل القناة." 
+    width={280} 
+    style={{ borderRadius: '10px' }}
+  />
+</div>

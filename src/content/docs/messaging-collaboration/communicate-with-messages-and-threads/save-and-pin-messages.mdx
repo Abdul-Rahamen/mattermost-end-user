@@ -3,8 +3,9 @@ title: "حفظ وتثبيت الرسائل (Save and pin messages)"
 description: "تعرف على كيفية حفظ الرسائل لاستخدامك الشخصي أو تثبيتها في القنوات ليشاهدها جميع أعضاء الفريق في Mattermost."
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem,Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import FAIcon from "../../../../components/FAIcon.astro";
 
 {/* استيراد الأصول المرئية */}
 import saveMessage from '../../../../images/save-message.png';
@@ -36,7 +37,7 @@ import mobileUnpinChannelGif from '../../../../images/mobile-unpin-a-message-fro
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    احفظ الرسائل للمتابعة اللاحقة عن طريق اختيار أيقونة **حفظ** [\|save-icon\|](##SUBST##|save-icon|) بجانب الرسالة.
+    احفظ الرسائل للمتابعة اللاحقة عن طريق اختيار أيقونة **حفظ**   بجانب الرسالة.
 
     <Image src={saveMessage} alt="حفظ الرسائل للمتابعة اللاحقة" width={600} style={{ display: 'block', margin: '2rem auto' }} />
 
@@ -52,7 +53,7 @@ import mobileUnpinChannelGif from '../../../../images/mobile-unpin-a-message-fro
 
     <Image src={mobileSaveGif} alt="حفظ رسالة في الجوال" width={300} style={{ display: 'block', margin: '2rem auto' }} />
 
-    لرؤية جميع رسائلك المحفوظة، اضغط على أيقونة **حفظ** [\|save-icon\|](##SUBST##|save-icon|) في أسفل التطبيق.
+    لرؤية جميع رسائلك المحفوظة، اضغط على أيقونة **حفظ**  <FAIcon name="save" /> في أسفل التطبيق.
 
     <Image src={mobileViewSavedGif} alt="عرض الرسائل المحفوظة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
 
@@ -60,7 +61,7 @@ import mobileUnpinChannelGif from '../../../../images/mobile-unpin-a-message-fro
 
     <Image src={mobileUnsaveGif} alt="إلغاء الحفظ من القائمة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
 
-    بدلاً من ذلك، يمكنك أيضًا الضغط على الرسالة المحفوظة في القناة ثم الضغط على أيقونة **تم الحفظ** [\|saved-icon\|](##SUBST##|saved-icon|) أسفلها لإلغاء الحفظ.
+    بدلاً من ذلك، يمكنك أيضًا الضغط على الرسالة المحفوظة في القناة ثم الضغط على أيقونة **تم الحفظ**<FAIcon name="save" /> أسفلها لإلغاء الحفظ.
 
     <Image src={mobileUnsaveChannelGif} alt="إلغاء الحفظ من القناة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
   </TabItem>
@@ -72,7 +73,7 @@ import mobileUnpinChannelGif from '../../../../images/mobile-unpin-a-message-fro
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    1. مرّر مؤشر الفأرة فوق الرسالة التي تريد تثبيتها. يظهر رابط أيقونة **المزيد** [\|more-icon\|](##SUBST##|more-icon|).
+    1. مرّر مؤشر الفأرة فوق الرسالة التي تريد تثبيتها. يظهر رابط أيقونة **المزيد** <FAIcon name="ellipsis-vertical" />.
     2. اختر خيار **المزيد**، ثم اختر **تثبيت في القناة**.
 
     <Image src={pinMessageImg} alt="تثبيت الرسائل" width={600} style={{ display: 'block', margin: '2rem auto' }} />
@@ -104,7 +105,7 @@ import mobileUnpinChannelGif from '../../../../images/mobile-unpin-a-message-fro
     1. اضغط على القناة المطلوبة.
     <Image src={mobileSelectChannel} alt="اختيار القناة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
     
-    2. اضغط على أيقونة **المزيد** [\|more-icon-vertical\|](##SUBST##|more-icon-vertical|) في الزاوية العلوية اليمنى.
+    2. اضغط على أيقونة **المزيد**<FAIcon name="ellipsis-vertical" /> في الزاوية العلوية اليمنى.
     <Image src={mobileMoreOptions} alt="خيارات القناة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
 
     3. اضغط على **عرض المعلومات**.
@@ -120,16 +121,7 @@ import mobileUnpinChannelGif from '../../../../images/mobile-unpin-a-message-fro
   </TabItem>
 </Tabs>
 
-<div style={{ 
-  borderInlineStart: '4px solid #ffffff', 
-  backgroundColor: 'rgba(0, 152, 126, 0.1)', 
-  padding: '1rem', 
-  margin: '1.5rem 0',
-  borderRadius: '0.25rem',
-  color: '#ffffff'
-}}>
-  <strong style={{ display: 'block', marginBottom: '0.5rem' }}>ℹ️ ملاحظة</strong>
-  <span style={{ color: 'var(--sl-color-white)' }}>
-    بدءًا من الإصدار v10.2 من Mattermost، يتم إخفاء أيقونة **المثبتة** [\|pinned-messages\|](##SUBST##|pinned-messages|) تلقائياً عندما لا توجد رسائل مثبتة في القناة.
-  </span>
-</div>
+<Aside type="note">  
+  بدءًا من الإصدار v10.2 من Mattermost، يتم إخفاء أيقونة **المثبتة**  تلقائياً عندما لا توجد رسائل مثبتة في القناة.
+</Aside>
+  

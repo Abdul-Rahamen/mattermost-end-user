@@ -31,7 +31,7 @@ Ensure images are centered using display: 'block' and margin: 'auto'.
 Code Cleanup: Remove all legacy HTML noise (<span dir="ltr">, <div>, ##SUBST##, broken macros).
 Information Architecture: Use clear headings, bullet points, and tables for comparison.
 Example of Input Style to Fix:
-![Plan Icon](##SUBST##) Available on Enterprise [link]
+![Plan Icon](##SUBST##) Available on Enterprise [link] or in fortawsome icons 
 <div class="tab">Mobile Step 1...</div>
 Example of Expected Output Style:
 <Aside type="note"><Badge text="Enterprise" /> متاح في نسخة...</Aside>

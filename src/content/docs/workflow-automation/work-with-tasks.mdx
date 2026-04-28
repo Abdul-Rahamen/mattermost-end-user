@@ -1,168 +1,108 @@
 ---
-title: Work with tasks
+title: "إدارة المهام"
+description: "تعرف على كيفية إدارة المهام في أدلة العمل، ضبط تواريخ الاستحقاق، استخدام إجراءات المهام المؤتمتة، والتعامل مع المهام الشرطية."
 ---
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Professional, Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/)
-</Aside>
+import FAIcon from "../../../components/FAIcon.astro";
 
+## المهام وتواريخ الاستحقاق
 
-# Tasks and due dates
+في بعض تدفقات العمل، توجد قيود زمنية على المهام بينما قد يكون للبعض الآخر أطر زمنية أكثر مرونة. يساعد ربط المهام بتواريخ تسليم محددة في توفير رؤية واضحة لأعباء العمل ويساعد الجميع على تحمل المسؤولية أثناء دورة التشغيل.
 
-In some workflows, there are time constraints on tasks and others may
-have more flexible timeframes. Associating tasks with deliverable dates
-provides visibility into workloads and helps everyone stay accountable
-during the run.
+لتعيين تاريخ استحقاق لمهمة ما، اختر أيقونة **Toggle Run Details** لفتح شاشة **Run Details**. قم بتمرير المؤشر فوق المهمة التي ترغب في تحريرها واختر أيقونة التقويم لتعيين تاريخ الاستحقاق. يمكن استخدام تواريخ الاستحقاق لفرز المهام في النظرة العامة لدورة التشغيل.
 
-To assign a due date to a task, select the **Toggle Run Details** icon
-to open the **Run Details** screen. Hover over the task you’d like to
-edit and select the calendar icon to assign a due date. Due dates can be
-used to sort tasks in the run overview.
+عند تعيين تاريخ استحقاق لمهمة ما، وتكون المهمة متأخرة أو مستحقة اليوم، يتم إضافة تذكير إلى الموجز اليومي لدليل العمل (Playbook's daily digest) جنباً إلى جنب مع المهام التي ليس لها تاريخ استحقاق محدد. وبمجرد اكتمال المهام، يتم إزالتها من تذكيرات الموجز اليومي. يمكنك تحديث قائمة المهام المعينة في أي وقت باستخدام الأمر المائل `/playbook todo`.
 
-When a due date is assigned to a task, and the task is overdue or due
-today, a reminder is added to the playbook's daily digest along with
-tasks that don't have an assigned due date. As tasks are completed,
-they're removed from the daily digest reminders. You can refresh the
-list of assigned tasks at any time using the `/playbook todo` slash
-command.
+يمكن إدخال تواريخ الاستحقاق نصياً (مثل "two minutes ago") أو رقمياً (مثل "15 March 2023").
 
-Due dates can be entered in text (e.g., "two minutes ago") or
-numerically (e.g., "15 March 2023").
+## إجراءات المهام (Task actions)
 
-# Task actions
+يمكنك إكمال المهام تلقائياً في دورة تشغيل دليل العمل باستخدام محفزات الكلمات المفتاحية. عندما يتم ذكر الكلمات المفتاحية التي أدخلتها في دورة التشغيل، يتم وضع علامة "مكتمل" على المهمة.
 
-You can automatically complete tasks in a playbook run using keyword
-triggers. When the keywords you've entered are mentioned in the run, the
-task is marked as completed.
+لهذه الميزة، يجب استخدام سلسلة نصية بدلاً من كلمات فردية. البحث هو بحث من نوع `ANY` (أي من الكلمات)، مما يعني أنه إذا استخدمت الكلمات الفردية "target" و "completed"، فإن أي من هاتين الكلمتين ستؤدي إلى وضع علامة مكتمل على المهمة. إذا كنت تستخدم عبارات تحتوي على تنسيق، فتأكد من استخدام تنسيق Markdown في الحقل النصي.
 
-For this feature, you should use a string of text rather than individual
-words. The search is an `ANY` search, meaning that if you used the
-individual words "target" and "completed", either of those words will
-trigger the action to be marked as complete. If you're using phrases
-that have formatting, make sure you use the Markdown formatting in the
-text field.
+عند تحرير مهمة، سترى ما يلي:
 
-When you edit a task, you'll see the following:
+- النص المطلوب البحث عنه في الرسائل.
+- القدرة على قصر هذا البحث على المشاركات من مستخدم معين (أو بوت).
+- خيار وضع علامة "تم" على المهمة (أو لا).
 
-- The text to search for in the messages
-- Ability to limit this for posts from a specific user (or bot)
-- Option to mark the task as done (or not).
+<img
+  class="img-computer-screenshots"
+  src="https://docs.mattermost.com/_images/task-actions.png"
+  alt="تهيئة المهام ليتم وضع علامة مكتمل عليها تلقائياً."
+/>
 
-![Configure tasks to be automatically marked as complete.](../../../images/task-actions.png)
+## المهام الشرطية (Conditional tasks)
 
-# Conditional tasks
+بدءاً من إصدار Mattermost v11.1، عند استخدام ماترموست في متصفح الويب أو تطبيق سطح المكتب، يمكن تضمين المهام بشرط في أدلة العمل بناءً على قيم السمات أو ظروف وقت التشغيل. يتيح ذلك تدفقات عمل تكيفية حيث لا تُعرض المهام إلا عندما تكون ذات صلة بالسياق الحالي. على سبيل المثال:
 
-.. If used with include::, note the paths for images
+- **الحوادث الأمنية**: تضمين مهام جنائية إضافية للحوادث المصنفة كأمنية.
+- **تدفقات عمل فئات العملاء**: إظهار عمليات موافقة مختلفة بناءً على مستوى اشتراك العميل.
+- **العمليات الجغرافية**: تضمين مهام امتثال خاصة بالمنطقة بناءً على خاصية الموقع.
+- **التعيينات القائمة على المهارات**: تعيين المهام تلقائياً لأعضاء الفريق بناءً على مجالات خبرتهم.
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/) (not available on Professional)
-</Aside>
+### تهيئة المنطق الشرطي
 
+لإعداد السلوك الشرطي في دليل العمل:
 
-From Mattermost v11.1, using Mattermost in a web browser or the desktop
-app, tasks can be conditionally included in playbooks based on attribute
-values or runtime conditions. This enables adaptive workflows where
-tasks are only presented when they're relevant to the current context.
-For example:
+1. انتقل إلى أيقونة **Product menu** <FAIcon name="table-cells"/> واختر **Playbooks**.
+2. اختر دليل العمل أو دورة التشغيل التي تريد إضافة شروط إليها.
+3. اختر تبويب **Outline**.
+4. تحت قسم **Tasks**، حدد المهمة التي تريد جعلها شرطية.
+5. من أيقونة **More** <FAIcon name="ellipsis-vertical"/> النقاط الثلاث الرأسية بجانب المهمة، اختر **Add condition**.
 
-- **Security incidents**: Include additional forensic tasks for
-  incidents classified as security-related.
-- **Customer tier workflows**: Show different approval processes based
-  on customer subscription level.
-- **Geographic operations**: Include region-specific compliance tasks
-  based on the location property.
-- **Skill-based assignments**: Automatically assign tasks to team
-  members based on areas of expertise.
+<img
+  class="img-computer-screenshots"
+  src="https://docs.mattermost.com/_images/playbook-conditions-add.png"
+  alt="مثال على إضافة شرط لدليل العمل."
+/>
 
-## Configure conditional logic
+6. اختر السمة والشرط والقيمة لتحديد متى يجب تضمين المهمة. ثم اختر **Done editing**.
 
-To set up conditional behavior in a playbook:
+<img
+  class="img-computer-screenshots"
+  src="https://docs.mattermost.com/_images/playbook-conditions-values.png"
+  alt="مثال على شرط لدليل العمل مع تحديد القيم."
+/>
 
-1.  Go to **Product** [\|product-list\|](##SUBST##|product-list|) icon
-    and select **Playbooks**.
+يتم تقييم المهام الشرطية وإضافتها أو إزالتها تلقائياً من قائمة المهام بناءً على الشروط المحددة. يقلل هذا من العبء الذهني من خلال إظهار المهام ذات الصلة فقط ويضمن عدم إغفال الخطوات الحاسمة في السيناريوهات المختلفة.
 
-2.  Select the playbook or run you want to add conditions to.
+:::tip[نصيحة]
+يمكنك إضافة ما يصل إلى شرطين لكل مهمة لإنشاء شرط "إما/أو".
+:::
 
-3.  Select the **Outline** tab.
+## صندوق وارد المهام (Task inbox)
 
-4.  Under **Tasks**, identify a task you want to make conditional.
+بالإضافة إلى الموجز اليومي، يمكنك أيضاً الوصول إلى صندوق وارد المهام. يوفر لك صندوق الوارد نظرة عامة عبر جميع دورات التشغيل للمهام التي تتحمل مسؤوليتها، مرتبة حسب تاريخ الاستحقاق.
 
-5.  From the **More**
-    [\|more-icon-vertical\|](##SUBST##|more-icon-vertical|) icon next to
-    the task, select **Add condition**.
+يمكنك القيام بما يلي:
 
-    ![An example of a playbook condition being added.](../../../images/playbook-conditions-add.png)
+- الوصول إلى كل مهمة مباشرة، دون الحاجة لزيارة دورات التشغيل الفردية.
+- وضع علامة "مكتمل" على المهام أو تخطيها.
+- تغيير الشخص المعين للمهمة من نفسك إلى عضو آخر في الفريق، وسيتم حينها إزالة المهمة من صندوق الوارد الخاص بك.
+- يمكنك تغيير تاريخ استحقاق المهام لإدارة الأولويات وحالات الاستعجال.
 
-6.  Select an attribute, condition, and value to define when the task
-    should be included. Then select **Done editing**.
+لعرض صندوق وارد المهام، انتقل إلى تبويب **Playbooks** في ماترموست. في الرأس، بجانب صورة ملفك الشخصي، اختر أيقونة قائمة المهام. سيتم عرض قائمة بكل مهمة معينة لك من كل دورة تشغيل قيد التنفيذ.
 
-    ![An example of a playbook condition with values defined.](../../../images/playbook-conditions-values.png)
+## إدارة مهام أدلة العمل على الجوال
 
-Conditional tasks are evaluated and automatically added to or removed
-from the checklist based on defined conditions. This reduces cognitive
-load by showing only relevant tasks and ensures that critical steps
-aren't overlooked in different scenarios.
+بدءاً من إصدار Mattermost v11.0 وتطبيق الجوال v2.32.0، يمكن لمستخدمي الجوال إجراء عمليات إدارة المهام التالية في دورات تشغيل أدلة العمل:
 
-<Aside type="note">
-You can add up to 2 conditions per task to create an either/or
-condition.
-</Aside>
+### التفاعل مع مهام دليل العمل
 
+- **التفاعل مع المهمة**: اضغط على أي مهمة لفتح عرض "ورقة سفلية" (bottom sheet) مفصل مع خيارات ومعلومات المهمة.
+- **تحديد/إلغاء تحديد المهام**: إكمال المهام أو إعادة فتحها مباشرة من تطبيق ماترموست للجوال.
+- **تخطي/إلغاء تخطي المهام**: وضع علامة "تخطي" على المهام أو إعادتها إلى الحالة النشطة مع تغير متطلبات سير العمل.
 
-# Task inbox
+### تحديث المهام
 
-In addition to the daily digest, you also have access to a task inbox.
-The task inbox provides you with a cross-run overview of the tasks
-you're accountable for, sorted by due date.
+- **تحديث الشخص المعين**: تغيير المسؤول عن إكمال المهمة مباشرة من تطبيق الجوال.
+- **تعديل تواريخ الاستحقاق**: ضبط المواعيد النهائية للمهام لتلائم الأولويات والجداول المتغيرة.
+- **تحرير أوامر المهام**: تحديث الأوامر المائلة أو التعليمات المرتبطة بالمهام.
+- **تغيير ملكية دورة التشغيل**: نقل ملكية دورة التشغيل بين أعضاء الفريق.
+- **إعادة تسمية المهام**: تحديث اسم المهمة ليعكس نطاق العمل أو الأولويات المتطورة (من تطبيق الجوال v2.38.0).
+- **إضافة أو تحرير أوصاف المهام**: إضافة سياق للمهمة أو تحديث وصف موجود (من تطبيق الجوال v2.38.0).
+- **حذف مهمة**: لا يمكن التراجع عن هذا الإجراء (من تطبيق الجوال v2.37.0).
 
-You can:
-
-- Access each task directly, without having to visit the individual
-  runs.
-- Mark tasks as complete or skip them.
-- Change the task assignee from yourself to another team member. The
-  task will then be removed from your inbox.
-- You can change the due date of tasks to manage priorities and urgency.
-
-To view your task inbox, access the **Playbooks** tab in Mattermost. In
-the header, next to your profile image, select the tasks list icon. A
-list of every task assigned to you from every run that's in progress is
-displayed.
-
-# Mobile playbooks task management
-
-From Mattermost v11.0 and mobile v2.32.0, mobile users can perform the
-following task management operations on playbook runs:
-
-## Interact with playbook tasks
-
-- **Task interaction**: Tap on any task to open a detailed bottom sheet
-  view with task options and information.
-- **Check/Uncheck tasks**: Complete or reopen tasks directly from the
-  Mattermost mobile app.
-- **Skip/Unskip tasks**: Mark tasks as skipped or return them to active
-  status as workflow requirements change.
-
-## Update tasks
-
-- **Update assignee**: Change who is responsible for completing a task
-  directly from the mobile app.
-- **Modify due dates**: Adjust task deadlines to accommodate changing
-  priorities and schedules.
-- **Edit task commands**: Update slash commands or instructions
-  associated with tasks.
-- **Change run ownership**: Transfer run ownership between team members.
-- **Rename tasks**: Update a task's name to reflect evolving scope or
-  priorities. (From Mattermost mobile v2.38.0)
-- **Add or edit task descriptions**: Add context to a task or update an
-  existing description. (From Mattermost mobile v2.38.0)
-- **Delete a task**: This action cannot be undone. (From Mattermost
-  mobile v2.37.0)
-
-These mobile capabilities provide full task management functionality for
-teams working with playbooks while on mobile devices, complementing your
-existing desktop and web browser experiences.
+توفر هذه القدرات على الجوال وظائف كاملة لإدارة المهام للفرق التي تعمل مع أدلة العمل أثناء استخدام الأجهزة المحمولة، مما يكمل تجاربك الحالية على سطح المكتب ومتصفح الويب.

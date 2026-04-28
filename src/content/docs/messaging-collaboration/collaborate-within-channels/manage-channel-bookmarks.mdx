@@ -5,6 +5,7 @@ description: "تعرف على كيفية وضع ما يصل إلى 50 رابطً
 
 import { Tabs, TabItem, Steps,Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import FAIcon from "../../../../components/FAIcon.astro";
 
 {/* استيراد الأصول المرئية */}
 import mobileMoreOptions from '../../../../images/mobile-select-more-options-for-a-channel.jpg';
@@ -22,7 +23,7 @@ import deleteBookmarkGif from '../../../../images/mobile-delete-a-channel-bookma
  </Aside>
 
 
-بدءًا من الإصدار v10.1 من Mattermost، يمكنك تثبيت ما يصل إلى 50 رابطًا أو ملفًا كإشارات مرجعية في الجزء العلوي من القنوات للوصول السريع والسهل إليها، ما لم يقم مسؤول النظام بتعطيل هذه الصلاحية. تظهر الإشارات المرجعية مباشرة أسفل ترويسة القناة. كما أن الملفات المضافة كإشارات مرجعية للقناة تكون [قابلة للبحث](/end-user-guide/collaborate/search-for-messages) داخل Mattermost.
+بدءًا من الإصدار v10.1 من Mattermost، يمكنك تثبيت ما يصل إلى 50 رابطًا أو ملفًا كإشارات مرجعية في الجزء العلوي من القنوات للوصول السريع والسهل إليها، ما لم يقم مسؤول النظام بتعطيل هذه الصلاحية. تظهر الإشارات المرجعية مباشرة أسفل ترويسة القناة. كما أن الملفات المضافة كإشارات مرجعية للقناة تكون [قابلة للبحث](/messaging-collaboration/communicate-with-messages-and-threads/search-for-messages/) داخل Mattermost.
 
 ## فتح إشارة مرجعية (Open a bookmark)
 
@@ -49,7 +50,7 @@ import deleteBookmarkGif from '../../../../images/mobile-delete-a-channel-bookma
     يختفي شريط الإشارات المرجعية عندما لا تحتوي القناة على أي إشارات.
 
     <Steps>
-    1. داخل القناة، اختر أيقونة **المزيد** [\|more-icon-vertical\|](##SUBST##|more-icon-vertical|).
+    1. داخل القناة، اختر أيقونة **المزيد**<FAIcon name="ellipsis-vertical" />.
        <Image src={mobileMoreOptions} alt="المزيد من الخيارات" width={300} />
 
     2. اختر **عرض المعلومات**.
@@ -101,11 +102,10 @@ import deleteBookmarkGif from '../../../../images/mobile-delete-a-channel-bookma
 باستخدام تطبيق الجوال، اضغط مطولاً على الإشارة المرجعية واختر **مشاركة**.
 
 ### نسخ روابط الإشارات المرجعية (Copy bookmark links)
-يمكنك نسخ روابط الإشارات المرجعية عندما يقوم مسؤول النظام بـ [تمكين صلاحية روابط الملفات العامة](/administration-guide/configure/site-configuration-settings#enable-public-file-links).
-
+يمكنك نسخ روابط الإشارات المرجعية عندما يقوم مسؤول النظام بـ [تمكين صلاحية روابط الملفات العامة](/messaging-collaboration/learn-about-mattermost-roles/)
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    اختر أيقونة **المزيد** [\|more-icon\|](##SUBST##|more-icon|) بجانب الإشارة المرجعية واختر **نسخ الرابط**.
+    اختر أيقونة **المزيد** <FAIcon name="ellipsis-vertical" /> بجانب الإشارة المرجعية واختر **نسخ الرابط**.
   </TabItem>
   <TabItem label="الهاتف المحمول" icon="mobile">
     اضغط مطولاً على الإشارة المرجعية واختر **نسخ الرابط**.
@@ -118,7 +118,7 @@ import deleteBookmarkGif from '../../../../images/mobile-delete-a-channel-bookma
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    اختر أيقونة **المزيد** [\|more-icon\|](##SUBST##|more-icon|) بجانب الإشارة المرجعية واختر **حذف**.
+    اختر أيقونة **المزيد** <FAIcon name="ellipsis-vertical" /> بجانب الإشارة المرجعية واختر **حذف**.
   </TabItem>
   <TabItem label="الهاتف المحمول" icon="mobile">
     اضغط مطولاً على الإشارة المرجعية واختر **حذف**.

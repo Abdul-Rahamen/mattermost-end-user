@@ -1,219 +1,131 @@
 ---
-title: Share and collaborate
+title: "المشاركة والتعاون"
+description: "تعلم كيفية إدارة الأذونات، الأدوار، ومشاركة أدلة العمل (Playbooks) مع فريقك في ماترموست لضمان التعاون الفعال والأمن."
 ---
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Professional, Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/)
-</Aside>
+import FAIcon from "../../../components/FAIcon.astro";
 
+هناك طرق مختلفة للفرق للوصول إلى أدلة العمل التعاونية والتفاعل معها. يتم إدارة ذلك في لوحة تحكم النظام (System Console) باستخدام الأذونات. يمكن منح الأذونات بمجموعة متنوعة من الطرق، للسماح بمزيج مختلف من الوصول والرؤية.
 
-There are different ways for teams to access and interact with
-collaborative playbooks. This is managed in the System Console using
-permissions. Permissions can be granted in a variety of ways, to allow
-for different combinations of access and visibility.
+يتم توفير الأذونات باستخدام:
 
-Permissions are provided using:
+- **مخطط النظام (System Scheme):** يطبق الأذونات بشكل شامل عبر جميع الفرق والقنوات وأدلة العمل.
+- **مخططات تجاوز الفريق (Team Override Schemes):** تتيح للمسؤولين تخصيص الأذونات لكل فريق.
 
-- **System Scheme:** Applies permissions universally across all teams,
-  channels, and playbooks.
-- **Team Override Schemes:** Allow admins to customize permissions for
-  each team.
+لمزيد من المعلومات حول مخططات النظام وتجاوز الفريق، راجع توثيق الأذونات المتقدمة في لوحة تحكم النظام.
 
-For more information about System and Team Override Schemes, refer to
-the
-`Advanced Permissions </administration-guide/onboard/advanced-permissions>`
-documentation.
+:::note[ملاحظة]
+بعض وظائف الأذونات متاحة فقط لعملاء Mattermost Enterprise. لمزيد من المعلومات، تفضل بزيارة [mattermost.com/pricing](https://mattermost.com/pricing).
+:::
 
-<Aside type="note">
-Some permissions functionality is only available to Mattermost
-Enterprise customers. For more information, visit
-<https://mattermost.com/pricing>.
-</Aside>
+في سياق أدلة العمل التعاونية، يتم تعيين دور لكل عضو، وبناءً على الأذونات المختارة، يحدد هذا كيفية تفاعلهم مع أدلة العمل. يمكن للعضو أن يكون عضواً في دليل عمل واحد، ومسؤولاً (Admin) في دليل عمل آخر. يتيح ذلك أذونات دقيقة عبر الفرق والأقسام. على سبيل المثال، يمكن ضبط رؤية دليل العمل بحيث لا يمكن إلا لفرق معينة رؤيته، أو ضبط الأذونات للسماح للمؤسسة بعرض دليل العمل ولكن لا يمكن إلا لأعضاء الفريق المعينين إجراء تعديلات.
 
+تنطبق الأذونات فقط على أدلة العمل. لا توجد أذونات محددة لدورات التشغيل (Runs).
 
-In the context of collaborative playbooks, members are assigned a role
-and based on the selected permissions, this determines how they interact
-with playbooks. A member can be a member of one playbook, and an admin
-of another. This allows for granular permissions across teams and
-departments. For example, setting playbook visibility so only certain
-teams can view it, or setting permissions to allow an organization to
-view a playbook but only designated team members can make edits.
+:::important[هام]
+بدءاً من إصدار Playbooks v2.6.0، تستخدم قوائم مهام القنوات الأذونات المستندة إلى القناة بدلاً من الأذونات الخاصة بدليل العمل. وهذا يعني أن المستخدمين الذين لديهم أذونات القناة المناسبة يمكنهم إنشاء وإدارة والتفاعل مع قوائم المهام مباشرة داخل القنوات دون الحاجة إلى أذونات وصول منفصلة لدليل العمل.
+:::
 
-Permissions are applied only to playbooks. There are no permissions that
-are specific to runs.
+## أدوار دليل العمل (Playbook roles)
 
-<Aside type="note">
-From Playbooks v2.6.0, channel checklists use
-`channel-based permissions </administration-guide/manage/team-channel-members>`
-rather than playbook-specific permissions. This means that users with
-appropriate channel permissions can create, manage, and interact with
-checklists directly within channels without requiring separate
-playbook access permissions.
-</Aside>
+- **العضو (Member):** في سياق أدلة العمل التعاونية، الأعضاء هم مستخدمو ماترموست الذين تتم إضافتهم إلى دليل عمل.
+- **مسؤول دليل العمل (Playbook Admin):** مسؤولو أدلة العمل هم أيضاً أعضاء، وقد يكون لديهم أذونات مرتفعة لتغيير رؤية دليل العمل ودورة التشغيل بالإضافة إلى الإعدادات الوظيفية. ليس لديهم وصول إلى لوحة تحكم النظام، ويتم إدارة امتيازاتهم من قبل مسؤول النظام. يحتاج الأعضاء إلى ترقيتهم إلى هذا الدور من داخل أدلة العمل. يتم تطبيق دور مسؤول دليل العمل لكل دليل عمل على حدة.
 
+:::note[ملاحظة]
+قبل إجراء تغييرات في النظام أو الفريق على الأذونات، تأكد من عدم فقدان الوصول إلى أدلة العمل الحالية الخاصة بك. انتقل إلى دليل العمل الذي أنت عضو فيه، اختر أيقونة **Manage Access** وقم بتغيير دورك من **Member** إلى **Admin**.
+:::
 
-# Playbook roles
+## أذونات أدلة العمل
 
-- **Member**: In the context of collaborative playbooks, members are
-  users of Mattermost who are added to a playbook.
-- **Playbook Admin**: Playbook Admins are also members, and may have
-  elevated permissions to change playbook and run visibility as well as
-  functional settings. They do not have access to the System Console and
-  their privileges are managed by the system admin. Members need to be
-  promoted to the role from within playbooks. The Playbook Admin role is
-  applied per playbook.
+إعدادات أدلة العمل الافتراضية مفتوحة تماماً، مما يمكن جميع الأعضاء من المشاركة في دورات التشغيل، وتحرير أدلة العمل، وعرض الدورات والأدلة، وإزالة أعضاء آخرين من الدورات، وتحرير الإجراءات، وإجراء تغييرات أخرى. توفر الأذونات تحكماً أفضل في الدورات والأدلة السرية، بالإضافة إلى إدارة الأعضاء. لاحظ أنه حتى مع الإعدادات الافتراضية، فإن أدلة العمل الخاصة تقصر هذه الإجراءات على أعضاء دليل العمل فقط.
 
-<Aside type="note">
-Before you make system or team changes to permissions, ensure that you
-don't lose access to your existing playbooks. Navigate to the playbook
-you're a member of. Select the **Manage Access** icon and change your
-role from **Member** to **Admin**.
-</Aside>
+### إنشاء أدلة عمل للقراءة فقط
 
+في المثال التالي، يمكن لمسؤولي أدلة العمل فقط تحرير الأدلة. يمكن للمستخدمين الآخرين عرض أدلة العمل العامة والخاصة التي هم أعضاء فيها، لكن لا يمكنهم تحرير أي دليل عمل أو تغيير عضويات أدلة العمل.
 
-# Playbooks permissions
+1. انتقل إلى **System Console > User Management > Permissions**.
+2. في قسم **All Members**، قم بإلغاء تحديد **Manage Public Playbooks** وإلغاء تحديد **Manage Private Playbooks**.
+3. قم بالتمرير لأسفل إلى قسم **Playbook Admin** وتأكد من تحديد **Manage Public Playbooks** و **Manage Private Playbooks**.
+4. اختر **Save**.
 
-Default playbooks settings are completely open which enable all members
-to participate in runs, edit playbooks, view runs and playbooks, remove
-other members from runs, edit actions, and make other changes.
-Permissions provide better control over confidential runs and playbooks,
-as well as member management. Note that even with the default settings,
-private playbooks restrict these actions to members of the playbook.
+### تقييد من يمكنه إنشاء أدلة العمل
 
-## Create read-only playbooks
+يمكنك أيضاً ضبط أذونات لأدلة العمل للقراءة فقط تسمح للأعضاء بإنشاء أدلة عمل عامة أو خاصة جديدة.
 
-In the following example, only playbook admins can edit playbooks. Other
-users can view public playbooks and private playbooks of which they are
-a member, but can't edit any playbook or change playbook memberships.
+1. انتقل إلى **System Console > User Management > Permissions**.
+2. في قسم **All Members**، قم بإلغاء تحديد **Manage Public Playbooks** وإلغاء تحديد **Manage Private Playbooks**.
+3. بعد ذلك، حدد **Create Public Playbook** و **Create Private Playbook**.
+4. اختر **Save**.
 
-1.  Go to **System Console \> User Management \> Permissions**.
-2.  In the **All Members** section, uncheck **Manage Public Playbooks**
-    and uncheck **Manage Private Playbooks**.
-3.  Scroll down to the **Playbook Admin** section and confirm that
-    **Manage Public Playbooks** and **Manage Private Playbooks** are
-    checked.
-4.  Select **Save**.
+### تقييد من يمكنه تحويل أدلة العمل من عامة إلى خاصة
 
-# Restrict who can create playbooks
+يمكنك التحكم في ما إذا كان بإمكان الأعضاء تحويل أدلة العمل من عامة إلى خاصة.
 
-You can also set permissions for read-only playbooks that do allow
-members to create new public or private playbooks.
+1. انتقل إلى **System Console > User Management > Permissions**.
+2. في قسم **All Members**، حدد **Convert Playbooks**.
+3. اختر **Save**.
 
-1.  Go to **System Console \> User Management \> Permissions**.
-2.  In the **All Members** section, uncheck **Manage Public Playbooks**
-    and uncheck **Manage Private Playbooks**.
-3.  Then, check **Create Public Playbook** and **Create Private
-    Playbook**.
-4.  Select **Save**.
+بدلاً من ذلك، لتقييد هذا الإجراء بحيث يمكن لمسؤولي أدلة العمل فقط تحويل الأدلة، قم بإلغاء تحديد الإعداد أعلاه ثم:
 
-## I want to restrict who can convert playbooks from public to private
+1. انتقل إلى **System Console > User Management > Permissions**.
+2. قم بالتمرير لأسفل إلى **Playbook Admin**.
+3. حدد **Convert Playbooks**.
+4. اختر **Save**.
 
-You can control whether Members can convert playbooks from public to
-private.
+### التحكم في من يبدأ دورة تشغيل
 
-1.  Go to **System Console \> User Management \> Permissions**.
-2.  In the **All Members** section, check **Convert Playbooks**.
-3.  Select **Save**.
+بشكل افتراضي، يمكن لجميع الأعضاء بدء دورة تشغيل باستخدام دليل عمل. يمكنك تقييد ذلك بحيث لا يمكن إلا لمسؤولي أدلة العمل بدء دورة تشغيل. لاحظ أنه مع هذه التهيئة، لن يتمكن الأعضاء من بدء الدورات أو تحرير أدلة العمل.
 
-Alternatively, to restrict this action so only Playbook Admins can
-convert playbooks from public to private, uncheck the setting above and:
+1. انتقل إلى **System Console > User Management > Permissions**.
+2. في قسم **All Members**، قم بإلغاء تحديد **Manage Runs**. يؤدي هذا أيضاً إلى إلغاء تحديد **Create Runs**.
+3. قم بالتمرير لأسفل إلى **Playbook Admin** وتأكد من تحديد **Manage Runs**.
+4. اختر **Save**.
 
-1.  Go to **System Console \> User Management \> Permissions**.
-2.  Scroll down to **Playbook Admin**.
-3.  Check **Convert Playbooks**.
-4.  Select **Save**.
+إذا كنت ترغب في الاستمرار في السماح للأعضاء بتحرير أدلة العمل، فإن البديل لهذه التهيئة هو جعل دليل العمل خاصاً.
 
-## I want to control who starts a run
+## تكرار دليل عمل (Duplicate)
 
-By default, all Members can start a run using a playbook. You can
-restrict this so that only Playbook Admins can start a run. Note that
-with this configuration, Members are not able to start runs or edit
-playbooks.
+أدلة العمل هي تدفقات عمل متكررة، وأحياناً يكون من الأسهل النسخ والتحسين بدلاً من البدء من الصفر.
 
-1.  Go to **System Console \> User Management \> Permissions**.
-2.  In the **All Members** section, uncheck **Manage Runs**. This also
-    unchecks **Create Runs**.
-3.  Scroll down to **Playbook Admin** and ensure that **Manage Runs** is
-    checked.
-4.  Select **Save**.
+يمكنك القيام بذلك عن طريق تكرار دليل عمل في شاشة أدلة العمل. اختر أيقونة النقاط الثلاث **...** تحت **Actions** ثم اختر **Duplicate**. سيتم إضافة عبارة "Copy of" إلى الاسم الأصلي لدليل العمل المنسوخ، والتي يمكنك تحريرها.
 
-If you want to continue to allow Members to edit playbooks, an
-alternative to this configuration is to make the playbook private.
+لاستيراد دليل عمل، انتقل إلى شاشة أدلة العمل، واختر **Import**. اختر الفريق الذي تقوم بالاستيراد إليه، ثم اختر ملف JSON. يمكنك أيضاً تصدير أي دليل عمل إلى ملف JSON لمشاركته بسهولة مع خوادم ماترموست الأخرى.
 
-# Duplicate a playbook
+## أرشفة دليل عمل (Archive)
 
-Playbooks are repeatable workflows and sometimes it’s easier to copy and
-improve rather than start from scratch.
+:::note[ملاحظة]
+لأرشفة دليل عمل، يجب أن تكون عضواً في دليل العمل أو مسؤولاً عنه ولديك إذن **Manage Playbook Configurations** المناسب الممنوح من قبل مسؤول النظام.
+:::
 
-You can do this by duplicating a playbook in the Playbooks screen.
-Select the **...** under **Actions** and then select **Duplicate**. The
-copied playbook will have **Copy of** appended to its original name
-which you can edit.
+لأرشفة دليل عمل:
 
-To import a playbook, go to the Playbooks screen, and select **Import**.
-Choose the team you’re importing to, then select the <span dir="ltr"><span dir="ltr"><span dir="ltr"><span dir="ltr"><span dir="ltr">JSON</span></span></span></span></span> file. You can
-also export any playbook to <span dir="ltr"><span dir="ltr"><span dir="ltr"><span dir="ltr"><span dir="ltr">JSON</span></span></span></span></span> to easily share with other Mattermost
-servers.
+1. انتقل إلى أيقونة <FAIcon name="table-cells"/> **Product menu** واختر **Playbooks**.
+2. اختر **View all...** تحت قسم **Playbooks** في القائمة اليسرى.
+3. اختر أيقونة النقاط الثلاث **...** في عمود **Actions** لدليل العمل الذي ترغب في أرشفته.
+4. اختر خيار القائمة **Archive** ثم زر **Archive** لتأكيد رغبتك في أرشفة دليل العمل.
 
-# Archive a playbook
+<img
+  class="img-computer-screenshots"
+  src="https://docs.mattermost.com/_images/archive-a-playbook.gif"
+  alt="أرشفة دليل عمل."
+/>
 
-<Aside type="note">
-To archive a playbook, you must be a member of the playbook or
-playbook admin and have applicable **Manage Playbook Configurations**
-permission granted by a system administrator.
-</Aside>
+## استعادة دليل عمل مؤرشف (Restore)
 
+:::note[ملاحظة]
+لاستعادة دليل عمل مؤرشف، يجب أن يكون لديك إذن **Manage Playbook Configurations** المناسب الممنوح من قبل مسؤول النظام.
+:::
 
-To archive a playbook:
+لاستعادة دليل عمل مؤرشف:
 
-1.  Go to the **Product** [\|product-list\|](##SUBST##|product-list|)
-    icon and select **Playbooks**.
-2.  Select **View all...** under the **Playbooks** section in the left
-    menu.
-3.  Select the **...** in the **Actions** column for the playbook you
-    would like to archive.
-4.  Select the **Archive** menu option then the **Archive** button to
-    confirm you would like to archive the playbook.
+1. انتقل إلى أيقونة <FAIcon name="table-cells"/> **Product menu** واختر **Playbooks**.
+2. اختر **View all...** تحت قسم **Playbooks** في القائمة اليسرى.
+3. تأكد من تحديد خانة الاختيار **With archived** بجانب شريط البحث الخاص بأدلة العمل.
+4. اختر أيقونة النقاط الثلاث **...** في عمود **Actions** لدليل العمل الذي ترغب في استعادته.
+5. اختر خيار القائمة **Restore** ثم زر **Restore** لتأكيد رغبتك في استعادة دليل العمل.
 
-![Archive a playbook](../../../images/archive-a-playbook.gif)
-
-# Restore an archived playbook
-
-<Aside type="note">
-To restore an archived playbook, you must have applicable **Manage
-Playbook Configurations** permission granted by a system
-administrator.
-</Aside>
-
-
-To restore an archived playbook:
-
-1.  Go to the **Product** [\|product-list\|](##SUBST##|product-list|)
-    icon and select **Playbooks**.
-2.  Select **View all...** under the **Playbooks** section in the left
-    menu.
-3.  Verify the **With archived** checkbox next to the playbook search
-    bar is selected.
-4.  Select the **...** in the **Actions** column for the playbook you
-    would like to restore.
-5.  Select the **Restore** menu option then the **Restore** button to
-    confirm you would like to restore the playbook.
-
-![Restore an archived playbook](../../../images/restore-an-archived-playbook.gif)
-
-# Export channel data
-
-.. If used with include::, note the paths for images
-
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on
-[Enterprise and Enterprise Advanced
-plans](https://mattermost.com/pricing/)
-</Aside>
-
-
-See the
-`export channel data </administration-guide/comply/export-mattermost-channel-data>`
-documentation for details on working with channel export functionality.
+<img
+  class="img-computer-screenshots"
+  src="https://docs.mattermost.com/_images/restore-an-archived-playbook.gif"
+  alt="استعادة دليل عمل مؤرشف."
+/>

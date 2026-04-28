@@ -1,63 +1,54 @@
 ---
-title: "إدارة إشعارات الويب الخاصة بك (Manage your web notifications)"
-description: "إدارة إشعارات الويب في Mattermost"
+title: "إدارة إشعارات الويب الخاصة بك"
+description: "تعلم كيفية تفعيل وتخصيص إشعارات ماترموست عند استخدامه في المتصفح، بما في ذلك التحكم في الشارات والأصوات وإعدادات الخصوصية."
 ---
 
+بدءاً من إصدار Mattermost v9.10، سيطلب منك ماترموست منح إذن لمتصفح الويب الخاص بك لعرض الإشعارات.
 
-## تمكين الإشعارات (Enable notifications)
+## تفعيل الإشعارات
 
-بدءًا من الإصدار v9.10 من Mattermost، يطالبك Mattermost بمنح الإذن لمتصفح الويب الخاص بك لإظهار الإشعارات.
+عندما ترى المطالبة بتفعيل الإشعارات:
 
-![بدءًا من الإصدار v9.10 من Mattermost، سيُطلب منك تمكين الإشعارات.](../../../../images/enable-notifications.png)
+- **عند اختيار "Enable notifications":** لن يتم سؤالك مرة أخرى، وستبدأ في تلقي إشعارات المتصفح لجميع أنشطة ماترموست مع الشارات والأصوات.
+- **إذا قمت بتجاهل المطالبة:** لن تتلقى إشعارات في المتصفح، وسيُطلب منك ذلك مرة أخرى في المرة القادمة التي تفتح فيها ماترموست، أو عند الانتقال إلى **Settings > Notifications > Desktop and mobile notifications**.
+- **عند اختيار "Deny" أو "Deny Permanently":** لن يتم سؤالك مرة أخرى ولن تتلقى إشعارات. يمكنك تغيير هذا لاحقاً من إعدادات المتصفح.
 
-- عند تحديد **تمكين الإشعارات (Enable notifications)**، لن يتم سؤالك مرة أخرى. ستبدأ في تلقي الإشعارات في متصفح الويب الخاص بك لجميع أنشطة Mattermost باستخدام [الشارات (#إشعارات-مبنية-على-الشارات)](#إشعارات-مبنية-على-الشارات-badge-based-notifications) و [الأصوات (#أصوات-الإشعارات)](#أصوات-الإشعارات-notification-sounds). راجع القسم أدناه حول [تخصيص إشعاراتك](#تخصيص-إشعاراتك-customize-your-notifications) بناءً على الكيفية التي تفضل بها أن يتم إعلامك بنشاط Mattermost في متصفح الويب.
-- إذا قمت بتجاهل هذه المطالبة، فلن تتلقى إشعارات Mattermost في متصفح الويب، وسيتم مطالبتك مرة أخرى في المرة القادمة التي تفتح فيها Mattermost في متصفح ويب، أو تذهب إلى **الإعدادات (Settings) > الإشعارات (Notifications) > إشعارات سطح المكتب والهاتف المحمول (Desktop and mobile notifications)**.
-- إذا حددت **رفض (Deny)** أو **رفض نهائيًا (Deny Permanently)**، فلن يتم سؤالك مرة أخرى. لن تتلقى إشعارات Mattermost في متصفح الويب. يمكنك تغيير هذا التفضيل عن طريق منح أذونات الإشعارات لـ Mattermost في متصفح الويب.
+![enable notifications prompt](https://docs.mattermost.com/_images/enable-notifications.png)
 
-## إشعارات مبنية على الشارات (Badge-based notifications)
+## الإشعارات المستندة إلى الشارات
 
-في متصفح الويب، تعرض أيقونات Mattermost الأنواع التالية من الشارات (badges):
+في متصفح الويب، تعرض أيقونات ماترموست الأنواع التالية من الشارات:
 
-- شارات مرقمة للرسائل [المباشرة](/end-user-guide/collaborate/channel-types) و [الجماعية](/end-user-guide/collaborate/channel-types) غير المقروءة، و [الإشارات (@mentions)](/end-user-guide/preferences/manage-your-mentions-keywords-notifications)، و [الكلمات الرئيسية (keywords)](/end-user-guide/preferences/manage-your-mentions-keywords-notifications) التي تتابعها بنشاط.
+- **شارات مرقمة:** للرسائل المباشرة والجماعية غير المقروءة، والإشارات (@mentions)، والكلمات الرئيسية التي تتابعها.
+- **نقطة حمراء:** تعني وجود إشارات أو كلمات رئيسية أو رسائل مباشرة/جماعية غير مقروءة.
+- **نقطة سوداء:** تعني وجود نشاط غير مقروء في القنوات التي أنت عضو فيها.
 
-تعني الشارة ذات النقطة الحمراء أن لديك إشارات (@mentions) أو كلمات رئيسية أو رسائل مباشرة أو رسائل جماعية غير مقروءة.
-![مثال على مؤشر شارة الإشارة في متصفح ويب Chrome.](../../../../images/chrome-mention-badge.png)
+![chrome mention badge](https://docs.mattermost.com/_images/chrome-mention-badge.png)
+![chrome activity badge](https://docs.mattermost.com/_images/chrome-activity-badge.png)
 
-تعني الشارة ذات النقطة السوداء أن لديك نشاطًا غير مقروء في القنوات التي أنت عضو فيها.
-![مثال على مؤشر شارة النشاط في متصفح ويب Chrome.](../../../../images/chrome-activity-badge.png)
+## أصوات الإشعارات
 
-## أصوات الإشعارات (Notification sounds)
+بشكل افتراضي، تتضمن إشعارات الويب أصواتاً مسموعة عند تلقي تنبيه جديد.
 
-بشكل افتراضي، تتضمن إشعارات الويب أصواتًا مسموعة.
+## تخصيص إشعاراتك
 
-## تخصيص إشعاراتك (Customize your notifications)
-
-:::note
-تقوم إعدادات إشعارات Mattermost المسماة "سطح المكتب" (Desktop) أيضًا بتكوين إشعارات الويب الخاصة بك عند استخدام Mattermost في متصفح الويب.
+:::tip
+إعدادات إشعارات ماترموست المسماة "Desktop" هي نفسها التي تقوم بتكوين إشعارات الويب عند استخدام ماترموست في المتصفح.
 :::
 
-### تقليل إشعارات الويب (Reduce web notifications)
+### تقليل إشعارات الويب
+لتقليل عدد الإشعارات، انتقل إلى **Settings > Notifications > Desktop and mobile notifications** واختر **Mentions, direct messages, and group messages**، ثم احفظ التغييرات.
 
-لتقليل عدد الإشعارات التي تتلقاها، حدد **إشعارات سطح المكتب والهاتف المحمول (Desktop and mobile notifications) > الإشارات والرسائل المباشرة والرسائل الجماعية (Mentions, direct messages, and group messages)**، واحفظ تغييراتك. يمكنك ضبط هذا التفضيل عبر جميع القنوات أو لقنوات محددة.
+### تغيير الأصوات أو تعطيلها
+يمكنك تغيير صوت الإشعار أو تعطيله من خلال **Desktop notification sounds > Message notification sound**.
 
-مع تمكين الإشعارات المحدودة، يمكنك أيضًا اختيار تلقي إشعارات حول الردود على السلاسل التي تتابعها عن طريق تحديد **أعلمني بالردود على السلاسل التي أتابعها (Notify me about replies to threads I'm following)**.
+### إشعارات المكالمات الواردة
+إذا كنت ترغب في سماع صوت عند بدء مكالمة في ماترموست، يمكنك اختيار الصوت من **Desktop notification sounds > Incoming call sound** (إذا قام المسؤول بتفعيل هذه الميزة).
 
-### تغيير الأصوات أو تعطيلها (Change or disable sounds)
+### تعطيل جميع إشعارات الويب
+اختر **Desktop and mobile notifications > Nothing** لتعطيل جميع إشعارات الويب وسطح المكتب.
 
-يمكنك تغيير أصوات الإشعارات أو تعطيلها بالانتقال إلى **أصوات إشعارات سطح المكتب (Desktop notification sounds) > صوت إشعار الرسالة (Message notification sound)**.
+## الأسئلة الشائعة
 
-### إشعارات المكالمات الواردة (Incoming Call notifications)
-
-هل تريد سماع صوت عند بدء مكالمة Mattermost؟ إذا قام مسؤول Mattermost الخاص بك بـ [تمكين هذه الميزة التجريبية (Beta feature)](/administration-guide/configure/plugins-configuration-settings)، فيمكنك اختيار الصوت الذي يتم تشغيله عند بدء مكالمة داخل رسالة مباشرة أو جماعية بالانتقال إلى **أصوات إشعارات سطح المكتب (Desktop notification sounds) > صوت المكالمة الواردة (Incoming call sound)**.
-
-### تعطيل جميع إشعارات الويب (Disable all web notifications)
-
-حدد **إشعارات سطح المكتب والهاتف المحمول (Desktop and mobile notifications) > لا شيء (Nothing)** لتعطيل جميع إشعارات الويب وسطح المكتب.
-
-قم بإلغاء تحديد **استخدام إعدادات مختلفة لأجهزتي المحمولة (Use different settings for my mobile devices)** لتعطيل جميع إشعارات Mattermost للهاتف المحمول بشكل إضافي في كل مكان تستخدم فيه Mattermost.
-
-## الأسئلة الشائعة (Frequently asked questions)
-
-### لماذا يتم مطالبتي مرارًا وتكرارًا بتمكين إشعارات لا أريدها؟ (Why am I prompted repeatedly enable notifications I don't want?)
-
-سيستمر Mattermost في مطالبتك بمنح الإذن للمتصفح لإظهار الإشعارات حتى تستجيب للمطالبة. إذا كنت ترغب في تعطيل جميع إشعارات Mattermost، فحدد **تمكين الإشعارات (Enable notifications)** عند المطالبة، ثم [قم بتعطيل جميع إشعارات ويب Mattermost](#تعطيل-جميع-إشعارات-الويب-disable-all-web-notifications).
+### لماذا يتم سؤالي بشكل متكرر عن تفعيل الإشعارات التي لا أريدها؟
+سيستمر ماترموست في مطالبتك بمنح الإذن للمتصفح حتى تستجيب للمطالبة. إذا كنت تريد تعطيل جميع الإشعارات، فنوصي باختيار **Enable notifications** أولاً، ثم تعطيلها من داخل إعدادات ماترموست (كما موضح أعلاه).

@@ -1,147 +1,74 @@
 ---
-title: Navigate boards
+title: "التنقل في اللوحات"
+description: "تعرف على كيفية الوصول إلى لوحات ماترموست، ربطها بالقنوات، وتنظيمها باستخدام الفئات في الشريط الجانبي."
 ---
 
-.. If used with include::, note the paths for images
+import FAIcon from "../../../components/FAIcon.astro";
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/) (not available on Professional)
-</Aside>
+## الوصول إلى اللوحات
 
+للوصول إلى لوحات ماترموست (Mattermost Boards)، اختر قائمة المنتجات <FAIcon name="table-cells"/> (Product menu) في الزاوية العلوية اليسرى من ماترموست، ثم اختر **Boards** لعرض جميع اللوحات الخاصة بفريقك.
 
-# Access boards
+للوصول إلى اللوحات المرتبطة بقناة ما، اختر أيقونة **Toggle Linked Boards** في أقصى اليمين.
 
-To access Mattermost Boards, select the **Product**
-[\|product-list\|](##SUBST##|product-list|) menu in the top left corner
-of Mattermost, and then select **Boards** to view all the boards for
-your team.
+## ربط لوحة بقناة
 
-To access boards linked to a channel, select the **Toggle Linked
-Boards** icon to the far right.
+يمكن ربط اللوحات بالقنوات والوصول إليها من "شريط التطبيقات" (Apps Bar) الخاص بالقناة. اختر أيقونة **Boards** من شريط التطبيقات في القناة لفتح شريط جانبي أيمن (RHS) حيث يمكن لأعضاء القناة البحث عن اللوحات وربطها بالقناة. لربط لوحة بالقناة، اختر زر **Add** لفتح نافذة ربط اللوحات وابحث عن اللوحة المطلوبة. يمكن لأعضاء القناة فقط البحث عن اللوحات وربطها داخل الفريق الذي يكونون فيه أيضاً مسؤولين عن اللوحة (Board Admins).
 
-# Link a board to a channel
+:::note[ملاحظة]
+يمكن ربط القناة بعدة لوحات، ولكن يمكن ربط كل لوحة فردية بقناة واحدة فقط في كل مرة. سيؤدي ربط نفس اللوحة بقناة أخرى إلى إزالة الربط من القناة السابقة تلقائياً.
+:::
 
-Boards can be linked to channels and accessed from the channel Apps Bar.
-Select the **Boards** icon from the Apps Bar in a channel to open a
-right-hand sidebar (RHS) where channel members can search for and link
-boards to the channel. To link a board to the channel, select **Add**
-button to open the link boards dialog and search for a board to link.
-Channel members can only search and link boards within the team where
-they are also board admins.
+افتح أيقونة اللوحات في شريط التطبيقات، واختر **Create a Board** لإنشاء لوحة جديدة مرتبطة بالقناة الحالية. بمجرد ربط اللوحة بقناة، يتم إدراجها في الجانب الأيمن من شريط تطبيقات اللوحات. يمنح ربط اللوحة بالقناة تلقائياً جميع أعضاء القناة حق الوصول إلى اللوحة، باستثناء حسابات الضيوف. اختر لوحة مرتبطة للانتقال إليها مباشرة.
 
-<Aside type="note">
-A channel can be linked to multiple boards, but each individual board
-can only be linked to one channel at a time. Linking the same board to
-another channel will automatically remove the link from the previous
-channel.
-</Aside>
+:::note[ملاحظة]
+جميع اللوحات المرتبطة سابقاً بمساحة العمل ستظهر تلقائياً في اللوحة الجانبية اليمنى بعد الترقية إلى إصدارات Boards الأحدث.
+:::
 
+## إلغاء ربط لوحة من قناة
 
-Open the Boards Apps Bar icon, and select **Create a Board** to create a
-new board linked to the current channel. Once a board is linked to a
-channel, it's listed in the right-hand side of the Boards Apps Bar.
-Linking a board to a channel automatically grants all channel members
-access to the board, with the exception of guest accounts. Select a
-linked board to navigate directly to the board.
+إذا كنت مسؤولاً عن اللوحة وترغب في إلغاء ربطها من القناة التي تتواجد فيها، افتح شريط تطبيقات اللوحات، اختر قائمة الخيارات (النقاط الثلاث) <FAIcon name="ellipsis" /> واختر **Unlink**. بدلاً من ذلك، يمكنك فتح نافذة **Share** في اللوحة، واختيار قائمة **Role** المنسدلة بجانب اسم القناة واختيار **Unlink**.
 
-<Aside type="note">
-All the boards previously associated with the workspace will
-automatically appear on the right-hand side panel post-migration as
-you upgrade to newer Boards versions.
-</Aside>
+## فئات الشريط الجانبي (Sidebar categories)
 
+يمكنك تنظيم لوحاتك في الشريط الجانبي الأيسر باستخدام فئات مخصصة. بشكل افتراضي، تظهر جميع اللوحات تحت فئة **Boards**. لإدارة فئاتك، افتح قائمة الخيارات (النقاط الثلاث) <FAIcon name="ellipsis" />  بجانب الفئة لإنشاء فئة أو حذفها أو إعادة تسميتها. باستثناء فئة **Boards** الافتراضية، يمكن إعادة تسمية أو حذف جميع الفئات الأخرى.
 
-# Unlink a board from a channel
+بعد إنشاء الفئات، يمكنك نقل لوحاتك إليها عن طريق فتح قائمة الخيارات <FAIcon name="ellipsis" />  بجانب اللوحة واختيار **Move To...** لتحديد الفئة التي تريد نقل اللوحة إليها.
 
-If you're a board admin and want to unlink a board from a channel you're
-in, open the Boards Apps Bar, select the options
-[\|more-icon\|](##SUBST##|more-icon|) menu and select **Unlink**.
-Alternatively, you can open the **Share** dialog on the board, open the
-**Role** drop-down menu next to the channel's name and select
-**Unlink**.
+إذا قمت بحذف فئة تحتوي على لوحات، فستعود تلك اللوحات إلى فئة **Boards** الافتراضية.
 
-# Sidebar categories
+يتم تنظيم الفئات لكل مستخدم على حدة، لذا يمكنك ترتيب لوحاتك تحت فئات تناسبك دون التأثير على اللوحات أو الفئات لدى المستخدمين الآخرين. إذا تم نقل لوحة إلى فئة مخصصة، فستظهر تحت تلك الفئة بالنسبة لك فقط. وسيستمر الأعضاء الآخرون في اللوحة في رؤيتها ضمن فئاتهم الخاصة.
 
-You can organize your boards in the left-hand sidebar using custom
-categories. By default, all boards will appear under the **Boards**
-category. To manage your categories, open the
-[\|more-icon\|](##SUBST##|more-icon|) menu next to the category to
-create, delete, or rename a category. With the exception to the default
-**Boards** category, all other categories can be renamed or deleted.
+:::note[ملاحظة]
+إذا كنت تنتمي لمساحة عمل قبل الإصدار 7.2، فسترى أنه قد تم ترحيل مساحات العمل إلى فئات مخصصة في الشريط الجانبي. يتم إدراج جميع اللوحات من مساحة عمل ما تحت فئة تحمل نفس الاسم. وتظهر اللوحات من الرسائل المباشرة ورسائل المجموعات تحت فئة **Boards** الافتراضية.
 
-After creating categories, you can move your boards to those categories
-by opening the more [\|more-icon\|](##SUBST##|more-icon|) menu next to
-the board and selecting **Move To…** to select the category where you
-want the board to be moved.
+الفئات مخصصة لكل مستخدم، ويمكن إعادة تسميتها أو حذفها من قبل كل مستخدم بعد الترحيل. لن يكون لدى المستخدمين الجدد فئات افتراضية، واللوحات التي ينضمون إليها ستظهر تحت فئة **Boards** الافتراضية.
 
-If you delete a category with boards in it, then those boards will
-return to the default **Boards** category.
+اللوحات التي تنشئها بعد الترحيل لن تكون مرتبطة بمساحة عمل وستظهر دائماً تحت فئة **Boards** الافتراضية ما لم تقم بنقلها أو إخفائها.
+:::
 
-Categories are organized per-user, so you can arrange your boards under
-categories that make sense to you without impacting boards or categories
-for other users. If a board is moved to a custom category, then the
-board will appear under that category for you only. Other users who are
-members of the board will continue to see the board in their own
-categories.
+## السحب والإفلات (Drag and drop)
 
-<Aside type="note">
-If you belonged to a workspace prior to v7.2, you’ll see that the
-workspaces have been migrated to custom categories in the sidebar. All
-boards from a workspace are listed under a category of the same name.
-Boards from direct messages and group messages appear under the
-default **Boards** category.
-Categories are per-user, and can be renamed or deleted by each user
-after migration. New users won’t have default categories, and boards
-they join will appear under the default **Boards** category.
-Boards that you create after the migration won’t be linked to a
-workspace and will always appear under the default **Boards** category
-unless you move or hide the boards.
-</Aside>
+يمكنك نقل كل من فئات الشريط الجانبي واللوحات وتغيير ترتيبهما ليناسب تفضيلاتك. يمكنك:
 
+- تحديد موضع اللوحة داخل الفئة.
+- سحب اللوحة من فئة وإفلاتها في فئة أخرى.
 
-# Drag and drop
+للقيام بذلك، اضغط مع الاستمرار على اسم الفئة أو اللوحة، ثم حركها حسب الحاجة. يتم فرز اللوحات المنقولة إلى فئة في أعلى الفئة بشكل افتراضي ما لم تقم بوضعها في موضع محدد قبل إفلات الماوس.
 
-You can move both sidebar categories and boards and change the order of
-both to suit your preference. You can:
+## إدارة اللوحات في الشريط الجانبي
 
-- Set the position of a board within a category.
-- Drag a board out of one category and drop it into another category.
+بالإضافة إلى نقل اللوحات إلى فئات أخرى، يمكنك القيام بالإجراءات التالية من قائمة الخيارات بجانب كل اسم لوحة:
 
-To do this, select and hold the cursor over the category or board name.
-Then move the category or board around as needed. Boards moved into a
-category are sorted to the top of the category by default unless you
-specifically position the board before releasing the cursor.
+- **حذف اللوحة (Delete board)**: إذا كنت مسؤولاً عن اللوحة، فسترى خياراً لحذفها. يؤدي حذف اللوحة إلى إزالتها نهائياً من الشريط الجانبي لجميع أعضاء اللوحة.
+- **تكرار اللوحة (Duplicate board)**: إنشاء نسخة من اللوحة وجميع البطاقات الموجودة عليها. ستظهر اللوحة المكررة تحت نفس فئة اللوحة الأصلية. لا يتم نقل أعضاء اللوحة والتعليقات من اللوحة الأصلية إلى اللوحة الجديدة.
+- **قالب جديد من اللوحة (New template from board)**: إنشاء قالب لوحة مخصص من اللوحة وجميع بطاقاتها.
+- **إخفاء اللوحة (Hide board)**: يخفي اللوحة من شريطك الجانبي فقط. ستظل اللوحة مرئية في الشريط الجانبي للأعضاء الآخرين. يمكنك إعادة اللوحة إلى شريطك الجانبي باستخدام مربع البحث (CMD+K / CTRL+K).
 
-# Manage boards on the sidebar
+## العثور على لوحة
 
-In addition to moving boards to other categories, from the
-[\|more-icon\|](##SUBST##|more-icon|) menu next to each board name you
-can perform the following actions:
+من أعلى الشريط الجانبي الأيسر للوحات، اختر حقل **Find Boards** (أو اضغط CMD+K / CTRL+K) لفتح مبدل اللوحات، وابدأ في كتابة اسم اللوحة التي تبحث عنها.
 
-- **Delete board**: If you're an admin of the board, you will see an
-  option to delete the board. Deleting the board permanently removes the
-  board from the sidebar of all board members.
-- **Duplicate board**: Creates a copy of the board and all the cards on
-  the board. The duplicated board will appear under the same category as
-  the original board. Board members and comments from the original board
-  aren't migrated to the new board.
-- **New template from board**: Creates a custom board template of the
-  board and all the cards on the board.
-- **Hide board**: Hides the board from your sidebar only. The board will
-  still remain visible on the sidebar for other board members. You can
-  add the board back to your sidebar using the search box
-  (CMD+K/CTRL+K).
+## الشريط الجانبي للفريق (Team sidebar)
 
-# Find a board
-
-From the top of the boards left hand sidebar, select the **Find Boards**
-field (CMD+K/CTRL+K) to open the board switcher, and start typing the
-name of the board you’re looking for.
-
-# Team sidebar
-
-If you’re a member of multiple teams, the team sidebar will appear on
-the left hand side of Boards. To switch teams, select any of the team
-icons from the team sidebar.
+إذا كنت عضواً في عدة فرق، فسيظهر شريط جانبي للفرق على الجانب الأيسر من اللوحات. للتبديل بين الفرق، اختر أي أيقونة من أيقونات الفرق في الشريط الجانبي للفرق.

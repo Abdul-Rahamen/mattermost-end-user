@@ -1,54 +1,55 @@
 ---
-title: "التعاون داخل Microsoft Teams "
-description: "تكامل Mattermost مع Microsoft Teams"
+title: "التعاون عبر مايكروسوفت تيمز (Microsoft Teams)"
+description: "دليل إعداد واستخدام تكامل ماترموست مع مايكروسوفت تيمز لتلقي إشعارات الدردشة اللحظية ومزامنة التواصل بين المنصتين."
 ---
 
+import { Tabs, TabItem } from "@astrojs/starlight/components";
 
-import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
-import { Image } from 'astro:assets';import teamsGif from '../../../images/microsoft-teams-chat-notifications.gif';
-import teamsNotif from '../../../images/microsoft-teams-chat-notifications.png';
-import teamsNotifSettings from '../../../images/teams_plugin_notification_settings.png';
+يتيح لك تكامل "ماترموست مع مايكروسوفت تيمز" (Mattermost for Microsoft Teams) كسر حواجز التواصل في بيئات العمل التي تستخدم المنصتين معاً، وذلك من خلال إعادة توجيه إشعارات الدردشة اللحظية من "تيمز" مباشرة إلى "ماترموست".
 
-<Aside type="note">متاح في الخطط: <Badge text="Entry" variant="note" /> <Badge text="Enterprise" variant="note" /> <Badge text="Enterprise Advanced" variant="note" /> (غير متاح في Professional)</Aside>
+![تكامل ماترموست مع مايكروسوفت تيمز يقوم بتوجيه إشعارات الدردشة اللحظية](https://docs.mattermost.com/_images/microsoft-teams-chat-notifications.gif)
 
-يتيح تكامل Mattermost مع Microsoft Teams إعادة توجيه إشعارات الدردشة في الوقت الفعلي من Teams إلى Mattermost عندما تكون بعيدًا عن Teams.
+## ربط حساب ماترموست بحساب مايكروسوفت تيمز
 
-<Image src={teamsGif} alt="Microsoft Teams chat notifications" height={500} style={{ display: 'block', margin: '12px auto' }} />
+:::note[ملاحظة للمسؤولين]
+يجب على "مسؤول النظام" (System Administrator) أولاً تثبيت وتفعيل تكامل ماترموست مع مايكروسوفت تيمز والتأكد من تفعيل دعم الإشعارات قبل البدء بعملية الربط.
+:::
 
-## ربط الحساب
+بمجرد قيام مسؤول النظام بإعداد التكامل، يمكنك ربط حساب مستخدم "ماترموست" الخاص بك بحسابك في "مايكروسوفت تيمز". هذه الخطوة مطلوبة لمرة واحدة فقط:
 
-قبل البدء، يجب على مسؤول النظام تثبيت وتمكين تكامل Microsoft Teams والتأكد من تمكين دعم الإشعارات في إعدادات الإضافات.
+1. سجل الدخول إلى "ماترموست" باستخدام بيانات اعتمادك.
+2. في أي قناة (Channel)، قم بتشغيل الأمر المائل (Slash command) التالي: `/msteams connect` ثم انقر على الرابط الظاهر.
+3. قم بتأكيد الهوية عبر "مايكروسوفت تيمز" باستخدام البريد الإلكتروني المطابق لحسابك في "ماترموست".
 
-<Steps>
-1. سجّل الدخول إلى Mattermost.
-2. في قناة، نفّذ `/msteams connect` ثم اتبع الرابط الناتج.
-3. مصادقة مع Microsoft باستخدام نفس البريد الإلكتروني المرتبط بحساب Mattermost.
-4. Mattermost يؤكد عند نجاح الربط.
-</Steps>
+سيرسل لك ماترموست إشعاراً فور اكتمال عملية الربط بنجاح.
 
-بعد الربط، سترى إشعارات الدردشة من Teams في Mattermost عندما تكون غير نشط في Teams.
+بعد ربط الحساب، وعندما تكون حالتك "غير متصل" (Offline) أو "بعيد" (Away) في "مايكروسوفت تيمز"، ستظهر أي رسالة تصلك في دردشة فردية أو جماعية على "تيمز" كإشعار داخل "ماترموست". يتضمن الإشعار رابطاً يفتح المحادثة مباشرة في تطبيق "تيمز" لمتابعة النقاش. لن تظهر هذه الإشعارات إذا كنت نشطاً مؤخراً على منصة "تيمز".
 
-<Image src={teamsNotif} alt="مثال على إشعار رسالة دردشة" height={500} style={{ display: 'block', margin: '12px auto' }} />
+![مثال على إشعار رسالة دردشة](https://docs.mattermost.com/_images/microsoft-teams-chat-notifications.png)
 
-## إدارة إعدادات الإشعارات
+### إدارة إعدادات الإشعارات
 
-تستطيع إدارة إعدادات التكامل عبر **Settings > Plugin Preferences**.
+يمكنك تخصيص إعدادات إشعارات التكامل في أي وقت عبر التوجه إلى:
+**Settings** > **Plugin Preferences** (الإعدادات > تفضيلات الملحقات البرمجية).
 
-<Image src={teamsNotifSettings} alt="إعدادات إشعارات التكامل" height={500} style={{ display: 'block', margin: '12px auto' }} />
+![إدارة إعدادات إشعارات مايكروسوفت تيمز](https://docs.mattermost.com/_images/teams_plugin_notification_settings.png)
 
-<Aside type="note">
-أوامر مفيدة:
-- `/msteams connect` — ربط الحساب.
-- `/msteams disconnect` — فصل الحساب.
-- `/msteams status` — إظهار حالة الاتصال.
-- `/msteams notifications on|off` — تبديل الإشعارات.
-</Aside>
+:::tip[نصيحة]
+يمكنك استخدام الأوامر المائلة التالية لإدارة إعدادات التكامل بسرعة عبر كتابتها في صندوق الرسائل:
 
-## أسئلة متكررة
+- `/msteams connect`: لربط حسابك بـ Microsoft Teams.
+- `/msteams disconnect`: لفك ارتباط الحساب.
+- `/msteams status`: لعرض حالة الاتصال الحالية.
+- `/msteams notifications on|off`: لتفعيل أو تعطيل الإشعارات.
+  :::
 
-Mattermost يقرر تسليم إشعارات الدردشة بناءً على توفر حسابك في Microsoft Teams. إذا كنت في حالة **غائب** أو **غير متصل** في Teams، سيتم توصيل الإشعارات في Mattermost. سلوك التسليم يعتمد على العميل:
+## الأسئلة الشائعة
 
-- متصفح الويب: لا نشاط في تبويب Teams لمدة 5 دقائق أو إغلاق التبويب.
-- تطبيق سطح المكتب: لا نشاط على الجهاز لمدة 5 دقائق أو إغلاق التطبيق.
+### كيف يحدد النظام توقيت إرسال إشعارات الدردشة؟
 
-لتجنب التنبيهات المزدوجة، لا يرسل Mattermost إشعارات عندما تكون متاحًا أو في وضع عدم الإزعاج في Teams.
+تُرسل الإشعارات لحظياً عندما تكون "غير نشط" في "مايكروسوفت تيمز". يعتمد ماترموست على حالة تواجدك (Presence) لتحديد حاجتك للإشعار؛ حيث يتم الإرسال فقط إذا كانت حالتك **Away** أو **Offline**. يختلف سلوك تحديد الحالة بناءً على نوع التطبيق المستخدم:
+
+- **متصفح الويب:** يرسل ماترموست الإشعارات عند توقف نشاطك في تبويب "تيمز" لمدة 5 دقائق أو أكثر، أو عند إغلاق التبويب، أو عند تعيين حالتك يدوياً إلى **Offline**.
+- **تطبيق سطح المكتب:** يرسل ماترموست الإشعارات عند توقف نشاطك على الحاسوب لمدة 5 دقائق أو أكثر، أو عند إغلاق التطبيق، أو عند تعيين حالتك يدوياً إلى **Offline**.
+
+لتجنب تكرار الإشعارات المزعجة، لن يقوم ماترموست بإرسال الإشعارات إذا كانت حالتك في "تيمز" هي: **Available** (متاح)، **Busy** (مشغول)، **Do not disturb** (ممنوع الإزعاج)، أو **Be right back** (سأعود حالاً).

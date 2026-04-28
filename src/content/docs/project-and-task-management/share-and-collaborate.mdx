@@ -1,211 +1,122 @@
 ---
-title: Share and collaborate
+title: "المشاركة والتعاون"
+description: "تعرف على كيفية إدارة الأذونات والأدوار في لوحات ماترموست، مشاركة اللوحات داخلياً أو علنياً، والتعاون مع فريقك."
 ---
 
-.. If used with include::, note the paths for images
+import FAIcon from "../../../components/FAIcon.astro";
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/) (not available on Professional)
-</Aside>
+## أذونات اللوحة (Board permissions)
 
+تنتمي اللوحات إلى الفرق، ويمكن منح أي عضو في هذا الفريق حق الوصول إلى اللوحة.
 
-# Board permissions
+إذا كانت مساحة عمل اللوحات لديك تبدو مختلفة، فقد تكون تستخدم إصداراً قديماً من Boards. في الإصدارات الأقدم، كانت اللوحات مرتبطة بمساحات عمل القنوات، ويتم تحديد عضوية اللوحة بناءً على عضوية القناة. في هذه الحالة، لن تنطبق عليك الأدوار والأذونات المذكورة هنا.
 
-Boards belong to teams and any member of that team can be granted access
-to a board.
+## الأدوار (Roles)
 
-If your boards workspace looks different, you may be on an earlier
-version of boards. In earlier versions, boards are tied to channel
-workspaces and board membership is determined by channel membership. In
-this case, roles and permissions won't be applicable to you.
+يتم تحديد مستوى الوصول إلى اللوحة من خلال دور اللوحة المعين للمستخدم. عضوية اللوحة الفردية لها الأولوية دائماً، يليها دور المجموعة الأعلى (الأكثر سماحية).
 
-# Roles
+| أذونات اللوحة                |         مسؤول (Admin)         |         محرر (Editor)         |       معلق (Commenter)        |        مشاهد (Viewer)         |
+| :--------------------------- | :---------------------------: | :---------------------------: | :---------------------------: | :---------------------------: |
+| تعديل الأذونات               | <FAIcon name="circle-check" color="#00987E"/> |                               |                               |                               |
+| مشاركة لوحة عامة             | <FAIcon name="circle-check" color="#00987E"/> |                               |                               |                               |
+| حذف اللوحة                   | <FAIcon name="circle-check" color="#00987E"/> |                               |                               |                               |
+| إعادة تسمية اللوحة           | <FAIcon name="circle-check" color="#00987E"/> | <FAIcon name="circle-check" color="#00987E"/> |                               |                               |
+| إضافة، تعديل، وحذف طرق العرض | <FAIcon name="circle-check" color="#00987E"/> | <FAIcon name="circle-check" color="#00987E"/> |                               |                               |
+| إضافة، تعديل، وحذف البطاقات  | <FAIcon name="circle-check" color="#00987E"/> | <FAIcon name="circle-check" color="#00987E"/> |                               |                               |
+| التعليق، وحذف تعليقاتي       | <FAIcon name="circle-check" color="#00987E"/> | <FAIcon name="circle-check" color="#00987E"/> | <FAIcon name="circle-check" color="#00987E"/> |                               |
+| حذف أي تعليق                 | <FAIcon name="circle-check" color="#00987E"/> |                               |                               |                               |
+| العرض                        | <FAIcon name="circle-check" color="#00987E"/> | <FAIcon name="circle-check" color="#00987E"/> | <FAIcon name="circle-check" color="#00987E"/> | <FAIcon name="circle-check" color="#00987E"/> |
 
-| **Board permissions** | **Admin** | **Editor** | **Commenter** | **Viewer** |
-|----|----|----|----|----|
-| Modify permissions | [\|checkmark\|](##SUBST##|checkmark|) |  |  |  |
-| Share a public board | [\|checkmark\|](##SUBST##|checkmark|) |  |  |  |
-| Delete board | [\|checkmark\|](##SUBST##|checkmark|) |  |  |  |
-| Rename board | [\|checkmark\|](##SUBST##|checkmark|) | [\|checkmark\|](##SUBST##|checkmark|) |  |  |
-| Add, edit, and delete views | [\|checkmark\|](##SUBST##|checkmark|) | [\|checkmark\|](##SUBST##|checkmark|) |  |  |
-| Add, edit, and delete cards | [\|checkmark\|](##SUBST##|checkmark|) | [\|checkmark\|](##SUBST##|checkmark|) |  |  |
-| Comment, delete my comments | [\|checkmark\|](##SUBST##|checkmark|) | [\|checkmark\|](##SUBST##|checkmark|) | [\|checkmark\|](##SUBST##|checkmark|) |  |
-| Delete any comment | [\|checkmark\|](##SUBST##|checkmark|) |  |  |  |
-| View | [\|checkmark\|](##SUBST##|checkmark|) | [\|checkmark\|](##SUBST##|checkmark|) | [\|checkmark\|](##SUBST##|checkmark|) | [\|checkmark\|](##SUBST##|checkmark|) |
+- **مسؤول (Admin)**: يمكنه تعديل اللوحة ومحتوياتها وأذوناتها. بشكل افتراضي، يكون منشئو اللوحات هم أيضاً مسؤولون عنها.
+- **محرر (Editor)**: يمكنه تعديل اللوحة ومحتوياتها.
+- **معلق (Commenter)**: يمكنه إضافة تعليقات على البطاقات.
+- **مشاهد (Viewer)**: يمكنه عرض اللوحة ومحتوياتها ولكن لا يمكنه التعليق أو تحرير اللوحة.
 
-The level of access to a board is determined by a user’s assigned board
-role. Individual board membership always gets precedence, followed by
-highest (most permissive) group role.
+### وصول مسؤول النظام (System admin)
 
-- **Admin**: Can modify the board, its contents, and its permissions. By
-  default, board creators are also admins of the board.
-- **Editor**: Can modify the board and its contents.
-- **Commenter**: Can add comments to cards.
-- **Viewer**: Can view the board and its contents but can't comment or
-  edit the board.
+يمكن لمسؤولي النظام الوصول إلى أي لوحة عبر الخادم شريطة أن يكون لديهم رابط اللوحة (URL) دون الحاجة لطلب إذن أو إضافتهم يدوياً. عندما ينضم مسؤول نظام إلى لوحة، يكون دوره الافتراضي هو مسؤول (Admin). سيظهر بجانب اسمهم تصنيف **Admin** في قائمة المشاركين.
 
-## System admin access
+### وصول مسؤول الفريق (Team admin)
 
-System admins can access any board across the server provided they have
-the board's URL without having to request permission or be manually
-added. When a system admin joins a board, their default role is admin.
-System admins will have an **Admin** label assigned to their name on the
-participants list.
+يمكن لمسؤولي الفريق الوصول إلى أي لوحة داخل فريقهم شريطة أن يكون لديهم رابط اللوحة دون الحاجة لطلب إذن أو إضافتهم يدوياً. عندما ينضم مسؤول فريق إلى لوحة، يكون دوره الافتراضي هو مسؤول. سيظهر بجانب اسمهم تصنيف **Team admin** في قائمة المشاركين.
 
-## Team admin access
+## إدارة وصول الفريق
 
-Team admins can access any board within their team provided they have
-the board's URL without having to request permission or be manually
-added. When a system admin joins a board, their default role is admin.
-Team admins will have a **Team admin** label assigned to their name on
-the participants list.
+يمكن لمسؤولي اللوحة إدارة وصول الفريق إلى لوحتهم عن طريق اختيار **Share** في الزاوية العلوية اليمنى من اللوحة. من القائمة المنسدلة بجانب خيار **Everyone at… Team**، اختر حداً أدنى لدور اللوحة لكل فرد في الفريق. يمكنك أيضاً تعيين الأدوار الجديدة بسهولة للفريق بأكمله و/أو لأعضاء الفريق الأفراد.
 
-## Manage team access
+تقلل الأدوار الافتراضية للوحة من غموض الأذونات وتمنع الثغرات الأمنية. يعني الحد الأدنى للدور الافتراضي أن مسؤولي اللوحة لا يمكنهم تعيين دور لعضو فردي في اللوحة يكون أقل من دور الفريق. إذا تم ضبط دور الفريق على **محرر (Editor)**، فسيتمكن مسؤول اللوحة فقط من تعيين دور **محرر** أو **مسؤول** لأعضاء الفريق الأفراد. لن تكون الأدوار الأدنى متاحة للاختيار ما لم يقم المسؤول بتغيير الحد الأدنى لدور اللوحة.
 
-Board admins can manage team access to their board by selecting
-**Share** in the top-right corner of the board. On the dropdown next to
-**Everyone at… Team** option, select a minimum board role for everyone
-on the team. You can also easily assign the new roles to the entire team
-and/or to individual team members.
+اعتماداً على الدور المختار، سيكون لكل فرد في الفريق حق الوصول إلى اللوحة بحد أدنى من الأذونات لهذا الدور. يمكن للمستخدمين الحصول على أذونات أعلى بناءً على عضويتهم الفردية في اللوحة. الوصول الافتراضي للفريق للوحة تم إنشاؤها حديثاً هو **None**، مما يعني أنه لا أحد في الفريق لديه حق الوصول إلى اللوحة.
 
-Minimum default board roles reduce permission ambiguity and prevent
-security loopholes. The minimum default role means that board admins
-can't assign individual board members a role lower than the team role.
-If the team role is set to **Editor** then the board admin will only be
-able to assign the **Editor** or **Admin** role to individual team
-members. Lower roles will not be available for selection unless the
-admin changes the minimum board role.
+## إدارة عضوية اللوحة الفردية
 
-Depending on the role selected, everyone on the team will have access to
-the board with a minimum of the permissions from the role selected.
-Users can get elevated permissions based on their individual board
-membership. The default team access for a newly created board is
-**None**, which means nobody on the team has access to the board.
+يمكن لمسؤولي اللوحة فقط إدارة أذونات المستخدمين في اللوحة، بما في ذلك إضافة الأعضاء وتغييرهم وإزالتهم.
 
-## Manage individual board membership
+لإضافة مستخدمين أفراد من الفريق كأعضاء صريحين في اللوحة، افتح نافذة **Share**، وابحث عن أعضاء الفريق الأفراد، ثم عين لهم دوراً لضبط أذوناتهم في اللوحة. دور أعضاء اللوحة الأفراد يتجاوز أي دور محدد لوصول الفريق.
 
-Only board admins can manage user permissions on a board, including
-adding, changing, and removing members.
+- لتغيير دور عضو في اللوحة، افتح نافذة **Share**، واختر القائمة المنسدلة للأدوار بجانب اسم المستخدم، ثم اختر دوراً آخر.
+- لإزالة عضو من اللوحة، افتح نافذة **Share**، واختر القائمة المنسدلة للأدوار بجانب اسم المستخدم، ثم اختر **Remove member**.
 
-To add individual users from the team as explicit members of the board,
-open the **Share** dialog on the board, search for individual team
-members, then assign a role to set their permissions for the board. The
-role for individual board members overrides any role specified for team
-access.
+يمكن لمسؤولي اللوحة أيضاً إضافة أعضاء أفراد باستخدام قائمة الإكمال التلقائي من الإشارات (@mentions) وخصائص الأشخاص. لإضافة فرد من قائمة الإكمال التلقائي، اكتب اسم المستخدم الخاص به في إشارة @ أو في خصائص **Person** أو **Multi-person**، ثم عين له دوراً من نافذة التأكيد، واختر **Add to board**.
 
-- To change a board member’s role, open the **Share** dialog, select the
-  role dropdown next to the user’s name, then select another role from
-  the list.
-- To remove a member from a board, open the **Share** dialog, select the
-  role dropdown next to the user’s name, then select **Remove member**.
+في اللوحات التي تتيح وصول الفريق، يمكن لأعضاء اللوحة الذين لديهم دور **محرر** أو **معلق** أيضاً إضافة أفراد إلى اللوحة من قائمة الإكمال التلقائي. سيتم تعيين الحد الأدنى الافتراضي لدور اللوحة للأعضاء المضافين بهذه الطريقة.
 
-Board admins can also add individual members using the autocomplete list
-from @mentions and the person properties. To add an individual from the
-autocomplete list, type their username in an @mention or in the
-**Person** or **Multi-person** properties, then assign a role to the
-user from the confirmation dialog, and select **Add to board**.
+### مجموعات أدوار القنوات
 
-On boards with team access, board members with **Editor** or
-**Commenter** roles can also add individuals to the board from the
-autocomplete list. Board members added in this manner will be assigned
-the default minimum board role.
+يمكن لمسؤولي اللوحة إضافة قناة إلى اللوحة لمنح جميع أعضائها حق الوصول كـ "محرر". للقيام بذلك، اختر **Share** في الزاوية العلوية اليمنى، وابحث عن اسم القناة، وأضفها إلى اللوحة كـ "مستخدم". الدور الافتراضي هو محرر. يؤدي القيام بذلك أيضاً إلى [ربط اللوحة بالقناة](/project-and-task-management/navigate-boards#ربط-لوحة-بقناة)، حيث ستظهر اللوحة في الشريط الجانبي الأيمن للقناة (RHS).
 
-## Channel role groups
+لإلغاء ربط القناة باللوحة، افتح نافذة **Share**، واختر القائمة المنسدلة للأدوار بجانب اسم القناة، ثم اختر **Unlink**.
 
-Board admins can add a channel to a board to grant all its members
-Editor access. To do this, select **Share** in the top-right corner of
-the board, search for the channel name, and add it to the board as a
-user. The default role is Editor. Doing so also
-`links the board back to the channel <end-user-guide/project-management/navigate-boards:link a board to a channel>`,
-where the board will appear on the channel RHS.
+:::note[ملاحظة]
+يمكن ربط اللوحة بقناة واحدة فقط في كل مرة. سيؤدي ربط قناة أخرى بنفس اللوحة إلى إزالة الربط من القناة السابقة تلقائياً.
+:::
 
-To unlink the channel from the board, open the **Share** dialog, select
-the role dropdown next to the channel’s name, then select **Unlink**.
+## حسابات الضيوف (Guest accounts)
 
-<Aside type="note">
-A board can only be linked to one channel at a time. Linking another
-channel to the same board will automatically remove the link from the
-previous channel.
-</Aside>
+بدءاً من إصدار Mattermost Boards v7.4، يتم دعم حسابات الضيوف في اللوحات. يمكن للضيوف:
 
+- الوصول إلى اللوحات التي تمت إضافتهم إليها كأعضاء صريحين. لا ينطبق "وصول الفريق" ومجموعات أدوار القنوات على حسابات الضيوف.
+- الوصول إلى اللوحات الموجودة، ولكن لا يمكنهم إنشاء لوحات جديدة. لا يملك الضيوف وصولاً إلى منتقي القوالب ولا يمكنهم تكرار لوحة موجودة.
+- البحث عن اللوحات التي هم أعضاء صريحون فيها حالياً.
+- تعيين أدوار "مشاهد" أو "معلق" أو "محرر" لهم، ولكن ليس "مسؤول اللوحة".
+- الإشارة (@mention) فقط للأعضاء الحاليين في اللوحة.
 
-# Guest accounts
+إذا لم تكن قادراً على الوصول إلى هذه الوظائف، فقد تكون تستخدم إصداراً أقدم من Boards.
 
-From Mattermost Boards v7.4,
-`guest accounts <administration-guide/onboard/guest-accounts:guest accounts>`
-are supported in Boards. Guests can:
+## مشاركة اللوحة
 
-- Access boards where they're added as an explicit member of the board.
-  [Team access](#manage-team-access) and [channel role
-  groups](#channel-role-groups) don't apply to guest accounts.
-- Access existing boards, but not create new boards. Guests don't have
-  access to the template picker and can't duplicate an existing board.
-- Search for boards where they're currently an explicit member.
-- Be assigned the Viewer, Commenter, or Editor roles, but not the board
-  Admin.
-- Only @mention current members on the board.
+يمكن مشاركة اللوحات داخلياً مع فريقك أو نشرها خارجياً مع إمكانية وصول محدودة.
 
-If you're not able to access this functionality, you may be on an
-earlier version of Boards.
+### مشاركة لوحة داخلياً
 
-# Share a board
+لمشاركة لوحة مع أعضاء الفريق داخلياً، اختر **Share** في الزاوية العلوية اليمنى من اللوحة، ثم اختر **Copy link** من تبويب **Share** أدناه. قم بلصق الرابط المنسوخ في قناة أو رسالة مباشرة. فقط أعضاء الفريق الذين لديهم أذونات في اللوحة سيتمكنون من فتحها من الرابط المشترك.
 
-Boards can be shared internally with your team or published externally
-with limited accessibility.
+### مشاركة لوحة علنياً
 
-## Share a board internally
+مشاركة اللوحات علنياً معطلة افتراضياً. هذا يعني أن تبويب **Publish** غير متاح في نافذة **Share**. لتفعيل مشاركة اللوحات العامة:
 
-To share a board with team members internally, select **Share** in the
-top-right corner of the board, then select **Copy link** from the
-**Share** tab below. Paste the copied link in a channel or direct
-message to share the board with other team members. Only team members
-who have permissions to the board will be able to open the board from
-the shared link.
+1. انتقل إلى **قائمة المنتجات > System Console > Products > Boards**.
+2. اضبط **Enable Publicly-Shared Boards** على **true**.
+3. اختر **Save**.
 
-## Share a board publicly
+بمجرد التفعيل، يمكن لمسؤولي اللوحة مشاركة رابط للقراءة فقط عبر الإنترنت مع أي شخص:
 
-Sharing boards publicly is disabled by default. This means that the
-**Publish** tab is not available from the **Share** dialog. To enable
-public board sharing:
+1. اختر **Share** في الزاوية العلوية اليمنى من اللوحة.
+2. انتقل إلى تبويب **Publish**.
+3. فعل خيار **Publish to the web**.
+4. اختر **Copy link**.
 
-1.  Go to **Product menu \> System Console \> Products \> Boards**.
-2.  Set **Enable Publicly-Shared Boards** to **true**.
-3.  Select **Save**.
+قم بلصق الرابط في أي مكان تريد مشاركة اللوحة فيه. سيتمكن أي شخص لديه الرابط من عرض اللوحة، لكنه لن يتمكن من تحريرها.
 
-Once enabled, board admins can share a read-only link online with
-anyone:
+اختر أيقونة **Regenerate Token** في مربع الرابط إذا كنت تريد إبطال جميع الروابط التي تمت مشاركتها مسبقاً. أكد الإجراء لإعادة إنشاء الرمز.
 
-1.  Select **Share** in the top-right corner of the board.
-2.  Toggle to the **Publish** tab.
-3.  Switch to the **Publish to the web** option.
-4.  Select **Copy link**.
+## مشاركة البطاقات في القنوات
 
-Paste the link anywhere you want to share the board. Anyone with the
-link will be able to view the board, but they won’t be able to edit the
-board.
+يمكن ربط البطاقات ومشاركتها مع أعضاء الفريق مباشرة في قنوات ماترموست. عند مشاركة رابط لبطاقة داخل القنوات، يتم عرض تفاصيل البطاقة تلقائياً في معاينة، مما يبرز موضوع البطاقة بنظرة سريعة دون الحاجة للانتقال إليها.
 
-Select the **Regenerate Token** icon in the URL box if you want to
-invalidate all the previously shared links. Confirm the action to
-regenerate the token.
+لمشاركة بطاقة، ستحتاج إلى نسخ رابط البطاقة أولاً:
 
-# Share cards on Channels
+- افتح بطاقة واختر قائمة الخيارات (النقاط الثلاث) <FAIcon name="ellipsis"/> في أعلى يمين البطاقة، ثم اختر **Copy link**.
+- بدلاً من ذلك، يمكنك فتح عرض اللوحة وتمرير الماوس فوق أي بطاقة للوصول إلى قائمة الخيارات الخاصة بها واختيار **Copy link**.
 
-Cards can be linked and shared with team members directly on Mattermost
-Channels. When you share a link to a card within Channels, the card
-details are automatically displayed in a preview. This preview
-highlights what the card is about at a glance without having to navigate
-to it.
-
-To share a card, you'll need to copy the card link first:
-
-- Open a card and select the options menu **(...)** at the top right of
-  the card, then select **Copy link**.
-- Alternatively, you can open the board view and hover your mouse over
-  any card to access the options menu **(...)** for the card and select
-  **Copy link** from there.
-
-After you've copied the link, paste it into any channel or direct
-message to share the card. A preview of the card will display within the
-channel with a link back to the card on Boards.
+بعد نسخ الرابط، قم بلصقه في أي قناة أو رسالة مباشرة. ستظهر معاينة للبطاقة داخل القناة مع رابط للعودة إلى البطاقة في اللوحات.

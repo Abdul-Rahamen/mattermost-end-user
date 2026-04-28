@@ -1,91 +1,46 @@
 ---
-title: Work with runs
+title: "إدارة دورات التشغيل (Runs)"
+description: "تعرف على كيفية بدء ومتابعة دورات تشغيل أدلة العمل (Playbook Runs) في ماترموست، وإدارة سلوك القنوات وتحديثات الحالة."
 ---
 
-<Aside type="note">
-[\|plans-img-yellow\|](##SUBST##|plans-img-yellow|) Available on [Entry,
-Professional, Enterprise, and Enterprise Advanced
-plans](https://mattermost.com/pricing/)
-</Aside>
+"دورة التشغيل" (Run) هي التنفيذ الفعلي لدليل العمل التعاوني. يمكنك بدء كل دورة تشغيل في قناة جديدة، أو اختيار استخدام نفس القناة لعدة دورات تشغيل.
 
+للوصول إلى دورات التشغيل، اختر قائمة المنتجات في الزاوية العلوية اليسرى من ماترموست، ثم اختر **Playbooks**. في قائمة دورات التشغيل، يمكنك اختيار دورة معينة لعرض مزيد من التفاصيل، مثل النظرة العامة والمراجعة اللاحقة. تعد هذه طريقة سهلة لتقييم جميع الدورات النشطة التي لديك حق الوصول إليها.
 
-A run is the execution of a collaborative playbook. You can start each
-run in a new channel or you can elect to use the same channel for
-multiple runs.
+## المتابعة والمشاركة
 
-To access runs, select the product menu in the top-left corner of
-Mattermost, then select **Playbooks**. In the runs list, you can select
-a run to view more details, such as the overview and retrospective. This
-is an easy way to assess all the active runs to which you have access.
+ليس من الضروري أن تكون عضواً في قناة دورة التشغيل لمتابعتها. يمكنك القيام بما يلي:
 
-# Follow and participate
+- **المتابعة (Follow):** إذا كنت تتابع دليل عمل، فلن يتم إضافتك بالضرورة إلى كل دورة تشغيل من دورات هذا الدليل، ولكن سيتم إضافتك كمتابع. للانضمام إلى قناة دورة التشغيل، اختر **Participate** في رأس تلك الدورة.
+- **المشاركة (Participate):** إذا كنت تشارك في دورة تشغيل، فمن المحتمل أنك ضمن فريق أو مجموعة من الأشخاص الذين تمت إضافتهم إليها. في هذه الحالة، ستتمكن من متابعة الدورة في قناتها الخاصة وعرض التفاصيل أيضاً في قائمة الدورات ضمن تبويب **Playbooks**.
 
-You don't have to be in a run's channel to follow the run. You can:
+## عرض تفاصيل دورة التشغيل
 
-- **Follow**: If you're following a playbook, you won't necessarily be
-  added to each of the playbook's runs but you will be added as a
-  follower. To join a run channel, select **Participate** in the header
-  of that run.
-- **Participate**: If you're participating in a run it's likely because
-  you're in a team or group of people who've been added to it. In this
-  case, you'll be able to follow the run in the run channel and also
-  view the details in the list of runs in the **Playbooks** tab.
+عندما تكون في قناة بها دورة تشغيل نشطة، اختر أيقونة **Toggle Run Details** في رأس القناة لفتح اللوحة اليمنى وعرض تفاصيل الدورة. يمكن تحرير معلومات مثل اسم الدورة ووصفها مباشرة، كما يمكن طي قوائم المهام وتصفيتها بناءً على حالتها.
 
-# View run details
+يمكن تحرير بعض إجراءات دورة التشغيل أثناء سير الدورة. يزيد هذا من وضوح التقدم المحرز في الدورة ويمكن أن يحسن من مستوى المسؤولية والمساءلة.
 
-When you’re in a channel with an active run, select the **Toggle Run
-Details** icon in the channel header to open the right-hand pane to view
-the run details. Information such as run name and description can be
-edited in-line, and the checklists can be collapsed and filtered based
-on their status.
+## دورات تشغيل أدلة العمل على الجوال
 
-Some run actions can be edited while the run is in progress. This
-increases visibility into the run's progress and can improve
-accountability.
+بدءاً من خادم Mattermost v11.0 وتطبيق الجوال v2.34.0، يمكن لمستخدمي الجوال إنشاء وإدارة دورات تشغيل أدلة العمل للقيادة العملياتية الميدانية.
 
-# Playbook runs on mobile
+## دورات التشغيل وسلوك القنوات
 
-From Mattermost server v11.0 and mobile app v2.34.0, mobile users can
-create and manage playbook runs for operational command at the edge.
+عند تهيئة دليل العمل الخاص بك، يمكنك تحديد ما إذا كانت كل دورة تشغيل تبدأ في قناة جديدة أو تستخدم نفس القناة. يمكنك تشغيل عدة أدلة عمل في نفس القناة في وقت واحد، ويتم إدراج كل دليل عمل قيد الاستخدام في اللوحة اليمنى لقناة دورة التشغيل.
 
-# Runs and channel behavior
+إذا قررت تشغيل دليل عمل في قناة جديدة، يمكنك القيام بذلك عند بدء الدورة. في اللوحة اليمنى للقناة، اختر **Start run**، ثم حدد الطريقة التي ترغب في تنفيذها بها.
 
-When you configure your playbook, you can decide whether each run of
-that playbook starts in a new channel or uses the same channel. You can
-run multiple playbooks in the same channel, simultaneously. Each
-playbook in use is listed in the RHS of the run channel.
+:::tip[نصيحة]
 
-If you decide to run a playbook in a new channel, you can do this when
-you start the run. In the channel RHS, select **Start run**. Then select
-how you'd like it to be executed.
+- عند المفاضلة بين إعادة استخدام قناة لعدة دورات تشغيل أو إنشاء قنوات جديدة لكل دورة، فإن تشغيل عدة دورات في قناة واحدة يساعد في تجنب إنشاء عدد كبير جداً من القنوات، مما قد يؤدي إلى ازدحام القنوات.
+- لا يتم أرشفة قنوات دورات التشغيل تلقائياً عند وضع علامة "مكتمل" على الدورات؛ ومع ذلك، يمكنك [أرشفة القنوات](/messaging-collaboration/collaborate-within-channels/archive-and-unarchive-channels#archive-a-channel) التي لم تعد بحاجة إليها. راجع توثيق [دورات تشغيل متعددة في قناة واحدة](/workflow-automation/work-with-collaborative-playbooks#multiple-runs-in-a-channel) لمزيد من الاعتبارات الإضافية.
+- في المقابل، يمكن أن يكون استخدام قناة مخصصة لكل دورة تشغيل مفيداً بشكل خاص في الحالات التي تتطلب امتثالاً صارماً وتصديراً لبيانات القناة.
+  :::
 
-<Aside type="note">
-- When deciding whether to reuse a channel for multiple runs, or
-  create new channels for each playbook run, multiple runs in a single
-  channel can help avoid too many channels being created, which can
-  lead to channel overload.
-- Playbook run channels aren't automatically archived when runs are
-  marked as complete; however, you can
-  `archive channels <end-user-guide/collaborate/archive-unarchive-channels:archive a channel>`
-  you no longer need, and system admins can
-  `allow user access to archived channels <administration-guide/configure/site-configuration-settings:allow users to view archived channels>`
-  if needed. See the
-  `multiple runs in a channel <end-user-guide/workflow-automation/work-with-playbooks:multiple runs in a channel>`
-  documentation for additional considerations.
-- In contrast, using a dedicated channel for each playbook run can be
-  helpful particularly in cases where strict
-  `compliance </administration-guide/comply/compliance-export>` and
-  `channel data export </administration-guide/comply/export-mattermost-channel-data>`
-  is required.
-</Aside>
+## إرسال خطافات الويب الصادرة (Outgoing Webhooks)
 
-
-# Send outgoing webhooks
-
-1.  In your run, select **Toggle Run Details** to open the right-hand
-    sidebar.
-2.  Select **Run details**.
-3.  In the **Run details** page, scroll down to **Actions**.
-4.  Add your webhook URLs in the field provided. You can turn off this
-    option using the toggle.
-5.  Select **Save**.
+1. في دورة التشغيل الخاصة بك، اختر **Toggle Run Details** لفتح الشريط الجانبي الأيمن.
+2. اختر **Run details**.
+3. في صفحة **Run details**، قم بالتمرير لأسفل إلى **Actions**.
+4. أضف روابط (URLs) خطافات الويب الخاصة بك في الحقل المخصص. يمكنك إيقاف هذا الخيار باستخدام زر التبديل.
+5. اختر **Save**.
