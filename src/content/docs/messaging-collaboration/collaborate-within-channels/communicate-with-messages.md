@@ -1,12 +1,12 @@
 ---
-title: "التواصل مع الرسائل والسلاسل (Communicate with messages and threads)"
-description: "تعرف على كيفية التواصل والتعاون باستخدام الرسائل وسلاسل المحادثات في Mattermost"
+title: "التواصل مع الرسائل والسلاسل "
+description: "تعرف على كيفية التواصل والتعاون باستخدام الرسائل وسلاسل المحادثات في Workspace"
 ---
 
 
 يعد [إرسال الرسائل](/end-user-guide/collaborate/send-messages)، و [الرد على الرسائل](/end-user-guide/collaborate/reply-to-messages)، و [المشاركة في سلاسل المناقشة](/end-user-guide/collaborate/organize-conversations) طرقًا مهمة للحفاظ على نشاط المحادثات مع فريقك.
 
-## العمل مع الرسائل والسلاسل (Work with messages and threads)
+## العمل مع الرسائل والسلاسل 
 
 تعرف على المزيد حول الرسائل والسلاسل:
 

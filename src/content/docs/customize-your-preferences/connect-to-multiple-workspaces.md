@@ -24,7 +24,7 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
     2. أدخل عنوان URL للخادم. يجب أن يبدأ العنوان بـ `http://` أو `https://`.
 
     :::tip
-    لا تجد عنوان URL لخادم ماترموست الخاص بك؟ اسأل قسم تكنولوجيا المعلومات أو مسؤول ماترموست عن **Mattermost Site URL** الخاص بمؤسستك. سيبدو العنوان مثل `https://example.com/company/mattermost` أو `mattermost.yourcompanydomain.com` أو `chat.yourcompanydomain.com`.
+    لا تجد عنوان URL لخادم ماترموست الخاص بك؟ اسأل قسم تكنولوجيا المعلومات أو مسؤول ماترموست عن **Mattermost Site URL** الخاص بمؤسستك. سيبدو العنوان مثل `https://example.com/company/Workspace` أو `Workspace.yourcompanydomain.com` أو `chat.yourcompanydomain.com`.
     :::
 
     3. أدخل **اسم العرض** (Display Name) للخادم.

@@ -10,7 +10,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "Workspace ",
+      title: "Workspace",
       logo: {
         src: "./src/assets/logo-light.jpg",
         alt: "Mattermost Logo",
@@ -68,7 +68,7 @@ export default defineConfig({
               slug: "access-your-workspace/client-availability",
             },
             {
-              label: "تسجيل الخروج من Mattermost",
+              label: "تسجيل الخروج من Workspace",
               slug: "access-your-workspace/log-out-of-mattermost",
             },
           ],
