@@ -13,9 +13,16 @@
     "@astrojs/starlight": "^0.38.3",
     "@astrojs/starlight-tailwind": "^5.0.0",
     "@fontsource/ibm-plex-sans-arabic": "^5.2.9",
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-brands-svg-icons": "^7.2.0",
+    "@fortawesome/free-regular-svg-icons": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.0.1",
     "sharp": "^0.34.2",
     "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }

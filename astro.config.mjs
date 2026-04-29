@@ -276,10 +276,6 @@ export default defineConfig({
               collapsed: true,
             },
             {
-              label: "التعاون داخل Microsoft Teams",
-              slug: "messaging-collaboration/collaborate-within-microsoft-teams",
-            },
-            {
               label: "اختصارات لوحة المفاتيح",
               items: [
                 {
@@ -307,11 +303,11 @@ export default defineConfig({
               slug: "workflow-automation/workflow-automation",
             },
             {
-              label: "تعرف على كتيبات اللعب التعاونية",
+              label: "تعرف على قوالب العمل التعاونية",
               slug: "workflow-automation/learn-about-collaborative-playbooks",
             },
             {
-              label: "العمل مع كتيبات اللعب التعاونية",
+              label: "العمل مع  قوالب العمل التعاونية",
               slug: "workflow-automation/work-with-collaborative-playbooks",
             },
             {
@@ -335,7 +331,7 @@ export default defineConfig({
               slug: "workflow-automation/share-and-collaborate",
             },
             {
-              label: "التفاعل مع كتيبات اللعب التعاونية",
+              label: "التفاعل مع  قوالب العمل التعاونية",
               slug: "workflow-automation/interact-with-collaborative-playbooks",
             },
           ],
