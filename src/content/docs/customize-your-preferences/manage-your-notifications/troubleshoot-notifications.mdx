@@ -12,9 +12,9 @@ import FAIcon from "../../../../components/FAIcon.astro";
 
 بدءاً من Mattermost v10.3، يمكنك إرسال إشعار اختبار لنفسك:
 
-1. انتقل إلى **Settings** <FAIcon name="gear" />.
-2. انتقل إلى خيارات **Notifications**.
-3. تحت قسم **Troubleshooting notifications**، اختر **Send a test notification**.
+1. انتقل إلى **الإعدادات** <FAIcon name="gear" />.
+2. انتقل إلى خيارات **الإشعارات**.
+3. تحت قسم **استكشاف أخطاء الإشعارات وإصلاحها**، اختر **إرسال إشعار اختبار**.
 
 إذا كانت الإشعارات تعمل، فستتلقى رسالة مباشرة من بوت النظام تؤكد ذلك. إذا لم تصلك الرسالة، فاتبع خطوات استكشاف الأخطاء أدناه.
 
@@ -24,24 +24,24 @@ import FAIcon from "../../../../components/FAIcon.astro";
 
 <Tabs>
   <TabItem label="سطح المكتب">
-    1. اختر **Settings** <FAIcon name="gear" /> في الزاوية العلوية اليمنى.
-    2. اختر **Desktop and mobile notifications**.
-    3. إذا كان خيار **Send notifications for** مضبوطاً على **Nothing**، فهذا يعني أن الإشعارات معطلة. اختر **All new messages** أو **Mentions, direct messages, and group messages** بدلاً من ذلك.
+    1. اختر **الإعدادات** <FAIcon name="gear" /> في الزاوية العلوية اليمنى.
+    2. اختر **إشعارات سطح المكتب والجوال**.
+    3. إذا كان خيار **إرسال الإشعارات لـ** مضبوطاً على **لاشيء**، فهذا يعني أن الإشعارات معطلة. اختر **كل الرسائل الجديدة** أو **الإشارات والرسائل المباشرة والرسائل الجماعية** بدلاً من ذلك.
 
     ![check desktop notifications](https://docs.mattermost.com/_images/desktop-notification-check.gif)
 
   </TabItem>
   <TabItem label="الويب">
-    1. اختر **Settings**<FAIcon name="gear" /> في الزاوية العلوية اليمنى.
-    2. اختر **Desktop and mobile notifications**.
-    3. تأكد من أن خيار **Send notifications for** ليس مضبوطاً على **Nothing**.
+    1. اختر **الإعدادات** <FAIcon name="gear" /> في الزاوية العلوية اليمنى.
+    2. اختر **إشعارات سطح المكتب والجوال**.
+    3. تأكد من أن خيار **إرسال الإشعارات لـ** ليس مضبوطاً على **لاشيء**.
   </TabItem>
   <TabItem label="الجوال">
     1. اضغط على صورة ملفك الشخصي في الزاوية السفلية اليمنى.
-    2. اضغط على **Settings** <FAIcon name="gear" />.
-    3. اضغط على **Notifications > Push Notifications**.
-    4. تأكد من اختيار **All new messages** أو **Mentions, direct messages, and group messages**.
-    5. تحت **Trigger push notifications when…**، اختر **Online, away or offline** لتلقي الإشعارات دائماً.
+    2. اضغط على **الإعدادات** <FAIcon name="gear" />.
+    3. اضغط على **الإشعارات > إشعارات الدفع**.
+    4. تأكد من اختيار **كل الرسائل الجديدة** أو **الإشارات والرسائل المباشرة والرسائل الجماعية**.
+    5. تحت **إرسال إشعارات الدفع عندما…**، اختر **متصل أو بعيد أو غير متصل** لتلقي الإشعارات دائماً.
   </TabItem>
 </Tabs>
 
@@ -51,7 +51,7 @@ import FAIcon from "../../../../components/FAIcon.astro";
   <TabItem label="سطح المكتب">
     تأكد من تفعيل الإشعارات في اتصال خادم ماترموست الخاص بك:
     1. اختر خيار خادم ماترموست في الزاوية العلوية اليسرى، ثم قم بتحرير تفاصيل الخادم.
-    2. تحت **Permissions**، قم بتفعيل **Notifications** واحفظ التغييرات.
+    2. تحت **الأذونات**، قم بتفعيل **الإشعارات** واحفظ التغييرات.
 
     ![check server notifications](https://docs.mattermost.com/_images/desktop-server-notification-check.gif)
 
@@ -61,24 +61,24 @@ import FAIcon from "../../../../components/FAIcon.astro";
 
     <Tabs>
       <TabItem label="Chrome">
-        1. من قائمة Chrome، اختر **Settings**.
-        2. اختر **Privacy and Security > Site settings**.
-        3. تحت **Permissions**، اختر **Notifications**.
-        4. تأكد من تفعيل **Sites can ask to send notifications**، وأضف رابط ماترموست إلى قائمة المسموح لهم.
+        1. من قائمة Chrome، اختر **الإعدادات**.
+        2. اختر **الخصوصية والأمان > إعدادات الموقع**.
+        3. تحت **الأذونات**، اختر **الإشعارات**.
+        4. تأكد من تفعيل **يمكن للمواقع أن تطلب إرسال الإشعارات**، وأضف رابط ماترموست إلى قائمة المسموح لهم.
       </TabItem>
       <TabItem label="Edge">
-        1. من قائمة Edge، اختر **Settings**.
-        2. اختر **Cookies and Site Permissions > Notifications**.
-        3. أضف رابط ماترموست إلى قسم **Allow**.
+        1. من قائمة Edge، اختر **الإعدادات**.
+        2. اختر **ملفات تعريف الارتباط وأذونات الموقع > الإشعارات**.
+        3. أضف رابط ماترموست إلى قسم **السماح**.
       </TabItem>
       <TabItem label="Firefox">
-        1. من قائمة Firefox، اختر **Settings**.
-        2. اختر **Privacy and Security > Permissions**.
-        3. اختر **Settings** بجانب **Notifications** وأضف رابط ماترموست.
+        1. من قائمة Firefox، اختر **الإعدادات**.
+        2. اختر **الخصوصية والأمان > الأذونات**.
+        3. اختر **الإعدادات** بجانب **الإشعارات** وأضف رابط ماترموست.
       </TabItem>
       <TabItem label="Safari">
-        1. من قائمة Safari، اختر **Preferences**.
-        2. اختر **Websites > Notifications**.
+        1. من قائمة Safari، اختر **التفضيلات**.
+        2. اختر **المواقع الإلكترونية > الإشعارات**.
         3. قم بتفعيل الإشعارات لموقع ماترموست الخاص بك.
       </TabItem>
     </Tabs>
@@ -101,8 +101,8 @@ import FAIcon from "../../../../components/FAIcon.astro";
       <TabItem label="iOS">
         1. افتح **إعدادات** الجهاز > **الإشعارات**.
         2. ابحث عن **Mattermost**.
-        3. قم بتفعيل **السماح بالإشعارات** واضبط التسليم على **Immediate Delivery**.
-        4. تأكد من عدم تفعيل وضع "عدم الإزعاج" أو "التركيز".
+        3. قم بتفعيل **السماح بالإشعارات** واضبط التسليم على **تسليم فوري**.
+        4. تأكد من عدم تفعيل وضع **عدم الإزعاج** أو **التركيز**.
       </TabItem>
     </Tabs>
 
@@ -115,20 +115,20 @@ import FAIcon from "../../../../components/FAIcon.astro";
 
 <Tabs>
   <TabItem label="Windows">
-    1. افتح **إعدادات Windows** وانتقل إلى **System > Notifications & actions**.
-    2. تأكد من تفعيل **Get notifications from apps and other senders**.
+    1. افتح **إعدادات Windows** وانتقل إلى **النظام > الإشعارات والإجراءات**.
+    2. تأكد من تفعيل **الحصول على إشعارات من التطبيقات والمرسلين الآخرين**.
     3. ابحث عن Mattermost في القائمة وفعل الإشعارات له.
-    4. تأكد من إيقاف وضع **Do Not Disturb** و **Focus Assist**.
+    4. تأكد من إيقاف وضع **عدم الإزعاج** و **مساعد التركيز**.
   </TabItem>
   <TabItem label="macOS">
-    1. افتح **System Settings > Notifications**.
-    2. تحت **Application Notifications**، تأكد من تفعيل الإشعارات لماترموست.
-    3. تأكد من إيقاف وضع **Focus mode**.
+    1. افتح **إعدادات النظام > الإشعارات**.
+    2. تحت **إشعارات التطبيق**، تأكد من تفعيل الإشعارات لماترموست.
+    3. تأكد من إيقاف وضع **التركيز**.
   </TabItem>
   <TabItem label="Linux">
-    1. افتح **Settings > Notifications**.
-    2. فعل خيار **Show Pop-up Notifications**.
-    3. تأكد من إيقاف وضع **Do Not Disturb**.
+    1. افتح **الإعدادات > الإشعارات**.
+    2. فعل خيار **إظهار إشعارات منبثقة**.
+    3. تأكد من إيقاف وضع **عدم الإزعاج**.
   </TabItem>
 </Tabs>
 
