@@ -1,59 +1,61 @@
 ---
-title: "التواصل مع الرسائل والسلاسل "
-description: "تعرف على كيفية التواصل والتعاون باستخدام الرسائل وسلاسل المحادثات في Workspace"
+title: "التواصل مع الرسائل والسلاسل"
+description: "تعرف على كيفية التواصل والتعاون بفاعلية باستخدام الرسائل وسلاسل المحادثات المتطورة في منصة تعاون."
 ---
 
+import { Card, CardGrid, Aside } from '@astrojs/starlight/components';
 
-يعد [إرسال الرسائل](/end-user-guide/collaborate/send-messages)، و [الرد على الرسائل](/end-user-guide/collaborate/reply-to-messages)، و [المشاركة في سلاسل المناقشة](/end-user-guide/collaborate/organize-conversations) طرقًا مهمة للحفاظ على نشاط المحادثات مع فريقك.
+يُعد إرسال الرسائل، والرد عليها، والمشاركة في سلاسل النقاش المتسلسلة الركيزة الأساسية للحفاظ على انسيابية العمل داخل الفريق. توفر **منصة تعاون** أدوات متقدمة لتنظيم هذه المحادثات وضمان عدم ضياع المعلومات الهامة.
 
-## العمل مع الرسائل والسلاسل 
+---
 
-تعرف على المزيد حول الرسائل والسلاسل:
+## العمل مع الرسائل والسلاسل
 
-<div class="toctree" maxdepth="1" hidden="">
+اكتشف الأدوات المتاحة لإدارة محادثاتك اليومية بفاعلية:
 
-إرسال الرسائل \</end-user-guide/collaborate/send-messages\> الرد على الرسائل
-\</end-user-guide/collaborate/reply-to-messages\> التفاعل مع الرموز التعبيرية وصور GIF
-\</end-user-guide/collaborate/react-with-emojis-gifs\> تنظيم المحادثات
-\</end-user-guide/collaborate/organize-conversations\> تمييز الرسائل كغير مقروءة
-\</end-user-guide/collaborate/mark-messages-unread\> إعادة توجيه الرسائل
-\</end-user-guide/collaborate/forward-messages\> مشاركة روابط القنوات والرسائل
-\</end-user-guide/collaborate/share-links\> حفظ وتثبيت الرسائل
-\</end-user-guide/collaborate/save-pin-messages\> ضبط تذكيرات الرسائل
-\</end-user-guide/collaborate/message-reminders\> البحث عن الرسائل
-\</end-user-guide/collaborate/search-for-messages\> جدولة الرسائل
-\</end-user-guide/collaborate/schedule-messages\> الإبلاغ عن الرسائل
-\</end-user-guide/collaborate/flag-messages\>
+<CardGrid>
+  <Card title="إرسال واستقبال الرسائل" icon="email">
+    تعرف على كيفية [إرسال الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/send-messages) المباشرة وفي القنوات.
+  </Card>
+  <Card title="تنظيم النقاشات المتسلسلة" icon="list-format">
+    استخدم [سلاسل المحادثات](/messaging-collaboration/communicate-with-messages-and-threads/organize-conversations) للحفاظ على تركيز النقاش ومنع تشتت القناة.
+  </Card>
+  <Card title="التفاعل البصري" icon="smiley">
+    عبر عن رأيك بسرعة باستخدام [الرموز التعبيرية والصور المتحركة](/messaging-collaboration/communicate-with-messages-and-threads/react-with-emojis-gifs).
+  </Card>
+  <Card title="إدارة المتابعة" icon="notification">
+    استخدم [تذكيرات الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/message-reminders) أو [تمييز الرسائل كغير مقروءة](/messaging-collaboration/communicate-with-messages-and-threads/mark-messages-unread).
+  </Card>
+</CardGrid>
 
-</div>
+---
 
-- [إرسال الرسائل (Send messages)](/end-user-guide/collaborate/send-messages) - إرسال الرسائل إلى مستخدمي Mattermost الآخرين.
-- [الرد على الرسائل (Reply to messages)](/end-user-guide/collaborate/reply-to-messages) - تواصل مع فريقك في Mattermost.
-- [التفاعل مع الرموز التعبيرية وصور GIF (React with emojis and GIFs)](/end-user-guide/collaborate/react-with-emojis-gifs) - استخدم الرموز التعبيرية وصور GIF للتفاعل مع الرسائل وللتعبير عن المفاهيم والفكاهة والعواطف والإيماءات الجسدية في رسائلك الخاصة.
-- [تنظيم المحادثات مع المناقشات المتسلسلة (Organize conversations with threaded discussions)](/end-user-guide/collaborate/organize-conversations) - تتوفر تجربة سلاسل اتصالات محسنة في Mattermost.
-- [تمييز الرسائل كغير مقروءة (Mark messages as unread)](/end-user-guide/collaborate/mark-messages-unread) - تغيير الرسائل إلى حالة غير مقروءة لسهولة المتابعة.
-- [إعادة توجيه الرسائل (Forward messages)](/end-user-guide/collaborate/forward-messages) - قم بإعادة توجيه الرسائل بسرعة وسهولة مع معاينات.
-- [مشاركة روابط الرسائل (Share links to messages)](/end-user-guide/collaborate/share-links) - مشاركة روابط الرسائل عبر القنوات.
-- [حفظ وتثبيت الرسائل (Save and pin messages)](/end-user-guide/collaborate/save-pin-messages) - تمييز الرسائل المفيدة لسهولة استرجاعها في المستقبل.
-- [ضبط تذكيرات الرسائل (Set message reminders)](/end-user-guide/collaborate/message-reminders) - ضبط تذكيرات لمتابعة الرسائل.
-- [البحث عن الرسائل (Search for messages)](/end-user-guide/collaborate/search-for-messages) - استخدم البحث للعثور على الرسائل والردود ومحتويات الملفات عبر قنوات Mattermost.
-- [جدولة الرسائل (Schedule messages)](/end-user-guide/collaborate/schedule-messages) - جدولة الرسائل ليتم إرسالها في المستقبل.
-- [الإبلاغ عن الرسائل (Flag messages)](/end-user-guide/collaborate/flag-messages) - الإبلاغ عن الرسائل التي قد تحتوي على معلومات حساسة أو مقيدة لمراجعتها من قبل المشرفين المعتمدين.
+## ميزات إدارة المحتوى المتقدمة
 
-## اجعل رسائلك تبرز (Make your messages stand out)
+توفر المنصة خيارات احترافية للتحكم في تدفق المعلومات:
 
-تعرف على المزيد حول كيفية إبراز رسائلك:
+* **إعادة توجيه الرسائل:** قم بـ [إعادة توجيه الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/forward-messages) مع معاينة فورية للمحتوى.
+* **حفظ وتثبيت الرسائل:** قم بـ [حفظ الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/save-pin-messages) للرجوع إليها لاحقاً أو تثبيتها في أعلى القناة للوصول السريع <i class="fa-solid fa-thumbtack"></i>.
+* **البحث الذكي:** استخدم [البحث المتقدم](/messaging-collaboration/communicate-with-messages-and-threads/search-for-messages) للعثور على الرسائل والملفات بدقة عالية <i class="fa-solid fa-magnifying-glass"></i>.
+* **جدولة المراسلات:** قم بـ [جدولة الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/schedule-messages) ليتم إرسالها في أوقات محددة مستقبلاً <i class="fa-solid fa-calendar-check"></i>.
+* **الإبلاغ عن المحتوى:** يمكنك [الإبلاغ عن الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/flag-messages) التي تخالف سياسات العمل لمراجعتها من قبل الإدارة.
 
-<div class="toctree" maxdepth="1" hidden="">
+---
 
-تنسيق الرسائل \</end-user-guide/collaborate/format-messages\> ضبط أولوية الرسالة
-\</end-user-guide/collaborate/message-priority\> الإشارة إلى الأشخاص
-\</end-user-guide/collaborate/mention-people\> مشاركة الملفات في الرسائل
-\</end-user-guide/collaborate/share-files-in-messages\>
+## اجعل رسائلك تبرز بوضوح
 
-</div>
+لضمان وصول فكرتك بالشكل الصحيح، استخدم أدوات التنسيق والتمييز التالية:
 
-- [تنسيق الرسائل (Format messages)](/end-user-guide/collaborate/format-messages) - استخدم markdown لتنسيق محتوى الرسالة.
-- [ضبط أولوية الرسالة (Set message priority)](/end-user-guide/collaborate/message-priority) - تأكد من أن الرسائل المهمة والعاجلة تبرز بوضوح من خلال إضافة ملصقات الأولوية، وطلب تأكيدات الرسائل.
-- [الإشارة إلى الأشخاص (Mention people)](/end-user-guide/collaborate/mention-people) - لفت انتباه أشخاص محددين.
-- [مشاركة الملفات في الرسائل (Share files in messages)](/end-user-guide/collaborate/share-files-in-messages) - شارك مقاطع الفيديو والتسجيلات الصوتية والصور في رسائل Mattermost الخاصة بك.
+### تنسيق النصوص المتقدم
+استخدم [تنسيق النصوص المتقدم](/messaging-collaboration/communicate-with-messages-and-threads/format-messages) لجعل رسائلك أكثر تنظيماً واحترافية باستخدام القوائم، النصوص العريضة، وأكواد البرمجة.
+
+### تحديد الأولوية والاهتمام
+* **ضبط أولوية الرسالة:** استخدم [ملصقات الأولوية](/messaging-collaboration/communicate-with-messages-and-threads/message-priority) (مثل: عاجل أو هام) وطلب تأكيدات القراءة.
+* **الإشارة للأعضاء:** استخدم [الإشارات](/messaging-collaboration/communicate-with-messages-and-threads/mention-people) للفت انتباه زملاء محددين أو الفريق بالكامل <i class="fa-solid fa-at"></i>.
+* **مشاركة الوسائط:** يمكنك [مشاركة الملفات](/messaging-collaboration/communicate-with-messages-and-threads/share-files-in-messages) بما في ذلك الصور، مقاطع الفيديو، والتسجيلات الصوتية مباشرة.
+
+---
+
+<Aside type="tip" title="نصيحة تقنية">
+استخدام سلاسل المحادثات (Threads) للرد على الرسائل يقلل من عدد التنبيهات للأعضاء غير المعنيين بالنقطة المحددة، مما يرفع من جودة التركيز داخل القناة.
+</Aside>

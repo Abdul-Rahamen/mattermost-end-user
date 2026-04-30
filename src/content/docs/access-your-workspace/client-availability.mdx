@@ -1,92 +1,69 @@
 ---
-title: "توفر العميل "
-description: "توفر العميل لـ Workspace"
+title: توفر الأنظمة والخدمات
+description: دليل توفر ميزات منصة تعاون عبر تطبيقات الويب، سطح المكتب، والهاتف المحمول.
+---
+import { Aside, Tabs, TabItem, Steps, Badge } from '@astrojs/starlight/components';
+
+توضح الجداول التالية ميزات المستخدم النهائي في **منصة تعاون** ومدى دعمها عبر متصفحات الويب، تطبيقات سطح المكتب، وتطبيقات الهاتف المحمول (آي أو إس وأندرويد).
+
+## المراسلة والتعاون
+
+| الميزة | الويب | سطح المكتب | الجوال |
+| :--- | :---: | :---: | :---: |
+| [المناقشات المترابطة (Threads)](/messaging-collaboration/communicate-with-messages-and-threads/organize-conversations) | ✅ | ✅ | ✅ |
+| [تنسيق النصوص (Markdown)](/messaging-collaboration/communicate-with-messages-and-threads/format-messages) | ✅ | ✅ | دعم جزئي |
+| [الرموز التعبيرية (Emojis)](/messaging-collaboration/communicate-with-messages-and-threads/react-with-emojis-and-gifs) | ✅ | ✅ | ✅ |
+| [تفاعلات الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/react-with-emojis-and-gifs) | ✅ | ✅ | ✅ |
+| [مشاركة الملفات](/messaging-collaboration/communicate-with-messages-and-threads/share-files-in-messages) | ✅ | ✅ | ✅ |
+| [الإشارات للمستخدمين @](/messaging-collaboration/communicate-with-messages-and-threads/mention-people) | ✅ | ✅ | ✅ |
+| [البحث باستخدام الوسوم (#)](/messaging-collaboration/communicate-with-messages-and-threads/search-for-messages) | ✅ | ✅ | ✅ |
+| [معدّلات البحث المتقدمة](/messaging-collaboration/communicate-with-messages-and-threads/search-for-messages) | ✅ | ✅ | ✅ |
+| [تثبيت وحفظ الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/save-and-pin-messages) | ✅ | ✅ | ✅ |
+| [الإشعارات والتنبيهات](/customize-your-preferences/manage-your-notifications/manage-your-notifications) | ✅ | ✅ | ✅ |
+| [إشارات مرجعية للقنوات](/messaging-collaboration/collaborate-within-channels/manage-channel-bookmarks) | ✅ | ✅ | ✅ |
+
+## إدارة القنوات
+
+| الميزة | الويب | سطح المكتب | الجوال |
+| :--- | :---: | :---: | :---: |
+| [إنشاء قناة جديدة](/messaging-collaboration/collaborate-within-channels/create-channels) | ✅ | ✅ | ✅ |
+| [الانضمام والمغادرة](/messaging-collaboration/collaborate-within-channels/join-and-leave-channels) | ✅ | ✅ | ✅ |
+| [تفضيل القنوات (النجمة)](/messaging-collaboration/collaborate-within-channels/mark-channels-as-favorites) | ✅ | ✅ | ✅ |
+| [كتم القنوات](/customize-your-preferences/manage-your-notifications/manage-your-channelspecific-notifications) | ✅ | ✅ | ✅ |
+| [إدارة وإضافة الأعضاء](/messaging-collaboration/collaborate-within-channels/manage-channel-members) | ✅ | ✅ | ✅ |
+| [إعادة تسمية القنوات](/messaging-collaboration/collaborate-within-channels/rename-channels) | ✅ | ✅ | ✅ |
+
+## إدارة الفرق
+
+| الميزة | الويب | سطح المكتب | الجوال |
+| :--- | :---: | :---: | :---: |
+| [دعم التنبيهات لفرق متعددة](/customize-your-preferences/manage-your-notifications/manage-your-notifications) | ✅ | ✅ | ✅ |
+| [التبديل بين الفرق](/messaging-collaboration/organize-using-teams/organize-using-teams) | ✅ | ✅ | ✅ |
+| [سمات الألوان لكل فريق](/customize-your-preferences/customize-your-mattermost-theme) | ✅ | ✅ | ✅ |
+| [إعدادات الفريق المتقدمة](/messaging-collaboration/organize-using-teams/team-settings) | ✅ | ✅ | ❌ |
+| [إنشاء فريق جديد](/messaging-collaboration/organize-using-teams/organize-using-teams) | ✅ | ✅ | ❌ |
+| [دعوة الأشخاص ومشاركة الروابط](/messaging-collaboration/invite-people) | ✅ | ✅ | ✅ |
+
+## العمليات والمكالمات
+
+| الميزة | الويب | سطح المكتب | الجوال |
+| :--- | :---: | :---: | :---: |
+| [كتيبات العمل (الأتمتة)](/workflow-automation/learn-about-collaborative-playbooks) | ✅ | ✅ | ❌ |
+| [إجراء المكالمات الصوتية](/messaging-collaboration/collaborate-within-channels/make-calls-in-mattermost) | ✅ | ✅ | ✅ |
+| [مشاركة الشاشة](/audio-and-screensharing/audio-and-screensharing) | ✅ | ✅ | ❌ |
+| [التكامل مع الأدوات الخارجية](/messaging-collaboration/extend-mattermost-with-integrations) | ✅ | ✅ | ✅ |
+
 ---
 
-تسلط الجداول التالية الضوء على ميزات المستخدم النهائي لـ Workspace ودعمها عبر تطبيقات الويب وسطح المكتب والهاتف المحمول (iOS و Android).
+## مستويات الجودة في منصة تعاون
 
-## الرسائل 
+نحن نلتزم في **منصة تعاون** بتقديم ميزات تلبي أعلى معايير الكفاءة المؤسسية. الميزة التي تجتاز اختباراتنا وتلبي احتياجات العمل يتم إصدارها كنسخة "مستقرة".
 
-| الميزة (Feature) | الويب (Web) | سطح المكتب (Desktop) | الهاتف المحمول (Mobile) |
-| :--- | :---: | :---: | :---: |
-| [المناقشات المترابطة (Threaded discussions)](/messaging-collaboration/communicate-with-messages-and-threads/organize-conversations) | ✅ | ✅ | ✅ |
-| [تنسيق الرسائل باستخدام Markdown](/messaging-collaboration/communicate-with-messages-and-threads/format-messages) | ✅ | ✅ | دعم جزئي (Partial Support) |
-| [الرموز التعبيرية (Emojis)](/messaging-collaboration/communicate-with-messages-and-threads/react-with-emojis-and-gifs) | ✅ | ✅ | ✅ |
-| [تفاعلات الرموز التعبيرية (Emoji reactions)](/messaging-collaboration/communicate-with-messages-and-threads/react-with-emojis-and-gifs) | ✅ | ✅ | ✅ |
-| [مشاركة الملفات (File sharing)](/messaging-collaboration/communicate-with-messages-and-threads/share-files-in-messages) | ✅ | ✅ | ✅ |
-| [الإشارات @mentions](/messaging-collaboration/communicate-with-messages-and-threads/mention-people) | ✅ | ✅ | ✅ |
-| [البحث عن الوسوم (Search hashtags)](/messaging-collaboration/communicate-with-messages-and-threads/search-for-messages) | ✅ | ✅ | ✅ |
-| [معدّلات البحث (Search modifiers)](/messaging-collaboration/communicate-with-messages-and-threads/search-for-messages) | ✅ | ✅ | ✅ |
-| تمييز البحث (Search highlighting) | ✅ | ✅ | ✅ |
-| [تثبيت وحفظ الرسائل (Pin and save messages)](/messaging-collaboration/communicate-with-messages-and-threads/save-and-pin-messages) | ✅ | ✅ | ✅ |
-| [معاينة روابط الصور (Preview image links)](/messaging-collaboration/communicate-with-messages-and-threads/share-files-in-messages) | ✅ | ✅ | ✅ |
-| [الإشعارات (Notifications)](/customize-your-preferences/manage-your-notifications/manage-your-notifications) | ✅ | ✅ | ✅ |
-| [وضع إشارة مرجعية على القنوات (Bookmark channels)](/messaging-collaboration/collaborate-within-channels/manage-channel-bookmarks) | ✅ | ✅ | ✅ |
+### الميزات التجريبية
+عند تطوير أدوات معقدة (مثل وكلاء الذكاء الاصطناعي)، قد نصدرها في البداية كنسخة **"تجريبية"**. يتيح لنا ذلك جمع الملاحظات من المستخدمين وتحسين الأداء قبل الاعتماد النهائي في بيئة الإنتاج.
 
-## القنوات 
 
-| الميزة (Feature) | الويب (Web) | سطح المكتب (Desktop) | الهاتف المحمول (Mobile) |
-| :--- | :---: | :---: | :---: |
-| [إنشاء قناة جديدة (Create a new channel)](/messaging-collaboration/collaborate-within-channels/create-channels) | ✅ | ✅ | ✅ |
-| [الانضمام إلى قناة (Join a channel)](/messaging-collaboration/collaborate-within-channels/join-and-leave-channels) | ✅ | ✅ | ✅ |
-| [مغادرة القناة (Leave a channel)](/messaging-collaboration/collaborate-within-channels/join-and-leave-channels) | ✅ | ✅ | ✅ |
-| [تفضيل قناة (Favorite a channel)](/messaging-collaboration/collaborate-within-channels/mark-channels-as-favorites) | ✅ | ✅ | ✅ |
-| [كتم القناة (Mute a channel)](/customize-your-preferences/manage-your-notifications/manage-your-channelspecific-notifications) | ✅ | ✅ | ✅ |
-| [إدارة الأعضاء (Manage members)](/messaging-collaboration/collaborate-within-channels/manage-channel-members) | ✅ | ✅ | ✅ |
-| [إضافة أعضاء (Add members)](/messaging-collaboration/collaborate-within-channels/manage-channel-members) | ✅ | ✅ | ✅ |
-| [إعادة تسمية القنوات (Rename channels)](/messaging-collaboration/collaborate-within-channels/rename-channels) | ✅ | ✅ | ✅ |
 
-## الفرق 
-
-| الميزة (Feature) | الويب (Web) | سطح المكتب (Desktop) | الهاتف المحمول (Mobile) |
-| :--- | :---: | :---: | :---: |
-| [دعم متعدد الفرق للإشعارات (Multi-team support for notifications)](/customize-your-preferences/manage-your-notifications/manage-your-notifications) | ✅ | ✅ | ✅ |
-| [التبديل بين الفرق (Team switching)](/messaging-collaboration/organize-using-teams/organize-using-teams) | ✅ | ✅ | ✅ |
-| [السمات المستندة إلى الفريق (Team-based theming)](/customize-your-preferences/customize-your-mattermost-theme) | ✅ | ✅ | ✅ |
-| [إعدادات الفريق (Team settings)](/messaging-collaboration/organize-using-teams/team-settings) | ✅ | ✅ |  |
-| [الانضمام إلى فريق حالي (Join existing team)](/messaging-collaboration/organize-using-teams/organize-using-teams) | ✅ | ✅ | ✅ |
-| [إنشاء فريق جديد (Create a new team)](/messaging-collaboration/organize-using-teams/organize-using-teams) | ✅ | ✅ |  |
-| [مشاركة رابط دعوة (Share an invite link)](/messaging-collaboration/invite-people) | ✅ | ✅ | ✅ |
-| [دعوة أشخاص (Invite people)](/messaging-collaboration/invite-people) | ✅ | ✅ | ✅ |
-| [مغادرة الفريق (Leave team)](/messaging-collaboration/organize-using-teams/organize-using-teams) | ✅ | ✅ |  |
-
-## أتمتة سير العمل 
-
-| الميزة (Feature) | الويب (Web) | سطح المكتب (Desktop) | الهاتف المحمول (Mobile) |
-| :--- | :---: | :---: | :---: |
-| [تعرف على كتيبات اللعب (Learn about playbooks)](/workflow-automation/learn-about-collaborative-playbooks) | ✅ | ✅ |  |
-| [التفاعل مع كتيبات اللعب (Interact with playbooks)](/workflow-automation/interact-with-collaborative-playbooks) | ✅ | ✅ |  |
-
-## المكالمات 
-
-| الميزة (Feature) | الويب (Web) | سطح المكتب (Desktop) | الهاتف المحمول (Mobile) |
-| :--- | :---: | :---: | :---: |
-| [إجراء مكالمات (Make calls)](/messaging-collaboration/collaborate-within-channels/make-calls-in-mattermost) | ✅ | ✅ | ✅ |
-| [مشاركة الصوت والشاشة (Audio and screensharing)](/audio-and-screensharing/audio-and-screensharing) | ✅ | ✅ |  |
-
-## التكامل 
-
-| الميزة (Feature) | الويب (Web) | سطح المكتب (Desktop) | الهاتف المحمول (Mobile) |
-| :--- | :---: | :---: | :---: |
-| [توسيع Workspace (Extend Workspace)](/messaging-collaboration/extend-mattermost-with-integrations) | ✅ | ✅ | ✅ |
-
-## المصادقة 
-
-| الميزة (Feature) | الويب (Web) | سطح المكتب (Desktop) | الهاتف المحمول (Mobile) |
-| :--- | :---: | :---: | :---: |
-| [الوصول إلى مساحة عملك (Access your workspace)](/access-your-workspace/access-your-workspace) | ✅ | ✅ | ✅ |
-
-## أخرى 
-
-| الميزة (Feature) | الويب (Web) | سطح المكتب (Desktop) | الهاتف المحمول (Mobile) |
-| :--- | :---: | :---: | :---: |
-| [إدارة خيارات العرض (Manage display options)](/customize-your-preferences/manage-your-display-options) | ✅ | ✅ | ✅ |
-| [تخصيص سمة Workspace (Customize your theme)](/customize-your-preferences/customize-your-Workspace-theme) | ✅ | ✅ | ✅ |
-| [إدارة ملفك الشخصي (Manage your profile)](/customize-your-preferences/manage-your-profile) | ✅ | ✅ | ✅ |
-| [إعدادات إشعارات القناة (Channel notification settings)](/customize-your-preferences/manage-your-notifications/manage-your-channelspecific-notifications) | ✅ | ✅ | ✅ |
-
-## ما هي مستويات جودة الميزات التي يمتلكها Workspace؟
-
-نحن نسعى جاهدين لإصدار ميزات قابلة للتطبيق (viable features). هذا يعني أننا نبذل جهدًا كبيرًا لضمان حل حالة الاستخدام بمستوى عالٍ من الجودة. الميزة التي تكون قابلة للتطبيق وتلبي معاييرنا لمستويات جودة الإنتاج سيتم إصدارها للإنتاج.
-
-ومع ذلك، عند العمل على ميزات كبيرة ومعقدة أو منتجات جديدة، قد نحتاج إلى اختبارها مع عدد كبير من العملاء والمستخدمين. في هذه السيناريوهات، سنصدرها كنسخة تجريبية، ونطبق علامات الميزات للتحقق من فعاليتها قبل إصدارها على مستوى الإنتاج.
+<Aside type="tip">
+للحصول على أفضل تجربة عمل متكاملة (بما في ذلك مشاركة الشاشة وإدارة الفرق)، نوصي باستخدام **تطبيق سطح المكتب**.
+</Aside>

@@ -10,10 +10,10 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "Workspace",
+      title: "تعـــــــاون ",
       logo: {
-        src: "./src/assets/logo-light.jpg",
-        alt: "Mattermost Logo",
+        src: "./src/assets/logo-light.png",
+        alt: "Taawon",
       },head: [
         {
           tag: 'link',
@@ -68,7 +68,7 @@ export default defineConfig({
               slug: "access-your-workspace/client-availability",
             },
             {
-              label: "تسجيل الخروج من Workspace",
+              label: "تسجيل الخروج",
               slug: "access-your-workspace/log-out-of-mattermost",
             },
           ],
@@ -108,7 +108,7 @@ export default defineConfig({
               slug: "messaging-collaboration/invite-people",
             },
             {
-              label: "تعرف على أدوار Mattermost",
+              label: "تعرف على أدوار والصلاحيات",
               slug: "messaging-collaboration/learn-about-mattermost-roles",
             },
             {
@@ -163,7 +163,7 @@ export default defineConfig({
                   slug: "messaging-collaboration/collaborate-within-channels/join-and-leave-channels",
                 },
                 {
-                  label: "إجراء مكالمات في Mattermost",
+                  label: "إجراء مكالمات في منصة ",
                   slug: "messaging-collaboration/collaborate-within-channels/make-calls-in-mattermost",
                 },
                 {
@@ -294,7 +294,7 @@ export default defineConfig({
               collapsed: true,
             },
             {
-              label: "توسيع Mattermost باستخدام عمليات الدمج",
+              label: "توسيع منصة تعاون باستخدام عمليات الدمج",
               slug: "messaging-collaboration/extend-mattermost-with-integrations",
             },
           ],
@@ -457,7 +457,7 @@ export default defineConfig({
               collapsed: true,
             },
             {
-              label: "تخصيص سمة Mattermost الخاصة بك",
+              label: "تخصيص سمة منصة تعاون الخاصة بك",
               slug: "customize-your-preferences/customize-your-mattermost-theme",
             },
             {
