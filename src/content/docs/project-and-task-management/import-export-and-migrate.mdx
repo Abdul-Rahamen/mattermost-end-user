@@ -94,7 +94,7 @@ git clone https://github.com/mattermost/focalboard focalboard
 يقوم تطبيق Node هذا بتحويل تصدير Jira `.XML` إلى ملف `.boardarchive`.
 
 1. افتح البحث المتقدم في Jira، وابحث عن جميع العناصر المراد تصديرها.
-2. اختر **Export > Export XML**.
+2. اختر **تصدير > تصدير XML**.
 3. احفظ الملف محلياً باسم `jira_export.xml`.
 4. اتبع خطوات تثبيت مستودع focalboard المذكورة أعلاه.
 5. انتقل إلى `focalboard/import/jira` وقم بتشغيل `npm install`.
@@ -104,14 +104,14 @@ git clone https://github.com/mattermost/focalboard focalboard
 
 ### القيود المعروفة
 
-يستورد السكربت كل عنصر كبطاقة في لوحة واحدة. لاحظ أن تصدير Jira `.XML` محدود بـ 1000 قضية في المرة الواحدة. يتم استيراد المستخدمين كخصائص من نوع "Select". لا يتم حالياً استيراد `الخصائص المخصصة`  `والتعليقات` `والملفات المدمجة`.
+يستورد السكربت كل عنصر كبطاقة في لوحة واحدة. لاحظ أن تصدير Jira `.XML` محدود بـ 1000 قضية في المرة الواحدة. يتم استيراد المستخدمين كخصائص من نوع "اختيار". لا يتم حالياً استيراد `الخصائص المخصصة`  `والتعليقات` `والملفات المدمجة`.
 
 ## الاستيراد من Trello
 
 يقوم تطبيق Node هذا بتحويل أرشيف Trello `.json` إلى ملف `.boardarchive`.
 
-1. من قائمة لوحة Trello، اختر **...Show Menu**.
-2. اختر **More > Print and Export > Export to JSON**.
+1. من قائمة لوحة Trello، اختر **...اظهر المزيد**.
+2. اختر **طباعة وتصدير > تصدير إلى JSON**.
 3. احفظ الملف محلياً باسم `trello.json`.
 4. اتبع خطوات تثبيت مستودع focalboard.
 5. انتقل إلى `focalboard/import/trello` وقم بتشغيل `npm install`.
@@ -125,10 +125,10 @@ git clone https://github.com/mattermost/focalboard focalboard
 
 ## الاستيراد من Todoist
 
-1. قم بزيارة خدمة تصدير بيانات Todoist مفتوحة المصدر على https://darekkay.com/todoist-export/.
-2. من قائمة **Options**، اختر **Export As > JSON**.
-3. قم بإلغاء تحديد خيار **Archived** إذا كان محدداً.
-4. اختر **Authorize and Backup** واتبع التعليمات.
+1. قم بزيارة خدمة تصدير بيانات قائمة المهام مفتوحة المصدر على https://darekkay.com/todoist-export/.
+2. من قائمة **خيارات**، اختر **تصدير بصيغة JSON**.
+3. قم بإلغاء تحديد خيار **المحفوظة** إذا كان محدداً.
+4. اختر **تفويض وإنشاء نسخة احتياطية** واتبع التعليمات.
 5. اتبع خطوات تثبيت مستودع focalboard.
 6. انتقل إلى `focalboard/import/todoist` وقم بتشغيل `npm install`.
 7. قم بتشغيل:
