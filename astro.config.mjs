@@ -33,8 +33,7 @@ export default defineConfig({
       customCss: [
         "./src/styles/global.css",
         './src/styles/custom.css',
-        "@fontsource/ibm-plex-sans-arabic/400.css",
-        "@fontsource/ibm-plex-sans-arabic/700.css",
+        './src/fonts/EffraVF_Trial_Wght.ttf',
       ],
       
       sidebar: [

@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Effra';
+    src: url('./EffraVF_Trial_Wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}

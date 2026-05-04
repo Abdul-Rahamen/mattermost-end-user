@@ -8,8 +8,7 @@
 
 @theme {
   /* الخطوط المفضلة */
-  --font-sans: 'IBM Plex Sans Arabic', ui-sans-serif, system-ui;
-  
+  --sl-font: 'Effra', sans-serif;
   /* Primary Colors (الأخضر - من الصورة الأولى) */
   --color-accent-25: #F6FEFC;
   --color-accent-50: #EFFEFA;

@@ -1,6 +1,6 @@
 ---
 title: "الاستيراد والتصدير والترحيل"
-description: "تعلم كيفية استيراد البيانات من أدوات أخرى مثل Asana وNotion وJira وTrello إلى لوحات ماترموست، وكيفية تصدير أرشيف اللوحات."
+description: "تعلم كيفية استيراد البيانات من أدوات أخرى مثل Asana وNotion وJira وTrello إلى لوحات منصة تعـــاون، وكيفية تصدير أرشيف اللوحات."
 ---
 import FAIcon from "../../../components/FAIcon.astro";
 
@@ -29,9 +29,6 @@ import FAIcon from "../../../components/FAIcon.astro";
 3. احفظ الملف محلياً، على سبيل المثال باسم `asana.json`.
 4. افتح نافذة التيرمينال على جهازك المحلي وقم بعمل Clone لمستودع focalboard إلى مجلد محلي:
 
-```bash[terminal]
-git clone https://github.com/mattermost/focalboard focalboard
-```
 
 5. انتقل إلى مجلد `focalboard/webapp`.
 6. قم بتشغيل الأمر `npm install`.
@@ -75,9 +72,6 @@ Exported to archive.boardarchive
 3. احفظ الملف الناتج محلياً، وفك ضغط المجلد.
 4. افتح نافذة التيرمينال وقم بعمل Clone لمستودع focalboard:
 
-```bash[terminal]
-git clone https://github.com/mattermost/focalboard focalboard
-```
 
 5. انتقل إلى `focalboard/webapp` وقم بتشغيل `npm install`.
 6. انتقل إلى `focalboard/import/notion` وقم بتشغيل `npm install`.
@@ -94,7 +88,7 @@ git clone https://github.com/mattermost/focalboard focalboard
 يقوم تطبيق Node هذا بتحويل تصدير Jira `.XML` إلى ملف `.boardarchive`.
 
 1. افتح البحث المتقدم في Jira، وابحث عن جميع العناصر المراد تصديرها.
-2. اختر **Export > Export XML**.
+2. اختر **تصدير > تصدير XML**.
 3. احفظ الملف محلياً باسم `jira_export.xml`.
 4. اتبع خطوات تثبيت مستودع focalboard المذكورة أعلاه.
 5. انتقل إلى `focalboard/import/jira` وقم بتشغيل `npm install`.
@@ -104,14 +98,18 @@ git clone https://github.com/mattermost/focalboard focalboard
 
 ### القيود المعروفة
 
+<<<<<<< HEAD
 يستورد السكربت كل عنصر كبطاقة في لوحة واحدة. لاحظ أن تصدير Jira `.XML` محدود بـ 1000 قضية في المرة الواحدة. يتم استيراد المستخدمين كخصائص من نوع "Select". لا يتم حالياً استيراد `الخصائص المخصصة`  `والتعليقات` `والملفات المدمجة`.
+=======
+يستورد السكربت كل عنصر كبطاقة في لوحة واحدة. لاحظ أن تصدير Jira `.XML` محدود بـ 1000 قضية في المرة الواحدة. يتم استيراد المستخدمين كخصائص من نوع "اختيار". لا يتم حالياً استيراد `الخصائص المخصصة`  `والتعليقات` `والملفات المدمجة`.
+>>>>>>> 619537957b22349b6cd4af6b42782d6b45f40a82
 
 ## الاستيراد من Trello
 
 يقوم تطبيق Node هذا بتحويل أرشيف Trello `.json` إلى ملف `.boardarchive`.
 
-1. من قائمة لوحة Trello، اختر **...Show Menu**.
-2. اختر **More > Print and Export > Export to JSON**.
+1. من قائمة لوحة Trello، اختر **...اظهر المزيد**.
+2. اختر **طباعة وتصدير > تصدير إلى JSON**.
 3. احفظ الملف محلياً باسم `trello.json`.
 4. اتبع خطوات تثبيت مستودع focalboard.
 5. انتقل إلى `focalboard/import/trello` وقم بتشغيل `npm install`.
@@ -125,10 +123,17 @@ git clone https://github.com/mattermost/focalboard focalboard
 
 ## الاستيراد من Todoist
 
+<<<<<<< HEAD
 1. قم بزيارة خدمة تصدير بيانات Todoist مفتوحة المصدر على https://darekkay.com/todoist-export/.
 2. من قائمة **Options**، اختر **Export As > JSON**.
 3. قم بإلغاء تحديد خيار **Archived** إذا كان محدداً.
 4. اختر **Authorize and Backup** واتبع التعليمات.
+=======
+1. قم بزيارة خدمة تصدير بيانات قائمة المهام مفتوحة المصدر على https://darekkay.com/todoist-export/.
+2. من قائمة **خيارات**، اختر **تصدير بصيغة JSON**.
+3. قم بإلغاء تحديد خيار **المحفوظة** إذا كان محدداً.
+4. اختر **تفويض وإنشاء نسخة احتياطية** واتبع التعليمات.
+>>>>>>> 619537957b22349b6cd4af6b42782d6b45f40a82
 5. اتبع خطوات تثبيت مستودع focalboard.
 6. انتقل إلى `focalboard/import/todoist` وقم بتشغيل `npm install`.
 7. قم بتشغيل:
