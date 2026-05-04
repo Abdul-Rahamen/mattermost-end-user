@@ -4,6 +4,9 @@ description: "تعرف على كيفية تمكين وتكوين بانرات ا
 ---
 
 import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import displayChannelBanners from '../../../../images/display-channels-banners.png';
+import writeDmImg from '../../../../images/write-dm.png';
 
 تُعد بانرات القناة أداة حيوية للتواصل الإداري؛ حيث تتيح للمسؤولين وضع شريط تنبيه ثابت وغير قابل للإغلاق في أعلى القناة. تهدف هذه البانرات بشكل أساسي إلى تذكير الأعضاء بسياسات التعامل مع البيانات الحساسة أو تقديم إرشادات تنظيمية هامة تظهر لجميع مستخدمي الويب، سطح المكتب، وتطبيقات الهاتف المحمول.
 
@@ -30,6 +33,7 @@ import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/componen
 ## كيفية إنشاء بانر القناة
 
 يمكن لمسؤولي القناة، ومسؤولي الفريق، ومسؤولي النظام تفعيل هذه الميزة في القنوات العامة أو الخاصة التي يمتلكون صلاحيات إدارية عليها.
+  <Image src={displayChannelBanners} alt="بدء محادثة مباشرة جديدة" height={400} style={{ display: 'block', margin: '24px auto', borderRadius: '8px' }} />
 
 <Steps>
 1. افتح القناة المطلوبة وتأكد من امتلاكك لصلاحيات الإدارة فيها.

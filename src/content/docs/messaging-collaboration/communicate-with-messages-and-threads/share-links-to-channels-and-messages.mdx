@@ -1,6 +1,6 @@
 ---
-title: "مشاركة روابط القنوات والرسائل (Share links to channels and messages)"
-description: "تعرف على كيفية مشاركة روابط القنوات والرسائل في Mattermost لتسهيل الوصول إلى المحتوى الهام."
+title: "مشاركة روابط القنوات والرسائل "
+description: "تعرف على كيفية مشاركة روابط القنوات والرسائل في منصة تعاون لتسهيل الوصول إلى المحتوى الهام."
 ---
 
 import { Tabs,Aside, TabItem, Steps } from '@astrojs/starlight/components';
@@ -12,26 +12,24 @@ import copyLinkImg from '../../../../images/copy-link.png';
 import permalinkPreviews from '../../../../images/permalink-previews.png';
 import mobileCopyGif from '../../../../images/mobile-copy-a-link-to-the-message.gif';
 
-يمكنك مشاركة روابط إلى القنوات والرسائل في Mattermost مع المستخدمين الآخرين.
+يمكنك مشاركة روابط إلى القنوات والرسائل في منصة تعاون مع المستخدمين الآخرين.
 
-## مشاركة روابط القنوات (Share channel links)
-
+## مشاركة روابط القنوات 
 مشاركة رابط قناة تسهّل على الآخرين العثور عليها والانضمام إليها. لمشاركة رابط قناة، اكتب `~` في صندوق النص ثم اختر القناة المراد ربطها. إذا كنت عضوًا في عدة فرق، يتم عرض القنوات الخاصة بالفريق الحالي فقط.
 <Aside type="note">
     بدلًا عن ذلك، يمكنك اختيار أيقونة **عرض المعلومات** في أعلى اليمين للوصول إلى خيارات إدارة القناة، بما في ذلك **نسخ الرابط** لمشاركته.
 </Aside>
 
-## مشاركة روابط الرسائل (Share message links)
-
+## مشاركة روابط الرسائل 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    عند مشاركة رابط رسالة، يعرض Mattermost معاينة للمحتوى في المنشور. لمشاركة رابط رسالة، اختر أيقونة **المزيد** بجانب الرسالة ثم **نسخ الرابط**.
+    عند مشاركة رابط رسالة، يعرض منصة تعاون معاينة للمحتوى في المنشور. لمشاركة رابط رسالة، اختر أيقونة **المزيد** بجانب الرسالة ثم **نسخ الرابط**.
 
     <Image src={msgMore} alt="المزيد من خيارات الرسائل" width={600} style={{ display: 'block', margin: '2rem auto' }} />
 
     <Image src={copyLinkImg} alt="نسخ الرابط" width={600} style={{ display: 'block', margin: '2rem auto' }} />
 
-    ألصق الرابط في رسالة لمشاركته — سيقوم Mattermost بإنشاء معاينة للمحتوى المشارك.
+    ألصق الرابط في رسالة لمشاركته — سيقوم منصة تعاون بإنشاء معاينة للمحتوى المشارك.
 
     <Image src={permalinkPreviews} alt="معاينات الروابط" width={600} style={{ display: 'block', margin: '2rem auto' }} />
 
@@ -64,13 +62,13 @@ import mobileCopyGif from '../../../../images/mobile-copy-a-link-to-the-message.
   </span>
 </div>
 
-## الروابط العميقة (Deep links)
+## الروابط العميقة 
 
-تُتيح الروابط العميقة إنشاء روابط مباشرة إلى فرق أو قنوات أو رسائل أو سلاسل محددة في Mattermost.
+تُتيح الروابط العميقة إنشاء روابط مباشرة إلى فرق أو قنوات أو رسائل أو سلاسل محددة في منصة تعاون.
 
-### صيغة الروابط العميقة (Deep link format)
+### صيغة الروابط العميقة 
 
-- رابط عميق لفريق: `mattermost://<your-Mattermost-server-URL>/<team-name>`
-- رابط عميق لقناة: `mattermost://<your-Mattermost-server-URL>/<team-name>/channels/<channel-name>`
-- رابط عميق لرسالة أو سلسلة: `mattermost://<your-Mattermost-server-URL>/<team-name>/pl/<post-id>`
-- رابط عميق لرسالة مباشرة: `mattermost://<your-Mattermost-server-URL>/<team-name>/messages/@<user-name>`
+- رابط عميق لفريق: `mattermost://<your-منصة تعاون-server-URL>/<team-name>`
+- رابط عميق لقناة: `mattermost://<your-منصة تعاون-server-URL>/<team-name>/channels/<channel-name>`
+- رابط عميق لرسالة أو سلسلة: `mattermost://<your-منصة تعاون-server-URL>/<team-name>/pl/<post-id>`
+- رابط عميق لرسالة مباشرة: `mattermost://<your-منصة تعاون-server-URL>/<team-name>/messages/@<user-name>`

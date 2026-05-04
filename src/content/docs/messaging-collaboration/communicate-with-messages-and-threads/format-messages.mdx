@@ -1,6 +1,6 @@
 ---
-title: "تنسيق الرسائل (Format messages)"
-description: "تعرف على كيفية استخدام شريط أدوات التنسيق وMarkdown لتنسيق رسائلك في Mattermost بالتفصيل الكامل."
+title: "تنسيق الرسائل "
+description: "تعرف على كيفية استخدام شريط أدوات التنسيق وMarkdown لتنسيق رسائلك في منصة تعاون بالتفصيل الكامل."
 ---
 
 import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
@@ -22,13 +22,12 @@ import markdownTable1 from '../../../../images/markdownTable1.png';
 import latexInline from '../../../../images/latex-inline.png';
 import latexCodeblock from '../../../../images/latex-codeblock.png';
 
-## <i class="fa-solid fa-pen-ruler"></i> استخدم شريط أدوات تنسيق الرسائل (Use the message formatting toolbar)
-
-بدءًا من الإصدار **v7.0** من Mattermost، يمكنك تنسيق رسائلك باستخدام شريط أدوات تنسيق الرسائل دون الحاجة لكتابة ترميز Markdown يدويًا.
+## <i class="fa-solid fa-pen-ruler"></i> استخدم شريط أدوات تنسيق الرسائل 
+بدءًا من الإصدار **v7.0** من منصة تعاون، يمكنك تنسيق رسائلك باستخدام شريط أدوات تنسيق الرسائل دون الحاجة لكتابة ترميز Markdown يدويًا.
 
 <Image 
   src={formattingToolbarGif} 
-  alt="شريط أدوات تنسيق الرسائل، المتاح بدءًا من Mattermost v7.0، لا يتطلب بنية Markdown، ويجعل تنسيق نص الرسالة سريعًا وسهلاً." 
+  alt="شريط أدوات تنسيق الرسائل، المتاح بدءًا من منصة تعاون v7.0، لا يتطلب بنية Markdown، ويجعل تنسيق نص الرسالة سريعًا وسهلاً." 
   style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
 />
 
@@ -78,7 +77,7 @@ import latexCodeblock from '../../../../images/latex-codeblock.png';
 قم بتنسيق النص المحدد كرابط بالضغط على `Ctrl`+`K` على Windows و Linux، أو `⌘`+`K` على Mac.
 </Aside>
 
-#### روابط القنوات (Channel links)
+#### روابط القنوات 
 
 أنشئ رابطًا إلى قناة عامة بكتابة `~` متبوعة باسم القناة (على سبيل المثال، `~roadmap`). يتم عرض أسماء القنوات الخاصة للأعضاء المصرح لهم فقط.
 
@@ -86,15 +85,14 @@ import latexCodeblock from '../../../../images/latex-codeblock.png';
 
 
 
-#### الروابط المعنونة (Titled links)
-
+#### الروابط المعنونة 
 أنشئ رابطًا معنونًا عن طريق وضع النص المراد في أقواس مربعة `[]` متبوعًا بالرابط في أقواس دائرية `()`.
 
-`[تحقق من Mattermost!](https://mattermost.com/)`
+`[تحقق من منصة تعاون!](https://mattermost.com/)`
 
-تظهر كـ: [تحقق من Mattermost!](https://mattermost.com/)
+تظهر كـ: [تحقق من منصة تعاون!](https://mattermost.com/)
 
-### العناوين (Headings)
+### العناوين 
 
 أنشئ عنوانًا بكتابة `#` ومسافة قبل النص. للعناوين الأصغر، استخدم المزيد من رموز `#`.
 
@@ -149,13 +147,13 @@ Large Heading
 2. Item two
 3. Item three
 
-### كتل الكود (Code blocks)
+### كتل الكود 
 
 أنشئ كتل كود باستخدام ثلاث علامات اقتباس خلفية (backticks) ` ``` ` على سطر جديد قبل الكود وبعده. بدلاً من ذلك، يمكنك إنشاء كتل كود عن طريق إضافة أربع مسافات بادئة لكل سطر من الكود.
 
 لتمكين تمييز بناء الجملة (syntax highlighting) للغات مختلفة، أدخل اسم اللغة المقابل بعد علامات الاقتباس الخلفية الثلاث الأولى.
 
-يدعم Mattermost اللغات والأسماء المستعارة التالية:
+يدعم منصة تعاون اللغات والأسماء المستعارة التالية:
 
 | اللغة | الأسماء المستعارة |
 | :--- | :--- |
@@ -237,7 +235,7 @@ func main() {
 
 تظهر كـ:
 
-**سمة GitHub (GitHub Theme)**
+**سمة GitHub **
 
 ![تمييز بناء الجملة في GitHub](../../../../images/syntax-highlighting-github.png)
 
@@ -263,7 +261,7 @@ func main() {
 
 تظهر كـ: `monospace`.
 
-### الصور المضمنة (In-line images)
+### الصور المضمنة 
 
 الصور المضمنة هي صور تُضاف داخل سطور النص. يمكنك التحكم في ما إذا كانت جميع الصور المضمنة التي يزيد ارتفاعها عن 100 بكسل سيتم طيها أو توسيعها تلقائيًا في الرسائل من خلال تعيين [تفضيل المستخدم](/end-user-guide/preferences/manage-your-display-options)، أو باستخدام أوامر الشرطة المائلة `/collapse` و `/expand`.
 
@@ -275,9 +273,9 @@ func main() {
 ![alt text](URL of image "Hover text")
 ```
 
-إذا كان ارتفاع الصورة الأصلية أكثر من 500 بكسل، يقوم Mattermost بتعيين ارتفاع الصورة عند 500 بكسل ويضبط العرض للحفاظ على نسبة العرض إلى الارتفاع الأصلية.
+إذا كان ارتفاع الصورة الأصلية أكثر من 500 بكسل، يقوم منصة تعاون بتعيين ارتفاع الصورة عند 500 بكسل ويضبط العرض للحفاظ على نسبة العرض إلى الارتفاع الأصلية.
 
-يمكنك تعيين عرض وارتفاع الصورة المعروضة بعد عنوان URL للصورة باستخدام علامة التساوي `=` متبوعة بقيم لكل من العرض والارتفاع `##x##`. إذا قمت بتعيين العرض فقط، فسيقوم Mattermost بضبط الارتفاع للحفاظ على نسبة العرض إلى الارتفاع الأصلية.
+يمكنك تعيين عرض وارتفاع الصورة المعروضة بعد عنوان URL للصورة باستخدام علامة التساوي `=` متبوعة بقيم لكل من العرض والارتفاع `##x##`. إذا قمت بتعيين العرض فقط، فسيقوم منصة تعاون بضبط الارتفاع للحفاظ على نسبة العرض إلى الارتفاع الأصلية.
 
 :::caution
 لا تدعم التطبيقات الأصلية (المنصات المحمولة) العرض والارتفاع الثابتين وستعرض الصورة بالحجم الكامل.
@@ -290,55 +288,54 @@ func main() {
 ![mattermost-icon-50x76](../../images/icon-50x76.png)
 ```
 
-#### صورة مضمنة مع نص عند التمرير (In-line image with hover text)
-
+#### صورة مضمنة مع نص عند التمرير 
 ```text
-![Mattermost](../images/icon-76x76.png "Mattermost Icon")
+![منصة تعاون](../images/icon-76x76.png "منصة تعاون Icon")
 ```
 
 تظهر كـ:
 
-> ![Mattermost](../../../../images/icon-76x76.png)
+> ![منصة تعاون](../../../../images/icon-76x76.png)
 
-#### صورة مضمنة مع رابط (In-line image with link)
+#### صورة مضمنة مع رابط 
 
 :::note
 يلزم وجود مجموعة إضافية من الأقواس المربعة `[]` حول النص البديل، وأقواس دائرية `()` حول رابط الصورة.
 :::
 
 ```text
-[![Mattermost](../images/icon-76x76.png)](https://github.com/mattermost/mattermost)
+[![منصة تعاون](../images/icon-76x76.png)](https://github.com/mattermost/mattermost)
 ```
 
 تظهر كـ:
 
 > [![image](../../../../images/icon-76x76.png)](https://github.com/mattermost/mattermost)
 
-#### صورة مضمنة مع عرض وارتفاع ثابتين (In-line image displayed with fixed width and height)
+#### صورة مضمنة مع عرض وارتفاع ثابتين 
 
 مثال: صورة مضمنة بعرض 50 بكسل وارتفاع 76 بكسل.
 
 ```text
-![Mattermost](../images/icon-76x76.png =50x76 "Mattermost Icon")
+![منصة تعاون](../images/icon-76x76.png =50x76 "منصة تعاون Icon")
 ```
 
 تظهر كـ:
 > [![image](../../../../images/icon-50x76.png)](https://github.com/mattermost/mattermost)
 
 
-#### صورة مضمنة مع عرض ثابت (In-line image displayed with fixed width)
+#### صورة مضمنة مع عرض ثابت 
 
 مثال: صورة مضمنة بعرض 50 بكسل حيث يقوم النظام بضبط الارتفاع للحفاظ على نسبة العرض إلى الارتفاع الأصلية.
 
 ```text
-![Mattermost](../images/icon-76x76.png =50 "Mattermost Icon")
+![منصة تعاون](../images/icon-76x76.png =50 "منصة تعاون Icon")
 ```
 
 تظهر كـ:
 
 > [![image](../../../../images/icon-76x76.png)](https://github.com/mattermost/mattermost)
 
-### الخطوط الأفقية (Horizontal lines)
+### الخطوط الأفقية 
 
 أنشئ خطًا باستخدام ثلاث رموز من `*` أو `_` أو `-`.
 
@@ -348,7 +345,7 @@ func main() {
 
 ---
 
-### اقتباسات الكتل (Block quotes)
+### اقتباسات الكتل 
 
 أنشئ اقتباسات كتل باستخدام رمز `>`.
 
@@ -376,12 +373,11 @@ func main() {
 النص متعدد الأسطر في خلية الجدول غير مدعوم باستخدام علامات HTML مثل `<br>` أو `<br/>`.
 :::
 
-### الصيغ الرياضية (Math Formulas)
+### الصيغ الرياضية 
 
 <div class="tab">
 
-استخدام LaTeX المضمن (Using Inline LaTeX)
-
+استخدام LaTeX المضمن 
 يمكنك إنشاء صيغ تظهر بشكل مضمن باستخدام LaTeX. استخدم رمز علامة الدولار ($) في بداية ونهاية كل صيغة.
 
 :::note
@@ -400,8 +396,7 @@ $X_k = \sum_{n=0}^{2N-1} x_n \cos \left[\frac{\pi}{N} \left(n+\frac{1}{2}+\frac{
 
 <div class="tab">
 
-استخدام LaTeX في كتل الكود (Using LaTeX in Code Blocks)
-
+استخدام LaTeX في كتل الكود 
 أنشئ صيغًا ككتل كود باستخدام LaTeX في [كتل الكود](#كتل-الكود-code-blocks) من نوع `latex`.
 
 :::note

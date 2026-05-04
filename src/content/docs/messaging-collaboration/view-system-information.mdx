@@ -4,6 +4,10 @@ description: كيفية عرض معلومات الإصدار وتفاصيل ال
 ---
 
 import { Tabs, TabItem, Steps, Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+
+import AboutPlatform from '../../../images/about-platform.png';
 
 يمكنك عرض التفاصيل الفنية حول خادم **منصة تعاون** الخاص بك، بما في ذلك معلومات الإصدار ومقاييس النظام. هذه المعلومات ضرورية جداً عند التواصل مع فريق الدعم الفني أو عند استكشاف المشكلات وإصلاحها.
 
@@ -16,6 +20,8 @@ import { Tabs, TabItem, Steps, Aside } from '@astrojs/starlight/components';
     <Steps>
     1. انقر على صورة ملفك الشخصي في الزاوية العلوية اليمنى من واجهة **منصة تعاون**.
     2. اختر **حول منصة تعاون** من القائمة المنسدلة.
+        <Image src={AboutPlatform} alt="فتح قائمة دعوة الأشخاص من اسم الفريق" height={500} style={{ display: 'block', margin: '12px auto' }} />
+
     </Steps>
   </TabItem>
   <TabItem label="الهاتف المحمول" icon="mobile">

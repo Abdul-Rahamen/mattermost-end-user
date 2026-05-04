@@ -1,6 +1,6 @@
 ---
 title: "إرسال الرسائل (Send messages)"
-description: "تعرف على كيفية إرسال الرسائل وتحريرها في Mattermost، وكيفية استخدام ميزات الذكاء الاصطناعي لإعادة الصياغة."
+description: "تعرف على كيفية إرسال الرسائل وتحريرها في منصة تعاون، وكيفية استخدام ميزات الذكاء الاصطناعي لإعادة الصياغة."
 ---
 
 import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
@@ -14,14 +14,14 @@ import globalDraftsGif from '../../../../images/Global-Drafts-Animated-GIF.gif';
 import mobileDraftGif from '../../../../images/mobile-draft-a-message.gif';
 import moreActionsImg from '../../../../images/more-actions.png';
 
-يمكنك إرسال رسائل في القنوات العامة والخاصة، وكذلك إلى مستخدمين آخرين في Mattermost. اعتماداً على توقيت إنشاء الرسالة، يمكنك إرسالها فوراً، أو [جدولتها لاحقاً](/end-user-guide/collaborate/schedule-messages)، أو [تعيين أولوية الرسالة](/end-user-guide/collaborate/message-priority).
+يمكنك إرسال رسائل في القنوات العامة والخاصة، وكذلك إلى مستخدمين آخرين في منصة تعاون. اعتماداً على توقيت إنشاء الرسالة، يمكنك إرسالها فوراً، أو [جدولتها لاحقاً](/end-user-guide/collaborate/schedule-messages)، أو [تعيين أولوية الرسالة](/end-user-guide/collaborate/message-priority).
 
 <Aside type="tip" title="تنبيهات التواجد">
-قد يعرض Mattermost تحذيراً عند محاولة إرسال رسالة لمستلم وضع حالته على [عدم الإزعاج](/end-user-guide/preferences/set-your-status-availability#set-your-availability) وكان الوقت المحلي للمستلم خارج ساعات العمل (بين الساعة 10 مساءً و 6 صباحاً). يظهر هذا التحذير فوق حقل كتابة الرسالة.
+قد يعرض منصة تعاون تحذيراً عند محاولة إرسال رسالة لمستلم وضع حالته على [عدم الإزعاج](/end-user-guide/preferences/set-your-status-availability#set-your-availability) وكان الوقت المحلي للمستلم خارج ساعات العمل (بين الساعة 10 مساءً و 6 صباحاً). يظهر هذا التحذير فوق حقل كتابة الرسالة.
 </Aside>
 
 <Aside type="note">
-بدءاً من الإصدار **v11.5** من Mattermost، يمكنك الوصول إلى موارد المساعدة الخاصة بتنسيق الرسائل عبر رابط **مساعدة** أسفل حقل إدخال الرسالة.
+بدءاً من الإصدار **v11.5** من منصة تعاون، يمكنك الوصول إلى موارد المساعدة الخاصة بتنسيق الرسائل عبر رابط **مساعدة** أسفل حقل إدخال الرسالة.
 </Aside>
 
 ---
@@ -43,7 +43,7 @@ import moreActionsImg from '../../../../images/more-actions.png';
 
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
-    1. اضغط على حقل النص في أسفل تطبيق Mattermost لكتابة رسالة.
+    1. اضغط على حقل النص في أسفل تطبيق منصة تعاون لكتابة رسالة.
        <Image 
          src={mobileTypeMessage} 
          alt="واجهة كتابة الرسالة على الهاتف" 
@@ -92,7 +92,7 @@ import moreActionsImg from '../../../../images/more-actions.png';
 
 ---
 
-## رسائل "المسح عند القراءة" (Burn-on-read)
+## رسائل "المسح عند القراءة" 
 
 <Aside type="note" title="توفر الخطط">
   متوفر في خطط: <Badge text="Entry" variant="note" /> <Badge text="Enterprise Advanced" variant="note" />
@@ -123,9 +123,9 @@ import moreActionsImg from '../../../../images/more-actions.png';
 
 ---
 
-## المسودات (Drafts)
+## المسودات 
 
-بدءاً من الإصدار **v7.7** من Mattermost، تتم مزامنة مسودات الرسائل على الخادم افتراضياً وتصبح متاحة في أي مكان تصل فيه إلى حسابك.
+بدءاً من الإصدار **v7.7** من منصة تعاون، تتم مزامنة مسودات الرسائل على الخادم افتراضياً وتصبح متاحة في أي مكان تصل فيه إلى حسابك.
 
 <Aside type="tip" title="تعطيل المزامنة">
 لتقييد المسودات على الجهاز الحالي فقط: اذهب إلى **الإعدادات** > **متقدم** > **السماح بمزامنة مسودات الرسائل مع الخادم** وأوقف الخيار.
