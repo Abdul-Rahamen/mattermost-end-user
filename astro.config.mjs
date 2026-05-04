@@ -67,7 +67,7 @@ export default defineConfig({
               slug: "access-your-workspace/client-availability",
             },
             {
-              label: "تسجيل الخروج من Mattermost",
+              label: "تسجيل الخروج",
               slug: "access-your-workspace/log-out-of-mattermost",
             },
           ],
@@ -107,7 +107,7 @@ export default defineConfig({
               slug: "messaging-collaboration/invite-people",
             },
             {
-              label: "تعرف على أدوار Mattermost",
+              label: "تعرف على أدوار والصلاحيات",
               slug: "messaging-collaboration/learn-about-mattermost-roles",
             },
             {
@@ -162,7 +162,7 @@ export default defineConfig({
                   slug: "messaging-collaboration/collaborate-within-channels/join-and-leave-channels",
                 },
                 {
-                  label: "إجراء مكالمات في Mattermost",
+                  label: "إجراء مكالمات في منصة ",
                   slug: "messaging-collaboration/collaborate-within-channels/make-calls-in-mattermost",
                 },
                 {

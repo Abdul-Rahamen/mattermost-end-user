@@ -1,2 +1,33 @@
-/* فرض اللون على الحدود، العنوان، والأيقونة */
+/* 1. تصفير الخلفية لكل الحالات الممكنة للعنصر النشط */
+.sidebar-content a[aria-current="page"],
+.sidebar-content a[aria-current="page"]:hover,
+.sidebar-content a[aria-current="page"]:focus,
+[aria-current="page"] {
+    background-color: transparent !important;
+    /* تحويل النص إلى شكل رابط */
+    color: var(--sl-color-text-accent) !important;
+    text-decoration: underline !important;
+    font-weight: 700 !important;
+}
 
+/* 2. معالجة الطبقة الخلفية (التي تسبب اللون الأخضر في الصورة) */
+.sidebar-content li a[aria-current="page"] {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* 3. زيادة التباعد العمودي بين العناصر لتجنب التكدس الظاهر في */
+.sidebar-content li {
+    margin-bottom: 12px !important; /* مسافة واضحة بين كل سطر والآخر */
+}
+
+/* 4. تباعد إضافي للمجموعات الكبيرة (مثل 'التعاون في المراسلة') */
+.sidebar-content details {
+    margin-top: 1.5rem !important;
+}
+
+/* 5. تحسين مظهر روابط العناوين الفرعية غير النشطة لتشبه الروابط العادية عند الوقوف عليها */
+.sidebar-content a:hover {
+    background-color: transparent !important;
+    text-decoration: underline !important;
+}

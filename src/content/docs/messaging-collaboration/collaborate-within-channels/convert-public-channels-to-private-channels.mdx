@@ -1,91 +1,119 @@
 ---
-title: "تحويل القنوات العامة إلى قنوات خاصة "
-description: "تعرف على كيفية تحويل قناة عامة إلى قناة خاصة في Mattermost"
+title: "تحويل القنوات العامة إلى قنوات خاصة"
+description: "تعرف على كيفية تغيير خصوصية القناة من عامة إلى خاصة في منصة تعاون والقيود المتعلقة بهذه العملية."
 ---
 
 import { Image } from 'astro:assets';
-import { Aside, Tabs, TabItem, Steps, Badge } from '@astrojs/starlight/components';
+import { Aside, Tabs, TabItem, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components';
 import convertPublicChannelToPrivate from '../../../../images/convert-public-channel-to-private.png';
 import mobileSelectAChannel from '../../../../images/mobile-select-a-channel.jpg';
 import mobileSelectMoreOptionsForAChannel from '../../../../images/mobile-select-more-options-for-a-channel.jpg';
 import mobileSelectViewInfoForAChannel from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
 import mobileConvertToPrivateChannel from '../../../../images/mobile-convert-to-private-channel.jpg';
 import mobileConfirmConvertToPrivateChannel from '../../../../images/mobile-confirm-convert-to-private-channel.jpg';
+import ChannelGroupMention from "../../../../images/channels-group-mentions.png";
 
 
-يجب أن تكون مسؤول نظام أو مسؤول فريق لتحويل القنوات العامة إلى قنوات خاصة. عند تحويل قناة من عامة إلى خاصة، يتم الحفاظ على سجلها وعضويتها. تظل العضوية في القناة خاصة عن طريق الدعوة فقط. تظل الملفات التي تمت مشاركتها علنًا متاحة لأي شخص لديه الرابط.
+تتيح **منصة تعاون** للمسؤولين مرونة عالية في إدارة خصوصية مساحات العمل. يتطلب تحويل القناة من عامة إلى خاصة صلاحيات **مسؤول النظام** أو **مسؤول الفريق**. عند إجراء هذا التحويل، تضمن المنصة الحفاظ على كامل سجل المحادثات وقائمة الأعضاء الحاليين، ولكن سيقتصر الانضمام مستقبلاً على الدعوات الخاصة فقط.
 
 <Aside type="note">
-لا يمكن تحويل القناة الافتراضية **الساحة العامة (Town Square)** إلى قناة خاصة.
+لا يمكن تحويل القناة الافتراضية للمؤسسة **(الساحة العامة)** إلى قناة خاصة نظراً لأنها مخصصة لجميع الموظفين.
 </Aside>
 
+---
+
+## تحويل القناة عبر منصات التشغيل
+
+تختلف واجهة الإعدادات بناءً على الجهاز المستخدم، ولكن النتيجة تظل واحدة:
+
 <Tabs>
-  <TabItem label="الويب/سطح المكتب (Web/Desktop)" icon="laptop">
-    لتحويل قناة عامة إلى قناة خاصة، حدد اسم القناة العامة في أعلى اللوحة المركزية للوصول إلى القائمة المنسدلة، ثم حدد **تحويل إلى قناة خاصة (Convert to Private Channel)**.
+  <TabItem label="الويب وسطح المكتب" icon="laptop">
+    لتحويل القناة، اتبع الخطوات البسيطة التالية:
+    
+    <Steps>
+    1. اضغط على اسم القناة في الجزء العلوي لفتح القائمة المنسدلة.
+    2. اختر خيار **تحويل إلى قناة خاصة**.
+    3. أكد العملية في النافذة المنبثقة.
+    </Steps>
 
     <Image 
       src={convertPublicChannelToPrivate} 
-      alt="من اسم القناة، يمكنك تحويل قناة عامة إلى قناة خاصة إذا كنت مسؤولاً." 
-      style={{ display: 'block', margin: '2rem auto', maxWidth: '100%' }} 
+      alt="واجهة تحويل خصوصية القناة في متصفح الويب" 
+      style={{ display: 'block', margin: '2rem auto', maxWidth: '100%', borderRadius: '8px' }} 
     />
   </TabItem>
 
-  <TabItem label="الهاتف المحمول (Mobile)" icon="mobile">
-    لتحويل قناة عامة إلى قناة خاصة:
+  <TabItem label="الهاتف المحمول" icon="mobile">
+    لإجراء التحويل عبر التطبيق، اتبع المسار التالي:
 
     <Steps>
-    1. اضغط على القناة التي تريد تحويلها.
-
+    1. افتح القناة التي ترغب في تغيير خصوصيتها.
        <Image 
          src={mobileSelectAChannel} 
-         alt="حدد القناة التي تريد إعادة تسميتها." 
-         style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} 
+         alt="اختيار القناة" 
+         style={{ height: '400px', width: 'auto', borderRadius: '15px', border: '1px solid #eee', display: 'block', margin: '1.5rem auto' }} 
        />
 
-    2. اضغط على أيقونة **المزيد (More)** الموجودة في الزاوية العلوية اليمنى من التطبيق.
+    2. اضغط على أيقونة **المزيد (⋮)** في الزاوية العلوية.
+       <Image src={mobileSelectMoreOptionsForAChannel} alt="فتح قائمة الخيارات" style={{ height: '400px', width: 'auto', borderRadius: '15px', border: '1px solid #eee', display: 'block', margin: '1.5rem auto' }}  />
 
-       <Image src={mobileSelectMoreOptionsForAChannel} alt="اضغط على المزيد من الخيارات للوصول إلى الخيارات المتاحة للقناة." style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}  />
-
-    3. اضغط على **عرض المعلومات (View info)**.
-
+    3. اختر **عرض المعلومات** للوصول إلى الخصائص المتقدمة.
        <Image 
          src={mobileSelectViewInfoForAChannel} 
-         alt="اضغط على عرض المعلومات لرؤية معلومات القناة الأساسية." 
-         style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} 
+         alt="الدخول لمعلومات القناة" 
+         style={{ height: '400px', width: 'auto', borderRadius: '15px', border: '1px solid #eee', display: 'block', margin: '1.5rem auto' }} 
        />
 
-    4. اضغط على **تحويل إلى قناة خاصة (Convert to private channel)**.
-
+    4. اضغط على خيار **تحويل إلى قناة خاصة**.
        <Image 
          src={mobileConvertToPrivateChannel} 
-         alt="اضغط على تحويل إلى قناة خاصة لجعل القناة خاصة." 
-         style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} 
+         alt="تغيير نوع الخصوصية" 
+         style={{ height: '400px', width: 'auto', borderRadius: '15px', border: '1px solid #eee', display: 'block', margin: '1.5rem auto' }} 
        />
 
-    5. اضغط على **نعم (Yes)** للتأكيد.
-
+    5. أكد العملية بالضغط على **نعم**.
        <Image 
          src={mobileConfirmConvertToPrivateChannel} 
-         alt="اضغط على نعم لتأكيد اختيارك." 
-         style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} 
+         alt="تأكيد التحويل النهائي" 
+         style={{ height: '400px', width: 'auto', borderRadius: '15px', border: '1px solid #eee', display: 'block', margin: '1.5rem auto' }} 
        />
     </Steps>
   </TabItem>
 </Tabs>
 
-## تحويل القنوات الخاصة إلى قنوات عامة (Convert private channels to public channels)
+---
 
-نظرًا للمخاوف الأمنية المحتملة المتعلقة بمشاركة سجل القنوات الخاصة، يمكن لمسؤولي النظام فقط تحويل القنوات الخاصة إلى قنوات عامة باستخدام وحدة تحكم النظام.
+## تحويل القنوات الخاصة إلى عامة
 
-<Aside type="note">
-* تقتصر القدرة على تحويل القنوات الخاصة إلى قنوات عامة باستخدامواجهة برمجة التطبيقات  على مسؤولي النظام ومسؤولي الفريق والمستخدمين الذين لديهم أدوار مسؤول محددة.
-* تتطلب الأدوار المحددة أذونات لإدارة قنوات ومجموعات إدارة المستخدمين. قم بإدارة الأذونات من خلال مخطط الأذونات
-* إذا تم تمكين إدارة قنوات مجموعات المزامنة ، فلا يمكن تحويل القنوات الخاصة إلى قنوات عامة.
-</Aside>
+نظراً لحساسية البيانات المخزنة في القنوات الخاصة، فإن عملية تحويلها إلى قنوات عامة تخضع لرقابة مشددة. يمكن فقط لـ **مسؤولي النظام** إجراء هذا التغيير عبر لوحة الإدارة المركزية لضمان عدم تسريب معلومات سرية بالخطأ.
+
+### خطوات التحويل الإداري:
 
 <Steps>
-1. انتقل إلى **وحدة تحكم النظام (System Console) > القنوات (Channels)**.
-2. حدد **تحرير (Edit)** لقناة خاصة موجودة. يمكنك أيضًا تصفية قائمة القنوات إلى القنوات الخاصة فقط.
-3. تحت **إدارة القناة (Channel Management) > قناة عامة أو قناة خاصة (Public channel or private channel)**، حدد **عامة (Public)**.
-4. حدد **حفظ (Save)**.
+1. انتقل إلى **وحدة تحكم النظام > القنوات**.
+2. ابحث عن القناة الخاصة المطلوبة واضغط على **تحرير**.
+3. من قسم **إدارة القناة**، قم بتغيير الحالة من **خاصة** إلى **عامة**.
+4. اضغط على **حفظ**؛ ستظهر القناة فوراً في نتائج البحث لجميع الموظفين.
 </Steps>
+
+---
+
+## ملاحظات أمنية هامة
+
+قبل تغيير خصوصية القناة، يرجى مراعاة ما يلي:
+
+<CardGrid>
+  <Card title="الروابط الخارجية" icon="link">
+    الملفات التي تمت مشاركتها عبر روابط مباشرة قبل التحويل قد تظل متاحة لمن يمتلك الرابط.
+  </Card>
+  <Card title="مزامنة المجموعات" icon="setting">
+    إذا كانت القناة مرتبطة بمجموعات مزامنة تلقائية (AD/LDAP)، فقد لا يكون التحويل اليدوي متاحاً.
+  </Card>
+  <Card title="سجل الأنشطة" icon="history">
+    سيتم إخطار الأعضاء داخل القناة برسالة نظام تفيد بتغيير نوع الخصوصية لضمان الشفافية.
+  </Card>
+</CardGrid>
+
+<Aside type="caution">
+عملية تحويل القناة الخاصة إلى عامة قد تؤدي إلى كشف سجلات نقاش كانت تعتبر سرية لجميع أعضاء الفريق الجدد، لذا يجب مراجعة المحتوى قبل التنفيذ.
+</Aside>

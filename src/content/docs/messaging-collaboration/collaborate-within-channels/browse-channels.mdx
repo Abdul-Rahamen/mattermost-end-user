@@ -1,6 +1,6 @@
 ---
-title: "تصفح القنوات (Browse channels)"
-description: "تعرف على كيفية البحث عن القنوات العامة في Mattermost والانضمام إليها"
+title: "تصفح القنوات "
+description: "تعرف على كيفية البحث عن القنوات العامة في منصة تعاون والانضمام إليها"
 ---
 
 import { Aside, Tabs, TabItem, Steps } from '@astrojs/starlight/components';
@@ -8,6 +8,8 @@ import { Image } from 'astro:assets';
 
 {/* استيراد الصور */}
 import mobileSelectChannel from '../../../../images/mobile-select-a-channel.jpg';
+import browseChannels from '../../../../images/browse-channels.png';
+import joinChannels from '../../../../images/join-channels.png';
 import createChannelMobile from '../../../../images/create-channel-or-open-direct-message-on-mobile.jpg';
 import mobileBrowseSearch from '../../../../images/mobile-browse-public-channels-using-search.jpg';
 import mobileBrowseFilters from '../../../../images/mobile-browse-public-channels-using-filters.jpg';
@@ -15,15 +17,19 @@ import mobileBrowsePublic from '../../../../images/mobile-browse-public-channels
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب (Web/Desktop)" icon="laptop">
+  
     <Steps>
       1. اختر أيقونة **زائد  في أعلى الشريط الجانبي لمعرفة جميع القنوات العامة المتاحة التي يمكنك الانضمام إليها.
-      2. اختر تصفح القنوات (Browse Channels) .
+      2. اختر تصفح القنوات  .
       3. ابحث عن القنوات بالاسم أو مرّر القائمة.
       4. اختر **انضمام (Join)** بجانب أي قناة لتصبح عضوًا فيها.
     </Steps>
-
+   <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', margin: '20px 0' }}>
+        <Image src={browseChannels} alt="واجهة إنشاء فريق جديد في منصة تعاون" height={400} style={{ width: 'auto', borderRadius: '12px', border: '1px solid #eee' }} />
+        <Image src={joinChannels} alt="تفعيل الخصوصية في الجوال" height={400} style={{ width: 'auto', borderRadius: '12px', border: '1px solid #eee' }} />
+    </div>
 <Aside type="note" >
-    بدءًا من الإصدار v9.1 من Mattermost، يمكنك تصفية القنوات حسب عامة، أو خاصة، أو مؤرشفة، وإخفاء القنوات التي أنت عضو فيها بالفعل.
+    بدءًا من الإصدار v9.1 من Workspace، يمكنك تصفية القنوات حسب عامة، أو خاصة، أو مؤرشفة، وإخفاء القنوات التي أنت عضو فيها بالفعل.
  
  </Aside>
 
@@ -39,7 +45,7 @@ import mobileBrowsePublic from '../../../../images/mobile-browse-public-channels
            width={300} 
          />
 
-      2. اضغط على **تصفح القنوات (Browse Channels)**.
+      2. اضغط على **تصفح القنوات **.
 
          <Image 
            src={createChannelMobile} 
@@ -76,9 +82,9 @@ import mobileBrowsePublic from '../../../../images/mobile-browse-public-channels
   </TabItem>
 </Tabs>
 
-هل تريد عرض كل القنوات التي أنت عضو فيها، أو لا تستطيع العثور على قناة خاصة؟ في المتصفح أو تطبيق سطح المكتب، اختر **البحث عن قناة (Find Channel)** في الشريط الجانبي لعرض كل القنوات التي أنت عضو فيها عبر جميع فرقك، بما في ذلك القنوات العامة والخاصة، والرسائل المباشرة والجماعية، والقنوات غير المقروءة، والسلاسل. القنوات المكتومة (muted) لا تظهر في النتائج.
+هل تريد عرض كل القنوات التي أنت عضو فيها، أو لا تستطيع العثور على قناة خاصة؟ في المتصفح أو تطبيق سطح المكتب، اختر **البحث عن قناة ** في الشريط الجانبي لعرض كل القنوات التي أنت عضو فيها عبر جميع فرقك، بما في ذلك القنوات العامة والخاصة، والرسائل المباشرة والجماعية، والقنوات غير المقروءة، والسلاسل. القنوات المكتومة (muted) لا تظهر في النتائج.
 
-## استرجاع القنوات الأخيرة (Retrieve recent channels)
+## استرجاع القنوات الأخيرة 
 
 في المتصفح أو تطبيق سطح المكتب، استخدم أسهم **السجل (History)** أعلى الشريط الجانبي للتنقل عبر سجل القنوات.
 
