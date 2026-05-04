@@ -289,7 +289,7 @@ export default defineConfig({
               collapsed: true,
             },
             {
-              label: "توسيع Mattermost باستخدام عمليات الدمج",
+              label: "توسيع منصة تعاون باستخدام عمليات الدمج",
               slug: "messaging-collaboration/extend-mattermost-with-integrations",
             },
           ],
@@ -452,7 +452,7 @@ export default defineConfig({
               collapsed: true,
             },
             {
-              label: "تخصيص سمة Mattermost الخاصة بك",
+              label: "تخصيص سمة منصة تعاون الخاصة بك",
               slug: "customize-your-preferences/customize-your-mattermost-theme",
             },
             {
