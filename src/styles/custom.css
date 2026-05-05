@@ -6,8 +6,8 @@
     background-color: transparent !important;
     /* تحويل النص إلى شكل رابط */
     color: var(--sl-color-text-accent) !important;
-    text-decoration: underline !important;
-    font-weight: 700 !important;
+    text-decoration: none !important; /* إلغاء الخط السفلي */
+    font-weight: 600 !important;
 }
 
 /* 2. معالجة الطبقة الخلفية (التي تسبب اللون الأخضر في الصورة) */
@@ -16,17 +16,33 @@
     box-shadow: none !important;
 }
 
-/* 3. زيادة التباعد العمودي بين العناصر لتجنب التكدس الظاهر في */
+/* 3. تعديل المسافات بين عناصر القائمة لتطابق التصميم النظيف */
 .sidebar-content li {
-    margin-bottom: 12px !important; /* مسافة واضحة بين كل سطر والآخر */
+    margin-bottom: 4px !important; 
 }
 
-/* 4. تباعد إضافي للمجموعات الكبيرة (مثل 'التعاون في المراسلة') */
-.sidebar-content details {
-    margin-top: 1rem !important;
-}
-
-/* 5. تحسين مظهر روابط العناوين الفرعية غير النشطة لتشبه الروابط العادية عند الوقوف عليها */
+/* 4. إزالة الخط السفلي عند الوقوف على الروابط في السايد بار */
 .sidebar-content a:hover {
-    background-color: transparent !important;
+    background-color: var(--sl-color-gray-6) !important;
+    text-decoration: none !important;
+}
+
+/* 5. تعديل عرض السايد بار وجدول المحتويات */
+:root {
+    /* زيادة عرض السgايد بار بنسبة الثلث تقريباً وتقرير عرض جدول المحتويات */
+    --sl-sidebar-width: 22rem; 
+    --sl-toc-width: 14rem;    
+}
+
+@media (min-width: 72rem) {
+    .main-frame {
+        grid-template-columns: var(--sl-sidebar-width) minmax(0, 1fr) var(--sl-toc-width) !important;
+    }
+}
+
+/* تحسين شكل السايد بار ليشبه الصورة (تنسيق العناوين) */
+.sidebar-content details summary {
+    font-weight: 700 !important;
+    color: var(--sl-color-white) !important;
+    padding-block: 0.5rem !important;
 }

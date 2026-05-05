@@ -1,8 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import    "./src/styles/custom.css";
-
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -24,15 +22,11 @@ export default defineConfig({
         },
       ],
       social: [
-        {
-          icon: "github",
-          label: "GitHub",
-          href: "https://github.com/withastro/starlight",
-        },
       ],
       customCss: [
         "./src/styles/global.css",
         './src/styles/custom.css',
+        './src/styles/asides.css',
         './src/fonts/EffraVF_Trial_Wght.ttf',
       ],
       
@@ -306,23 +300,23 @@ export default defineConfig({
               slug: "workflow-automation/learn-about-collaborative-playbooks",
             },
             {
-              label: "العمل مع  قوالب العمل التعاونية",
+              label: "إدارة  قوالب العمل التعاونية",
               slug: "workflow-automation/work-with-collaborative-playbooks",
             },
             {
-              label: "العمل مع عمليات التشغيل",
+              label: "إدارة عمليات التشغيل",
               slug: "workflow-automation/work-with-runs",
             },
             {
-              label: "العمل مع المهام",
+              label: "إدارة المهام",
               slug: "workflow-automation/work-with-tasks",
             },
             {
-              label: "العمل مع الإشعارات والتحديثات",
+              label: "إدارة الإشعارات والتحديثات",
               slug: "workflow-automation/work-with-notifications-and-updates",
             },
             {
-              label: "العمل مع المقاييس والأهداف",
+              label: "إدارة المقاييس والأهداف",
               slug: "workflow-automation/work-with-metrics-and-goals",
             },
             {
@@ -358,23 +352,23 @@ export default defineConfig({
               slug: "project-and-task-management/navigate-boards",
             },
             {
-              label: "العمل مع اللوحات",
+              label: "إدارة اللوحات",
               slug: "project-and-task-management/work-with-boards",
             },
             {
-              label: "العمل مع البطاقات",
+              label: "إدارة البطاقات",
               slug: "project-and-task-management/work-with-cards",
             },
             {
-              label: "العمل مع العروض",
+              label: "إدارة العروض",
               slug: "project-and-task-management/work-with-views",
             },
             {
-              label: "العمل مع المجموعات والفرز والتصفية",
+              label: "إدارة المجموعات والفرز والتصفية",
               slug: "project-and-task-management/work-with-groups-filter-and-sort",
             },
             {
-              label: "العمل مع الحسابات",
+              label: "إدارة الحسابات",
               slug: "project-and-task-management/work-with-calculations",
             },
             {
