@@ -1,0 +1,17 @@
+:root[data-theme='dark'] .sl-markdown-content :global(img) {
+  /* عكس الألوان مع الحفاظ على درجة اللون الأصلية للأيقونات /
+  filter: invert(1) hue-rotate(180deg) contrast(1.4) brightness(1.1) !important;
+  / إضافة تأثير بسيط لجعل الصورة تبدو كجزء من الواجهة الداكنة */
+  mix-blend-mode: screen; 
+  opacity: 0.9;
+}
+
+ 
+
+:root[data-theme='dark'] .sl-markdown-content img,
+:root[data-theme='dark'] .sl-markdown-content picture img {
+  filter: invert(0.9) hue-rotate(180deg) brightness(1.1) !important;
+  transition: filter 0.3s ease-in-out;  
+}
+
+
