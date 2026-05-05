@@ -23,11 +23,10 @@
 
 /* 4. تباعد إضافي للمجموعات الكبيرة (مثل 'التعاون في المراسلة') */
 .sidebar-content details {
-    margin-top: 1.5rem !important;
+    margin-top: 1rem !important;
 }
 
 /* 5. تحسين مظهر روابط العناوين الفرعية غير النشطة لتشبه الروابط العادية عند الوقوف عليها */
 .sidebar-content a:hover {
     background-color: transparent !important;
-    text-decoration: underline !important;
 }

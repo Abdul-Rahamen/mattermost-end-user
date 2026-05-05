@@ -6,6 +6,7 @@ description: "تعرف على كيفية تعيين تذكير للرسائل ف
 import { Tabs, TabItem, Steps,Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 import FAIcon from '../../../../components/FAIcon.astro';
+import channelFilesIcon from "../../../../images/message-remider.gif";
 
 بدءًا من الإصدار v7.10 من منصة تعاون، وباستخدام منصة تعاون في متصفح الويب أو تطبيق سطح المكتب، يمكنك تعيين تذكير واحد محدد بوقت على منشور تم إجراؤه في قناة، أو رسالة مباشرة، أو رسالة جماعية. القدرة على إعداد تذكيرات متكررة غير مدعومة حالياً.
 
@@ -15,6 +16,7 @@ import FAIcon from '../../../../components/FAIcon.astro';
 2. اختر أيقونة **المزيد** <FAIcon name="ellipsis-vertical" />.
 3. اختر **تذكير**. 
 4. اختر فترة زمنية محددة مسبقاً أو أدخل تاريخًا ووقتًا مخصصين. 
+<Image src={channelFilesIcon} alt="أيقونة ملفات القناة"  />
 
 ستتلقى رسالة مباشرة من النظام في الوقت الذي اخترته، تحتوي على محتوى الرسالة الأصلية التي طلبت التذكير بها. بمجرد إرسال التذكير، لن تتلقى تنبيهاً آخر ما لم تقم بتعيين تذكير جديد لتلك الرسالة.
 

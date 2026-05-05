@@ -8,7 +8,7 @@ import { Image } from 'astro:assets';
 
 {/* استيراد الأصول المرئية */}
 import msgMore from '../../../../images/message-more.png';
-import copyLinkImg from '../../../../images/copy-link.png';
+import copyLinkImg from '../../../../images/copy-link.gif';
 import permalinkPreviews from '../../../../images/permalink-previews.png';
 import mobileCopyGif from '../../../../images/mobile-copy-a-link-to-the-message.gif';
 
@@ -45,22 +45,13 @@ import mobileCopyGif from '../../../../images/mobile-copy-a-link-to-the-message.
   </TabItem>
 </Tabs>
 
-<div style={{ 
-  borderInlineStart: '4px solid #ffffff', 
-  backgroundColor: 'rgba(0, 152, 126, 0.1)', 
-  padding: '1rem', 
-  margin: '1.5rem 0',
-  borderRadius: '0.25rem',
-  color: '#ffffff'
-}}>
-  <strong style={{ display: 'block', marginBottom: '0.5rem' }}>ℹ️ ملاحظة</strong>
-  <span style={{ color: 'var(--sl-color-white)' }}>
+<Aside type="note">
+  
     <ul style={{ listStyleType: 'disc', paddingInlineStart: '1.5rem' }}>
       <li>تحترم معاينات الرسائل صلاحيات عضوية القناة؛ لذلك تُعرض فقط للمستخدمين الذين لديهم حق الوصول.</li>
       <li>إذا لم تتمكن من مشاركة الروابط، فاتصل بمسؤول النظام؛ قد تكون شهادة SSL مطلوبة.</li>
     </ul>
-  </span>
-</div>
+</Aside>
 
 ## الروابط العميقة 
 

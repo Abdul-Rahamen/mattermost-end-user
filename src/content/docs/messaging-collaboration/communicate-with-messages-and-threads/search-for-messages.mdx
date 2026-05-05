@@ -33,11 +33,8 @@ import calendarImg from '../../../../images/calendar2.png';
     <Steps>
     1. اختر حقل البحث، ثم اختر **الرسائل**، وأدخل معايير البحث الخاصة بك.
        <Image src={searchMessages} alt="حقل البحث" width={600} />
-       <Image src={searchMessagesExpanded} alt="حقل البحث الموسع" width={600} />
 
-    2. بشكل افتراضي، تتضمن النتائج رسائل من فريقك الحالي. بدءًا من الإصدار v10.8، يمكنك اختيار **جميع الفرق** للبحث الشامل.
-       <Image src={searchAllTeams} alt="البحث في جميع الفرق" width={600} />
-
+   
        <div style={{ padding: '1rem', backgroundColor: 'rgba(52, 152, 219, 0.1)', borderInlineStart: '4px solid #3498db', borderRadius: '0.25rem', margin: '1rem 0' }}>
          <strong>💡 تلميح:</strong> بدءًا من الإصدار v10.10، يتوفر معامل البحث `from:` للبحث عبر الفرق.
        </div>
@@ -69,15 +66,6 @@ import calendarImg from '../../../../images/calendar2.png';
 
 من حقل البحث، اختر **الملفات** للعثور على المرفقات. يتم البحث داخل أسماء الملفات ومحتويات المستندات المدعومة (PDF, DOCX, PPTX, إلخ).
 
-<Image src={searchFiles} alt="البحث عن الملفات" width={600} />
-
-### تصفية النتائج حسب نوع الملف (Filter results by file type)
-
-يمكنك تضييق البحث باختيار **تصفية نوع الملف** وتحديد فئات مثل الصور أو جداول البيانات.
-
-<Image src={fileSearchFilter} alt="تصفية حسب نوع الملف" width={600} />
-
-### الوصول إلى الملفات التي تمت مشاركتها مؤخرًا (Access recently shared files)
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
@@ -101,7 +89,6 @@ import calendarImg from '../../../../images/calendar2.png';
 | `after:` | بعد تاريخ معين | `after:2023-12-01` |
 | `on:` | في تاريخ محدد | `on:2024-02-15` |
 
-<Image src={calendarImg} alt="منتقي التاريخ" width={400} />
 
 ### الاستثناءات والرموز الخاصة
 * **الاستثناء `-`**: لاستبعاد كلمات (مثال: `test -release`).

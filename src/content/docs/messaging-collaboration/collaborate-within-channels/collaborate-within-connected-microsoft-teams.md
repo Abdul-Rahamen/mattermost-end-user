@@ -1,5 +1,5 @@
 ---
-title: "التعاون داخل Microsoft Teams (Collaborate within Microsoft Teams)"
+title: "التعاون داخل "
 description: "تكامل منصة تعاون مع Microsoft Teams"
 ---
 
@@ -36,8 +36,7 @@ description: "تكامل منصة تعاون مع Microsoft Teams"
 
 ![مثال على إشعار رسالة دردشة.](../../../../images/microsoft-teams-chat-notifications.png)
 
-### إدارة إعدادات الإشعارات (Manage notification settings)
-
+### إدارة إعدادات الإشعارات 
 قم بإدارة إعدادات إشعارات منصة تعاون الخاصة بتكامل Microsoft Teams في أي وقت في **الإعدادات (Settings) > تفضيلات الإضافات (Plugin Preferences)**.
 
 ![إدارة إعدادات الإشعارات لتكامل Microsoft Teams في إعدادات الحساب > تفضيلات الإضافات.](../../../../images/teams_plugin_notification_settings.png)
@@ -52,7 +51,7 @@ description: "تكامل منصة تعاون مع Microsoft Teams"
 
 ## الأسئلة الشائعة (Frequently asked questions)
 
-### كيف يحدد التكامل متى يتم إرسال إشعارات الدردشة؟ (How does the integration determine when to send chat notifications?)
+### كيف يحدد التكامل متى يتم إرسال إشعارات الدردشة؟ 
 
 يتم إرسال إشعارات الدردشة في الوقت الفعلي عندما لا تكون نشطًا في Microsoft Teams وتتلقى رسالة دردشة أو دردشة جماعية. يستخدم منصة تعاون حالتك عبر الإنترنت في Teams لتحديد ما إذا كان يجب تسليم إشعار الدردشة. يقوم منصة تعاون بتسليم الإشعارات إذا ظهرت كـ **غائب (Away)** أو **غير متصل (Offline)** في Microsoft Teams، لذا فإن السلوك الافتراضي لوقت تسليم الإشعارات يعتمد على العميل الذي تستخدمه عادةً للوصول إلى Microsoft Teams:
 

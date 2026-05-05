@@ -7,6 +7,7 @@ import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/component
 import { Image } from 'astro:assets';
 
 {/* استيراد الأصول المرئية بمساراتها الصحيحة */}
+import desktopRenameChannels from '../../../../images/desktop-channel-rename.gif';
 import mobileSelectChannel from '../../../../images/mobile-select-a-channel.jpg';
 import mobileMoreOptions from '../../../../images/mobile-select-more-options-for-a-channel.jpg';
 import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
@@ -19,12 +20,13 @@ import mobileRenameSave from '../../../../images/mobile-rename-channel-name-and-
   <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
     1. اختر اسم القناة في أعلى اللوحة المركزية للوصول إلى القائمة المنسدلة.
-    2. اختر **إعدادات القناة (Channel Settings)**.
+    2. اختر **إعدادات القناة **.
     3. قم بتحديث المعلومات التالية في النافذة المنبثقة:
     </Steps>
 
     - **اسم القناة :** الاسم الذي يظهر في واجهة مستخدم منصة تعاون لجميع الأعضاء. أدخل اسماً جديداً يعبر عن محتوى القناة.
     - **عنوان URL للقناة :** الرابط المباشر للوصول إلى القناة عبر المتصفح. اختر **تحرير (Edit)** لتعديل الرابط، ثم اضغط **تم (Done)**.
+       <Image src={desktopRenameChannels} alt="Step 3" />
 
     <Aside type="note" title="تنبيه بخصوص الروابط">
       إذا قام مسؤول النظام بتمكين عناوين URL المجهولة (بداية من النسخة <Badge text="v11.6.0" variant="note" />)، فسيتم تعيين الروابط تلقائياً ولن تعكس اسم القناة بالضرورة.

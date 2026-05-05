@@ -21,8 +21,9 @@ import blockQuotesImg from '../../../../images/blockQuotes.png';
 import markdownTable1 from '../../../../images/markdownTable1.png';
 import latexInline from '../../../../images/latex-inline.png';
 import latexCodeblock from '../../../../images/latex-codeblock.png';
+import FAIcon from "../../../../components/FAIcon.astro";
 
-## <i class="fa-solid fa-pen-ruler"></i> استخدم شريط أدوات تنسيق الرسائل 
+## <FAIcon name="pen-ruler"/>استخدم شريط أدوات تنسيق الرسائل 
 بدءًا من الإصدار **v7.0** من منصة تعاون، يمكنك تنسيق رسائلك باستخدام شريط أدوات تنسيق الرسائل دون الحاجة لكتابة ترميز Markdown يدويًا.
 
 <Image 
@@ -31,26 +32,23 @@ import latexCodeblock from '../../../../images/latex-codeblock.png';
   style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
 />
 
-يوفر شريط الأدوات خيارات التنسيق التالية:
-
-| الخيار | الأيقونة |
+| خيارات التنسيق | الأيقونات |
 | :--- | :--- |
-| [تطبيق الغامق/المائل/التسطير](#نمط-النص-text-style) | <i class="fa-solid fa-bold"></i> <i class="fa-solid fa-italic"></i> <i class="fa-solid fa-strikethrough"></i> |
-| إضافة [عناوين](#العناوين-headings) أو [روابط](#الروابط-links) أو مرفقات | <i class="fa-solid fa-heading"></i> <i class="fa-solid fa-link"></i> <i class="fa-solid fa-paperclip"></i> |
-| تنسيق قائمة مرقمة أو نقطية أو اقتباس أو نص كود | <i class="fa-solid fa-list-ol"></i> <i class="fa-solid fa-list-ul"></i> <i class="fa-solid fa-quote-right"></i> <i class="fa-solid fa-code"></i> |
-| [إضافة رموز تعبيرية أو صور GIF](/end-user-guide/collaborate/react-with-emojis-gifs) | <i class="fa-solid fa-face-smile"></i> |
-| [تعيين أولوية الرسالة](/end-user-guide/collaborate/message-priority) | <i class="fa-solid fa-circle-exclamation"></i> |
+| **تنسيق النص (عريض، مائل، أو يتوسطه خط)** | <FAIcon name="bold"/> <FAIcon name="italic"/> <FAIcon name="strikethrough"/> |
+| **إضافة العناوين، الروابط، أو المرفقات** | <FAIcon name="heading"/> <FAIcon name="link"/> <FAIcon name="paperclip"/> |
+| **قائمة مرقمة، قائمة منقطة، اقتباس، أو نص برمجيد** | <FAIcon name="list-ol"/> <FAIcon name="list"/> <FAIcon name="quote-left"/> <FAIcon name="code"/> |
+| **إضافة الرموز التعبيرية أو الصور المتحركة** | <FAIcon name="smile"/> <FAIcon name="icons"/> |
+| **تحديد أولوية الرسالة** | <FAIcon name="exclamation"/> |
 
-راجع معاينة لكيفية ظهور تنسيق الرسالة بعد إرسالها عن طريق اختيار أيقونة **إظهار/إخفاء المعاينة (Show/Hide Preview)** <i class="fa-solid fa-eye"></i>. اختر الأيقونة مرة أخرى للعودة إلى المسودة.
-
+راجع معاينة لكيفية ظهور تنسيق الرسالة بعد إرسالها عن طريق اختيار أيقونة **إظهار/إخفاء المعاينة** <FAIcon name="eye"/>. اختر الأيقونة مرة أخرى للعودة إلى المسودة.
 <Aside type="note">
-- قم بإخفاء خيارات التنسيق عن طريق اختيار أيقونة **إظهار/إخفاء التنسيق (Show/Hide Formatting)** <i class="fa-solid fa-font"></i>، واخترها مرة أخرى لإظهار الخيارات.
+- قم بإخفاء خيارات التنسيق عن طريق اختيار أيقونة **إظهار/إخفاء التنسيق (Show/Hide Formatting)** <FAIcon name="font"/>، واخترها مرة أخرى لإظهار الخيارات.
 - يمكنك التحكم في ما إذا كان سيتم عرض تنسيق المنشور داخل محرر تنسيق الرسائل؛ عند تعطيله، سيظهر النص الخام. راجع [تخصيص القنوات](/end-user-guide/preferences/manage-advanced-options) لمزيد من التفاصيل.
 </Aside>
 ----
-## <i class="fa-brands fa-markdown"></i> استخدام Markdown (Use Markdown)
+##  استخدام Markdown 
 
-يمكنك أيضًا تنسيق الرسائل باستخدام Markdown للتحكم في [نمط النص](#نمط-النص-text-style)، و [الروابط](#الروابط-links)، و [العناوين](#العناوين-headings)، و [القوائم](#القوائم-lists)، و [كتل الكود](#كتل-الكود-code-blocks)، و [الكود المضمن](#الكود-المضمن-in-line-code)، و [الصور المضمنة](#الصور-المضمنة-in-line-images)، و [الخطوط الأفقية](#الخطوط-الأفقية-horizontal-lines)، و [اقتباسات الكتل](#اقتباسات-الكتل-block-quotes)، و [الجداول](#الجداول-tables)، و [الصيغ الرياضية](#الصيغ-الرياضية-math-formulas). استخدام Markdown سهل: اكتب رسالتك ثم استخدم قواعد التنسيق.
+يمكنك أيضًا تنسيق الرسائل باستخدام Markdown للتحكم في [نمط النص](#نمط-النص)، و [الروابط](#الروابط)، و [العناوين](#العناوين)، و [القوائم](#القوائم)، و [كتل الكود](#كتل-الكود)، و [الكود المضمن](#الكود-المضمن-in-line-code)، و [الصور المضمنة](#الصور-المضمنة-in-line-images)، و [الخطوط الأفقية](#الخطوط-الأفقية)، و [اقتباسات الكتل](#اقتباسات-الكتل)، و [الجداول](#الجداول)، و [الصيغ الرياضية](#الصيغ-الرياضية). استخدام Markdown سهل: اكتب رسالتك ثم استخدم قواعد التنسيق.
 
 <Image 
   src={messagesTable1} 
@@ -58,7 +56,7 @@ import latexCodeblock from '../../../../images/latex-codeblock.png';
   style={{ width: '100%', maxWidth: '700px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
 />
 
-### نمط النص (Text style)
+### نمط النص 
 
 يمكنك استخدام `_` أو `*` حول كلمة أو عبارة لجعلها مائلة، أو `__` أو `**` لجعلها غامقة.
 
@@ -147,6 +145,18 @@ Large Heading
 2. Item two
 3. Item three
 
+
+استخدم الاقواس لإنشاء قائمة خيارت صح او خطا: 
+
+```text
+- [ ] Item one
+- [ ] Item two
+- [x] Completed item
+```
+تظهر كـ:
+- [ ] Item one
+- [ ] Item two
+- [x] Completed item
 ### كتل الكود 
 
 أنشئ كتل كود باستخدام ثلاث علامات اقتباس خلفية (backticks) ` ``` ` على سطر جديد قبل الكود وبعده. بدلاً من ذلك، يمكنك إنشاء كتل كود عن طريق إضافة أربع مسافات بادئة لكل سطر من الكود.
@@ -375,7 +385,7 @@ func main() {
 
 ### الصيغ الرياضية 
 
-<div class="tab">
+<div name="tab">
 
 استخدام LaTeX المضمن 
 يمكنك إنشاء صيغ تظهر بشكل مضمن باستخدام LaTeX. استخدم رمز علامة الدولار ($) في بداية ونهاية كل صيغة.
@@ -394,7 +404,7 @@ $X_k = \sum_{n=0}^{2N-1} x_n \cos \left[\frac{\pi}{N} \left(n+\frac{1}{2}+\frac{
 
 </div>
 
-<div class="tab">
+<div name="tab">
 
 استخدام LaTeX في كتل الكود 
 أنشئ صيغًا ككتل كود باستخدام LaTeX في [كتل الكود](#كتل-الكود-code-blocks) من نوع `latex`.

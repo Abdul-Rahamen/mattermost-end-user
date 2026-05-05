@@ -6,7 +6,7 @@ description: "تعرف على كيفية استخدام اسم القناة وه
 import { Image } from 'astro:assets';
 import { Aside, Tabs, TabItem, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components';
 import channelPurposeInfo from '../../../../images/channel-purpose-info.png';
-import channelHeaderImg from '../../../../images/channel-header.png';
+import channelHeaderImg from '../../../../images/channel-header.gif';
 import mobileSelectChannel from '../../../../images/mobile-select-a-channel.jpg';
 import mobileMoreOptions from '../../../../images/mobile-select-more-options-for-a-channel.jpg';
 import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
@@ -87,12 +87,12 @@ import mobileUpdateHeader from '../../../../images/mobile-update-channel-header.
 
 <Tabs>
   <TabItem label="الويب وسطح المكتب" icon="laptop">
-    <Image src={channelHeaderImg} alt="استخدام الروابط وتنسيق النصوص في ترويسة القناة." />
     <Steps>
     1. من قائمة اسم القناة العلوية، اختر **إعدادات القناة**.
     2. في حقل **ترويسة القناة**، أضف روابطك أو تعليماتك باستخدام [تنسيق النصوص المتقدم](/messaging-collaboration/communicate-with-messages-and-threads/format-messages).
     3. اضغط على **حفظ**.
     </Steps>
+    <Image src={channelHeaderImg} alt="استخدام الروابط وتنسيق النصوص في ترويسة القناة." />
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
