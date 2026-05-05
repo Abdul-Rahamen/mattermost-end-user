@@ -1,8 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import    "./src/styles/custom.css";
-
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -24,15 +22,11 @@ export default defineConfig({
         },
       ],
       social: [
-        {
-          icon: "github",
-          label: "GitHub",
-          href: "https://github.com/withastro/starlight",
-        },
       ],
       customCss: [
         "./src/styles/global.css",
         './src/styles/custom.css',
+        './src/styles/asides.css',
         './src/fonts/EffraVF_Trial_Wght.ttf',
       ],
       

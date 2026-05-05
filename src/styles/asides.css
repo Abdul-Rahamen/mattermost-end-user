@@ -1,0 +1,90 @@
+.starlight-aside {
+    padding: 1rem;
+    border: 0px solid var(--sl-color-asides-border);
+    border-radius: 0.5rem;
+    margin-block: 1.5rem;
+}
+
+/* Note Variant */
+.starlight-aside--note {
+    --sl-color-asides-text-accent: #0086C9;
+    --sl-color-asides-border: #0086C9;
+    background-color: #EFF8FF;
+}
+
+:root[data-theme='dark'] .starlight-aside--note {
+    --sl-color-asides-text-accent: #B2DDFF;
+    --sl-color-asides-border: #0086C9;
+    background-color: #102A56;
+}
+
+/* Tip Variant */
+.starlight-aside--tip {
+    --sl-color-asides-text-accent: #067647;
+    --sl-color-asides-border: #12B76A;
+    background-color: #ECFDF3;
+}
+
+:root[data-theme='dark'] .starlight-aside--tip {
+    --sl-color-asides-text-accent: #6CE9A6;
+    --sl-color-asides-border: #12B76A;
+    background-color: #053321;
+}
+
+/* Caution Variant */
+.starlight-aside--caution {
+    --sl-color-asides-text-accent: #B54708;
+    --sl-color-asides-border: #F79009;
+    background-color: #FFFAEB;
+}
+
+:root[data-theme='dark'] .starlight-aside--caution {
+    --sl-color-asides-text-accent: #FEC84B;
+    --sl-color-asides-border: #F79009;
+    background-color: #4E2E0A;
+}
+
+/* Danger Variant */
+.starlight-aside--danger {
+    --sl-color-asides-text-accent: #B42318;
+    --sl-color-asides-border: #F04438;
+    background-color: #FEF3F2;
+}
+
+:root[data-theme='dark'] .starlight-aside--danger {
+    --sl-color-asides-text-accent: #FDA29B;
+    --sl-color-asides-border: #F04438;
+    background-color: #55160C;
+}
+
+.starlight-aside__title {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: var(--sl-text-h5);
+    font-weight: 700;
+    line-height: var(--sl-line-height-headings);
+    color: var(--sl-color-asides-text-accent);
+    margin-bottom: 0.5rem;
+}
+
+.starlight-aside__icon {
+    font-size: 1.25em;
+    width: 1em;
+    height: 1em;
+    color: var(--sl-color-asides-text-accent);
+}
+
+.starlight-aside__content {
+    color: var(--sl-color-gray-2);
+}
+
+:root[data-theme='dark'] .starlight-aside__content {
+    color: var(--sl-color-gray-1);
+}
+
+.starlight-aside__content a {
+    color: var(--sl-color-asides-text-accent);
+    text-decoration: underline;
+    font-weight: 500;
+}
