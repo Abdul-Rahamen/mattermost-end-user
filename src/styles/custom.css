@@ -46,3 +46,26 @@
     color: var(--sl-color-white) !important;
     padding-block: 0.5rem !important;
 }
+
+/* 6. تنسيق اختصارات لوحة المفاتيح لضمان الاتجاه من اليسار لليمن (LTR) */
+kbd, .kbd-shortcut {
+    direction: ltr !important;
+    display: inline-block !important;
+    unicode-bidi: isolate !important;
+    font-family: var(--sl-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace) !important;
+    background-color: var(--sl-color-gray-6) !important;
+    color: var(--sl-color-gray-2) !important;
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--sl-color-gray-4) !important;
+    box-shadow: 0 1px 0 var(--sl-color-gray-4) !important;
+    font-size: 0.85em !important;
+    white-space: nowrap !important;
+    margin: 0 2px !important;
+    vertical-align: middle !important;
+}
+
+/* ضمان بقاء ترتيب المفاتيح صحيحاً داخل الجداول العربية */
+[dir="rtl"] kbd, [dir="rtl"] .kbd-shortcut {
+    text-align: left !important;
+}
