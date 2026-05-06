@@ -27,6 +27,7 @@ export default defineConfig({
         "./src/styles/global.css",
         './src/styles/custom.css',
         './src/styles/asides.css',
+        './src/styles/light-dark-img.css',
         './src/fonts/EffraVF_Trial_Wght.ttf',
       ],
       
@@ -389,6 +390,10 @@ export default defineConfig({
         {
           label: "وكلاء الذكاء الاصطناعي",
           items: [
+            {
+              label: "وكلاء الذكاء الاصطناعي",
+              slug: "ai-agents/ai-agent"
+            },
             {
               label: "نصائح استخدام الوكلاء وأفضل الممارسات",
               slug: "ai-agents/agents-usage-tips-and-best-practices",
