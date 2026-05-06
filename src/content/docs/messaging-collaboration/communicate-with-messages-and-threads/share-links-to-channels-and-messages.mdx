@@ -9,7 +9,7 @@ import { Image } from 'astro:assets';
 {/* استيراد الأصول المرئية */}
 import msgMore from '../../../../images/message-more.png';
 import copyLinkImg from '../../../../images/copy-link.gif';
-import permalinkPreviews from '../../../../images/permalink-previews.png';
+import permalinkPreviews from '../../../../images/permalink-previews.gif';
 import mobileCopyGif from '../../../../images/mobile-copy-a-link-to-the-message.gif';
 
 يمكنك مشاركة روابط إلى القنوات والرسائل في منصة تعاون مع المستخدمين الآخرين.
@@ -27,7 +27,7 @@ import mobileCopyGif from '../../../../images/mobile-copy-a-link-to-the-message.
 
     <Image src={msgMore} alt="المزيد من خيارات الرسائل" width={600} style={{ display: 'block', margin: '2rem auto' }} />
 
-    <Image src={copyLinkImg} alt="نسخ الرابط" width={600} style={{ display: 'block', margin: '2rem auto' }} />
+    {/* <Image src={copyLinkImg} alt="نسخ الرابط" width={600} style={{ display: 'block', margin: '2rem auto' }} /> */}
 
     ألصق الرابط في رسالة لمشاركته — سيقوم منصة تعاون بإنشاء معاينة للمحتوى المشارك.
 
@@ -57,9 +57,3 @@ import mobileCopyGif from '../../../../images/mobile-copy-a-link-to-the-message.
 
 تُتيح الروابط العميقة إنشاء روابط مباشرة إلى فرق أو قنوات أو رسائل أو سلاسل محددة في منصة تعاون.
 
-### صيغة الروابط العميقة 
-
-- رابط عميق لفريق: `mattermost://<your-منصة تعاون-server-URL>/<team-name>`
-- رابط عميق لقناة: `mattermost://<your-منصة تعاون-server-URL>/<team-name>/channels/<channel-name>`
-- رابط عميق لرسالة أو سلسلة: `mattermost://<your-منصة تعاون-server-URL>/<team-name>/pl/<post-id>`
-- رابط عميق لرسالة مباشرة: `mattermost://<your-منصة تعاون-server-URL>/<team-name>/messages/@<user-name>`

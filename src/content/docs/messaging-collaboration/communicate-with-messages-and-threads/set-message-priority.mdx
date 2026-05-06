@@ -7,14 +7,11 @@ import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/component
 import { Image } from 'astro:assets';
 
 {/* استيراد الصور المحلية */}
-import mpaAnimatedGif from '../../../../images/MPA-Animated-GIF-Update-2023-08-15.gif';
+import mpaAnimatedGif from '../../../../images/message-priority.gif';
 import urgentSidebarImg from '../../../../images/urgent-message.png';
 
 بدءًا من الإصدار **v7.7** من منصة تعاون و **v2.4** لتطبيق الجوال، يمكنك إضافة ملصق أولوية الرسالة إلى الرسائل الأصلية  لجعل الرسائل المهمة التي تتطلب إجراءً أو ردًا في الوقت المناسب أكثر وضوحًا وأقل عرضة للتجاهل.
 
-<img  src='../../../../images/MPA-Animated-GIF-Update-2023-08-15.gif' alt="تأكد من بروز الرسائل المهمة والعاجلة بوضوح من خلال إضافة ملصقات الأولوية إلى الرسائل الأصلية." width="400" 
-  style={{ borderRadius: '8px', border: '1px solid #eee', margin: '20px auto', display: 'block' }} 
-/>
 
 ---
 
@@ -30,6 +27,7 @@ import urgentSidebarImg from '../../../../images/urgent-message.png';
    * **عاجل (Urgent)**: للرسائل التي تتطلب استجابة فورية.
 3. اختر **تطبيق (Apply)**.
 </Steps>
+<Image  src={mpaAnimatedGif} alt="تأكد من  الأصلية" />
 
 عندما ترسل رسالة ذات أولوية، يظهر ملصق الأولوية بجانب اسمك في القناة، بالإضافة إلى عرض **السلاسل ** عندما يرد الآخرون على السلسلة.
 

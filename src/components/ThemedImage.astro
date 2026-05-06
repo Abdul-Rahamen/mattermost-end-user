@@ -1,0 +1,11 @@
+---
+const { lightSrc, darkSrc, alt } = Astro.props;
+---
+
+<img src={lightSrc} alt={alt} class="light-only" />
+<img src={darkSrc} alt={alt} class="dark-only" />
+
+<style>
+  :root[data-theme='dark'] .light-only { display: none; }
+  :root[data-theme='light'] .dark-only { display: none; }
+</style>

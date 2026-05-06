@@ -37,7 +37,7 @@ description: "تكامل منصة تعاون مع Microsoft Teams"
 ![مثال على إشعار رسالة دردشة.](../../../../images/microsoft-teams-chat-notifications.png)
 
 ### إدارة إعدادات الإشعارات 
-قم بإدارة إعدادات إشعارات منصة تعاون الخاصة بتكامل Microsoft Teams في أي وقت في **الإعدادات (Settings) > تفضيلات الإضافات (Plugin Preferences)**.
+قم بإدارة إعدادات إشعارات منصة تعاون الخاصة بتكامل Microsoft Teams في أي وقت في **الإعدادات (Settings) > تفضيلات الإضافات **.
 
 ![إدارة إعدادات الإشعارات لتكامل Microsoft Teams في إعدادات الحساب > تفضيلات الإضافات.](../../../../images/teams_plugin_notification_settings.png)
 
@@ -49,7 +49,7 @@ description: "تكامل منصة تعاون مع Microsoft Teams"
 - `/msteams notifications on|off`: تغيير إعدادات الإشعارات الحالية الخاصة بك.
 :::
 
-## الأسئلة الشائعة (Frequently asked questions)
+## الأسئلة الشائعة 
 
 ### كيف يحدد التكامل متى يتم إرسال إشعارات الدردشة؟ 
 

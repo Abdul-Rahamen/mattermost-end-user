@@ -48,7 +48,8 @@
 ## **6\. التنسيق (Output Format)**
 
 يجب أن يدمج المخرج النهائي بين البنية التقنية الصحيحة (من التعليمة الأولى) واللغة العربية الاحترافية:
-
+You can use the fortawsome icons instead of that exists in code 
+not en terms needed 
 \---  
 title: "عنوان الصفحة بالعربية الاحترافية"  
 description: "وصف موجز ومركز لمحتوى الصفحة يساعد في تحسين محركات البحث (SEO)"  

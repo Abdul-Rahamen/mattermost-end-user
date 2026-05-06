@@ -50,7 +50,7 @@ import audioQuickSettings from '../../../../images/make-calls/sound-call-options
     
     <Tabs>
         <TabItem label="مكالمات الفيديو" icon="laptop">
-              <Image src={desktopStartCall} alt="بدء مكالمة من ترويسة القناة" style={{ borderRadius: '10px', margin: '1rem 0' }} />
+              <Image src={desktopStartCall} alt="بدء مكالمة من ترويسة القناة" style={{ borderRadius: '10px', margin: '1rem 0' }} data-origin="dark" />
               <Steps>
               1. **تأكيد الهوية**:
                  تحقق من اسم الاجتماع الظاهر أعلى الواجهة، واستخدم الحقل المخصص لإدخال اسم المستخدم الذي ترغب بالظهور به في المكالمة.
@@ -74,7 +74,7 @@ import audioQuickSettings from '../../../../images/make-calls/sound-call-options
               ###  الإعدادات العامة للمنصة
               تُستخدم هذه الواجهة لضبط التفضيلات الأساسية للعرض واللغة قبل أو أثناء المكالمة.
 
-              <Image src={callSettingsGeneral} alt="واجهة الإعدادات العامة" />
+              <Image src={callSettingsGeneral} alt="واجهة الإعدادات العامة" data-origin="dark"/>
 
               <Steps>
               1. **الحد الأقصى لعدد المشاركين المثبتين على المنصة**: 
@@ -92,7 +92,7 @@ import audioQuickSettings from '../../../../images/make-calls/sound-call-options
               
           ### إعدادات الإشعارات والتنبيهات
         . لضبط التنبيهات الصوتية والمرئية
-          <Image src={callSettingsNotifications} alt="واجهة إعدادات الإشعارات" />
+          <Image src={callSettingsNotifications} alt="واجهة إعدادات الإشعارات" data-origin="dark"/>
 
           <Steps>
               1. **تشغيل الصوت عند**: 
@@ -108,11 +108,11 @@ import audioQuickSettings from '../../../../images/make-calls/sound-call-options
               ###  خيارات الفيديو السريعة
                الخيارات المتاحة عند النقر على أيقونة الكاميرا في شريط الأدوات.
 
-              <Image src={cameraQuickOptions} alt="خيارات الفيديو السريعة" />
+              <Image src={cameraQuickOptions} alt="خيارات الفيديو السريعة" data-origin="dark"/>
 
               <Steps>
               1. **خلفيات افتراضية**: 
-                الوصول المباشر لقائمة الخلفيات الجاهزة أو تمويه الخلفية الحقيقية (Blur) لزيادة الخصوصية.
+                الوصول المباشر لقائمة الخلفيات الجاهزة أو تمويه الخلفية الحقيقية  لزيادة الخصوصية.
 
               2. **عكس فيديو الكاميرا**: 
                 تفعيل أو تعطيل وضع "المرآة"؛ حيث تظهر صورتك لنفسك بشكل معكوس (يمينك هو يسارك) كما تظهر في المرآة الحقيقية.
@@ -128,7 +128,7 @@ import audioQuickSettings from '../../../../images/make-calls/sound-call-options
               ### أولاً: واجهة المكالمة الصوتية النشطة
               عند بدء مكالمة صوتية أو الانضمام إليها، تظهر واجهة مخصصة تركز على التواصل الصوتي مع خيارات إدارة الجلسة.
 
-              <Image src={voiceCallInterface} alt="واجهة المكالمة الصوتية الكاملة" />
+              <Image src={voiceCallInterface} alt="واجهة المكالمة الصوتية الكاملة" data-origin="dark"/>
 
               <Steps>
               1. **عرض المشاركين**: 
@@ -153,7 +153,7 @@ import audioQuickSettings from '../../../../images/make-calls/sound-call-options
               ### ثانياً: إعدادات الصوت السريعة
               من خلال الضغط على زر **المزيد (...)** أو أيقونة الإعدادات، تظهر قائمة منبثقة للتحكم الفوري في أجهزة الصوت.
 
-              <Image src={audioQuickSettings} alt="خيارات الصوت السريعة" />
+              <Image data-origin="dark" src={audioQuickSettings} alt="خيارات الصوت السريعة" />
 
               <Steps>
               1. **إخراج الصوت**: 
@@ -178,24 +178,14 @@ import audioQuickSettings from '../../../../images/make-calls/sound-call-options
               </Aside>
 
 
-</TabItem>
-    </Tabs>
-    
+         </TabItem>
+         </Tabs>
     <Aside type="note">
     - عند بدء مكالمة في قناة، يتم كتم صوتك افتراضيًا. في رسالة مباشرة أو مجموعة، يكون الصوت مفتوحاً افتراضيًا.
     - يمكنك نقل نافذة المكالمة إلى منطقة مختلفة من الشاشة.
     - بدلاً من ذلك، يمكنك بدء مكالمة باستخدام أمر الشرطة المائلة `/call start`.
     </Aside>
-  {/* </TabItem>
 
-  <TabItem label="الجوال" icon="mobile">
-    لبدء مكالمة، انتقل إلى قائمة معلومات القناة ثم اضغط **بدء مكالمة**.
-
-    <Image src={mobileStartCall} alt="بدء مكالمة عبر الجوال" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
-
-    بعد بدء المكالمة، يتم تشغيل الصوت عبر مكبر صوت الجهاز أو جهاز بلوتوث متصل. يمكنك النقر على أيقونة **المكبر** لاختيار جهاز الإخراج يدويًا.
-  </TabItem>
-</Tabs> */}
 
 ---
 
