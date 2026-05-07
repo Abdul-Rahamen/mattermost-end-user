@@ -29,7 +29,7 @@
 
 /* 5. تعديل عرض السايد بار وجدول المحتويات */
 :root {
-    /* زيادة عرض السgايد بار بنسبة الثلث تقريباً وتقرير عرض جدول المحتويات */
+    /* زيادة عرض السايد بار بنسبة الثلث تقريباً وتقرير عرض جدول المحتويات */
     --sl-sidebar-width: 22rem; 
     --sl-toc-width: 14rem;    
 }
@@ -40,58 +40,95 @@
     }
 }
 
-/* تحسين شكل السايد بار ليشبه الصورة (تنسيق العناوين) */
-.sidebar-content details summary {
+/* ============================ 
+    تنسيق اختصارات الكيبورد بشكل كامل 
+    وذلك لضمان وضوحها وسهولة قرائتها
+    في اللغة العربية.
+    ============================
+*/
+
+
+/* 6. تنسيق اختصارات لوحة المفاتيح لضمان الاتجاه من اليسار لليمن (LTR) */
+kbd, .kbd-shortcut {
+    direction: ltr !important;
+    display: inline-block !important;
+    unicode-bidi: isolate !important;
+    font-family: var(--sl-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace) !important;
+    background-color: var(--sl-color-gray-6) !important;
+    color: var(--sl-color-gray-2) !important;
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--sl-color-gray-4) !important;
+    box-shadow: 0 1px 0 var(--sl-color-gray-4) !important;
+    font-size: 0.85em !important;
+    white-space: nowrap !important;
+    margin: 0 2px !important;
+    vertical-align: middle !important;
+}
+
+/* ضمان بقاء ترتيب المفاتيح صحيحاً داخل الجداول العربية */
+[dir=""] kbd, [dir="rtl"] .kbd-shortcut {
+    text-align: left !important;
+}
+
+/* ==========================================================================
+   تحسين التسلسل الهرمي في السايد بار (Sidebar Hierarchy & Guide Lines)
+   ========================================================================== */
+
+/* 1. إضافة خط إرشادي عمودي للقوائم المتداخلة لتمييز المستويات */
+.sidebar-content details ul {
+    border-inline-start: 3px solid var(--sl-color-gray-5) !important;
+    margin-inline-start: 0.8rem !important;
+    padding-inline-start: 0.5rem !important;
+    list-style: none !important;
+}
+
+/* 2. تمييز العناوين الرئيسية (المستوى الأول) */
+.sidebar-content > ul > li > details > summary {
     font-weight: 700 !important;
+    font-size: 1.05rem !important;
     color: var(--sl-color-white) !important;
-    padding-block: 0.5rem !important;
-}
-/* استهداف الصور داخل محتوى التوثيق فقط */
-:root[data-theme='dark'] .sl-markdown-content :global(img) {
-  /* عكس الألوان مع الحفاظ على درجة اللون الأصلية للأيقونات */
-  filter: invert(1) hue-rotate(180deg) contrast(1.4) brightness(1.1) !important;
-  /* إضافة تأثير بسيط لجعل الصورة تبدو كجزء من الواجهة الداكنة */
-  mix-blend-mode: screen; 
-  opacity: 0.9;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
 }
 
-/* استثناء الصور التي لا تريد عكس ألوانها (اختياري) */
-/* استهداف الصور داخل محتوى المقال فقط مع استخدام !important لضمان التنفيذ */
-:root[data-theme='dark'] .sl-markdown-content img,
-:root[data-theme='dark'] .sl-markdown-content picture img {
-  filter: invert(0.9) hue-rotate(180deg) brightness(1.1) !important;
-  transition: filter 0.3s ease-in-out;
+/* 3. تمييز العناوين الفرعية (المستوى الثاني وما بعده) */
+.sidebar-content details details summary {
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    color: var(--sl-color-gray-2) !important;
 }
 
-/* لمنع الصور من أن تبدو باهتة جداً */
-:root[data-theme='dark'] .sl-markdown-content img {
-  mix-blend-mode: normal; /* جرب تغييرها إلى lighten إذا كانت الخلفية سوداء تماماً */
-}
-/* 1. الحالة الأولى: الموقع في الوضع الداكن والصورة "فاتحة" (تحتاج لعكس) */
-
-
-/* 3. الحالة الثالثة: الموقع في الوضع الفاتح والصورة أصلاً "داكنة" (تحتاج لعكس لتصبح فاتحة) */
-:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
-  filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
-}
-:root[data-theme='light'] .sl-markdown-content :global(img[data-origin="dark"]) {
-  filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(1.2) !important;
-  mix-blend-mode: multiply; /* يزيل الحواف البيضاء الزائدة */
+/* 4. إبراز الخط الإرشادي عند وجود عنصر نشط داخل القسم */
+.sidebar-content details:has(a[aria-current="page"]) > ul {
+    border-inline-start-color: var(--sl-color-text-accent) !important;
+    border-inline-start-width: 1.5px !important;
 }
 
-/* 2. عندما يكون الموقع في الوضع الداكن (Dark Mode) */
-/* نتركها كما هي (Origin Mode) لأنها داكنة أصلاً */
-
-/* 3. ضمان أن الصور الأخرى (الفاتحة) تعمل بشكل طبيعي */
-/* إذا أردت عكس الصور الفاتحة لتصبح داكنة في الوضع الليلي */
-:root[data-theme='light'] .sl-markdown-content img[data-origin="dark"] {
-    filter: invert(1) hue-rotate(180deg) contrast(1.3) brightness(1.1) !important;
-    background-color: #000 !important;
-    mix-blend-mode: plus-lighter;
-}
-:root[data-theme='dark'] .sl-markdown-content img[data-origin="dark"] {
-  filter: none !important;
-  mix-blend-mode: normal !important;
-  background-color: transparent !important;
+/* 5. تحسين مظهر الروابط الفردية داخل القوائم الفرعية */
+.sidebar-content li a {
+    font-size: 0.92rem !important;
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
 }
 
+/* 6. تأثير حركي ناعم عند ظهور القوائم الفرعية */
+.sidebar-content details[open] > ul {
+    animation: sidebar-fade-in 0.25s ease-out;
+}
+
+@keyframes sidebar-fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 7. تحسين المسافات العامة لجعل التصميم يبدو "نظيفاً" */
+.sidebar-content summary {
+    margin-bottom: 2px !important;
+}

@@ -12,7 +12,8 @@ export default defineConfig({
       logo: {
         src: "./src/assets/logo-light.png",
         alt: "Taawon",
-      },head: [
+      },
+      head: [
         {
           tag: 'link',
           attrs: {
@@ -20,8 +21,16 @@ export default defineConfig({
             href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
           },
         },
+        {
+          tag: 'script',
+          attrs: {
+            src: '/scripts/sidebar-accordion.js',
+            defer: true,
+          },
+        },
       ],
       social: [
+
       ],
       customCss: [
         "./src/styles/global.css",
@@ -40,7 +49,6 @@ export default defineConfig({
               slug: "end-user-guide/end-user-guide",
             },
           ],
-          collapsed: true,
         },
         {
           label: "الوصول إلى مساحة عملك",
@@ -288,6 +296,7 @@ export default defineConfig({
               slug: "messaging-collaboration/extend-mattermost-with-integrations",
             },
           ],
+          collapsed: true,
         },
         {
           label: "أتمتة سير العمل",
