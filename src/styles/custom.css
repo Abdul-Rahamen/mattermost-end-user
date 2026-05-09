@@ -150,3 +150,16 @@ kbd, .kbd-shortcut {
     inset-inline-end: auto;
     inset-inline-start: calc(var(--ec-brdWd) + var(--ec-uiPadInl) / 2);
 }
+
+/* ============================
+    توسيط شريط البحث فوق منطقة المحتوى الرئيسي
+   Center Search Bar Over Content Area
+   ============================ */
+
+@media (min-width: 50rem) {
+    header.header > div.header > div.sl-flex:nth-child(2) {
+        justify-self: start;
+        width: var(--sl-content-width, 45rem);
+        justify-content: center;
+    }
+}
