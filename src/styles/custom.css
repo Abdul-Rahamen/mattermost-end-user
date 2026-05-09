@@ -29,7 +29,7 @@
 
 /* 5. تعديل عرض السايد بار وجدول المحتويات */
 :root {
-    /* زيادة عرض السgايد بار بنسبة الثلث تقريباً وتقرير عرض جدول المحتويات */
+    /* زيادة عرض السايد بار بنسبة الثلث تقريباً وتقرير عرض جدول المحتويات */
     --sl-sidebar-width: 22rem; 
     --sl-toc-width: 14rem;    
 }
@@ -40,16 +40,75 @@
     }
 }
 
-/* تحسين شكل السايد بار ليشبه الصورة (تنسيق العناوين) */
-.sidebar-content details summary {
+/* ============================ 
+    تنسيق اختصارات الكيبورد بشكل كامل 
+    وذلك لضمان وضوحها وسهولة قرائتها
+    في اللغة العربية.
+    ============================
+*/
+
+
+/* 6. تنسيق اختصارات لوحة المفاتيح لضمان الاتجاه من اليسار لليمن (LTR) */
+kbd, .kbd-shortcut {
+    direction: ltr !important;
+    display: inline-block !important;
+    unicode-bidi: isolate !important;
+    font-family: var(--sl-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace) !important;
+    background-color: var(--sl-color-gray-6) !important;
+    color: var(--sl-color-gray-2) !important;
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--sl-color-gray-4) !important;
+    box-shadow: 0 1px 0 var(--sl-color-gray-4) !important;
+    font-size: 0.85em !important;
+    white-space: nowrap !important;
+    margin: 0 2px !important;
+    vertical-align: middle !important;
+}
+
+/* ضمان بقاء ترتيب المفاتيح صحيحاً داخل الجداول العربية */
+[dir=""] kbd, [dir="rtl"] .kbd-shortcut {
+    text-align: left !important;
+}
+
+/* ==========================================================================
+   تحسين التسلسل الهرمي في السايد بار (Sidebar Hierarchy & Guide Lines)
+   ========================================================================== */
+
+/* 1. إضافة خط إرشادي عمودي للقوائم المتداخلة لتمييز المستويات */
+.sidebar-content details ul {
+    border-inline-start: 3px solid var(--sl-color-gray-5) !important;
+    margin-inline-start: 0.8rem !important;
+    padding-inline-start: 0.5rem !important;
+    list-style: none !important;
+}
+
+/* 2. تمييز العناوين الرئيسية (المستوى الأول) */
+.sidebar-content > ul > li > details > summary {
     font-weight: 700 !important;
+    font-size: 1.05rem !important;
     color: var(--sl-color-white) !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* 3. تمييز العناوين الفرعية (المستوى الثاني وما بعده) */
+.sidebar-content details details summary {
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    color: var(--sl-color-gray-2) !important;
+}
+
+/* 4. إبراز الخط الإرشادي عند وجود عنصر نشط داخل القسم */
+.sidebar-content details:has(a[aria-current="page"]) > ul {
+    border-inline-start-color: var(--sl-color-text-accent) !important;
+    border-inline-start-width: 1.5px !important;
     padding-block: 0.5rem !important;
 }
 /* تخصيص أيقونات البطاقات داخل CardGrid */
 .sl-markdown-content .card-grid .card {
     /* تغيير لون أيقونة الـ SVG إلى الأخضر */
-    --sl-icon-color:  #067647 !important; /* اللون الأخضر */
+    --sl-icon-color:  #00987e !important; /* اللون الأخضر */
 }
 
 .sl-markdown-content .card-grid .card .icon {
@@ -60,13 +119,13 @@
     border: 1px solid #e2e8f0;
     
     /* التأكد من أن الأيقونة نفسها تظهر باللون المختار */
-    color: #28a745 !important;
+    color: #00987e !important;
 }
 
 /* لضمان تناسق الألوان في الوضع الداكن أيضاً */
 :root[data-theme='dark'] .sl-markdown-content .card-grid .card .icon {
     background-color: #ffffff !important; /* تظل بيضاء */
-    color: #28a745 !important; /* تظل الأيقونة خضراء */
+    color: #00987e !important; /* تظل الأيقونة خضراء */
 }
 /* مؤشر الماوس */
 .sl-markdown-content img:not(.icon) {
@@ -93,53 +152,62 @@
   transition: all 0.2s ease-out;
 }
 
-/* عندما يكون هناك قسم مفتوح، نريد التحكم في سلوك البقية */
-/* Starlight يستخدم ملخصات (summary) للنقر */
+/* لمنع الصور من أن تبدو باهتة جداً */
+:root[data-theme='dark'] .sl-markdown-content img {
+  mix-blend-mode: normal; /* جرب تغييرها إلى lighten إذا كانت الخلفية سوداء تماماً */
+}
+/* 1. الحالة الأولى: الموقع في الوضع الداكن والصورة "فاتحة" (تحتاج لعكس) */
 
-.sidebar-content details summary {
-  cursor: pointer;
-  list-style: none;
+
+/* 3. الحالة الثالثة: الموقع في الوضع الفاتح والصورة أصلاً "داكنة" (تحتاج لعكس لتصبح فاتحة) */
+:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
+  filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
+}
+:root[data-theme='light'] .sl-markdown-content :global(img[data-origin="dark"]) {
+  filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(1.2) !important;
+  mix-blend-mode: multiply; /* يزيل الحواف البيضاء الزائدة */
 }
 
-/* تحسين شكل السهم ليعطي إيحاء الأكورديون */
-.sidebar-content details summary::marker,
-.sidebar-content details summary::-webkit-details-marker {
-  display: none;
+/* 2. عندما يكون الموقع في الوضع الداكن (Dark Mode) */
+/* نتركها كما هي (Origin Mode) لأنها داكنة أصلاً */
+
+/* 3. ضمان أن الصور الأخرى (الفاتحة) تعمل بشكل طبيعي */
+/* إذا أردت عكس الصور الفاتحة لتصبح داكنة في الوضع الليلي */
+:root[data-theme='light'] .sl-markdown-content img[data-origin="dark"] {
+    filter: invert(1) hue-rotate(180deg) contrast(1.3) brightness(1.1) !important;
+    background-color: #000 !important;
+    mix-blend-mode: plus-lighter;
+}
+/* عندما يتم فتح الصورة (المكتبة تضيف هذا الكلاس تلقائياً) */
+.medium-zoom-image--opened {
+    z-index: 1000 !important;
+    /* إلغاء أي قيود من Starlight أثناء التكبير */
+    max-width: none !important;
+    max-height: none !important;
+    cursor: zoom-out !important;
 }
 
-/* --- حل مشكلة انغلاق القائمة الجانبية في Starlight --- */
-
-/* 1. البحث عن أي قائمة تحتوي بداخلها على الرابط النشط وإظهارها */
-.sidebar-content details:has(a[aria-current="page"]) {
-  display: block !important;
+/* طبقة الخلفية السوداء */
+.medium-zoom-overlay {
+    z-index: 999 !important;
+    cursor: zoom-out !important;
+    /* إضافة بلور خفيف للخلفية لتركيز النظر على الصورة */
+    backdrop-filter: blur(8px);
 }
 
-/* 2. إجبار محتوى القائمة (ul) على الظهور */
-.sidebar-content details:has(a[aria-current="page"]) > ul {
-  display: block !important;
-  visibility: visible !important;
-  height: auto !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
+/* تحسين شكل الصورة قبل الضغط */
+.sl-markdown-content img:not(.icon) {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out !important;
 }
 
-/* 3. تدوير أيقونة السهم لتبدو القائمة مفتوحة فعلياً */
-.sidebar-content details:has(a[aria-current="page"]) > summary svg {
-  transform: rotate(90deg) !important;
+/* تجنب اهتزاز الصورة عند الوقوف عليها */
+.sl-markdown-content img:not(.icon):hover {
+    opacity: 0.9;
+}
+:root[data-theme='dark'] .sl-markdown-content img[data-origin="dark"] {
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  background-color: transparent !important;
 }
 
-/* 4. تمييز القسم المفتوح لسهولة التعرف عليه */
-.sidebar-content details:has(a[aria-current="page"]) > summary {
-  color: var(--sl-color-accent-high) !important;
-  font-weight: 700 !important;
-}
-
-/* 5. إلغاء أي تأثيرات إغلاق قد تأتي من مكتبة Starlight */
-.sidebar-content details:has(a[aria-current="page"]) > summary ~ * {
-  display: block !important;
-}
-/* إذا أردت حلاً جذرياً يضمن إغلاق البقية عند فتح واحد، 
-  فنحن نحتاج لاستخدام خاصية name في HTML5 لوسم details.
-  بما أن Starlight لا يضعها تلقائياً، سنقوم بإضافتها عبر السكربت 
-  ولكن بطريقة بسيطة جداً لا تتعارض مع النظام.
-*/

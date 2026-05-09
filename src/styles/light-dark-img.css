@@ -29,13 +29,55 @@
 }
 
 
+/* تحسين شكل السايد بار ليشبه الصورة (تنسيق العناوين) */
+.sidebar-content details summary {
+    font-weight: 700 !important;
+    color: var(--sl-color-white) !important;
+    padding-block: 0.5rem !important;
+}
+
+/* استهداف الصور داخل محتوى التوثيق فقط */
+:root[data-theme='dark'] .sl-markdown-content :global(img) {
+  /* عكس الألوان مع الحفاظ على درجة اللون الأصلية للأيقونات */
+  filter: invert(1) hue-rotate(180deg) contrast(1.4) brightness(1.1) !important;
+  /* إضافة تأثير بسيط لجعل الصورة تبدو كجزء من الواجهة الداكنة */
+  mix-blend-mode: screen; 
+  opacity: 0.9;
+}
+
+/* استثناء الصور التي لا تريد عكس ألوانها (اختياري) */
+/* استهداف الصور داخل محتوى المقال فقط مع استخدام !important لضمان التنفيذ */
+:root[data-theme='dark'] .sl-markdown-content img,
+:root[data-theme='dark'] .sl-markdown-content picture img {
+  filter: invert(0.9) hue-rotate(180deg) brightness(1.1) !important;
+  transition: filter 0.3s ease-in-out;
+}
+
+/* لمنع الصور من أن تبدو باهتة جداً */
+:root[data-theme='dark'] .sl-markdown-content img {
+  mix-blend-mode: normal; /* جرب تغييرها إلى lighten إذا كانت الخلفية سوداء تماماً */
+}
+/* 1. الحالة الأولى: الموقع في الوضع الداكن والصورة "فاتحة" (تحتاج لعكس) */
+
+
+/* 3. الحالة الثالثة: الموقع في الوضع الفاتح والصورة أصلاً "داكنة" (تحتاج لعكس لتصبح فاتحة) */
+:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
+  filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
+}
+:root[data-theme='light'] .sl-markdown-content :global(img[data-origin="dark"]) {
+  filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(1.2) !important;
+  mix-blend-mode: multiply; /* يزيل الحواف البيضاء الزائدة */
+}
+
+/* 2. عندما يكون الموقع في الوضع الداكن (Dark Mode) */
+/* نتركها كما هي (Origin Mode) لأنها داكنة أصلاً */
+
 /* 3. ضمان أن الصور الأخرى (الفاتحة) تعمل بشكل طبيعي */
 /* إذا أردت عكس الصور الفاتحة لتصبح داكنة في الوضع الليلي */
-
 :root[data-theme='light'] .sl-markdown-content img[data-origin="dark"] {
-  filter: invert(1) hue-rotate(180deg) contrast(1.3) brightness(1.1) !important;
-  background-color: #000 !important;
-  mix-blend-mode: plus-lighter;
+    filter: invert(1) hue-rotate(180deg) contrast(1.3) brightness(1.1) !important;
+    background-color: #000 !important;
+    mix-blend-mode: plus-lighter;
 }
 :root[data-theme='dark'] .sl-markdown-content img[data-origin="dark"] {
   filter: none !important;
