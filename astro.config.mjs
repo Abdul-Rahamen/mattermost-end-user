@@ -9,6 +9,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "تعـــــــاون ",
+      components: {
+        // إضافة المكون ليعمل في كل الصفحات تلقائياً
+
+      },
       logo: {
         src: "./src/assets/logo-light.png",
         alt: "Taawon",
@@ -19,7 +23,14 @@ export default defineConfig({
             rel: 'stylesheet',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
           },
+        },{
+          tag: 'script',
+          attrs: {
+            src: '/src/scripts/zoom.js',
+            type: 'module',
+          },
         },
+       
       ],
       social: [
       ],

@@ -46,52 +46,100 @@
     color: var(--sl-color-white) !important;
     padding-block: 0.5rem !important;
 }
-/* استهداف الصور داخل محتوى التوثيق فقط */
-:root[data-theme='dark'] .sl-markdown-content :global(img) {
-  /* عكس الألوان مع الحفاظ على درجة اللون الأصلية للأيقونات */
-  filter: invert(1) hue-rotate(180deg) contrast(1.4) brightness(1.1) !important;
-  /* إضافة تأثير بسيط لجعل الصورة تبدو كجزء من الواجهة الداكنة */
-  mix-blend-mode: screen; 
-  opacity: 0.9;
+/* تخصيص أيقونات البطاقات داخل CardGrid */
+.sl-markdown-content .card-grid .card {
+    /* تغيير لون أيقونة الـ SVG إلى الأخضر */
+    --sl-icon-color:  #067647 !important; /* اللون الأخضر */
 }
 
-/* استثناء الصور التي لا تريد عكس ألوانها (اختياري) */
-/* استهداف الصور داخل محتوى المقال فقط مع استخدام !important لضمان التنفيذ */
-:root[data-theme='dark'] .sl-markdown-content img,
-:root[data-theme='dark'] .sl-markdown-content picture img {
-  filter: invert(0.9) hue-rotate(180deg) brightness(1.1) !important;
-  transition: filter 0.3s ease-in-out;
+.sl-markdown-content .card-grid .card .icon {
+    /* تغيير لون خلفية الدائرة المحيطة بالأيقونة إلى الأبيض */
+    background-color: #ffffff !important;
+    
+    /* إضافة حدود اختيارية لإبراز الدائرة البيضاء إذا كانت خلفية الموقع فاتحة */
+    border: 1px solid #e2e8f0;
+    
+    /* التأكد من أن الأيقونة نفسها تظهر باللون المختار */
+    color: #28a745 !important;
 }
 
-/* لمنع الصور من أن تبدو باهتة جداً */
-:root[data-theme='dark'] .sl-markdown-content img {
-  mix-blend-mode: normal; /* جرب تغييرها إلى lighten إذا كانت الخلفية سوداء تماماً */
+/* لضمان تناسق الألوان في الوضع الداكن أيضاً */
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card .icon {
+    background-color: #ffffff !important; /* تظل بيضاء */
+    color: #28a745 !important; /* تظل الأيقونة خضراء */
 }
-/* 1. الحالة الأولى: الموقع في الوضع الداكن والصورة "فاتحة" (تحتاج لعكس) */
-
-
-/* 3. الحالة الثالثة: الموقع في الوضع الفاتح والصورة أصلاً "داكنة" (تحتاج لعكس لتصبح فاتحة) */
-:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
-  filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
-}
-:root[data-theme='light'] .sl-markdown-content :global(img[data-origin="dark"]) {
-  filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(1.2) !important;
-  mix-blend-mode: multiply; /* يزيل الحواف البيضاء الزائدة */
+/* مؤشر الماوس */
+.sl-markdown-content img:not(.icon) {
+  cursor: zoom-in;
 }
 
-/* 2. عندما يكون الموقع في الوضع الداكن (Dark Mode) */
-/* نتركها كما هي (Origin Mode) لأنها داكنة أصلاً */
-
-/* 3. ضمان أن الصور الأخرى (الفاتحة) تعمل بشكل طبيعي */
-/* إذا أردت عكس الصور الفاتحة لتصبح داكنة في الوضع الليلي */
-:root[data-theme='light'] .sl-markdown-content img[data-origin="dark"] {
-    filter: invert(1) hue-rotate(180deg) contrast(1.3) brightness(1.1) !important;
-    background-color: #000 !important;
-    mix-blend-mode: plus-lighter;
-}
-:root[data-theme='dark'] .sl-markdown-content img[data-origin="dark"] {
-  filter: none !important;
-  mix-blend-mode: normal !important;
-  background-color: transparent !important;
+/* ضمان ظهور الصورة المكبرة فوق كل شيء */
+.medium-zoom-overlay {
+  z-index: 100 !important;
 }
 
+.medium-zoom-image--opened {
+  z-index: 101 !important;
+  cursor: zoom-out;
+}
+
+
+/* تحويل السايد بار إلى أكورديون عبر CSS 
+  ملاحظة: هذا الكود سيجعل الأقسام تفتح وتغلق بسلاسة 
+*/
+
+/* استهداف القوائم الجانبية فقط */
+.sidebar-content details {
+  transition: all 0.2s ease-out;
+}
+
+/* عندما يكون هناك قسم مفتوح، نريد التحكم في سلوك البقية */
+/* Starlight يستخدم ملخصات (summary) للنقر */
+
+.sidebar-content details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+/* تحسين شكل السهم ليعطي إيحاء الأكورديون */
+.sidebar-content details summary::marker,
+.sidebar-content details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* --- حل مشكلة انغلاق القائمة الجانبية في Starlight --- */
+
+/* 1. البحث عن أي قائمة تحتوي بداخلها على الرابط النشط وإظهارها */
+.sidebar-content details:has(a[aria-current="page"]) {
+  display: block !important;
+}
+
+/* 2. إجبار محتوى القائمة (ul) على الظهور */
+.sidebar-content details:has(a[aria-current="page"]) > ul {
+  display: block !important;
+  visibility: visible !important;
+  height: auto !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* 3. تدوير أيقونة السهم لتبدو القائمة مفتوحة فعلياً */
+.sidebar-content details:has(a[aria-current="page"]) > summary svg {
+  transform: rotate(90deg) !important;
+}
+
+/* 4. تمييز القسم المفتوح لسهولة التعرف عليه */
+.sidebar-content details:has(a[aria-current="page"]) > summary {
+  color: var(--sl-color-accent-high) !important;
+  font-weight: 700 !important;
+}
+
+/* 5. إلغاء أي تأثيرات إغلاق قد تأتي من مكتبة Starlight */
+.sidebar-content details:has(a[aria-current="page"]) > summary ~ * {
+  display: block !important;
+}
+/* إذا أردت حلاً جذرياً يضمن إغلاق البقية عند فتح واحد، 
+  فنحن نحتاج لاستخدام خاصية name في HTML5 لوسم details.
+  بما أن Starlight لا يضعها تلقائياً، سنقوم بإضافتها عبر السكربت 
+  ولكن بطريقة بسيطة جداً لا تتعارض مع النظام.
+*/

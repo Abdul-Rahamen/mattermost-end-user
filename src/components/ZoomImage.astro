@@ -1,0 +1,40 @@
+---
+/* مكون لإضافة ميزة التكبير للصور */
+---
+
+<script>
+  import mediumZoom from 'medium-zoom';
+
+  // دالة لتفعيل الزوم
+  const setupZoom = () => {
+    // استهداف الصور داخل المحتوى فقط وتجنب الأيقونات
+    const images = document.querySelectorAll('.sl-markdown-content img:not(.icon)');
+    
+    if (images.length > 0) {
+      mediumZoom(images, {
+        margin: 24,
+        background: 'var(--sl-color-bg-overlay)', // يستخدم لون خلفية الموقع الأصلية
+      });
+    }
+  };
+
+  // تشغيل عند أول تحميل
+  setupZoom();
+
+  // تشغيل بعد كل انتقال بين الصفحات (مهم جداً لـ Starlight)
+  document.addEventListener('astro:after-swap', setupZoom);
+</script>
+
+<style is:global>
+  /* تحسينات بصرية */
+  .medium-zoom-overlay {
+    z-index: 100 !important;
+    backdrop-filter: blur(4px);
+  }
+  .medium-zoom-image--opened {
+    z-index: 101 !important;
+  }
+  .sl-markdown-content img:not(.icon) {
+    cursor: zoom-in;
+  }
+</style>

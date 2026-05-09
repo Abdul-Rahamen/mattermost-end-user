@@ -5,16 +5,19 @@ description: "تعرف على كيفية تسجيل الدخول إلى منصة
 
 import { Image } from 'astro:assets';
 import { Aside, Tabs, TabItem, Steps, Badge } from '@astrojs/starlight/components';
-import loginEmailUsername from '../../../images/login-email-username.png';
+import loginEmailUsername from '../../../images/dark-login.png';
 import loginGitlab from '../../../images/login-gitlab.png';
+import desktopLoginImg from '../../../images/desktop-login.png';
 import signInEntraid from '../../../images/sign-in-entraid.png';
 import loginAd from '../../../images/login-ad.png';
 import loginOnelogin from '../../../images/login-onelogin.png';
+import lightImg from '../../../images/light-login.png';
+import darkImg from '../../../images/dark-login.png';
 
 قم بالوصول إلى مثيل منصة تعاون الخاص بمنظمتك باستخدام بيانات الاعتماد عبر متصفح الويب أو تطبيق سطح المكتب أو تطبيق الجوال لنظامي iOS وAndroid. اعتمادًا على كيفية تكوين منصة التعاون، قد تقوم بتسجيل الدخول باستخدام عنوان البريد الإلكتروني أو اسم مستخدم ل تسجيل الدخول الموحد (SSO)، ثم إدخال كلمة المرور. راجع وثيقة [توفر العميل ](/access-your-workspace/client-availability) لمعرفة الميزات المتاحة على عملاء منصة تعاون المختلفة.
 
 <Aside type="note">
-لا يمكنك العثور على رابط منصة تعاون الخاص بمنظمتك؟ اطلبه من فريق تكنولوجيا المعلومات في شركتك أو من مسؤول نظام منصة التعاون. عنوان موقع المؤسسة (**منصة تعاون Site URL**) قد يكون مثل `https://example.com/company/منصة تعاون` أو `منصة التعاون.yourcompanydomain.com` أو `chat.yourcompanydomain.com`.
+لا يمكنك العثور على رابط منصة تعاون الخاص بمنظمتك؟ اطلبه من فريق تكنولوجيا المعلومات في شركتك أو من مسؤول نظام منصة التعاون. عنوان موقع المؤسسة (**منصة تعاون Site URL**) قد يكون مثل `https://example.com/company/workspace` أو ` workspace.yourcompanydomain.com` أو `chat.yourcompanydomain.com`.
 </Aside>
 
 <Tabs>
@@ -35,6 +38,7 @@ import loginOnelogin from '../../../images/login-onelogin.png';
     4. إذا تطلب الخادم "Authentication secret" فسيُطلب منك إدخاله—أدخله بالضبط كما زوّده مسؤول النظام ثم اختر **موافق (OK)**.
     5. سيُفتح الفريق الأول المعروض في شريط الفرق. إذا لم تكن عضوًا في أي فريق بعد، سيُطلب منك الانضمام إلى أحدهم.
     </Steps>
+        <Image src={desktopLoginImg} alt="Login Light" />
 
     <Aside type="note">
     عند تسجيل الدخول باستخدام بيانات اعتماد خارجية مثل Google أو **Entra ID**، قد تخرج مؤقتًا من تطبيق سطح المكتب أثناء عملية المصادقة. ستعود تلقائيًا بعد النجاح.
@@ -49,6 +53,12 @@ import loginOnelogin from '../../../images/login-onelogin.png';
     4. يمكنك توسيع قسم **خيارات متقدمة ** وإدخال **Authentication secret** إذا كانت منظمتك تطلب ذلك.
     5. سيُفتح الفريق الأول في شريط الفرق.
     </Steps>
+    
+
+      <div class="auth-image-container">
+        <Image not src={lightImg} alt="Login Light" class="light-only phone-screenshots" />
+        <Image src={darkImg} alt="Login Dark" class="dark-only phone-screenshots" />
+      </div>
   </TabItem>
 
   <TabItem label="Microsoft Intune" icon="mobile">
@@ -100,14 +110,6 @@ import loginOnelogin from '../../../images/login-onelogin.png';
 
 يمكنك تسجيل الدخول باستخدام اسم المستخدم أو البريد الإلكتروني إذا تم تفعيل [إنشاء الحساب عبر البريد](/administration-guide/configure/authentication-configuration-settings) من قبل المسؤول.
 
-<Image 
-  src={loginEmailUsername} 
-  alt="تسجيل الدخول إلى منصة تعاون باستخدام اسم المستخدم أو البريد الإلكتروني." 
-  style={{ display: 'block', margin: '2rem auto', maxWidth: '100%' }} 
-/>
-
-
-
 
 ### المصادقة متعددة العوامل 
 
@@ -126,8 +128,8 @@ import loginOnelogin from '../../../images/login-onelogin.png';
   <TabItem label="سطح المكتب (Desktop)" icon="laptop">
     | المشكلة | الإجراء المطلوب |
     | :--- | :--- |
-    | خطأ: **Server authentication required** | أدخل السر المزود من مسؤول النظام في النافذة المنبثقة. |
-    | خطأ: **The provided authentication secret is incorrect** | تأكد من صحة السر من المسؤول (حساس لحالة الأحرف). |
+    | خطأ: **يرجى إدخال "الرمز السري" (Secret) المستلم من مسؤول النظام في النافذة التي ستظهر لك** | أدخل السر المزود من مسؤول النظام في النافذة المنبثقة. |
+    | خطأ: **تحقق من مطابقة الرمز السري بدقة؛ تأكد من الأحرف الكبيرة والصغيرة (حساس لحالة الأحرف).** | تأكد من صحة السر من المسؤول (حساس لحالة الأحرف). |
     | **توقف الاتصال فجأة** | ربما تم تغيير السر؛ سيسألك التطبيق عن السر الجديد تلقائيًا. |
   </TabItem>
   <TabItem label="الجوال (Mobile)" icon="mobile">
