@@ -29,15 +29,17 @@
 
 /* 5. تعديل عرض السايد بار وجدول المحتويات */
 :root {
-    /* زيادة عرض السايد بار بنسبة الثلث تقريباً وتقرير عرض جدول المحتويات */
-    --sl-sidebar-width: 22rem; 
+    /* جعل المتغير نفسه مرناً (بين 18rem و 22rem) ويتناسب مع عرض الشاشة (20vw) */
+    --sl-sidebar-width: clamp(18rem, 20vw, 22rem); 
     --sl-toc-width: 14rem;    
 }
 
+/* 5. تعديل عرض السايد بار وجدول المحتويات ليصبح مرناً */
+@media (min-width: 50rem) {
+    .main-frame { grid-template-columns: minmax(18rem, 20%) 1fr !important; }
+}
 @media (min-width: 72rem) {
-    .main-frame {
-        grid-template-columns: var(--sl-sidebar-width) minmax(0, 1fr) var(--sl-toc-width) !important;
-    }
+    .main-frame { grid-template-columns: minmax(18rem, 20%) 1fr var(--sl-toc-width) !important; }
 }
 
 /* ============================ 
@@ -125,6 +127,13 @@ kbd, .kbd-shortcut {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* 7. جعل السايدبار متجاوب يتقلص  */
+@media (max-width: 800px) {
+    site-sidebar {
+        display: none !important;
     }
 }
 
