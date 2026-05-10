@@ -49,6 +49,7 @@ export default defineConfig({
         './src/styles/light-dark-img.css',
         './src/fonts/EffraVF_Trial_Wght.ttf',
         './src/styles/searchbar-responsive.css',
+        './src/styles/tables-rtl.css',
       ],
       
       sidebar: [

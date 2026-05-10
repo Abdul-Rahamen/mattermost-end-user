@@ -1,0 +1,67 @@
+
+/* ============================
+    دعم الاتجاه من اليمين لليسار للجداول (RTL Tables Support)
+    يضمن هذا الملف أن تظهر كافة الجداول في المشروع باتجاه صحيح ومنظم.
+   ============================ */
+
+/* 1. ضبط اتجاه الجداول بالكامل وترتيب الأعمدة */
+.sl-markdown-content table {
+    direction: rtl !important;
+    width: 100% !important;
+    border-collapse: separate !important; /* ضروري لعمل الحواف المنحنية */
+    border-spacing: 0 !important;
+    margin-block: 1.5rem !important;
+    display: table !important;
+    border-radius: 12px !important; /* الحواف المنحنية */
+    overflow: hidden !important;
+    border: 1px solid var(--sl-color-gray-5) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important; /* لمسة جمالية بريميوم */
+}
+
+/* 2. مسافات الخلايا والحدود الداخلية */
+.sl-markdown-content th, 
+.sl-markdown-content td {
+    text-align: right !important;
+    padding: 14px 18px !important;
+    border-bottom: 1px solid var(--sl-color-gray-5) !important;
+    border-inline-end: 1px solid var(--sl-color-gray-5) !important;
+}
+
+/* إزالة الحدود الزائدة لضمان نظافة التصميم */
+.sl-markdown-content th:last-child, 
+.sl-markdown-content td:last-child {
+    border-inline-end: none !important;
+}
+
+.sl-markdown-content tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+/* 3. تنسيق رأس الجدول (Header) لتمييزه بصرياً */
+thead th {
+    background-color: var(--sl-color-gray-6) !important;
+    color: var(--sl-color-white) !important;
+    font-weight: 700 !important;
+}
+
+/* 4. الحفاظ على اتجاه اختصارات الكيبورد (KBD) لتبقى LTR حتى داخل الجدول العربي */
+td kbd, 
+td .kbd-shortcut {
+    direction: ltr !important;
+    display: inline-block !important;
+    unicode-bidi: isolate !important;
+}
+
+/* 5. تحسين مظهر الصفوف وتأثير الحوم (Hover) */
+tbody tr:hover {
+    background-color: var(--sl-color-gray-6) !important;
+}
+
+/* 6. ضمان التجاوب في الشاشات الصغيرة */
+@media (max-width: 50rem) {
+    table {
+        display: block !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+    }
+}
