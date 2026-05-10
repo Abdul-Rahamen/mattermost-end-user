@@ -1,0 +1,142 @@
+/* ============================
+    تنسيق أكواد البرمجة (Code Directives)
+    بناءً على التصميم المطلوب للوضع الفاتح والداكن
+   ============================ */
+
+/* 1. الهيكل الأساسي لبلوك الكود */
+.sl-markdown-content .expressive-code {
+    --ec-brdRad: 8px !important;
+    --ec-brdWidth: 1px !important;
+    border-radius: var(--ec-brdRad) !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    margin-block: 2rem !important;
+    direction: ltr !important; /* الأكواد البرمجية دائماً LTR */
+}
+
+.sl-markdown-content .expressive-code pre {
+    counter-reset: ec-line; /* تهيئة العداد لأرقام الأسطر */
+    padding: 1.5rem 0 !important; /* مسافة علوية وسفلية داخل البلوك */
+    position: relative !important;
+    border-radius: var(--ec-brdRad) !important;
+    border: var(--ec-brdWidth) solid var(--ec-brdCol) !important;
+}
+
+/* 2. الأسطر وترقيمها عبر CSS Counters */
+.sl-markdown-content .expressive-code .ec-line {
+    counter-increment: ec-line;
+    position: relative !important;
+    padding-left: 4.5rem !important; /* مسافة الكود عن عمود الأرقام */
+    padding-right: 1.5rem !important;
+    line-height: 1.7 !important;
+    min-height: 1.7em !important;
+}
+
+/* تصميم أرقام الأسطر */
+.sl-markdown-content .expressive-code .ec-line::before {
+    content: counter(ec-line);
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 3.5rem !important;
+    text-align: center !important;
+    font-family: var(--sl-font-mono) !important;
+    font-size: 0.85em !important;
+    user-select: none !important; /* منع نسخ الأرقام */
+    opacity: 0.9 !important;
+}
+
+/* 3. زر النسخ (Copy Button) */
+.sl-markdown-content .expressive-code .copy {
+    position: absolute !important;
+    top: 0.75rem !important;
+    right: 0.75rem !important;
+    z-index: 10 !important;
+}
+
+.sl-markdown-content .expressive-code .copy button {
+    border-radius: 6px !important;
+    border: 1px solid var(--ec-brdCol) !important;
+    padding: 0.4rem 0.8rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.85rem !important;
+    font-family: var(--sl-font) !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    min-width: 65px !important;
+}
+
+/* إضافة كلمة Copy إلى الزر (إذا لم تكن موجودة) */
+.sl-markdown-content .expressive-code .copy button::after {
+    content: "Copy";
+    margin-left: 5px;
+}
+
+/* تغيير الكلمة عند النسخ (Starlight يضيف كلاس copied) */
+.sl-markdown-content .expressive-code .copy button[data-copied]::after {
+    content: "Copied!";
+}
+
+/* إخفاء الهيدر الافتراضي إن وجد لمنع التداخل */
+.sl-markdown-content .expressive-code .header {
+    display: none !important;
+}
+
+/* ============================
+    الوضع الفاتح (Light Mode) 
+   ============================ */
+:root[data-theme='light'] .sl-markdown-content .expressive-code {
+    --ec-brdCol: #e2e8f0 !important;
+    background-color: #ffffff !important;
+    /* عمود أرقام الأسطر (لون أخضر ثابت) ثابت حتى عند التمرير الأفقي */
+    background-image: linear-gradient(to right, var(--color-accent-600) 0%, var(--color-accent-600) 3.5rem, #ffffff 3.5rem, #ffffff 100%) !important;
+}
+
+:root[data-theme='light'] .sl-markdown-content .expressive-code pre {
+    background-color: transparent !important;
+}
+
+:root[data-theme='light'] .sl-markdown-content .expressive-code .ec-line::before {
+    color: #ffffff !important; /* أرقام بيضاء */
+}
+
+:root[data-theme='light'] .sl-markdown-content .expressive-code .copy button {
+    background-color: #ffffff !important;
+    color: #334155 !important;
+}
+
+:root[data-theme='light'] .sl-markdown-content .expressive-code .copy button:hover {
+    background-color: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* ============================
+    الوضع الداكن (Dark Mode) 
+   ============================ */
+:root[data-theme='dark'] .sl-markdown-content .expressive-code {
+    --ec-brdCol: #1e222a !important;
+    background-color: #282c34 !important; /* خلفية الكود */
+    /* عمود أرقام الأسطر (داكن جداً) ثابت حتى عند التمرير الأفقي */
+    background-image: linear-gradient(to right, #1e222a 0%, #1e222a 3.5rem, #282c34 3.5rem, #282c34 100%) !important;
+}
+
+:root[data-theme='dark'] .sl-markdown-content .expressive-code pre {
+    background-color: transparent !important;
+}
+
+:root[data-theme='dark'] .sl-markdown-content .expressive-code .ec-line::before {
+    color: #8b949e !important; /* أرقام رمادية */
+}
+
+:root[data-theme='dark'] .sl-markdown-content .expressive-code .copy button {
+    background-color: #282c34 !important;
+    color: #abb2bf !important;
+}
+
+:root[data-theme='dark'] .sl-markdown-content .expressive-code .copy button:hover {
+    background-color: #343942 !important;
+    border-color: #4b5563 !important;
+}

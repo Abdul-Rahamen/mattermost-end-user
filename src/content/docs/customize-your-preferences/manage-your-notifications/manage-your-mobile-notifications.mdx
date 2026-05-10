@@ -4,6 +4,8 @@ description: "تعرف على كيفية تفعيل وتخصيص إشعارات 
 ---
 
 import { Tabs, TabItem } from '@astrojs/starlight/components';
+import serverLogoutIndicator from '../../../../images/server-logout-indicator.png';
+import numberedBadge from '../../../../images/numbered-badge.png';
 
 ## تفعيل الإشعارات
 
@@ -19,7 +21,7 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 
 تعرض أيقونات تطبيق منصة تعـــاون للجوال شارات مرقمة للرسائل المباشرة والجماعية غير المقروءة، والإشارات (@mentions)، والكلمات الرئيسية التي تتابعها.
 
-![numbered badge](../../../../images/numbered-badge.png)
+<img src={numberedBadge.src} alt="numbered badge" style="width: 100px; height: 100px;"/>
 
 :::note
 - لا يعرض تطبيق منصة تعـــاون للجوال شارات النقطة (Dot badges) للأنشطة الأخرى غير المقروءة، حيث يتم منح الأولوية للأنشطة التي تشارك فيها مباشرة.
@@ -68,9 +70,9 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 ## الأسئلة الشائعة
 
 ### هل عدد الإشعارات هو نفسه في جميع عملاء ماترموست؟
-لا. يتم إخطارك فقط بالمواضيع (Threads) غير المقروءة التي تحتوي على إشارات (@mentions) على جهازك المحمول، ولا يتم إرسال تنبيهات للأنشطة غير المقروءة العامة.
+لا. يتم إخطارك فقط بالمواضيع غير المقروءة التي تحتوي على إشارات (@mentions) على جهازك المحمول، ولا يتم إرسال تنبيهات للأنشطة غير المقروءة العامة.
 
 ### ماذا تعني أيقونة ماترموست التي تحتوي على علامة تعجب؟
-![server logout indicator](../../../../images/server-logout-indicator.png)
+<img src={serverLogoutIndicator.src} alt="server logout indicator" style="width: 100px; height: 100px;"/>
 
 تعني أنك قمت بتسجيل الخروج من خادم واحد على الأقل من الخوادم المتصل بها. قم بتسجيل الدخول مرة أخرى لاستعادة الإشعارات.
