@@ -5,6 +5,7 @@ title: "الرد على الرسائل "
 
 import { Tabs, TabItem,Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import FAIcon from "../../../../components/FAIcon.astro";
 
 {/* استيراد الصور */}
 import replyToMessage from '../../../../images/reply-to-message.png';
@@ -15,7 +16,7 @@ import collapseSidebarImg from '../../../../images/collapse-sidebar.png';
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    قم بالرد على الرسائل عن طريق اختيار أيقونة **الرد <i class="fa-solid fa-reply"></i> الصفحة الرئيسية**  بجانب نص الرسالة.
+    قم بالرد على الرسائل عن طريق اختيار أيقونة **الرد <FAIcon name="reply"/>الصفحة الرئيسية**  بجانب نص الرسالة.
     <Image 
       src={replyToMessage} 
       alt="الرد على رسائل منصة تعاون" 
@@ -60,10 +61,4 @@ import collapseSidebarImg from '../../../../images/collapse-sidebar.png';
   width={600} 
 />
 
-لتصغير الشريط الجانبي الأيمن إلى عرضه الأصلي، اختر نفس أيقونة **طي**.
 
-<Image 
-  src={collapseSidebarImg} 
-  alt="طي الشريط الجانبي" 
-  width={600} 
-/>

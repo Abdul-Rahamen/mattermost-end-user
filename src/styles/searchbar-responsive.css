@@ -42,7 +42,7 @@
 @media (max-width: 800px) {
     header.header > div.header > div.sl-flex:nth-child(2) {
         width: auto !important;
-        justify-content: flex-end;
+        /* justify-content: flex-end; */
     }
 
     site-search button {

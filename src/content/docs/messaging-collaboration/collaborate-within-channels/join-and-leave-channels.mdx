@@ -5,6 +5,7 @@ description: "تعرف على كيفية الانضمام إلى القنوات 
 
 import { Tabs, TabItem, Steps, Aside, Badge, Card, CardGrid } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import FAIcon from "../../../../components/FAIcon.astro";
 
 import browseChannels from '../../../../images/browse-channels.png';
 import joinChannels from '../../../../images/join-channels.png';
@@ -23,10 +24,10 @@ import mobileConfirmLeave from '../../../../images/mobile-confirm-leave-a-channe
 تختلف طريقة الانضمام بناءً على نوع خصوصية القناة:
 
 <CardGrid>
-  <Card title="القنوات العامة" icon="magnifier">
-    يتم تمييزها بأيقونة الكرة الأرضية <i class="fa-solid fa-globe"></i>. يمكن لأي عضو في المؤسسة البحث عنها والانضمام إليها في أي وقت.
+  <Card title="القنوات العامة" icon="seti:license">
+    يتم تمييزها بأيقونة الكرة  <FAIcon name="globe"/>. يمكن لأي عضو في المؤسسة البحث عنها والانضمام إليها في أي وقت.
   </Card>
-  <Card title="القنوات الخاصة" icon="lock">
+  <Card title="القنوات الخاصة" icon="seti:lock">
     يتم تمييزها بأيقونة القفل <i class="fa-solid fa-lock"></i>. لا تظهر في نتائج البحث، ويجب أن تتم دعوتك إليها يدوياً من قبل عضو موجود داخلها.
   </Card>
 </CardGrid>
@@ -38,10 +39,10 @@ import mobileConfirmLeave from '../../../../images/mobile-confirm-leave-a-channe
     <Steps>
     1. اضغط على زر **إضافة قنوات** في الشريط الجانبي، ثم اختر **تصفح القنوات**.
        *(يمكنك أيضاً الضغط على أيقونة الزائد `+` في أعلى الشريط الجانبي).*
-       <Image src={browseChannels} alt="تصفح القنوات في نسخة سطح المكتب" style={{ display: 'block', margin: '1rem auto', borderRadius: '8px' }} />
+       <Image src={browseChannels} alt="تصفح القنوات في نسخة سطح المكتب"  />
 
     2. ابحث عن القناة المطلوبة واضغط على زر **انضمام**.
-       <Image src={joinChannels} alt="زر الانضمام للقنوات" style={{ display: 'block', margin: '1rem auto', borderRadius: '8px' }} />
+       <Image src={joinChannels} alt="زر الانضمام للقنوات"  />
     </Steps>
   </TabItem>
 

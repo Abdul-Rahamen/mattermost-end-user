@@ -8,7 +8,7 @@ import { Image } from 'astro:assets';
 
 {/* استيراد الصور */}
 import mobileSelectChannel from '../../../../images/mobile-select-a-channel.jpg';
-import browseChannels from '../../../../images/browse-channels.png';
+import browseChannels from '../../../../images/browse-channels.gif';
 import joinChannels from '../../../../images/join-channels.png';
 import createChannelMobile from '../../../../images/create-channel-or-open-direct-message-on-mobile.jpg';
 import mobileBrowseSearch from '../../../../images/mobile-browse-public-channels-using-search.jpg';
@@ -25,11 +25,11 @@ import mobileBrowsePublic from '../../../../images/mobile-browse-public-channels
       4. اختر **انضمام (Join)** بجانب أي قناة لتصبح عضوًا فيها.
     </Steps>
    <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', margin: '20px 0' }}>
-        <Image src={browseChannels} alt="واجهة إنشاء فريق جديد في منصة تعاون" height={400} style={{ width: 'auto', borderRadius: '12px', border: '1px solid #eee' }} />
-        <Image src={joinChannels} alt="تفعيل الخصوصية في الجوال" height={400} style={{ width: 'auto', borderRadius: '12px', border: '1px solid #eee' }} />
+        <Image src={browseChannels} alt="واجهة إنشاء فريق جديد في منصة تعاون" />
+        {/* <Image src={joinChannels} alt="تفعيل الخصوصية في الجوال" height={400} style={{ width: 'auto', borderRadius: '12px', border: '1px solid #eee' }} /> */}
     </div>
 <Aside type="note" >
-    بدءًا من الإصدار v9.1 من Workspace، يمكنك تصفية القنوات حسب عامة، أو خاصة، أو مؤرشفة، وإخفاء القنوات التي أنت عضو فيها بالفعل.
+    بدءًا من الإصدار v9.1 ، يمكنك تصفية القنوات حسب عامة، أو خاصة، أو مؤرشفة، وإخفاء القنوات التي أنت عضو فيها بالفعل.
  
  </Aside>
 

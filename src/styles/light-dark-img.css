@@ -1,17 +1,31 @@
+/* استهداف الصور داخل محتوى التوثيق فقط */
 :root[data-theme='dark'] .sl-markdown-content :global(img) {
-  /* عكس الألوان مع الحفاظ على درجة اللون الأصلية للأيقونات /
+  /* عكس الألوان مع الحفاظ على درجة اللون الأصلية للأيقونات */
   filter: invert(1) hue-rotate(180deg) contrast(1.4) brightness(1.1) !important;
-  / إضافة تأثير بسيط لجعل الصورة تبدو كجزء من الواجهة الداكنة */
+  /* إضافة تأثير بسيط لجعل الصورة تبدو كجزء من الواجهة الداكنة */
   mix-blend-mode: screen; 
   opacity: 0.9;
 }
 
- 
-
+/* استثناء الصور التي لا تريد عكس ألوانها (اختياري) */
+/* استهداف الصور داخل محتوى المقال فقط مع استخدام !important لضمان التنفيذ */
 :root[data-theme='dark'] .sl-markdown-content img,
+:root[data-theme='dark'] .sl-markdown-content img:not(.light-only),
 :root[data-theme='dark'] .sl-markdown-content picture img {
   filter: invert(0.9) hue-rotate(180deg) brightness(1.1) !important;
-  transition: filter 0.3s ease-in-out;  
+  transition: filter 0.3s ease-in-out;
+}
+
+/* لمنع الصور من أن تبدو باهتة جداً */
+:root[data-theme='dark'] .sl-markdown-content img {
+  mix-blend-mode: normal; /* جرب تغييرها إلى lighten إذا كانت الخلفية سوداء تماماً */
+}
+/* 1. الحالة الأولى: الموقع في الوضع الداكن والصورة "فاتحة" (تحتاج لعكس) */
+
+
+/* 3. الحالة الثالثة: الموقع في الوضع الفاتح والصورة أصلاً "داكنة" (تحتاج لعكس لتصبح فاتحة) */
+:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
+  filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
 }
 
 
@@ -70,3 +84,42 @@
   mix-blend-mode: normal !important;
   background-color: transparent !important;
 }
+:root[data-theme='dark'] .sl-markdown-content img.dark-only {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    background-color: transparent !important;
+}
+
+/* لضمان ظهورهما بشكل طبيعي في الوضع الفاتح أيضاً */
+:root[data-theme='light'] .sl-markdown-content img.light-only {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+/* --- الجزء الخاص بالتبديل بين صورتين (Login Page) --- */
+
+/* 1. القاعدة الذهبية: إلغاء أي فلاتر قديمة على هذه الصور */
+.sl-markdown-content .light-only,
+.sl-markdown-content .dark-only {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    opacity: 1 !important;
+    display: block;
+    margin: 2rem auto;
+}
+
+/* 2. في الوضع الفاتح: أخفِ الصورة الداكنة */
+:root[data-theme='light'] .sl-markdown-content .dark-only {
+    display: none !important;
+}
+
+/* 3. في الوضع الداكن: أخفِ الصورة الفاتحة */
+:root[data-theme='dark'] .sl-markdown-content .light-only {
+    display: none !important;
+}
+
+/* --- الجزء الخاص بعكس الصور الأخرى (الاختياري) --- */
+/* إذا كان لديك صور أخرى فاتحة وتريد عكسها "فقط" إذا لم تكن من الصور المستثناة */
+/* :root[data-theme='dark'] .sl-markdown-content img:not(.dark-only):not(.light-only) {
+    filter: invert(1) hue-rotate(180deg) contrast(1.4) !important;
+} */

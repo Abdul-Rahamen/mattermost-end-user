@@ -105,29 +105,38 @@ kbd, .kbd-shortcut {
 .sidebar-content details:has(a[aria-current="page"]) > ul {
     border-inline-start-color: var(--sl-color-text-accent) !important;
     border-inline-start-width: 1.5px !important;
+    padding-block: 0.5rem !important;
+}
+/* تخصيص أيقونات البطاقات داخل CardGrid */
+.sl-markdown-content .card-grid .card {
+    /* تغيير لون أيقونة الـ SVG إلى الأخضر */
+    --sl-icon-color:  #00987e !important; /* اللون الأخضر */
 }
 
-/* 5. تحسين مظهر الروابط الفردية داخل القوائم الفرعية */
-.sidebar-content li a {
-    font-size: 0.92rem !important;
-    padding-top: 0.3rem !important;
-    padding-bottom: 0.3rem !important;
+.sl-markdown-content .card-grid .card .icon {
+    /* تغيير لون خلفية الدائرة المحيطة بالأيقونة إلى الأبيض */
+    background-color: #ffffff !important;
+    
+    /* إضافة حدود اختيارية لإبراز الدائرة البيضاء إذا كانت خلفية الموقع فاتحة */
+    border: 1px solid #e2e8f0;
+    
+    /* التأكد من أن الأيقونة نفسها تظهر باللون المختار */
+    color: #00987e !important;
 }
 
-/* 6. تأثير حركي ناعم عند ظهور القوائم الفرعية */
-.sidebar-content details[open] > ul {
-    animation: sidebar-fade-in 0.25s ease-out;
+/* لضمان تناسق الألوان في الوضع الداكن أيضاً */
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card .icon {
+    background-color: #ffffff !important; /* تظل بيضاء */
+    color: #00987e !important; /* تظل الأيقونة خضراء */
+}
+/* مؤشر الماوس */
+.sl-markdown-content img:not(.icon) {
+  cursor: zoom-in;
 }
 
-@keyframes sidebar-fade-in {
-    from {
-        opacity: 0;
-        transform: translateX(8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+/* ضمان ظهور الصورة المكبرة فوق كل شيء */
+.medium-zoom-overlay {
+  z-index: 100 !important;
 }
 
 /* 7. جعل السايدبار متجاوب يتقلص  */
@@ -142,20 +151,72 @@ kbd, .kbd-shortcut {
     margin-bottom: 2px !important;
 }
 
-/* ============================
-   دعم الكتابة من اليمين لليسار في مكونات الأكواد البرمجية
-   Code Blocks RTL Support
-   ============================ */
 
-[dir="rtl"] .expressive-code .ec-line {
-    direction: rtl;
-    text-align: right;
-    unicode-bidi: normal;
-    grid-template-areas: 'code gutter';
-    grid-template-columns: 1fr auto;
+/* تحويل السايد بار إلى أكورديون عبر CSS 
+  ملاحظة: هذا الكود سيجعل الأقسام تفتح وتغلق بسلاسة 
+*/
+
+/* استهداف القوائم الجانبية فقط */
+.sidebar-content details {
+  transition: all 0.2s ease-out;
 }
 
-[dir="rtl"] .expressive-code .copy {
-    inset-inline-end: auto;
-    inset-inline-start: calc(var(--ec-brdWd) + var(--ec-uiPadInl) / 2);
+/* لمنع الصور من أن تبدو باهتة جداً */
+:root[data-theme='dark'] .sl-markdown-content img {
+  mix-blend-mode: normal; /* جرب تغييرها إلى lighten إذا كانت الخلفية سوداء تماماً */
 }
+/* 1. الحالة الأولى: الموقع في الوضع الداكن والصورة "فاتحة" (تحتاج لعكس) */
+
+
+/* 3. الحالة الثالثة: الموقع في الوضع الفاتح والصورة أصلاً "داكنة" (تحتاج لعكس لتصبح فاتحة) */
+:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
+  filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
+}
+:root[data-theme='light'] .sl-markdown-content :global(img[data-origin="dark"]) {
+  filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(1.2) !important;
+  mix-blend-mode: multiply; /* يزيل الحواف البيضاء الزائدة */
+}
+
+/* 2. عندما يكون الموقع في الوضع الداكن (Dark Mode) */
+/* نتركها كما هي (Origin Mode) لأنها داكنة أصلاً */
+
+/* 3. ضمان أن الصور الأخرى (الفاتحة) تعمل بشكل طبيعي */
+/* إذا أردت عكس الصور الفاتحة لتصبح داكنة في الوضع الليلي */
+:root[data-theme='light'] .sl-markdown-content img[data-origin="dark"] {
+    filter: invert(1) hue-rotate(180deg) contrast(1.3) brightness(1.1) !important;
+    background-color: #000 !important;
+    mix-blend-mode: plus-lighter;
+}
+/* عندما يتم فتح الصورة (المكتبة تضيف هذا الكلاس تلقائياً) */
+.medium-zoom-image--opened {
+    z-index: 1000 !important;
+    /* إلغاء أي قيود من Starlight أثناء التكبير */
+    max-width: none !important;
+    max-height: none !important;
+    cursor: zoom-out !important;
+}
+
+/* طبقة الخلفية السوداء */
+.medium-zoom-overlay {
+    z-index: 999 !important;
+    cursor: zoom-out !important;
+    /* إضافة بلور خفيف للخلفية لتركيز النظر على الصورة */
+    backdrop-filter: blur(8px);
+}
+
+/* تحسين شكل الصورة قبل الضغط */
+.sl-markdown-content img:not(.icon) {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out !important;
+}
+
+/* تجنب اهتزاز الصورة عند الوقوف عليها */
+.sl-markdown-content img:not(.icon):hover {
+    opacity: 0.9;
+}
+:root[data-theme='dark'] .sl-markdown-content img[data-origin="dark"] {
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  background-color: transparent !important;
+}
+

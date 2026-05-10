@@ -9,6 +9,7 @@ import FAIcon from "../../../../components/FAIcon.astro";
 
 {/* استيراد الأصول المرئية */}
 import mobileMoreOptions from '../../../../images/mobile-select-more-options-for-a-channel.jpg';
+import desktopAdd from '../../../../images/add-remark-bar.gif';
 import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
 import mobileAddFirst from '../../../../images/mobile-add-first-channel-bookmark.jpg';
 import mobileAddSubsequent from '../../../../images/mobile-add-subsequent-channel-bookmarks.jpg';
@@ -42,6 +43,9 @@ import deleteBookmarkGif from '../../../../images/mobile-delete-a-channel-bookma
     2. حدد نوع الإشارة:
        * اختر **إضافة رابط** لتحديد عنوان URL، ونص الإشارة المرجعية، وأيقونة اختيارية.
        * اختر **إرفاق ملف** لاختيار ملف، وتحديد نص الإشارة المرجعية، وأيقونة اختيارية.
+
+        <Image src={desktopAdd} alt="المزيد من الخيارات" />
+
     </Steps>
   </TabItem>
 
@@ -83,7 +87,7 @@ import deleteBookmarkGif from '../../../../images/mobile-delete-a-channel-bookma
     لا يمكنك إعادة ترتيب إشارات القناة المرجعية باستخدام تطبيق الجوال.
  </Aside>
 
-
+{/* 
 ### تعديل الإشارات المرجعية 
 يمكنك إجراء تغييرات على الرابط أو الملف، أو عنوان الإشارة، أو الأيقونة الاختيارية. تعديل الإشارة المرجعية يغيرها لدى جميع أعضاء القناة.
 
@@ -123,4 +127,4 @@ import deleteBookmarkGif from '../../../../images/mobile-delete-a-channel-bookma
     اضغط مطولاً على الإشارة المرجعية واختر **حذف**.
     <Image src={deleteBookmarkGif} alt="حذف إشارة مرجعية في الجوال" width={300} />
   </TabItem>
-</Tabs>
+</Tabs> */}
