@@ -45,6 +45,7 @@ export default defineConfig({
       customCss: [
         "./src/styles/global.css",
         './src/styles/custom.css',
+        './src/styles/image-zoom.css',
         './src/styles/asides.css',
         './src/styles/light-dark-img.css',
         './src/fonts/EffraVF_Trial_Wght.ttf',

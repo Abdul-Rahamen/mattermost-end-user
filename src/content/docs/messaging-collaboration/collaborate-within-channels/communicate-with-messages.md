@@ -1,61 +1,44 @@
----
-title: "التواصل مع الرسائل والسلاسل"
-description: "تعرف على كيفية التواصل والتعاون بفاعلية باستخدام الرسائل وسلاسل المحادثات المتطورة في منصة تعاون."
----
 
-import { Card, CardGrid, Aside } from '@astrojs/starlight/components';
+# How to Setup NVIDIA Drivers and CUDA for vGPUs on Ubuntu 20.04
 
-يُعد إرسال الرسائل، والرد عليها، والمشاركة في سلاسل النقاش المتسلسلة الركيزة الأساسية للحفاظ على انسيابية العمل داخل الفريق. توفر **منصة تعاون** أدوات متقدمة لتنظيم هذه المحادثات وضمان عدم ضياع المعلومات الهامة.
+## 1. Checking the OS Version
+Ensure that your Ubuntu version is 20.04 by running the following command:
+`lsb_release -a`
 
----
+## 2. Checking the NVIDIA Driver
+Check if the NVIDIA drivers are already installed and functioning by running:
+`nvidia-smi`
 
-## العمل مع الرسائل والسلاسل
+This should output the version of the GPU driver. If the command fails or cannot find the driver, follow the steps below based on your situation:
 
-اكتشف الأدوات المتاحة لإدارة محادثاتك اليومية بفاعلية:
+### If `nvidia-smi` failed (driver is corrupted or outdated):
+1. Purge the old driver by running: 
+   `sudo apt purge nvidia*`
+2. Copy the `nvidia-linux-grid-580_580.65.06_amd64.deb` driver to your current directory.
+3. Install the vGPU Driver by running:
+   `sudo apt-get install ./nvidia-linux-grid-580_580.65.06_amd64.deb`
+4. Verify the installation was successful by running `nvidia-smi` again.
 
-<CardGrid>
-  <Card title="إرسال واستقبال الرسائل" icon="email">
-    تعرف على كيفية [إرسال الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/send-messages) المباشرة وفي القنوات.
-  </Card>
-  <Card title="تنظيم النقاشات المتسلسلة" icon="list-format">
-    استخدم [سلاسل المحادثات](/messaging-collaboration/communicate-with-messages-and-threads/organize-conversations) للحفاظ على تركيز النقاش ومنع تشتت القناة.
-  </Card>
-  <Card title="التفاعل البصري" icon="smiley">
-    عبر عن رأيك بسرعة باستخدام [الرموز التعبيرية والصور المتحركة](/messaging-collaboration/communicate-with-messages-and-threads/react-with-emojis-gifs).
-  </Card>
-  <Card title="إدارة المتابعة" icon="notification">
-    استخدم [تذكيرات الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/message-reminders) أو [تمييز الرسائل كغير مقروءة](/messaging-collaboration/communicate-with-messages-and-threads/mark-messages-unread).
-  </Card>
-</CardGrid>
+### If `nvidia-smi` cannot find the driver (no driver installed):
+1. **DO NOT** install any standard drivers from the online Ubuntu repositories, as you specifically need the vGPU grid driver.
+2. Follow steps 2 through 4 from the section directly above to install the local `.deb` package.
 
----
+## 3. Checking the NVIDIA CUDA Toolkit
+Check if CUDA is already installed by running:
+`nvcc --version`
 
-## ميزات إدارة المحتوى المتقدمة
+If the command is not found or does not show the version info, follow these steps to install it:
 
-توفر المنصة خيارات احترافية للتحكم في تدفق المعلومات:
-
-* **إعادة توجيه الرسائل:** قم بـ [إعادة توجيه الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/forward-messages) مع معاينة فورية للمحتوى.
-* **حفظ وتثبيت الرسائل:** قم بـ [حفظ الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/save-pin-messages) للرجوع إليها لاحقاً أو تثبيتها في أعلى القناة للوصول السريع <i class="fa-solid fa-thumbtack"></i>.
-* **البحث الذكي:** استخدم [البحث المتقدم](/messaging-collaboration/communicate-with-messages-and-threads/search-for-messages) للعثور على الرسائل والملفات بدقة عالية <i class="fa-solid fa-magnifying-glass"></i>.
-* **جدولة المراسلات:** قم بـ [جدولة الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/schedule-messages) ليتم إرسالها في أوقات محددة مستقبلاً <i class="fa-solid fa-calendar-check"></i>.
-* **الإبلاغ عن المحتوى:** يمكنك [الإبلاغ عن الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/flag-messages) التي تخالف سياسات العمل لمراجعتها من قبل الإدارة.
-
----
-
-## اجعل رسائلك تبرز بوضوح
-
-لضمان وصول فكرتك بالشكل الصحيح، استخدم أدوات التنسيق والتمييز التالية:
-
-### تنسيق النصوص المتقدم
-استخدم [تنسيق النصوص المتقدم](/messaging-collaboration/communicate-with-messages-and-threads/format-messages) لجعل رسائلك أكثر تنظيماً واحترافية باستخدام القوائم، النصوص العريضة، وأكواد البرمجة.
-
-### تحديد الأولوية والاهتمام
-* **ضبط أولوية الرسالة:** استخدم [ملصقات الأولوية](/messaging-collaboration/communicate-with-messages-and-threads/message-priority) (مثل: عاجل أو هام) وطلب تأكيدات القراءة.
-* **الإشارة للأعضاء:** استخدم [الإشارات](/messaging-collaboration/communicate-with-messages-and-threads/mention-people) للفت انتباه زملاء محددين أو الفريق بالكامل <i class="fa-solid fa-at"></i>.
-* **مشاركة الوسائط:** يمكنك [مشاركة الملفات](/messaging-collaboration/communicate-with-messages-and-threads/share-files-in-messages) بما في ذلك الصور، مقاطع الفيديو، والتسجيلات الصوتية مباشرة.
-
----
-
-<Aside type="tip" title="نصيحة تقنية">
-استخدام سلاسل المحادثات (Threads) للرد على الرسائل يقلل من عدد التنبيهات للأعضاء غير المعنيين بالنقطة المحددة، مما يرفع من جودة التركيز داخل القناة.
-</Aside>
+1. **DO NOT** install the `nvidia-cuda-toolkit` from the standard online package manager (apt), as it will install a conflicting display driver and corrupt your vGPU setup.
+2. Copy the `cuda_13.2.1_595.58.03_linux.run` file to your current directory.
+3. Run the installer using the following command:
+   `sudo sh cuda_13.2.1_595.58.03_linux.run`
+4. If a prompt appears stating: *"Existing package manager installation of the driver found. It is strongly recommended that you remove this before continuing,"* just select **Continue**.
+5. Accept the End User License Agreement by typing `accept` and hitting Enter.
+6. **CRITICAL:** In the menu that appears, uncheck everything *except* the **CUDA Toolkit 13.2**. Ensure the "Driver" option is completely unchecked so it does not overwrite your vGPU driver.
+7. Select **Install** and hit Enter.
+8. Once finished, you will likely need to add CUDA to your system path. Run these two commands:
+   `echo 'export PATH=/usr/local/cuda/bin:$PATH' >> ~/.bashrc`
+   `source ~/.bashrc`
+9. Finally, verify the toolkit was installed correctly by running:
+   `nvcc --version`

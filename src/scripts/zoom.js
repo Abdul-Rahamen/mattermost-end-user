@@ -1,68 +1,89 @@
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 import mediumZoom from 'medium-zoom';
 
 
 
-const setupZoom = () => {
-    const images = document.querySelectorAll('.sl-markdown-content img:not(.icon)');
+// const setupZoom = () => {
+//     const images = document.querySelectorAll('.sl-markdown-content img:not(.icon)');
 
-  // 1. إعداد المكتبة الأساسية
-  const zoom = mediumZoom(images, {
-    margin: 24,
-    background: 'rgba(0, 0, 0, 0.8)',
-    scrollOffset: 0, // لمنع إغلاق الصورة فور السكرول
-  });
+//   // 1. إعداد المكتبة الأساسية
+//   const zoom = mediumZoom(images, {
+//     margin: 24,
+//     background: 'rgba(0, 0, 0, 0.8)',
+//     scrollOffset: 0, // لمنع إغلاق الصورة فور السكرول
+//   });
 
-  // 2. إضافة ميزة التكبير عبر عجلة الماوس
-  zoom.on('opened', () => {
-    const zoomImage = document.querySelector('.medium-zoom-image--opened');
+//   // 2. إضافة ميزة التكبير عبر عجلة الماوس
+//   zoom.on('opened', () => {
+//     const zoomImage = document.querySelector('.medium-zoom-image--opened');
     
-    const handleWheel = (event) => {
-      event.preventDefault();
+//     const handleWheel = (event) => {
+//       event.preventDefault();
       
-      // الحصول على قيمة التكبير الحالية أو البدء بـ 1
-      let currentScale = parseFloat(zoomImage.style.transform.match(/scale\(([^)]+)\)/)?.[1] || 1);
+//       // الحصول على قيمة التكبير الحالية أو البدء بـ 1
+//       let currentScale = parseFloat(zoomImage.style.transform.match(/scale\(([^)]+)\)/)?.[1] || 1);
       
-      // تحديد اتجاه التكبير (لأعلى يكبر، لأسفل يصغر)
-      const delta = event.deltaY > 0 ? -0.1 : 0.1;
-      let newScale = currentScale + delta;
+//       // تحديد اتجاه التكبير (لأعلى يكبر، لأسفل يصغر)
+//       const delta = event.deltaY > 0 ? -0.1 : 0.1;
+//       let newScale = currentScale + delta;
 
-      // وضع حدود للتكبير (بين 1 و 3 أضعاف مثلاً)
-      newScale = Math.min(Math.max(1, newScale), 3);
+//       // وضع حدود للتكبير (بين 1 و 3 أضعاف مثلاً)
+//       newScale = Math.min(Math.max(1, newScale), 3);
 
-      // تطبيق التكبير الجديد مع الحفاظ على التوسيط
-      zoomImage.style.transform = `scale(${newScale})`;
-    };
+//       // تطبيق التكبير الجديد مع الحفاظ على التوسيط
+//       zoomImage.style.transform = `scale(${newScale})`;
+//     };
 
-    window.addEventListener('wheel', handleWheel, { passive: false });
+//     window.addEventListener('wheel', handleWheel, { passive: false });
 
-    // تنظيف الحدث عند إغلاق الصورة
-    zoom.on('closed', () => {
-      window.removeEventListener('wheel', handleWheel);
-    });
+//     // تنظيف الحدث عند إغلاق الصورة
+//     zoom.on('closed', () => {
+//       window.removeEventListener('wheel', handleWheel);
+//     });
+//   });
+// };
+
+// // تشغيل السكربت مع نظام Astro
+// document.addEventListener('astro:page-load', setupZoom);
+// setupZoom()
+
+
+// استيراد مباشر من الحزمة بدون تحديد مسار الملفات الداخلية
+
+
+
+
+const initPhotoSwipe = () => {
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.sl-markdown-content',
+    children: 'img',
+    pswpModule: () => import('photoswipe'),
+    
+    // إعدادات الرؤية والذكاء
+    bgOpacity: 1, // خلفية سوداء بالكامل 100%
+    wheelToZoom: true, // التكبير بالسكرول
+    padding: { top: 20, bottom: 20, left: 20, right: 20 },
   });
+
+  // هذه الخطوة مهمة جداً: Starlight يضيف أبعاداً للصور قد تعيق PhotoSwipe
+  // لذا سنقوم بتعريف أبعاد الصورة للمكتبة عند النقر
+  lightbox.addFilter('domItemData', (itemData, element) => {
+    if (element instanceof HTMLImageElement) {
+      itemData.src = element.src;
+      itemData.w = element.naturalWidth || element.width;
+      itemData.h = element.naturalHeight || element.height;
+      itemData.msrc = element.src;
+    }
+    return itemData;
+  });
+
+  lightbox.init();
 };
 
-// تشغيل السكربت مع نظام Astro
-document.addEventListener('astro:page-load', setupZoom);
-setupZoom()
-
-// function applyAccordionLogic() {
-//   // ميزة HTML5 الجديدة: إعطاء نفس الاسم لمجموعة details يجعلها تعمل كأكورديون
-//   const allDetails = document.querySelectorAll('.sidebar-content details');
-//   allDetails.forEach(detail => {
-//     detail.setAttribute('name', 'starlight-menu');
-//   });
-// }
-
-// // تشغيل عند التحميل وعند الانتقال
-// document.addEventListener('astro:page-load', applyAccordionLogic);
-// applyAccordionLogic();
-
-
-// دالة الفتح القسري
-/**
- * سكربت "الصياد" لفتح القوائم الجانبية في Starlight
- */
+document.addEventListener('astro:page-load', initPhotoSwipe);
+document.addEventListener('astro:after-swap', initPhotoSwipe);
+initPhotoSwipe();
 const autoExpandSidebar = () => {
   // 1. وظيفة للبحث عن العنصر حتى داخل الـ Shadow DOM إذا وجد
   const findActive = () => {
