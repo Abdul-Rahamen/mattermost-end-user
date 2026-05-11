@@ -220,3 +220,22 @@ kbd, .kbd-shortcut {
   background-color: transparent !important;
 }
 
+
+
+/* ============================
+   دعم الكتابة من اليمين لليسار في مكونات الأكواد البرمجية
+   Code Blocks RTL Support
+   ============================ */
+
+[dir="rtl"] .expressive-code .ec-line {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: normal;
+    grid-template-areas: 'code gutter';
+    grid-template-columns: 1fr auto;
+}
+
+[dir="rtl"] .expressive-code .copy {
+    inset-inline-end: auto;
+    inset-inline-start: calc(var(--ec-brdWd) + var(--ec-uiPadInl) / 2);
+}
