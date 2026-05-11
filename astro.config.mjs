@@ -51,6 +51,7 @@ export default defineConfig({
         './src/fonts/EffraVF_Trial_Wght.ttf',
         './src/styles/searchbar-responsive.css',
         './src/styles/tables-rtl.css',
+        './src/styles/code-style.css',
       ],
       
       sidebar: [
