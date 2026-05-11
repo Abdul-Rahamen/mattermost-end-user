@@ -140,3 +140,18 @@
     background-color: #343942 !important;
     border-color: #4b5563 !important;
 }
+
+
+/* ============================
+   بلوكات النص العادي (text/plaintext) — اتجاه RTL
+   ============================ */
+.sl-markdown-content .expressive-code:is([data-language="text"], [data-language="plaintext"], :has([data-language="text"]), :has([data-language="plaintext"]), :has([class*="language-text"]), :has([class*="language-plaintext"])) {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.sl-markdown-content .expressive-code:is([data-language="text"], [data-language="plaintext"], :has([data-language="text"]), :has([data-language="plaintext"]), :has([class*="language-text"]), :has([class*="language-plaintext"])) .ec-line {
+    direction: rtl !important;
+    text-align: right !important;
+    unicode-bidi: plaintext !important;
+}
