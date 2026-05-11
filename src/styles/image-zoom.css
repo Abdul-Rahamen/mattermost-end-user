@@ -1,0 +1,32 @@
+/* تغيير شكل الماوس عند التحويم فوق الصور */
+.sl-markdown-content img {
+  cursor: zoom-in;
+  transition: opacity 0.3s;
+}
+
+.sl-markdown-content img:hover {
+  opacity: 0.9;
+}
+
+/* ضمان ظهور نافذة التكبير فوق قائمة Starlight الجانبية */
+
+.pswp__bg {
+    background: #000000 !important;
+    opacity: 1 !important;
+}
+
+/* 2. التأكد من أن الصورة داخل نافذة التكبير ليست شفافة */
+.pswp__img {
+    opacity: 1 !important;
+    background-color: transparent !important;
+}
+
+/* 3. رفع طبقة التكبير فوق كل عناصر Starlight */
+.pswp {
+    z-index: 999999 !important;
+}
+
+/* 4. إخفاء أي عناصر تظهر بشكل غريب أثناء التكبير */
+.pswp__content {
+    background: black;
+}
