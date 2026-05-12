@@ -85,7 +85,7 @@ export default defineConfig({
             },
             {
               label: "تسجيل الخروج",
-              slug: "access-your-workspace/log-out-of-mattermost",
+              slug: "access-your-workspace/log-out-of-workspace",
             },
           ],
           collapsed: true,
@@ -124,8 +124,8 @@ export default defineConfig({
               slug: "messaging-collaboration/invite-people",
             },
             {
-              label: "تعرف على أدوار والصلاحيات",
-              slug: "messaging-collaboration/learn-about-mattermost-roles",
+              label: "تعرف على الأدوار والصلاحيات",
+              slug: "messaging-collaboration/learn-about-taawon-roles",
             },
             {
               label: "عرض معلومات النظام",
@@ -307,7 +307,7 @@ export default defineConfig({
             },
             {
               label: "توسيع منصة تعاون باستخدام عمليات الدمج",
-              slug: "messaging-collaboration/extend-mattermost-with-integrations",
+              slug: "messaging-collaboration/extend-workspace-with-integrations",
             },
           ],
           collapsed: true,
@@ -475,7 +475,7 @@ export default defineConfig({
             },
             {
               label: "تخصيص سمة منصة تعاون الخاصة بك",
-              slug: "customize-your-preferences/customize-your-mattermost-theme",
+              slug: "customize-your-preferences/customize-your-theme",
             },
             {
               label: "تخصيص شريط القناة الجانبي",
