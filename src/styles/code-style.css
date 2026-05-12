@@ -155,3 +155,12 @@
     text-align: right !important;
     unicode-bidi: plaintext !important;
 }
+
+/* تحريك زر النسخ لليسار في بلوكات النص فقط لتجنب التداخل مع النص العربي */
+.sl-markdown-content .expressive-code:is([data-language="text"], [data-language="plaintext"], :has([data-language="text"]), :has([data-language="plaintext"]), :has([class*="language-text"]), :has([class*="language-plaintext"])) .copy {
+    position: absolute !important;
+    top: 0.75rem !important;
+    left: 0.75rem !important;
+    right: auto !important;
+    z-index: 10 !important;
+}
