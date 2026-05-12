@@ -180,7 +180,7 @@ export default defineConfig({
                 },
                 {
                   label: "إجراء مكالمات في منصة ",
-                  slug: "messaging-collaboration/collaborate-within-channels/make-calls-in-mattermost",
+                  slug: "messaging-collaboration/collaborate-within-channels/make-calls-in-taawon",
                 },
                 {
                   label: "إدارة أعضاء القناة",
