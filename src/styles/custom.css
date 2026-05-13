@@ -220,3 +220,9 @@ kbd, .kbd-shortcut {
   background-color: transparent !important;
 }
 
+
+
+/* إضافة حد سفلي للهيدر في الوضع الليلي */
+[data-theme="dark"] header.header {
+    border-bottom: 1px solid var(--sl-color-gray-5) !important;
+}

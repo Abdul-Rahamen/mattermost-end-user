@@ -91,8 +91,8 @@
 :root[data-theme='light'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) {
     --ec-brdCol: #e2e8f0 !important;
     background-color: #ffffff !important;
-    /* عمود أرقام الأسطر (لون أخضر ثابت) ثابت حتى عند التمرير الأفقي */
-    background-image: linear-gradient(to right, var(--color-accent-600) 0%, var(--color-accent-600) 3.5rem, #ffffff 3.5rem, #ffffff 100%) !important;
+    /* عمود أرقام الأسطر ثابت حتى عند التمرير الأفقي */
+    background-image: linear-gradient(to right, #00987e 0%, #00987e 3.5rem, #ffffff 3.5rem, #ffffff 100%) !important;
 }
 
 :root[data-theme='light'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) pre {
