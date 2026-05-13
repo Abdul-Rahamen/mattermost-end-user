@@ -34,13 +34,7 @@
     --sl-toc-width: 14rem;    
 }
 
-/* 5. تعديل عرض السايد بار وجدول المحتويات ليصبح مرناً */
-@media (min-width: 50rem) {
-    .main-frame { grid-template-columns: minmax(18rem, 20%) 1fr !important; }
-}
-@media (min-width: 72rem) {
-    .main-frame { grid-template-columns: minmax(18rem, 20%) 1fr var(--sl-toc-width) !important; }
-}
+
 
 /* ============================ 
     تنسيق اختصارات الكيبورد بشكل كامل 
@@ -225,4 +219,8 @@ kbd, .kbd-shortcut {
 /* إضافة حد سفلي للهيدر في الوضع الليلي */
 [data-theme="dark"] header.header {
     border-bottom: 1px solid var(--sl-color-gray-5) !important;
+}
+
+.social-icons:where(.astro-kmkmnagf):after {
+    display: none !important;
 }
