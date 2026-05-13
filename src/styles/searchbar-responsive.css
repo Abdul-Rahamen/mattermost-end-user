@@ -1,0 +1,127 @@
+
+/* ============================
+    تحسين تجاوب شريط البحث (Search Bar Responsiveness)
+    يتم التحكم في حجم وشكل شريط البحث بناءً على عرض الشاشة لضمان أفضل تجربة مستخدم.
+   ============================ */
+
+/* 1. الحالة الافتراضية للشاشات الكبيرة (أكبر من 970px) */
+/* نقل اختصار الكيبورد إلى اليسار وإزالة الإطار الخارجي */
+@media (min-width: 970px) {
+    header.header > div.header > div.sl-flex:nth-child(2) {
+        flex: 1 1 auto; /* ينمو ليملأ المساحة المتبقية فقط، ويتقلص عند الحاجة */
+        max-width: var(--sl-content-width, 720px);
+        justify-content: center;
+        margin-inline: 32px;
+    }
+
+    site-search button {
+        gap: 8px;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    /* نقل اختصار الكيبورد إلى اليسار */
+    site-search button kbd {
+        order: 1 !important;
+        margin-inline: 0 !important;
+    }
+
+    /* give the spane 70% of the flex area to push the kbd to left */
+    site-search button span {
+        width: 250px !important;
+        display: flex !important;
+        /* keep the text in the start */
+        justify-content: flex-start !important;
+
+    }
+
+    /* إزالة الإطار الخارجي لاختصار الكيبورد */
+    site-search button kbd kbd {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+}
+
+/* ضمان عدم اختفاء مبدل الثيمات أو تقلصه بشكل مشوه فوق 800px */
+@media (min-width: 800px) {
+    starlight-theme-select {
+        flex-shrink: 0 !important;
+        display: flex !important;
+    }
+}
+
+/* 2. مرحلة التقلص (بين 970px و 800px) */
+/* في هذه المرحلة، يتقلص عرض الشريط ويختفي اختصار الكيبورد لتوفير المساحة بذكاء */
+@media (max-width: 970px) and (min-width: 800px) {
+    header.header > div.header > div.sl-flex:nth-child(2) {
+        width: 100% !important;
+        max-width: 352px !important; /* تقليص العرض تدريجياً */
+        justify-content: center;
+    }
+
+    /* إخفاء اختصار الكيبورد (KBD) لتقليل الازدحام البصري */
+    site-search kbd {
+        display: none !important;
+    }
+}
+
+/* 3. مرحلة الموبايل والأجهزة الصغيرة (أقل من 800px) */
+/* يتحول شريط البحث إلى أيقونة عدسة فقط لتوفير مساحة للهوية والشعارات */
+@media (max-width: 800px) {
+    header.header > div.header > div.sl-flex:nth-child(2) {
+        width: auto !important;
+        /* justify-content: flex-end; */
+    }
+
+    site-search button {
+        padding: 10px !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 50% !important; /* جعلها دائرية عند الضغط */
+    }
+
+    site-search button:hover {
+        background-color: var(--sl-color-gray-6) !important;
+    }
+
+    /* إخفاء النص والاختصار ليبقى الرمز فقط */
+    site-search button span,
+    site-search button kbd {
+        display: none !important;
+    }
+
+    /* تكبير الأيقونة قليلاً لتسهيل النقر في الموبايل */
+    site-search button svg {
+        width: 22px !important;
+        height: 22px !important;
+        margin: 0 !important;
+    }
+
+    /* إخفاء مبدل الثيمات (Light/Dark) لتوفير المساحة في الهيدر الصغير */
+    starlight-theme-select {
+        display: none !important;
+    }
+}
+
+/* تقليل البادينغ والمارجن في حاوية العنوان */
+.title-wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important; /* يمنع المتصفح من سحق العنوان */
+}
+
+header.header > div.header {
+    display: flex !important;
+}
+
+
+/* إضافة حد سفلي للهيدر في الوضع الليلي */
+[data-theme="dark"] header.header {
+    border-bottom: 1px solid var(--sl-color-gray-5) !important;
+}
