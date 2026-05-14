@@ -11,6 +11,7 @@ import mobileSelectMoreOptionsForAChannel from '../../../../images/mobile-select
 import mobileSelectViewInfoForAChannel from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
 import mobileConvertToPrivateChannel from '../../../../images/mobile-convert-to-private-channel.jpg';
 import mobileConfirmConvertToPrivateChannel from '../../../../images/mobile-confirm-convert-to-private-channel.jpg';
+import mobileConfirmConvertToPrivateChannelAlart from '../../../../images/mobile-confirm-convert-to-private-channel-alart.jpg';
 import ChannelGroupMention from "../../../../images/channels-group-mentions.png";
 
 
@@ -50,30 +51,39 @@ import ChannelGroupMention from "../../../../images/channels-group-mentions.png"
        <Image 
          src={mobileSelectAChannel} 
          alt="اختيار القناة" 
-         style={{ height: '400px', width: 'auto', borderRadius: '15px', border: '1px solid #eee', display: 'block', margin: '1.5rem auto' }} 
+         class="phone-screenshots"
        />
 
-    2. اضغط على أيقونة **المزيد (⋮)** في الزاوية العلوية.
-       <Image src={mobileSelectMoreOptionsForAChannel} alt="فتح قائمة الخيارات" style={{ height: '400px', width: 'auto', borderRadius: '15px', border: '1px solid #eee', display: 'block', margin: '1.5rem auto' }}  />
+    2. اضغط علئ اسم القناه او المجموعة
+       <Image src={mobileSelectMoreOptionsForAChannel} alt="فتح قائمة الخيارات" 
+              class="phone-screenshots"/>
 
-    3. اختر **عرض المعلومات** للوصول إلى الخصائص المتقدمة.
+    3. اختر **اعدادت الدردشة**.
        <Image 
          src={mobileSelectViewInfoForAChannel} 
          alt="الدخول لمعلومات القناة" 
-         style={{ height: '400px', width: 'auto', borderRadius: '15px', border: '1px solid #eee', display: 'block', margin: '1.5rem auto' }} 
+        class="phone-screenshots"
        />
 
     4. اضغط على خيار **تحويل إلى قناة خاصة**.
        <Image 
          src={mobileConvertToPrivateChannel} 
          alt="تغيير نوع الخصوصية" 
+        class="phone-screenshots"
+
        />
 
     5. أكد العملية بالضغط على **نعم**.
        <Image 
          src={mobileConfirmConvertToPrivateChannel} 
          alt="تأكيد التحويل النهائي" 
-         style={{ height: '400px', width: 'auto', borderRadius: '15px', border: '1px solid #eee', display: 'block', margin: '1.5rem auto' }} 
+        class="phone-screenshots"
+       />
+    6. اشعار بنجاح التحويل.
+       <Image 
+         src={mobileConfirmConvertToPrivateChannelAlart} 
+         alt="تأكيد التحويل النهائي" 
+        class="phone-screenshots"
        />
     </Steps>
   </TabItem>

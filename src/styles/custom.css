@@ -1,3 +1,4 @@
+@import "photoswipe/style.css";
 /* 1. تصفير الخلفية لكل الحالات الممكنة للعنصر النشط */
 .sidebar-content a[aria-current="page"],
 .sidebar-content a[aria-current="page"]:hover,
@@ -238,4 +239,10 @@ kbd, .kbd-shortcut {
 [dir="rtl"] .expressive-code .copy {
     inset-inline-end: auto;
     inset-inline-start: calc(var(--ec-brdWd) + var(--ec-uiPadInl) / 2);
+}
+
+/* بقية تنسيقاتك المخصصة للـ pswp */
+.pswp__bg {
+    background: #000000 !important;
+    opacity: 1 !important;
 }

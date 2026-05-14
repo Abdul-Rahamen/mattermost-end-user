@@ -1,0 +1,32 @@
+/* ضبط العناوين في منطقة المحتوى الرئيسي */
+.sl-markdown-content h1 {
+  font-size: 1.875rem !important; /* أصغر قليلاً من الافتراضي */
+  font-weight: 700 !important;   /* سماكة واضحة لكن غير مبالغ فيها */
+  margin-bottom: 1.5rem !important;
+  font-family:'Effra';
+}
+
+.sl-markdown-content h2 {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;   /* تقليل السماكة من Bold إلى Semi-bold */
+  margin-top: 2rem !important;
+}
+
+.sl-markdown-content h3 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+.sl-markdown-content h4, 
+.sl-markdown-content h5 {
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  color: var(--sl-color-gray-2) !important; /* لون أخف قليلاً للتميز */
+}
+
+/* ضبط العنوان الرئيسي في أعلى الصفحة (Page Title) */
+h1#_top {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em;
+}

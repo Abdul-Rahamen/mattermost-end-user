@@ -1,0 +1,33 @@
+/* استهداف حاوية القائمة الجانبية بناءً على السورس كود */
+#starlight__sidebar {
+  /* لمتصفح Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 transparent;
+}
+
+/* استهداف المتصفحات التي تدعم Webkit (Chrome, Edge, Safari) */
+#starlight__sidebar::-webkit-scrollbar {
+  width: 5px; /* عرض نحيف جداً كما في الصورة */
+}
+
+/* مسار شريط التمرير (الخلفية) */
+#starlight__sidebar::-webkit-scrollbar-track {
+  background: transparent !important; /* جعله شفافاً تماماً */
+}
+
+/* مقبض شريط التمرير (الجزء المتحرك) */
+#starlight__sidebar::-webkit-scrollbar-thumb {
+  background-color: #4b5563 !important; /* لون رمادي هادئ */
+  border-radius: 20px !important; /* حواف دائرية كبسولية */
+  border: 1px solid transparent; /* مسافة بسيطة تجعله يبدو أنحف */
+}
+
+/* تغيير اللون عند مرور الماوس (اختياري) */
+#starlight__sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #10b981 !important; /* الأخضر اليماني/Emerald */
+}
+
+/* إضافة تباعد بسيط للقائمة الجانبية من اليمين لكي لا يلتصق الشريط بالكلام */
+#starlight__sidebar {
+  padding-inline-end: 4px;
+}

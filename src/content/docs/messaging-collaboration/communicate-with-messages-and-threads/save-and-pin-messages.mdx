@@ -10,9 +10,9 @@ import FAIcon from "../../../../components/FAIcon.astro";
 {/* استيراد الأصول المرئية */}
 import saveMessage from '../../../../images/save-message.png';
 import removeSavedPost from '../../../../images/remove-from-saved-posts.png';
-import mobileSaveGif from '../../../../images/mobile-save-a-message.gif';
+import mobileSaveGif from '../../../../images/mobile-save-a-message1.gif';
 import mobileViewSavedGif from '../../../../images/mobile-view-saved-messages.gif';
-import mobileUnsaveGif from '../../../../images/mobile-unsave-a-message-from-saved-messages.gif';
+import mobileUnsaveGif from '../../../../images/mobile-unsave-a-message-from-saved-messages1.gif';
 import mobileUnsaveChannelGif from '../../../../images/mobile-unsave-a-message-from-the-channel.gif';
 import pinMessageImg from '../../../../images/pin-message-to-channel.png';
 import pinnedExampleImg from '../../../../images/pinned-example-channel.png';
@@ -54,11 +54,6 @@ import mobileUnpinChannelGif from '../../../../images/mobile-unpin-a-message-fro
     <Image src={mobileSaveGif} alt="حفظ رسالة في الجوال" width={300} style={{ display: 'block', margin: '2rem auto' }} />
 
     لرؤية جميع رسائلك المحفوظة، اضغط على أيقونة **حفظ**  <FAIcon name="save" /> في أسفل التطبيق.
-
-    <Image src={mobileViewSavedGif} alt="عرض الرسائل المحفوظة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
-
-    قم بإزالة عنصر من قائمة **الرسائل المحفوظة** عن طريق الضغط مطولاً على الرسالة واختيار **إلغاء الحفظ**.
-
     <Image src={mobileUnsaveGif} alt="إلغاء الحفظ من القائمة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
 
     بدلاً من ذلك، يمكنك أيضًا الضغط على الرسالة المحفوظة في القناة ثم الضغط على أيقونة **تم الحفظ**<FAIcon name="save" /> أسفلها لإلغاء الحفظ.
@@ -107,16 +102,15 @@ import mobileUnpinChannelGif from '../../../../images/mobile-unpin-a-message-fro
     2. اضغط على أيقونة **المزيد**<FAIcon name="ellipsis-vertical" /> في الزاوية العلوية اليمنى.
     <Image src={mobileMoreOptions} alt="خيارات القناة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
 
-    3. اضغط على **عرض المعلومات**.
+    4. اضغط على **الرسائل المثبتة**.
     <Image src={mobileViewInfo} alt="عرض المعلومات" width={300} style={{ display: 'block', margin: '2rem auto' }} />
 
-    4. اضغط على **الرسائل المثبتة**.
-    <Image src={mobileEditChannel} alt="الرسائل المثبتة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
     <Image src={mobileViewPinned} alt="عرض القائمة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
 
-    لإلغاء التثبيت، اضغط مطولاً على الرسالة في القائمة أو القناة واختر **إلغاء التثبيت من القناة**.
-    <Image src={mobileUnpinGif} alt="إلغاء تثبيت من القائمة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    لإلغاء التثبيت، اضغط مطولاً على الرسالة في القائمة أو القناة واختر **إلغاء التثبيت من الرسائل المثبته**.
     <Image src={mobileUnpinChannelGif} alt="إلغاء تثبيت من القناة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+        لإلغاء التثبيت، اضغط مطولاً على الرسالة في القائمة أو القناة واختر **إلغاء التثبيت من القناة**.
+    <Image src={mobileUnpinGif} alt="إلغاء تثبيت من القائمة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
   </TabItem>
 </Tabs>
 

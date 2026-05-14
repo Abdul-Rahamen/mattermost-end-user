@@ -9,10 +9,11 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "تعـــــــاون ",
-      components: {
-        // إضافة المكون ليعمل في كل الصفحات تلقائياً
-
-      },
+      components:{
+        // @ts-ignore
+   
+        Footer: "/src/components/ZoomImage.astro",
+           },
       logo: {
         src: "./src/assets/logo-light.png",
         alt: "Taawon",
@@ -27,8 +28,11 @@ export default defineConfig({
         },{
           tag: 'script',
           attrs: {
-            src: '/src/scripts/zoom.js',
-            type: 'module',
+            src: '/scripts/zoom.js',
+            // type: 'module',
+              defer: true,
+
+            
           },
         },
         {
@@ -43,7 +47,10 @@ export default defineConfig({
 
       ],
       customCss: [
+        'photoswipe/dist/photoswipe.css',
         "./src/styles/global.css",
+        "./src/styles/sidebar-scroll.css",
+        "./src/styles/headings.css",
         './src/styles/custom.css',
         './src/styles/image-zoom.css',
         './src/styles/asides.css',
@@ -51,7 +58,9 @@ export default defineConfig({
         './src/fonts/EffraVF_Trial_Wght.ttf',
         './src/styles/searchbar-responsive.css',
         './src/styles/tables-rtl.css',
-        './src/styles/code-style.css',
+        "./src/styles/code-style.css",       
+         "./src/styles/tabs-filter.css",
+
       ],
       
       sidebar: [
@@ -180,7 +189,7 @@ export default defineConfig({
                 },
                 {
                   label: "إجراء مكالمات في منصة ",
-                  slug: "messaging-collaboration/collaborate-within-channels/make-calls-in-mattermost",
+                  slug: "messaging-collaboration/collaborate-within-channels/make-calls",
                 },
                 {
                   label: "إدارة أعضاء القناة",

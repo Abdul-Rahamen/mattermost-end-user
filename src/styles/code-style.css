@@ -4,7 +4,7 @@
    ============================ */
 
 /* 1. الهيكل الأساسي لبلوك الكود */
-.sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) {
+.sl-markdown-content .expressive-code {
     --ec-brdRad: 8px !important;
     --ec-brdWidth: 1px !important;
     border-radius: var(--ec-brdRad) !important;
@@ -14,7 +14,7 @@
     direction: ltr !important; /* الأكواد البرمجية دائماً LTR */
 }
 
-.sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) pre {
+.sl-markdown-content .expressive-code pre {
     counter-reset: ec-line; /* تهيئة العداد لأرقام الأسطر */
     padding: 1.5rem 0 !important; /* مسافة علوية وسفلية داخل البلوك */
     position: relative !important;
@@ -23,7 +23,7 @@
 }
 
 /* 2. الأسطر وترقيمها عبر CSS Counters */
-.sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .ec-line {
+.sl-markdown-content .expressive-code .ec-line {
     counter-increment: ec-line;
     position: relative !important;
     padding-left: 4.5rem !important; /* مسافة الكود عن عمود الأرقام */
@@ -33,7 +33,7 @@
 }
 
 /* تصميم أرقام الأسطر */
-.sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .ec-line::before {
+.sl-markdown-content .expressive-code .ec-line::before {
     content: counter(ec-line);
     position: absolute !important;
     left: 0 !important;
@@ -47,14 +47,14 @@
 }
 
 /* 3. زر النسخ (Copy Button) */
-.sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .copy {
+.sl-markdown-content .expressive-code .copy {
     position: absolute !important;
     top: 0.75rem !important;
     right: 0.75rem !important;
     z-index: 10 !important;
 }
 
-.sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .copy button {
+.sl-markdown-content .expressive-code .copy button {
     border-radius: 6px !important;
     border: 1px solid var(--ec-brdCol) !important;
     padding: 0.4rem 0.8rem !important;
@@ -70,45 +70,45 @@
 }
 
 /* إضافة كلمة Copy إلى الزر (إذا لم تكن موجودة) */
-.sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .copy button::after {
+.sl-markdown-content .expressive-code .copy button::after {
     content: "Copy";
     margin-left: 5px;
 }
 
 /* تغيير الكلمة عند النسخ (Starlight يضيف كلاس copied) */
-.sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .copy button[data-copied]::after {
+.sl-markdown-content .expressive-code .copy button[data-copied]::after {
     content: "Copied!";
 }
 
 /* إخفاء الهيدر الافتراضي إن وجد لمنع التداخل */
-.sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .header {
+.sl-markdown-content .expressive-code .header {
     display: none !important;
 }
 
 /* ============================
     الوضع الفاتح (Light Mode) 
    ============================ */
-:root[data-theme='light'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) {
+:root[data-theme='light'] .sl-markdown-content .expressive-code {
     --ec-brdCol: #e2e8f0 !important;
     background-color: #ffffff !important;
     /* عمود أرقام الأسطر (لون أخضر ثابت) ثابت حتى عند التمرير الأفقي */
     background-image: linear-gradient(to right, var(--color-accent-600) 0%, var(--color-accent-600) 3.5rem, #ffffff 3.5rem, #ffffff 100%) !important;
 }
 
-:root[data-theme='light'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) pre {
+:root[data-theme='light'] .sl-markdown-content .expressive-code pre {
     background-color: transparent !important;
 }
 
-:root[data-theme='light'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .ec-line::before {
+:root[data-theme='light'] .sl-markdown-content .expressive-code .ec-line::before {
     color: #ffffff !important; /* أرقام بيضاء */
 }
 
-:root[data-theme='light'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .copy button {
+:root[data-theme='light'] .sl-markdown-content .expressive-code .copy button {
     background-color: #ffffff !important;
     color: #334155 !important;
 }
 
-:root[data-theme='light'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .copy button:hover {
+:root[data-theme='light'] .sl-markdown-content .expressive-code .copy button:hover {
     background-color: #f8fafc !important;
     border-color: #cbd5e1 !important;
 }
@@ -116,33 +116,30 @@
 /* ============================
     الوضع الداكن (Dark Mode) 
    ============================ */
-:root[data-theme='dark'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) {
+:root[data-theme='dark'] .sl-markdown-content .expressive-code {
     --ec-brdCol: #1e222a !important;
     background-color: #282c34 !important; /* خلفية الكود */
     /* عمود أرقام الأسطر (داكن جداً) ثابت حتى عند التمرير الأفقي */
     background-image: linear-gradient(to right, #1e222a 0%, #1e222a 3.5rem, #282c34 3.5rem, #282c34 100%) !important;
 }
 
-:root[data-theme='dark'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) pre {
+:root[data-theme='dark'] .sl-markdown-content .expressive-code pre {
     background-color: transparent !important;
 }
 
-:root[data-theme='dark'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .ec-line::before {
+:root[data-theme='dark'] .sl-markdown-content .expressive-code .ec-line::before {
     color: #8b949e !important; /* أرقام رمادية */
 }
 
-:root[data-theme='dark'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .copy button {
+:root[data-theme='dark'] .sl-markdown-content .expressive-code .copy button {
     background-color: #282c34 !important;
     color: #abb2bf !important;
 }
 
-:root[data-theme='dark'] .sl-markdown-content .expressive-code:not([data-language="text"]):not([data-language="plaintext"]):not(:has([data-language="text"])):not(:has([data-language="plaintext"])):not(:has([class*="language-text"])):not(:has([class*="language-plaintext"])) .copy button:hover {
+:root[data-theme='dark'] .sl-markdown-content .expressive-code .copy button:hover {
     background-color: #343942 !important;
     border-color: #4b5563 !important;
 }
-
-
-
 
 /* ============================
    دعم الكتابة من اليمين لليسار في مكونات الأكواد البرمجية

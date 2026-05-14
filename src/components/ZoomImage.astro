@@ -1,40 +1,97 @@
 ---
-/* مكون لإضافة ميزة التكبير للصور */
+// مكون الزووم مع تفعيل بكرة الماوس
 ---
 
 <script>
-  import mediumZoom from 'medium-zoom';
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/dist/photoswipe.css';
 
-  // دالة لتفعيل الزوم
-  const setupZoom = () => {
-    // استهداف الصور داخل المحتوى فقط وتجنب الأيقونات
-    const images = document.querySelectorAll('.sl-markdown-content img:not(.icon)');
+  // function setupPhotoSwipe() {
+  //   const articleContent = document.querySelector('.sl-markdown-content');
+  //   if (!articleContent) return;
+
+  //   const images = articleContent.querySelectorAll('img');
+
+  //   images.forEach((img) => {
+  //     if (img.closest('.not-prose')) return; // تجنب الأيقونات أو العناصر الصغيرة
+      
+  //     img.style.cursor = 'zoom-in';
+
+  //     img.onclick = (e) => {
+  //       e.preventDefault();
+        
+  //       const dataSource = [{
+  //         src: img.getAttribute('src'),
+  //         width: img.naturalWidth || 2000, 
+  //         height: img.naturalHeight || 1500,
+  //         alt: img.getAttribute('alt') || ''
+  //       }];
+
+  //       const options = {
+  //         dataSource: dataSource,
+  //         // إعدادات الزووم
+  //         secondaryZoomLevel: 2, // مستوى الزووم عند النقر المزدوج أو السكرول
+  //         maxZoomLevel: 4,      // أقصى حد للزووم
+          
+  //         // تفعيل العمليات المخصصة
+  //         pswpModule: () => import('photoswipe'),
+          
+  //         // تأكد من أن الخلفية لا تمنع التفاعل
+  //         closeOnVerticalDrag: true,
+  //       };
+
+  //       const pswp = new PhotoSwipeLightbox(options);
+        
+  //       // إضافة مستمع لحدث بكرة الماوس يدوياً إذا لم يعمل تلقائياً
+  //       pswp.on('wheel', (e) => {
+  //         // PhotoSwipe v5 يدعم الزووم بالسكرول تلقائياً إذا كانت الأبعاد صحيحة
+  //         // لكننا نتأكد هنا من منع السكرول الافتراضي للمتصفح خلف الصورة
+  //         if (pswp.currItem) {
+  //            // المنطق الداخلي لـ PhotoSwipe سيتولى الباقي
+  //         }
+  //       });
+
+  //       pswp.init();
+  //       pswp.loadAndOpen(0);
+  //     };
+  //   });
+  // }
+
+  // document.addEventListener('astro:page-load', setupPhotoSwipe);
+  // setupPhotoSwipe();
+
+
+
+
+
+const initPhotoSwipe = () => {
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.sl-markdown-content',
+    children: 'img',
+    pswpModule: () => import('photoswipe'),
     
-    if (images.length > 0) {
-      mediumZoom(images, {
-        margin: 24,
-        background: 'var(--sl-color-bg-overlay)', // يستخدم لون خلفية الموقع الأصلية
-      });
+    // إعدادات الرؤية والذكاء
+    bgOpacity: 1, // خلفية سوداء بالكامل 100%
+    wheelToZoom: true, // التكبير بالسكرول
+    padding: { top: 20, bottom: 20, left: 20, right: 20 },
+  });
+
+  // هذه الخطوة مهمة جداً: Starlight يضيف أبعاداً للصور قد تعيق PhotoSwipe
+  // لذا سنقوم بتعريف أبعاد الصورة للمكتبة عند النقر
+  lightbox.addFilter('domItemData', (itemData, element) => {
+    if (element instanceof HTMLImageElement) {
+      itemData.src = element.src;
+      itemData.w = element.naturalWidth || element.width;
+      itemData.h = element.naturalHeight || element.height;
+      itemData.msrc = element.src;
     }
-  };
+    return itemData;
+  });
 
-  // تشغيل عند أول تحميل
-  setupZoom();
+  lightbox.init();
+};
 
-  // تشغيل بعد كل انتقال بين الصفحات (مهم جداً لـ Starlight)
-  document.addEventListener('astro:after-swap', setupZoom);
+document.addEventListener('astro:page-load', initPhotoSwipe);
+document.addEventListener('astro:after-swap', initPhotoSwipe);
+initPhotoSwipe();
 </script>
-
-<style is:global>
-  /* تحسينات بصرية */
-  .medium-zoom-overlay {
-    z-index: 100 !important;
-    backdrop-filter: blur(4px);
-  }
-  .medium-zoom-image--opened {
-    z-index: 101 !important;
-  }
-  .sl-markdown-content img:not(.icon) {
-    cursor: zoom-in;
-  }
-</style>

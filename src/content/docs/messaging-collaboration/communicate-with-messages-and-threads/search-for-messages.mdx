@@ -6,11 +6,11 @@ description: "تعرف على كيفية استخدام محرك بحث منصة
 
 import { Tabs,Icon , TabItem, Steps,Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import FAIcon from "../../../../components/FAIcon.astro";
 
 {/* استيراد الأصول المرئية */}
 import searchMessages from '../../../../images/search-messages.png';
 import searchMessagesExpanded from '../../../../images/search-messages-expanded.png';
-import searchAllTeams from '../../../../images/search-all-teams.png';
 import jumpToMessage from '../../../../images/jump-to-message.png';
 import mobileSearch from '../../../../images/mobile-search-for-messages.jpg';
 import mobileTeamSelection from '../../../../images/mobile-search-message-team-selection.jpg';
@@ -18,11 +18,11 @@ import mobileSearchHashtags from '../../../../images/mobile-search-message-crite
 import mobileSearchModifiers from '../../../../images/mobile-search-message-with-modifiers.jpg';
 import mobileSearchResults from '../../../../images/mobile-search-message-results.jpg';
 import searchFiles from '../../../../images/search-files.png';
-import fileSearchFilter from '../../../../images/file-search-filter.png';
-import channelFilesIcon from '../../../../images/channel-files-icon.png';
-import calendarImg from '../../../../images/calendar2.png';
+import fileSearchFilter from '../../../../images/file-search-filter.jpg';
+import channelFilesIcon from '../../../../images/channel-files-filters.gif';
+import calendarImg from '../../../../images/calendar2.gif';
 
-استخدم بحث منصة تعاون للعثور على الرسائل والردود ومحتويات الملفات. يمكنك أيضًا البحث عن طريق [الوسوم](#الوسوم-hashtags)، أو إجراء عمليات بحث أكثر تقدمًا باستخدام [معاملات البحث](#معاملات-البحث-search-modifiers).
+استخدم بحث منصة تعاون للعثور على الرسائل والردود ومحتويات الملفات. يمكنك أيضًا البحث عن طريق [الوسوم](#الوسوم)، أو إجراء عمليات بحث أكثر تقدمًا باستخدام [معاملات البحث](#معاملات-البحث).
 
 
 
@@ -32,9 +32,12 @@ import calendarImg from '../../../../images/calendar2.png';
   <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
     1. اختر حقل البحث، ثم اختر **الرسائل**، وأدخل معايير البحث الخاصة بك.
-       <Image src={searchMessages} alt="حقل البحث" width={600} />
+       <Image src={searchMessages} alt="حقل البحث" width={600} data-origin="light"/>
 
-   
+    2. يمكن ايضا التصفية النتائج البحث من خلال  [معاملات البحث](#معاملات-البحث).
+       <Image src={calendarImg} alt="حقل البحث" width={600} data-origin="light"/>
+
+
        <div style={{ padding: '1rem', backgroundColor: 'rgba(52, 152, 219, 0.1)', borderInlineStart: '4px solid #3498db', borderRadius: '0.25rem', margin: '1rem 0' }}>
          <strong>💡 تلميح:</strong> بدءًا من الإصدار v10.10، يتوفر معامل البحث `from:` للبحث عبر الفرق.
        </div>
@@ -46,17 +49,15 @@ import calendarImg from '../../../../images/calendar2.png';
 
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
-    1. اضغط على أيقونة **البحث** [\|search-icon\|](##SUBST##|search-icon|) في أسفل التطبيق.
+    1. اضغط على أيقونة **البحث**<FAIcon name="search" /> في أسفل التطبيق.
        <Image src={mobileSearch} alt="أيقونة البحث الجوال" width={300} />
 
-    2. اضغط على **جميع الفرق** للبحث الشامل أو اختر فريقًا محددًا.
-       <Image src={mobileTeamSelection} alt="اختيار الفريق" width={300} />
-
-    3. أدخل معايير البحث والوسوم المطلوبة.
+    2. أدخل معايير البحث والوسوم المطلوبة.
        <Image src={mobileSearchHashtags} alt="إدخال معايير البحث" width={300} />
 
-    4. استخدم [معاملات البحث](#معاملات-البحث-search-modifiers) لتحسين النتائج.
+    3. استخدم [معاملات البحث](#معاملات-البحث) لتحسين النتائج.
        <Image src={mobileSearchModifiers} alt="تطبيق المعاملات" width={300} />
+    4. نتائج البحث
        <Image src={mobileSearchResults} alt="نتائج البحث جوال" width={300} />
     </Steps>
   </TabItem>
@@ -69,11 +70,17 @@ import calendarImg from '../../../../images/calendar2.png';
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    اختر أيقونة **ملفات القناة  <fa class="fa-solid fa-save" />**  بجانب اسم القناة.
-    <Image src={channelFilesIcon} alt="أيقونة ملفات القناة" width={300} />
+    اختر أيقونة **ملفات   <fa class="fa-solid fa-file" />**  بجانب حقل البحث.
+    <Image src={channelFilesIcon} alt="أيقونة ملفات القناة" />
   </TabItem>
   <TabItem label="الهاتف المحمول" icon="mobile">
-    اضغط على اسم القناة ثم اختر **الملفات**.
+     اختر **الملفات**.
+
+      <Steps>
+    1. اختيار فئة ملف البحث **تصفية حسب نوع الملف**.
+       <Image src={fileSearchFilter} alt="أيقونة البحث الجوال" width={300} />
+
+    </Steps>
   </TabItem>
 </Tabs>
 
