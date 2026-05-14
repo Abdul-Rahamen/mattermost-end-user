@@ -1,67 +1,91 @@
 
-/* ============================
-    دعم الاتجاه من اليمين لليسار للجداول (RTL Tables Support)
-    يضمن هذا الملف أن تظهر كافة الجداول في المشروع باتجاه صحيح ومنظم.
-   ============================ */
 
-/* 1. ضبط اتجاه الجداول بالكامل وترتيب الأعمدة */
+
+/* ==========================================================================
+   تنسيق الجداول (Tables) - النسخة النهائية بتباين عالٍ للهيدر
+   ========================================================================== */
+
+/* 1. التنسيق العام (الوضع الفاتح - Light Mode) */
 .sl-markdown-content table {
-    direction: rtl !important;
-    width: 100% !important;
-    border-collapse: separate !important; /* ضروري لعمل الحواف المنحنية */
-    border-spacing: 0 !important;
-    margin-block: 1.5rem !important;
     display: table !important;
-    border-radius: 12px !important; /* الحواف المنحنية */
-    overflow: hidden !important;
-    border: 1px solid var(--sl-color-gray-5) !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important; /* لمسة جمالية بريميوم */
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: 1px solid #d1d5db !important; /* حدود رمادية صريحة */
+    box-shadow: none !important;
+    margin: 2rem 0 !important;
+    background-color: #ffffff !important;
+    direction: rtl;
 }
 
-/* 2. مسافات الخلايا والحدود الداخلية */
-.sl-markdown-content th, 
-.sl-markdown-content td {
+/* رأس الجدول - تم تغميقه ليصبح رمادي متوسط (Silver/Gray) */
+:root[data-theme='light'] .sl-markdown-content thead {
+    background-color:  #f3f4f6 !important; /* درجة أغمق من السابق (Slate 100-200) */
+}
+
+:root[data-theme='light'] .sl-markdown-content th {
+    background-color:  #f3f4f6 !important; /* درجة أغمق من السابق (Slate 100-200) */
+    color: #1f2937 !important; /* نص أسود كربوني غامق */
+    font-weight: 700 !important; /* سماكة أكبر للخط */
+    font-size: 0.9rem !important;
+    padding: 0.85rem 1.5rem !important;
     text-align: right !important;
-    padding: 14px 18px !important;
-    border-bottom: 1px solid var(--sl-color-gray-5) !important;
-    border-inline-end: 1px solid var(--sl-color-gray-5) !important;
+    border: 1px solid #d1d5db !important; /* حدود الهيدر واضحة جداً */
+    direction: rtl;
 }
 
-/* إزالة الحدود الزائدة لضمان نظافة التصميم */
-.sl-markdown-content th:last-child, 
-.sl-markdown-content td:last-child {
-    border-inline-end: none !important;
+/* تنسيق الخلايا (محتوى الجدول) */
+.sl-markdown-content td {
+    padding: 1rem 1.5rem !important;
+    font-size: 0.9rem !important;
+    color: #111827 !important;
+    border: 1px solid #dee2eb !important;
+    background-color: #ffffff !important;
+    direction: rtl;
+
 }
 
-.sl-markdown-content tbody tr:last-child td {
-    border-bottom: none !important;
+/* إلغاء تظليل الصفوف المتبادل */
+.sl-markdown-content tr, 
+.sl-markdown-content tr:nth-child(2n) {
+    background-color: #ffffff !important;
+    direction: rtl;
+
 }
 
-/* 3. تنسيق رأس الجدول (Header) لتمييزه بصرياً */
-thead th {
-    background-color: var(--sl-color-gray-6) !important;
-    color: var(--sl-color-white) !important;
-    font-weight: 700 !important;
+/* 2. التنسيق المخصص للوضع الليلي (Dark Mode) 
+   الخلفية شفافة تماماً كما في صورة المطلوب
+   ========================================================================== */
+:root[data-theme='dark'] .sl-markdown-content table {
+    background-color: transparent !important;
+    border: 1px solid #374151 !important;
+    direction: rtl;
+
 }
 
-/* 4. الحفاظ على اتجاه اختصارات الكيبورد (KBD) لتبقى LTR حتى داخل الجدول العربي */
-td kbd, 
-td .kbd-shortcut {
-    direction: ltr !important;
-    display: inline-block !important;
-    unicode-bidi: isolate !important;
+:root[data-theme='dark'] .sl-markdown-content thead {
+    background-color: #1f2937 !important; /* هيدر داكن متناسق مع الخلفية */
+    direction: rtl;
+
 }
 
-/* 5. تحسين مظهر الصفوف وتأثير الحوم (Hover) */
-tbody tr:hover {
-    background-color: var(--sl-color-gray-6) !important;
+:root[data-theme='dark'] .sl-markdown-content th {
+    color: #d1d5db !important; 
+    border: 1px solid #374151 !important;
+    font-weight: 600 !important;
+    direction: rtl;
+
 }
 
-/* 6. ضمان التجاوب في الشاشات الصغيرة */
-@media (max-width: 50rem) {
-    table {
-        display: block !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
-    }
+:root[data-theme='dark'] .sl-markdown-content td {
+    background-color: transparent !important;
+    color: #f9fafb !important;
+    border: 1px solid #374151 !important;
+    direction: rtl;
+
+}
+
+:root[data-theme='dark'] .sl-markdown-content tr {
+    background-color: transparent !important;
+    
+
 }

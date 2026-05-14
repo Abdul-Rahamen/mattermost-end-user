@@ -9,7 +9,8 @@ import addChannelsImg from '../../../../images/add-channels-button.gif';
 import writeDmImg from '../../../../images/write-dm.png';
 import mobileCreateImg from '../../../../images/create-channel-or-open-direct-message-on-mobile.jpg';
 import mobilePrivateImg from '../../../../images/private-channel-create.jpg';
-import mobileGroupImg from '../../../../images/start-group-conversation.jpg';
+import mobileChooseGroupMembers from '../../../../images/choose-group-members.jpg';
+import mobileGroupImg from '../../../../images/start-conversion.jpg';
 
 تمنح **منصة تعاون** الصلاحية لجميع المستخدمين لإنشاء مساحات عمل مخصصة، سواء كانت قنوات مفتوحة للنقاش العام أو قنوات خاصة للمواضيع الحساسة، ما لم يقم مسؤول النظام بتقييد هذه الصلاحيات.
 
@@ -59,21 +60,27 @@ import mobileGroupImg from '../../../../images/start-group-conversation.jpg';
     </Steps>
 
     <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', margin: '20px 0' }}>
-        <Image src={mobilePrivateImg} alt="تفعيل الخصوصية في الجوال" height={400} style={{ width: 'auto', borderRadius: '12px', border: '1px solid #eee' }} />
+        <Image src={mobilePrivateImg} alt="تفعيل الخصوصية في الجوال"  class="phone-screenshots" />
     </div>
 
     ### بدء رسالة مباشرة أو جماعية
 
     <Steps>
     1. اضغط على أيقونة الزائد `+` في الأعلى.
-    2. اختر **فتح رسالة مباشرة**.
+    2. اختر **ابدء الدردشة**.
+    </Steps>
+    <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', margin: '20px 0' }}>
+        <Image src={mobileCreateImg} alt="إنشاء قناة عبر الجوال" class="phone-screenshots" />
+    </div>
+    <Steps>
     3. حدد الشخص أو مجموعة الأشخاص (حتى 7) ثم اضغط على **بدء**.
     </Steps>
-
-    <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', margin: '20px 0' }}>
-        <Image src={mobileCreateImg} alt="إنشاء قناة عبر الجوال" height={400} style={{ width: 'auto', borderRadius: '12px', border: '1px solid #eee' }} />
-        <Image src={mobileGroupImg} alt="واجهة الرسائل الجماعية في تطبيق الجوال" height={400} style={{ width: 'auto', borderRadius: '12px', border: '1px solid #eee' }}  />
-    </div>
+        <Image src={mobileChooseGroupMembers} alt="واجهة الرسائل الجماعية في تطبيق الجوال" class="phone-screenshots"  />    
+        
+    <Steps>
+    4. **بدء بالمحادثة**.
+    </Steps>
+        <Image src={mobileGroupImg} alt="واجهة الرسائل الجماعية في تطبيق الجوال" class="phone-screenshots"  />
   </TabItem>
 </Tabs>
 

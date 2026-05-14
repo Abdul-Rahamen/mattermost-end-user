@@ -1,0 +1,57 @@
+---
+// src/components/CustomTabItem.astro
+const { label, icon } = Astro.props;
+---
+<style is:global>
+  /* استهداف دقيق جداً للمكونات */
+  
+  /* 1. الحاوية الخارجية */
+  .custom-tabs-wrapper starlight-tabs {
+    border: 1px solid var(--sl-color-gray-5) !important;
+    border-radius: 8px !important;
+    display: block;
+    overflow: hidden;
+  }
+
+  /* 2. شريط التبويبات */
+  .custom-tabs-wrapper .tablist {
+    background-color: var(--sl-color-bg-nav) !important;
+    border-bottom: 1px solid var(--sl-color-gray-5) !important;
+    justify-content: flex-end !important; /* لليمين */
+    padding-inline: 1rem !important;
+    display: flex !important;
+  }
+
+  /* 3. الزر - التعديل الجوهري هنا */
+  .custom-tabs-wrapper [role="tab"] {
+    position: relative;
+    border: none !important;
+    background: none !important;
+    padding: 12px 20px !important;
+    color: var(--sl-color-gray-3) !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  /* 4. الحالة النشطة - نستخدم shadow لضمان السماكة والقوة */
+  .custom-tabs-wrapper [role="tab"][aria-selected="true"] {
+    color: #10b981 !important; /* لون الأخضر */
+    font-weight: 700 !important;
+    /* هذا سيعطيك خطاً سفلياً بسمك 4px حقيقي وواضح جداً */
+    box-shadow: inset 0 -4px 0 0 #10b981 !important; 
+  }
+
+  /* 5. إزالة أي خطوط افتراضية قد تضعها Starlight تحت الأزرار */
+  .custom-tabs-wrapper [role="tab"]::after {
+    display: none !important;
+  }
+
+  .custom-tabs-wrapper .tabpanel {
+    padding: 2rem 1.5rem !important;
+  }
+</style>
+
+<div class="custom-tabs-wrapper">
+  <slot />
+</div>

@@ -12,6 +12,8 @@ import mobileMoreOptions from '../../../../images/mobile-select-more-options-for
 import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
 import mobileEditChannel from '../../../../images/mobile-edit-channel.jpg';
 import mobileConfirmArchive from '../../../../images/mobile-confirm-archive-a-channel.jpg';
+import archiveDesktopChannelImg from '../../../../images/archive-desktop-channels.png';
+import unarchiveDesktopChannelImg from '../../../../images/unarchive-desktop-channels.png';
 import unarchiveChannelImg from '../../../../images/unarchive-channel.png';
 import mobileUnarchive from '../../../../images/mobile-unarchive-a-channel.jpg';
 import mobileConfirmUnarchive from '../../../../images/mobile-confirm-unarchive-a-channel.jpg';
@@ -26,26 +28,28 @@ import mobileConfirmUnarchive from '../../../../images/mobile-confirm-unarchive-
 
 
 <Tabs>
-  <TabItem label="الويب/سطح المكتب (Web/Desktop)" icon="laptop">
-    لتأرشفة قناة: افتح قائمة القناة من اسم القناة في أعلى اللوحة المركزية ثم اختر **أرشفة القناة **.
+  <TabItem label="الويب/سطح المكتب" icon="laptop">
+    لتأرشفة قناة: افتح قائمة القناة من اسم القناة في أعلى اللوحة المركزية ثم اختر **أرشفة القناة**.
+           <Image src={archiveDesktopChannelImg} alt="Step 1" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+
   </TabItem>
 
-  <TabItem label="الهاتف المحمول (Mobile)" icon="mobile">
+  <TabItem label="الهاتف المحمول " icon="mobile">
     <Steps>
     1. اضغط على القناة التي تريد أرشفتها.
-       <Image src={mobileSelectChannel} alt="Step 1" width={300} style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+       <Image src={mobileSelectChannel} alt="Step 1" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
 
-    2. اضغط أيقونة **المزيد ** في الزاوية العلوية اليمنى.
-       <Image src={mobileMoreOptions} alt="Step 2" width={300} style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    2. اضغط علئ اسم القناه او المجموعة
+       <Image src={mobileMoreOptions} alt="Step 2" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
 
-    3. اضغط **عرض المعلومات **.
-       <Image src={mobileViewInfo} alt="Step 3" width={300} style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    3. اضغط **اعدادت الدردشة**.
+       <Image src={mobileViewInfo} alt="Step 3" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
 
-    4. اختر **أرشفة القناة ** ثم أكد بالضغط على **نعم (Yes)**.
-       <Image src={mobileEditChannel} alt="Step 4" width={300} style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    4. اختر **أرشفة الدردشة**.
+       <Image src={mobileEditChannel} alt="Step 4" class="phone-screenshots" />
 
     5. اضغط **نعم ** للتأكيد النهائي.
-       <Image src={mobileConfirmArchive} alt="Step 5" width={300} style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+       <Image src={mobileConfirmArchive} alt="Step 5" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
     </Steps>
   </TabItem>
 </Tabs>
@@ -68,32 +72,34 @@ import mobileConfirmUnarchive from '../../../../images/mobile-confirm-unarchive-
 يمكن لمسؤولي النظام ومسؤولي الفريق استعادة القنوات المؤرشفة — يتم استعادة العضويات والمحتوى ما لم تحذف الرسائل أو الملفات بواسطة سياسة الاحتفاظ.
 
 <Tabs>
-  <TabItem label="الويب/سطح المكتب (Web/Desktop)" icon="laptop">
+  <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
     1. للعثور على القناة، ابحث عنها ثم افتحها.
-    2. من قائمة القناة اختر **إلغاء أرشفة القناة **.
+    2. من قائمة القناة اختر **إلغاء أرشفة القناة**.
     </Steps>
-    <Image src={unarchiveChannelImg} alt="Unarchive Channel Web" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }}/>
+    <Image src={unarchiveDesktopChannelImg} alt="Unarchive Channel Web" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }}/>
   </TabItem>
 
-  <TabItem label="الهاتف المحمول (Mobile)" icon="mobile">
-    <Steps>
+  <TabItem label="الهاتف المحمول " icon="mobile">
+الغاء الارشفة غير جاهزه  في تطبيق الهاتف حاليا ,  لا تزال  قيد التطوير
+
+    {/* <Steps>
     1. اضغط على القناة التي تريد إلغاء أرشفتها.
-       <Image src={mobileSelectChannel} alt="Select Channel" width={300} style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+       <Image src={mobileSelectChannel} alt="Select Channel" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
 
     2. اضغط أيقونة **المزيد **.
-       <Image src={mobileMoreOptions} alt="More Options" width={300} style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+       <Image src={mobileMoreOptions} alt="More Options" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
 
     3. اضغط **عرض المعلومات **.
-       <Image src={mobileViewInfo} alt="View Info" width={300} style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+       <Image src={mobileViewInfo} alt="View Info" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
 
     4. اضغط **إلغاء أرشفة القناة **.
-       <Image src={mobileUnarchive} alt="Unarchive Click" width={300} 
+       <Image src={mobileUnarchive} alt="Unarchive Click" class="phone-screenshots"
        style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
 
     5. اضغط **نعم (Yes)** للتأكيد.
-       <Image src={mobileConfirmUnarchive} alt="Confirm Unarchive" width={300}    style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
-    </Steps>
+       <Image src={mobileConfirmUnarchive} alt="Confirm Unarchive" class="phone-screenshots"   style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    </Steps> */}
   </TabItem>
 </Tabs>
 
