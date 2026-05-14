@@ -12,7 +12,7 @@ export default defineConfig({
       components:{
         // @ts-ignore
    
-        Footer: "/src/components/ZoomImage.astro",
+        Footer: "/src/components/Footer.astro",
            },
       logo: {
         src: "./src/assets/logo-light.png",
@@ -24,15 +24,6 @@ export default defineConfig({
           attrs: {
             rel: 'stylesheet',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
-          },
-        },{
-          tag: 'script',
-          attrs: {
-            src: '/scripts/zoom.js',
-            // type: 'module',
-              defer: true,
-
-            
           },
         },
         {
