@@ -20,6 +20,7 @@
 /* 3. تعديل المسافات بين عناصر القائمة لتطابق التصميم النظيف */
 .sidebar-content li {
     margin-bottom: 4px !important; 
+    border: none !important;
 }
 
 /* 4. إزالة الخط السفلي عند الوقوف على الروابط في السايد بار */
@@ -102,6 +103,7 @@ kbd, .kbd-shortcut {
     border-inline-start-width: 1.5px !important;
     padding-block: 0.5rem !important;
 }
+
 /* تخصيص أيقونات البطاقات داخل CardGrid */
 .sl-markdown-content .card-grid .card {
     /* تغيير لون أيقونة الـ SVG إلى الأخضر */
