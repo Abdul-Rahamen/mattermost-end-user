@@ -8,11 +8,12 @@ import { Image } from 'astro:assets';
 import FAIcon from "../../../../components/FAIcon.astro";
 
 import browseChannels from '../../../../images/browse-channels.png';
+import mobileBrowseChannels from '../../../../images/mobile-browse-channels.jpg';
 import joinChannels from '../../../../images/join-channels.png';
 import mobileSelectChannel from '../../../../images/mobile-select-a-channel.jpg';
 import mobileBrowsePublic from '../../../../images/mobile-browse-public-channels.jpg';
 import mobileMoreOptions from '../../../../images/mobile-select-more-options-for-a-channel.jpg';
-import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
+import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-leave.jpg';
 import mobileConfirmLeave from '../../../../images/mobile-confirm-leave-a-channel.jpg';
 
 تعتمد مرونة العمل في **منصة تعاون** على قدرتك على الوصول إلى مساحات النقاش الصحيحة في الوقت المناسب. تنقسم القنوات في المنصة إلى نوعين أساسيين يحددان كيفية الوصول إليهما.
@@ -52,6 +53,7 @@ import mobileConfirmLeave from '../../../../images/mobile-confirm-leave-a-channe
        <Image src={mobileSelectChannel} alt="أيقونة الإضافة في الجوال" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
 
     2. اختر **تصفح القنوات**.
+       <Image src={mobileBrowseChannels} alt="قائمة القنوات العامة في الجوال" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
     
     3. اضغط على اسم القناة التي تود الانضمام إليها من القائمة الظاهرة.
        <Image src={mobileBrowsePublic} alt="قائمة القنوات العامة في الجوال" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
@@ -74,15 +76,15 @@ import mobileConfirmLeave from '../../../../images/mobile-confirm-leave-a-channe
 
 <Tabs>
   <TabItem label="الويب وسطح المكتب" icon="laptop">
-    اضغط على اسم القناة في الأعلى لفتح القائمة المنسدلة، ثم اختر **مغادرة القناة**.
+    اضغط على اسم القناة او المجموعة  في الأعلى لفتح القائمة المنسدلة، ثم اختر **مغادرة القناة**.
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
     1. افتح القناة التي تود مغادرتها.
-    2. اضغط على أيقونة **المزيد (⋮)** في الزاوية العلوية.
+    2. اضغط علئ اسم القناه او المجموعة
        <Image src={mobileMoreOptions} alt="خيارات إضافية" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
-    3. اختر **عرض المعلومات** ثم اضغط على خيار **مغادرة القناة**.
+    3. اختر **عرض المعلومات** ثم اضغط على خيار **مغادرة المجموعة**.
        <Image src={mobileViewInfo} alt="معلومات القناة والمغادرة" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
     4. أكد العملية بالضغط على **مغادرة**.
        <Image src={mobileConfirmLeave} alt="تأكيد المغادرة" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />

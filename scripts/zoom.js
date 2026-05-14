@@ -1,56 +1,5 @@
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
-import mediumZoom from 'medium-zoom';
-
-
-
-// const setupZoom = () => {
-//     const images = document.querySelectorAll('.sl-markdown-content img:not(.icon)');
-
-//   // 1. إعداد المكتبة الأساسية
-//   const zoom = mediumZoom(images, {
-//     margin: 24,
-//     background: 'rgba(0, 0, 0, 0.8)',
-//     scrollOffset: 0, // لمنع إغلاق الصورة فور السكرول
-//   });
-
-//   // 2. إضافة ميزة التكبير عبر عجلة الماوس
-//   zoom.on('opened', () => {
-//     const zoomImage = document.querySelector('.medium-zoom-image--opened');
-    
-//     const handleWheel = (event) => {
-//       event.preventDefault();
-      
-//       // الحصول على قيمة التكبير الحالية أو البدء بـ 1
-//       let currentScale = parseFloat(zoomImage.style.transform.match(/scale\(([^)]+)\)/)?.[1] || 1);
-      
-//       // تحديد اتجاه التكبير (لأعلى يكبر، لأسفل يصغر)
-//       const delta = event.deltaY > 0 ? -0.1 : 0.1;
-//       let newScale = currentScale + delta;
-
-//       // وضع حدود للتكبير (بين 1 و 3 أضعاف مثلاً)
-//       newScale = Math.min(Math.max(1, newScale), 3);
-
-//       // تطبيق التكبير الجديد مع الحفاظ على التوسيط
-//       zoomImage.style.transform = `scale(${newScale})`;
-//     };
-
-//     window.addEventListener('wheel', handleWheel, { passive: false });
-
-//     // تنظيف الحدث عند إغلاق الصورة
-//     zoom.on('closed', () => {
-//       window.removeEventListener('wheel', handleWheel);
-//     });
-//   });
-// };
-
-// // تشغيل السكربت مع نظام Astro
-// document.addEventListener('astro:page-load', setupZoom);
-// setupZoom()
-
-
-// استيراد مباشر من الحزمة بدون تحديد مسار الملفات الداخلية
-
 
 
 

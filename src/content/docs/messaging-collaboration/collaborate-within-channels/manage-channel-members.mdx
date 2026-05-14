@@ -13,17 +13,22 @@ import mobileEditChannel from '../../../../images/mobile-edit-channel.jpg';
 import mobileSelectMembers from '../../../../images/mobile-select-members-to-add-to-a-channel.jpg';
 import mobileAddSelected from '../../../../images/mobile-add-selected-member-to-a-channel.jpg';
 import mobileMentionPrompt from '../../../../images/mobile-add-user-to-a-channel-by-mentioning.gif';
+import desktopMentionPrompt from '../../../../images/desktop-add-user-to-a-channel-by-mentioning.png';
 import addMemberPop from '../../../../images/add-member-pop.jpg';
 import mobileAddFromProfile from '../../../../images/mobile-add-user-from-profile.jpg';
 import mobileMoreOptions from '../../../../images/mobile-select-more-options-for-a-channel.jpg';
-import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
+// import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
 import mobileConfirmLeave from '../../../../images/mobile-confirm-leave-a-channel.jpg';
-import removeMemberDesktop from '../../../../images/remove-member-from-channel.png';
+import removeMemberDesktop from '../../../../images/remove-member-from-channel.gif';
 import mobileViewMembers from '../../../../images/mobile-view-members-of-a-channel.jpg';
 import mobileManageList from '../../../../images/mobile-manage-channel-members-list.jpg';
 import mobileRemoveAction from '../../../../images/mobile-remove-user-from-a-channel.jpg';
 import mobileConfirmRemove from '../../../../images/mobile-confirm-remove-user-from-channel.jpg';
 import mobileDoneExit from '../../../../images/mobile-exit-after-removing-user-from-a-channel.jpg';
+import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
+import mobileViewLeaveInfo from '../../../../images/mobile-select-view-info-for-a-leave.jpg';
+import mobileConfirmLeaveAe from '../../../../images/mobile-confirm-leave-a-channel.jpg';
+import destopLeaveChannelNow from '../../../../images/leave-from-a-channel.png';
 
 
 ### إضافة أعضاء إلى قناة 
@@ -33,7 +38,7 @@ import mobileDoneExit from '../../../../images/mobile-exit-after-removing-user-f
 عند تمكين عناصر التحكم في الوصول المستندة إلى السمات ، ستظهر لك تفاصيل حول سمات المستخدم المسموح لها بالوصول إلى القناة. لن يظهر في نتائج البحث إلا المستخدمون الذين يستوفون المتطلبات عند إضافة أعضاء لتلك القناة.
 
 <Tabs>
-  <TabItem label="الويب/سطح المكتب (Web/Desktop)" icon="laptop">
+  <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
     1. حدد اسم القناة في أعلى الجزء الأوسط لفتح القائمة المنسدلة، ثم اختر **إضافة أعضاء **.
        <Image src={addMemberImg} alt="استخدم الخيارات المتاحة عبر اسم القناة لإضافة عضو." />
@@ -46,16 +51,16 @@ import mobileDoneExit from '../../../../images/mobile-exit-after-removing-user-f
     </Aside>
   </TabItem>
 
-  <TabItem label="الهاتف المحمول (Mobile)" icon="mobile">
+  <TabItem label="الهاتف المحمول " icon="mobile">
     <Steps>
     1. اضغط على اسم القناة في أعلى الشاشة.
-       <Image src={mobileNameClick} alt="اضغط على اسم القناة لاستكشاف الخيارات." style={{ width: '300px' }} />
+      
+       <Image src={mobileMoreOptions} alt="اضغط على اسم القناة لاستكشاف الخيارات." style={{ width: '300px' }} />
     2. اضغط على **إضافة أعضاء **.
-       <Image src={mobileEditChannel} alt="اضغط على إضافة أعضاء." style={{ width: '300px' }} />
+       <Image src={mobileViewLeaveInfo} alt="اضغط على إضافة أعضاء." style={{ width: '300px' }} />
     3. اختر الأعضاء المراد إضافتهم. يمكنك التمرير عبر القائمة الأبجدية أو البحث باستخدام حقل البحث.
        <Image src={mobileSelectMembers} alt="اختر مستخدماً من القائمة." style={{ width: '300px' }} />
     4. اضغط على **إضافة أعضاء ** للتأكيد.
-       <Image src={mobileAddSelected} alt="تأكيد إضافة الأعضاء." style={{ width: '300px' }} />
     </Steps>
   </TabItem>
 </Tabs>
@@ -63,7 +68,7 @@ import mobileDoneExit from '../../../../images/mobile-exit-after-removing-user-f
 #### الإشارة إلى المستخدمين 
 يمكنك أيضاً [الإشارة إلى المستخدمين عبر @mention](/messaging-collaboration/communicate-with-messages-and-threads/mention-people) لإضافتهم إلى القناة. إذا لم يكونوا أعضاءً، فسيقوم منصة تعاون بمطالبتك بإضافتهم.
 
-<Image src={mobileMentionPrompt} alt="مطالبة منصة تعاون بإضافة مستخدم عند الإشارة إليه." />
+<Image src={desktopMentionPrompt} alt="مطالبة منصة تعاون بإضافة مستخدم عند الإشارة إليه." />
 
 
 ---
@@ -73,19 +78,21 @@ import mobileDoneExit from '../../../../images/mobile-exit-after-removing-user-f
 يمكنك مغادرة القنوات العامة أو الخاصة في أي وقت.
 
 <Tabs>
-  <TabItem label="الويب/سطح المكتب (Web/Desktop)" icon="laptop">
-    حدد اسم القناة في الجزء العلوي لفتح القائمة المنسدلة، ثم اختر **مغادرة القناة **. 
+  <TabItem label="الويب/سطح المكتب" icon="laptop">
+    حدد اسم القناة في الجزء العلوي لفتح القائمة المنسدلة، ثم اختر **مغادرة المجموعة **. 
     إذا كانت لديك صلاحيات إدارة الأعضاء، يمكنك أيضاً المغادرة عبر الذهاب إلى **عرض المعلومات  > الأعضاء > إدارة ** واختيار اسمك.
+    <Image src={destopLeaveChannelNow} alt="مطالبة منصة تعاون بإضافة مستخدم عند الإشارة إليه." />
+
   </TabItem>
 
-  <TabItem label="الهاتف المحمول (Mobile)" icon="mobile">
+  <TabItem label="الهاتف المحمول " icon="mobile">
     <Steps>
     1. داخل القناة، اضغط على أيقونة **المزيد ** في الزاوية العلوية اليمنى.
        <Image src={mobileMoreOptions} alt="الوصول إلى خيارات القناة." style={{ width: '300px' }} />
-    2. اضغط على **مغادرة القناة **.
-       <Image src={mobileViewInfo} alt="خيار مغادرة القناة." style={{ width: '300px' }} />
-    3. اضغط على **مغادرة (Leave)** للتأكيد.
-       <Image src={mobileConfirmLeave} alt="تأكيد المغادرة." style={{ width: '300px' }} />
+    2. اضغط على **مغادرة المجموعة **.
+       <Image src={mobileViewLeaveInfo} alt="خيار مغادرة القناة." style={{ width: '300px' }} />
+    3. اضغط على **مغادرة ** للتأكيد.
+       <Image src={mobileConfirmLeaveAe} alt="تأكيد المغادرة." style={{ width: '300px' }} />
     </Steps>
   </TabItem>
 </Tabs>
@@ -97,29 +104,30 @@ import mobileDoneExit from '../../../../images/mobile-exit-after-removing-user-f
 يمكن لأي عضو (بناءً على الصلاحيات) إزالة أعضاء آخرين من القناة.
 
 <Tabs>
-  <TabItem label="الويب/سطح المكتب (Web/Desktop)" icon="laptop">
+  <TabItem label="الويب/سطح المكتب" icon="laptop">
     لديك طريقتان لإزالة الأعضاء:
-    - افتح قائمة القناة المنسدلة واختر **إدارة الأعضاء **. اختر [دور المستخدم](/messaging-collaboration/learn-about-mattermost-roles/)، ثم اختر **إزالة من القناة **.
-    - اختر أيقونة **عرض المعلومات **، ثم **الأعضاء **، ثم **إدارة **، وحدد **إزالة من القناة**.
+    - افتح قائمة القناة المنسدلة واختر **إدارة الأعضاء**. اختر [دور المستخدم](/messaging-collaboration/learn-about-mattermost-roles/)، ثم اختر **إزالة من القناة **.
+    - اختر أيقونة **عرض المعلومات**، ثم **الأعضاء **، ثم **إدارة**، وحدد**إزالة من القناة**.
     <Image src={removeMemberDesktop} alt="إزالة عضو عبر إعدادات القناة." />
   </TabItem>
 
-  <TabItem label="الهاتف المحمول (Mobile)" icon="mobile">
+  <TabItem label="الهاتف المحمول " icon="mobile">
     <Steps>
-    1. اضغط على أيقونة **المزيد** في الزاوية العلوية اليمنى.
-    2. اضغط على **عرض المعلومات **.
-       <Image src={mobileViewInfo} alt="عرض معلومات القناة." style={{ width: '300px' }} />
-    3. اضغط على **الأعضاء **.
-       <Image src={mobileEditChannel} alt="الدخول لقائمة الأعضاء." style={{ width: '300px' }} />
-    4. اضغط على **إدارة ** في الزاوية العلوية اليمنى.
+    1. اختار القناه او المجموعة .
+    2. اضغط علئ اسم القناه او المجموعة
+       <Image src={mobileMoreOptions} alt="عرض معلومات القناة." style={{ width: '300px' }} />
+    3. اضغط على **الأعضاء**.
+       <Image src={mobileViewInfo} alt="الدخول لقائمة الأعضاء." style={{ width: '300px' }} />
+    4. اضغط على **إدارة** في الزاوية العلوية اليمنى.
        <Image src={mobileViewMembers} alt="إدارة أدوار الأعضاء." style={{ width: '300px' }} />
-    5. اضغط على دور المستخدم لتغييره، ثم اختر **إزالة من القناة **.
+    5. اضغط على عضو .
        <Image src={mobileManageList} alt="قائمة إدارة الأعضاء." style={{ width: '300px' }} />
+    6. اضغط على **إزالة من القناة** .
+
        <Image src={mobileRemoveAction} alt="خيار الإزالة." style={{ width: '300px' }} />
-    6. اضغط على **إزالة ** للتأكيد النهائي.
+    7. اضغط على **إزالة** للتأكيد النهائي.
        <Image src={mobileConfirmRemove} alt="تأكيد الإزالة." style={{ width: '300px' }} />
-    7. اضغط على **تم ** للعودة إلى القناة.
-       <Image src={mobileDoneExit} alt="إنهاء العملية." style={{ width: '300px' }} />
+
     </Steps>
   </TabItem>
 </Tabs>

@@ -12,7 +12,8 @@ import mobileTypeMessage from '../../../../images/mobile-type-a-message-in-a-cha
 import mobileSendingGif from '../../../../images/mobile-sending-a-message.gif';
 import globalDraftsGif from '../../../../images/Global-Drafts-Animated-GIF.gif';
 import mobileDraftGif from '../../../../images/mobile-draft-a-message.gif';
-import moreActionsImg from '../../../../images/more-actions.png';
+import moreActionsImg from '../../../../images/more-actions.gif';
+import deleteMessage from "../../../../images/delete-and-edit-messages.gif";
 
 يمكنك إرسال رسائل في القنوات العامة والخاصة، وكذلك إلى مستخدمين آخرين في منصة تعاون. اعتماداً على توقيت إنشاء الرسالة، يمكنك إرسالها فوراً، أو [جدولتها لاحقاً](/messaging-collaboration/communicate-with-messages-and-threads/schedule-messages)، أو [تعيين أولوية الرسالة](/messaging-collaboration/communicate-with-messages-and-threads/set-message-priority).
 
@@ -32,7 +33,7 @@ import moreActionsImg from '../../../../images/more-actions.png';
   <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
     1. أدخل رسالتك في حقل النص في أسفل القناة.
-    2. اختر أيقونة **إرسال** <i class="fa-solid fa-paper-plane" style="color: #1c63ed;"></i> لإرسالها.
+    2. اختر أيقونة **إرسال** <FAIcon name="paper-plane" style="color: #1c63ed;"/> لإرسالها.
     </Steps>
 
     <Aside type="note" title="استخدام لوحة المفاتيح">
@@ -74,7 +75,7 @@ import moreActionsImg from '../../../../images/more-actions.png';
 
 <Steps>
 1. اكتب رسالتك في حقل التأليف.
-2. اختر خيار **إعادة صياغة ** <i class="fa-solid fa-wand-magic-sparkles"></i> من إجراءات الرسالة.
+2. اختر خيار **إعادة صياغة ** <FAIcon name="wand-magic-sparkles"/> من إجراءات الرسالة.
 3. اختر وكيل الذكاء الاصطناعي  المتاح.
 4. اختر أحد خيارات إعادة الصياغة المتاحة:
    - **تحسين الكتابة**: لزيادة الوضوح والاحترافية.
@@ -83,7 +84,7 @@ import moreActionsImg from '../../../../images/more-actions.png';
    - **تبسيط / تلخيص**: لتبسيط اللغة أو استخراج النقاط الأساسية.
    - **موجه مخصص **: تحديد تعليمات مخصصة.
 5. راجع الاقتراح؛ اختر **إعادة توليد ** لتجربة اقتراح جديد أو **تجاهل ** للعودة للنص الأصلي.
-6. اختر **إرسال ** <i class="fa-solid fa-paper-plane" style="color: #1c63ed;"></i>.
+6. اختر **إرسال ** <FAIcon name="paper-plane" style="color: #1c63ed;"/>.
 </Steps>
 
 <Aside type="note">
@@ -104,7 +105,7 @@ import moreActionsImg from '../../../../images/more-actions.png';
   <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
     1. اكتب رسالتك.
-    2. اختر أيقونة **المسح عند القراءة** <i class="fa-solid fa-checked" ></i> في شريط أدوات الرسالة.
+    2. اختر أيقونة **المسح عند القراءة** <FAIcon name="checked"/> في شريط أدوات الرسالة.
     3. اختر **إرسال**.
     </Steps>
   </TabItem>
@@ -161,22 +162,27 @@ import moreActionsImg from '../../../../images/more-actions.png';
 <Tabs>
   <TabItem label="تحرير الرسائل" icon="pencil">
     <Steps>
-    1. اختر أيقونة **المزيد ** <i class="fa-solid fa-ellipsis-vertical"></i> بجانب الرسالة المرسلة.
+    1. اختر أيقونة **المزيد ** <FAIcon name="ellipsis-vertical"/> بجانب الرسالة المرسلة.
        <Image 
          src={moreActionsImg} 
          alt="خيارات تحرير الرسالة" 
          style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '15px auto' }} 
        />
-    2. اختر **تحرير (Edit)** لتعديل النص. (بدءاً من **v10.5**، يمكن تعديل أو إزالة المرفقات أيضاً).
+    2. اختر **تعديل ** لتعديل النص. (بدءاً من **v10.5**، يمكن تعديل أو إزالة المرفقات أيضاً).
     </Steps>
     <Aside type="note">تعديل الرسالة لا يرسل إشعارات إشارة (`@mention`) جديدة أو إشعارات سطح مكتب.</Aside>
   </TabItem>
 
   <TabItem label="حذف الرسائل" icon="trash">
     <Steps>
-    1. اختر أيقونة **المزيد ** <i class="fa-solid fa-ellipsis-vertical"></i>.
+    1. اختر أيقونة **المزيد** <FAIcon name="ellipsis-vertical"/>.
     2. اختر **حذف **.
     3. أكد العملية بالضغط على **حذف** مرة أخرى.
+      <Image 
+         src={deleteMessage} 
+         alt="خيارات تحرير الرسالة" 
+         style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '15px auto' }} 
+       />
     </Steps>
   </TabItem>
 </Tabs>

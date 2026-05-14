@@ -13,6 +13,8 @@ import loginAd from '../../../images/login-ad.png';
 import loginOnelogin from '../../../images/login-onelogin.png';
 import lightImg from '../../../images/light-login.png';
 import darkImg from '../../../images/dark-login.png';
+import FAIcon from "../../../components/FAIcon.astro";
+import { Icon } from '@astrojs/starlight/components';
 
 قم بالوصول إلى مثيل منصة تعاون الخاص بمنظمتك باستخدام بيانات الاعتماد عبر متصفح الويب أو تطبيق سطح المكتب أو تطبيق الجوال لنظامي iOS وAndroid. اعتمادًا على كيفية تكوين منصة التعاون، قد تقوم بتسجيل الدخول باستخدام عنوان البريد الإلكتروني أو اسم مستخدم ل تسجيل الدخول الموحد (SSO)، ثم إدخال كلمة المرور. راجع وثيقة [توفر العميل ](/access-your-workspace/client-availability) لمعرفة الميزات المتاحة على عملاء منصة تعاون المختلفة.
 
@@ -21,7 +23,7 @@ import darkImg from '../../../images/dark-login.png';
 </Aside>
 
 <Tabs>
-  <TabItem label="الويب/سطح المكتب (Web/Desktop)" icon="laptop">
+  <TabItem label="الويب/سطح المكتب" icon="laptop">
     ### متصفح الويب 
     <Steps>
     1. افتح متصفح ويب مدعوم.
@@ -33,7 +35,7 @@ import darkImg from '../../../images/dark-login.png';
     ### تطبيق سطح المكتب 
     <Steps>
     1. حمّل وثبّت تطبيق منصة تعاون لسطح المكتب من App Store (لنظام **macOS**) أو من Microsoft Store (لنظام **Windows**)، أو باستخدام مدير الحزم على **Linux**.
-    2. عند المطالبة، أدخل رابط خادم منصة تعاون واسم العرض للمثال. اسم العرض مفيد عند [الاتصال بمساحات عمل متعددة ](/customize-your-preferences/connect-to-multiple-workspaces).
+    2. عند المطالبة، أدخل رابط خادم منصة تعاون واسم العرض للمثال. اسم العرض مفيد عند <span><Icon name="external" />[الاتصال بمساحات عمل متعددة ](/customize-your-preferences/connect-to-multiple-workspaces).</span>
     3. أدخل بيانات الاعتماد الخاصة بك لتسجيل الدخول.
     4. إذا تطلب الخادم "Authentication secret" فسيُطلب منك إدخاله—أدخله بالضبط كما زوّده مسؤول النظام ثم اختر **موافق (OK)**.
     5. سيُفتح الفريق الأول المعروض في شريط الفرق. إذا لم تكن عضوًا في أي فريق بعد، سيُطلب منك الانضمام إلى أحدهم.

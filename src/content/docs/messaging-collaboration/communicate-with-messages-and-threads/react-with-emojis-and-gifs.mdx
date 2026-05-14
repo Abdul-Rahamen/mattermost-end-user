@@ -15,6 +15,7 @@ import addCustomEmojiBtn from '../../../../images/add-custom-emoji1.png';
 import addCustomEmojiModal from '../../../../images/add_custom_emoji.png';
 import deleteCustomEmoji from '../../../../images/delete_custom_emoji.png';
 import FAIcon from "../../../../components/FAIcon.astro";
+import messagesGifComment from '../../../../images/messages-gifs-comments.jpg';
 
 الرموز التعبيرية  وملفات GIF هي أدوات حيوية للتواصل السريع، التعبير عن المشاعر، أو إضافة لمسة من الفكاهة داخل محادثاتك في منصة تعاون.
 
@@ -37,7 +38,7 @@ import FAIcon from "../../../../components/FAIcon.astro";
     <Image 
       src={recentEmojis} 
       alt="تفاعلات سريعة" 
-      style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
+      
     />
     <Aside type="tip">
       إذا لم تظهر التفاعلات السريعة، فعلها عبر: **الإعدادات** > **العرض** > **التفاعلات السريعة على الرسائل**.
@@ -49,6 +50,13 @@ import FAIcon from "../../../../components/FAIcon.astro";
     1. اضغط مطولاً على أي رسالة.
     2. اختر رمزاً تعبيرياً من قائمة العناصر المستخدمة مؤخراً.
     </Steps>
+     <Image 
+      src={messagesGifComment} 
+      alt="تفاعلات سريعة" 
+      class="phone-screenshots"
+
+    
+    />
   </TabItem>
 </Tabs>
 
@@ -110,17 +118,6 @@ import FAIcon from "../../../../components/FAIcon.astro";
 1. من منتقي الرموز، اختر **الرموز المخصصة **.
    <Image src={addCustomEmojiBtn} alt="زر الإضافة" style={{ width: '100%', maxWidth: '500px', borderRadius: '8px', display: 'block', margin: '10px auto' }} />
 
-2. أدخل اسماً فريداً للرمز (سيعمل مع الإكمال التلقائي).
-3. اختر **تحديد (Select)** وارفع الصورة (يفضل أن تكون مربعة، بصيغة JPG/PNG/GIF، وبحجم أقل من 512 KiB).
-4. اضغط **حفظ**.
-   <Image src={addCustomEmojiModal} alt="نافذة الرفع" style={{ width: '100%', maxWidth: '500px', borderRadius: '8px', display: 'block', margin: '10px auto' }} />
+
 </Steps>
 
-#### حذف الرموز المخصصة
-يمكنك حذف الرموز التي قمت بتحميلها عبر الدخول إلى قسم **الرموز المخصصة** داخل المنتقي، والضغط على **حذف ** بجانب الرمز المطلوب.
-
-<Image 
-  src={deleteCustomEmoji} 
-  alt="حذف الرموز المخصصة" 
-  style={{ width: '100%', maxWidth: '500px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
-/>
