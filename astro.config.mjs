@@ -47,7 +47,7 @@ export default defineConfig({
         './src/styles/image-zoom.css',
         './src/styles/asides.css',
         './src/styles/light-dark-img.css',
-        './src/fonts/EffraVF_Trial_Wght.ttf',
+        './src/fonts/font-face.css',
         './src/styles/searchbar-responsive.css',
         './src/styles/tables-rtl.css',
         "./src/styles/code-style.css",       
