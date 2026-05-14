@@ -38,7 +38,7 @@ export default defineConfig({
 
       ],
       customCss: [
-        'photoswipe/dist/photoswipe.css',
+        'photoswipe/style.css',
         "./src/styles/global.css",
         "./src/styles/sidebar-scroll.css",
         "./src/styles/headings.css",
@@ -534,5 +534,10 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        'photoswipe/dist/photoswipe.css': 'photoswipe/style.css',
+      },
+    },
   },
 });
