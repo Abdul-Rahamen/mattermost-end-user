@@ -91,8 +91,8 @@
 :root[data-theme='light'] .sl-markdown-content .expressive-code {
     --ec-brdCol: #e2e8f0 !important;
     background-color: #ffffff !important;
-    /* عمود أرقام الأسطر (لون أخضر ثابت) ثابت حتى عند التمرير الأفقي */
-    background-image: linear-gradient(to right, var(--color-accent-600) 0%, var(--color-accent-600) 3.5rem, #ffffff 3.5rem, #ffffff 100%) !important;
+    /* عمود أرقام الأسطر ثابت حتى عند التمرير الأفقي */
+    background-image: linear-gradient(to right, #00987e 0%, #00987e 3.5rem, #ffffff 3.5rem, #ffffff 100%) !important;
 }
 
 :root[data-theme='light'] .sl-markdown-content .expressive-code pre {
@@ -142,19 +142,24 @@
 }
 
 /* ============================
-   دعم الكتابة من اليمين لليسار في مكونات الأكواد البرمجية
-   Code Blocks RTL Support
+   بلوكات النص العادي (text/plaintext) — اتجاه RTL
    ============================ */
-
-[dir="rtl"] .expressive-code .ec-line {
-    direction: rtl;
-    text-align: right;
-    unicode-bidi: normal;
-    grid-template-areas: 'code gutter';
-    grid-template-columns: 1fr auto;
+.sl-markdown-content .expressive-code:is([data-language="text"], [data-language="plaintext"], :has([data-language="text"]), :has([data-language="plaintext"]), :has([class*="language-text"]), :has([class*="language-plaintext"])) {
+    direction: rtl !important;
+    text-align: right !important;
 }
 
-[dir="rtl"] .expressive-code .copy {
-    inset-inline-end: auto;
-    inset-inline-start: calc(var(--ec-brdWd) + var(--ec-uiPadInl) / 2);
+.sl-markdown-content .expressive-code:is([data-language="text"], [data-language="plaintext"], :has([data-language="text"]), :has([data-language="plaintext"]), :has([class*="language-text"]), :has([class*="language-plaintext"])) .ec-line {
+    direction: rtl !important;
+    text-align: right !important;
+    unicode-bidi: plaintext !important;
+}
+
+/* تحريك زر النسخ لليسار في بلوكات النص فقط لتجنب التداخل مع النص العربي */
+.sl-markdown-content .expressive-code:is([data-language="text"], [data-language="plaintext"], :has([data-language="text"]), :has([data-language="plaintext"]), :has([class*="language-text"]), :has([class*="language-plaintext"])) .copy {
+    position: absolute !important;
+    top: 0.75rem !important;
+    left: 0.75rem !important;
+    right: auto !important;
+    z-index: 10 !important;
 }

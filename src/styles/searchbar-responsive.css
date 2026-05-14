@@ -5,13 +5,41 @@
    ============================ */
 
 /* 1. الحالة الافتراضية للشاشات الكبيرة (أكبر من 970px) */
+/* نقل اختصار الكيبورد إلى اليسار وإزالة الإطار الخارجي */
 @media (min-width: 970px) {
-    header.header > div.header > div.sl-flex:nth-child(2) {
-        flex: 1 1 auto; /* ينمو ليملأ المساحة المتبقية فقط، ويتقلص عند الحاجة */
-        max-width: var(--sl-content-width, 720px);
-        justify-content: center;
-        margin-inline: 32px;
+
+
+    site-search button {
+        gap: 8px;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
     }
+
+    /* نقل اختصار الكيبورد إلى اليسار */
+    site-search button kbd {
+        order: 1 !important;
+        margin-inline: 0 !important;
+    }
+
+    /* give the spane 70% of the flex area to push the kbd to left */
+    site-search button span {
+        width: 250px !important;
+        display: flex !important;
+        /* keep the text in the start */
+        justify-content: flex-start !important;
+
+    }
+
+    /* إزالة الإطار الخارجي لاختصار الكيبورد */
+    site-search button kbd kbd {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
 }
 
 /* ضمان عدم اختفاء مبدل الثيمات أو تقلصه بشكل مشوه فوق 800px */
@@ -70,9 +98,25 @@
         margin: 0 !important;
     }
 
-    /* إخفاء مبدل الثيمات (Light/Dark) لتوفير المساحة في الهيدر الصغير */
-    starlight-theme-select {
+    /* إخفاء مبدل الثيمات في الهيدر فقط لتوفير المساحة، مع إبقائه في السايدبار */
+    header.header starlight-theme-select {
         display: none !important;
+    }
+
+    /* إخفاء أيقونة العدسة في شريط البحث عند فتح المودال لتجنب التداخل مع زر الإلغاء */
+    :global([data-search-modal-open]) site-search button svg {
+        display: none !important;
+    }
+
+    /* إخفاء أيقونة البحث الافتراضية داخل فورم Pagefind في وضع الجوال لتجنب التداخل */
+    #starlight__search .pagefind-ui__form::before {
+        display: none !important;
+    }
+
+    /* تحسين شكل وحجم مبدل الثيمات في السايدبار وضع الجوال */
+    starlight-theme-select select {
+        font-size: 0.875rem !important; /* تصغير الخط ليناسب الجوال */
+        padding-block: 0.5rem !important; /* تقليل المسافات الرأسية */
     }
 }
 

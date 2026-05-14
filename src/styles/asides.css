@@ -7,54 +7,54 @@
 
 /* Note Variant */
 .starlight-aside--note {
-    --sl-color-asides-text-accent: #0086C9;
-    --sl-color-asides-border: #0086C9;
+    --sl-color-asides-text-accent: #1570EF;
+    --sl-color-asides-border: #1570EF;
     background-color: #EFF8FF;
 }
 
 :root[data-theme='dark'] .starlight-aside--note {
-    --sl-color-asides-text-accent: #B2DDFF;
-    --sl-color-asides-border: #0086C9;
-    background-color: #102A56;
+    --sl-color-asides-text-accent: #ffffff;
+    --sl-color-asides-border: #1570EF;
+    background-color: #1570EF; /* Darker, deeper blue */
 }
 
 /* Tip Variant */
 .starlight-aside--tip {
-    --sl-color-asides-text-accent: #067647;
-    --sl-color-asides-border: #12B76A;
+    --sl-color-asides-text-accent: #079455;
+    --sl-color-asides-border: #079455;
     background-color: #ECFDF3;
 }
 
 :root[data-theme='dark'] .starlight-aside--tip {
-    --sl-color-asides-text-accent: #6CE9A6;
-    --sl-color-asides-border: #12B76A;
-    background-color: #053321;
+    --sl-color-asides-text-accent: #ffffff;
+    --sl-color-asides-border: #079455;
+    background-color: #079455; /* Darker, deeper green */
 }
 
 /* Caution Variant */
 .starlight-aside--caution {
-    --sl-color-asides-text-accent: #B54708;
-    --sl-color-asides-border: #F79009;
+    --sl-color-asides-text-accent: #DC6803;
+    --sl-color-asides-border: #DC6803;
     background-color: #FFFAEB;
 }
 
 :root[data-theme='dark'] .starlight-aside--caution {
-    --sl-color-asides-text-accent: #FEC84B;
-    --sl-color-asides-border: #F79009;
-    background-color: #4E2E0A;
+    --sl-color-asides-text-accent: #ffffff;
+    --sl-color-asides-border: #DC6803;
+    background-color: #DC6803; /* Darker, deeper orange/brown */
 }
 
 /* Danger Variant */
 .starlight-aside--danger {
-    --sl-color-asides-text-accent: #B42318;
-    --sl-color-asides-border: #F04438;
+    --sl-color-asides-text-accent: #d92d20;
+    --sl-color-asides-border: #d92d20;
     background-color: #FEF3F2;
 }
 
 :root[data-theme='dark'] .starlight-aside--danger {
-    --sl-color-asides-text-accent: #FDA29B;
-    --sl-color-asides-border: #F04438;
-    background-color: #55160C;
+    --sl-color-asides-text-accent: #ffffff;
+    --sl-color-asides-border: #d92d20;
+    background-color: #d92d20; /* Darker, deeper red */
 }
 
 .starlight-aside__title {
@@ -64,9 +64,14 @@
     font-size: var(--sl-text-h5);
     font-weight: 700;
     line-height: var(--sl-line-height-headings);
-    color: var(--sl-color-asides-text-accent);
+    color: #161616;
     margin-bottom: 0.5rem;
 }
+
+:root[data-theme='dark'] .starlight-aside__title {
+    color: #ffffff; /* White title for solid Dark Theme backgrounds */
+}
+
 
 .starlight-aside__icon {
     font-size: 1.25em;

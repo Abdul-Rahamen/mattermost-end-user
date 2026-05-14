@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Layout: Zoomed-Out / Wide-Screen Grid (> 1536px)
+   ==========================================================================
+   
+   When the viewport exceeds 1536px (user zooms out or uses ultra-wide),
+   the 3-column layout [Sidebar | Main Content | TOC] becomes a fixed-width 
+   12-column CSS Grid (1536px total = 384 + 768 + 384), centered in the 
+   viewport with left/right border lines — similar to how premium documentation 
+   sites like Stripe, Tailwind, etc. constrain their content.
+   
+   Grid Column Breakdown (12 columns × 128px = 1536px):
+     - Left sidebar (nav):     3 cols = 384px
+     - Main content:           6 cols = 768px
+     - Right sidebar (TOC):    3 cols = 384px
+
+   ========================================================================== */
+
+@media (min-width: 1537px) {
+
+  /* ──────────────────────────────────────────────
+     1. The outer page wrapper — constrain the max width
+        and center it in the viewport
+     ────────────────────────────────────────────── */
+  .page {
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+  }
+
+  /* ──────────────────────────────────────────────
+     2. Left + Right page border lines
+        Creates the "framed" look on wide screens
+     ────────────────────────────────────────────── */
+  .page::before,
+  .page::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--sl-color-hairline);
+    z-index: var(--sl-z-index-navbar);
+    pointer-events: none;
+  }
+
+  /* Left border — pinned to the left edge of the centered container */
+  .page::before {
+    left: calc(50% - 768px);
+  }
+
+  /* Right border — pinned to the right edge of the centered container */
+  .page::after {
+    right: calc(50% - 768px);
+  }
+
+  /* ──────────────────────────────────────────────
+     3. Header — constrain to 1536px, centered
+        Override the default full-width fixed header
+     ────────────────────────────────────────────── */
+  .header {
+    max-width: 1536px;
+    margin-inline: auto;
+    inset-inline-start: calc(50% - 768px) !important;
+    width: 1536px !important;
+    /* Add border to match left/right page borders */
+    border-inline-start: 1px solid var(--sl-color-hairline);
+    border-inline-end: 1px solid var(--sl-color-hairline);
+  }
+
+  /* ──────────────────────────────────────────────
+     3.1 Header Content Alignment
+         Match header internal grid to the page grid (384 | 768 | 384)
+     ────────────────────────────────────────────── */
+  .header .header {
+    display: grid !important;
+    grid-template-columns: 384px 768px 384px !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  .header .title-wrapper {
+    padding-inline: var(--sl-nav-pad-x) !important;
+    width: 384px !important;
+  }
+
+  /* Search container in header */
+  .header .header > div.sl-flex:nth-child(2) {
+    width: 768px !important;
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+
+  /* Right group (Theme toggle, etc.) */
+  .header .right-group {
+    width: 384px !important;
+    padding-inline: 0 !important;
+    justify-content: flex-end !important;
+  }
+
+  /* ──────────────────────────────────────────────
+     4. Left Sidebar (Nav) — constrain within the grid
+        Override the default fixed full-height sidebar
+     ────────────────────────────────────────────── */
+  nav.sidebar .sidebar-pane {
+    width: 384px !important;
+    inset-inline-start: calc(50% - 768px) !important;
+  }
+
+  /* ──────────────────────────────────────────────
+     5. Main frame — set left offset to the fixed sidebar width
+     ────────────────────────────────────────────── */
+  .main-frame {
+    --sl-content-inline-start: 384px;
+    padding-inline-start: 384px !important;
+  }
+
+  /* ──────────────────────────────────────────────
+     6. TwoColumnContent — Convert to CSS Grid
+        The wrapper for main-pane + right-sidebar-container
+     ────────────────────────────────────────────── */
+  .main-frame > .lg\:sl-flex {
+    display: grid !important;
+    /* 6 cols for main content (768px) + 3 cols for TOC (384px) */
+    grid-template-columns: 1fr 384px;
+    max-width: calc(1536px - 384px); /* Total minus left sidebar */
+    width: 100%;
+  }
+
+  /* ──────────────────────────────────────────────
+     7. Main Content Pane — fills the first grid column
+     ────────────────────────────────────────────── */
+  .main-pane {
+    order: 1 !important;
+    width: 100% !important;
+    margin-inline: 0 !important; /* Reset Starlight default margins */
+    min-width: 0; /* Prevent grid blowout */
+  }
+
+  /* ──────────────────────────────────────────────
+     8. Right Sidebar (TOC) — fixed 384px in the second column
+     ────────────────────────────────────────────── */
+  .right-sidebar-container {
+    order: 2 !important;
+    width: 384px !important;
+  }
+
+  .right-sidebar {
+    width: 384px !important;
+    /* Position it relative to the center of the viewport to avoid scrollbar shifts */
+    inset-inline-end: calc(50% - 768px) !important;
+    inset-inline-start: auto !important;
+  }
+
+  /* ──────────────────────────────────────────────
+     9. Content Panel — ensure max-width matches content zone
+     ────────────────────────────────────────────── */
+  .content-panel .sl-container {
+    max-width: 100%;
+  }
+
+  /* ──────────────────────────────────────────────
+     10. Override sidebar width CSS variable
+         so Starlight internal calculations work correctly
+     ────────────────────────────────────────────── */
+  :root {
+    --sl-sidebar-width: 384px;
+  }
+
+  div.header{
+    border-left: none !important;
+    border-right: none !important;
+  }
+}
