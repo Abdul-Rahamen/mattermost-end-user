@@ -1,0 +1,90 @@
+/* Landing page sections */
+.landing-section {
+  margin-top: var(--yeds-spacing-16);
+}
+
+.landing-section:first-of-type {
+  margin-top: var(--yeds-spacing-12);
+}
+
+.landing-section .section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--yeds-spacing-3);
+  margin-bottom: var(--yeds-spacing-6);
+}
+
+.landing-section .section-header .section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--yeds-effects-border-radius-md);
+  background-color: var(--yeds-color-alpha-primary-10);
+  color: var(--yeds-color-primary-600);
+  flex-shrink: 0;
+}
+
+.landing-section .section-header h2 {
+  margin: 0 !important;
+}
+
+/* LinkCard row layout */
+.link-card-row {
+  display: grid;
+  gap: var(--yeds-spacing-4);
+}
+
+@media (min-width: 50rem) {
+  .link-card-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Feature highlight cards */
+.feature-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--yeds-effects-border-radius-lg);
+  background-color: var(--yeds-color-alpha-primary-10);
+  color: var(--yeds-color-primary-600);
+  margin-bottom: var(--yeds-spacing-3);
+  flex-shrink: 0;
+}
+
+/* Card body text */
+.sl-markdown-content .card .body p {
+  margin: 0;
+  color: var(--yeds-color-text-secondary-paragraph);
+  line-height: 1.6;
+}
+
+/* Section description */
+.section-desc {
+  color: var(--yeds-color-text-secondary-paragraph);
+  font-size: var(--yeds-typography-sizes-lg);
+  line-height: 1.6;
+  margin-bottom: var(--yeds-spacing-8);
+  max-width: 60ch;
+}
+
+/* Footer-like section separator */
+.landing-footer-note {
+  margin-top: var(--yeds-spacing-16);
+  padding-top: var(--yeds-spacing-8);
+  border-top: 1px solid var(--yeds-color-border-background-white);
+  text-align: center;
+  color: var(--yeds-color-text-secondary-paragraph);
+  font-size: var(--yeds-typography-sizes-sm);
+}
+
+/* Scale hero actions for mobile */
+@media (max-width: 50rem) {
+  .landing-section {
+    margin-top: var(--yeds-spacing-10);
+  }
+}

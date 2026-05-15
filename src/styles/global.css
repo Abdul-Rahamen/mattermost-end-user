@@ -133,7 +133,7 @@
   --yeds-color-neutral-800: #1f2a37;
   --yeds-color-neutral-900: #111927;
   --yeds-color-neutral-950: #0d121c;
-  --yeds-typography-font-family: Effra Trial;
+  --yeds-typography-font-family: 'Effra', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --yeds-typography-weight-bold: 700;
   --yeds-typography-weight-semibold: 600;
   --yeds-typography-weight-medium: 500;
@@ -964,5 +964,32 @@
   object-fit: contain;
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--yeds-typography-font-family);
+  font-weight: var(--yeds-typography-weight-regular, 400);
+  line-height: 1.7;
+}
+
+.sl-markdown-content {
+  font-family: var(--yeds-typography-font-family);
+  font-weight: var(--yeds-typography-weight-regular, 400);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.sl-markdown-content p {
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.sl-markdown-content strong {
+  font-weight: var(--yeds-typography-weight-bold, 700);
+}
 
 

@@ -12,7 +12,7 @@ export default defineConfig({
       components:{
         // @ts-ignore
    
-        Footer: "/src/components/ZoomImage.astro",
+        Footer: "/src/components/Footer.astro",
            },
       logo: {
         src: "./src/assets/logo-light.png",
@@ -24,15 +24,6 @@ export default defineConfig({
           attrs: {
             rel: 'stylesheet',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
-          },
-        },{
-          tag: 'script',
-          attrs: {
-            src: '/scripts/zoom.js',
-            // type: 'module',
-              defer: true,
-
-            
           },
         },
         {
@@ -47,7 +38,7 @@ export default defineConfig({
 
       ],
       customCss: [
-        'photoswipe/dist/photoswipe.css',
+        'photoswipe/style.css',
         "./src/styles/global.css",
         "./src/styles/sidebar-scroll.css",
         './src/styles/custom.css',
@@ -55,13 +46,12 @@ export default defineConfig({
         './src/styles/image-zoom.css',
         './src/styles/asides.css',
         './src/styles/light-dark-img.css',
-        './src/fonts/EffraVF_Trial_Wght.ttf',
+        './src/fonts/font-face.css',
         './src/styles/searchbar-responsive.css',
         './src/styles/tables-rtl.css',
         "./src/styles/code-style.css",       
          "./src/styles/tabs-filter.css",
-         "./src/styles/custom-links.css",
-
+        "./src/styles/landing.css",
       ],
       
       sidebar: [
@@ -543,5 +533,10 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        'photoswipe/dist/photoswipe.css': 'photoswipe/style.css',
+      },
+    },
   },
 });

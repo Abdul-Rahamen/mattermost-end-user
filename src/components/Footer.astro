@@ -1,0 +1,36 @@
+---
+import StarlightFooter from '@astrojs/starlight/components/Footer.astro';
+---
+
+<StarlightFooter />
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+  const initPhotoSwipe = () => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '.sl-markdown-content',
+      children: 'img',
+      pswpModule: () => import('photoswipe'),
+      bgOpacity: 1,
+      wheelToZoom: true,
+      padding: { top: 20, bottom: 20, left: 20, right: 20 },
+    });
+
+    lightbox.addFilter('domItemData', (itemData, element) => {
+      if (element instanceof HTMLImageElement) {
+        itemData.src = element.src;
+        itemData.w = element.naturalWidth || element.width;
+        itemData.h = element.naturalHeight || element.height;
+        itemData.msrc = element.src;
+      }
+      return itemData;
+    });
+
+    lightbox.init();
+  };
+
+  document.addEventListener('astro:page-load', initPhotoSwipe);
+  document.addEventListener('astro:after-swap', initPhotoSwipe);
+  initPhotoSwipe();
+</script>
