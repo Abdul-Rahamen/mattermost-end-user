@@ -1,8 +1,7 @@
 
 
-
 /* ==========================================================================
-   تنسيق الجداول (Tables) - النسخة النهائية بتباين عالٍ للهيدر
+   تنسيق الجداول (Tables) - النسخة النهائية مع محاذاة يمين وهيدر داكن
    ========================================================================== */
 
 /* 1. التنسيق العام (الوضع الفاتح - Light Mode) */
@@ -10,27 +9,24 @@
     display: table !important;
     width: 100% !important;
     border-collapse: collapse !important;
-    border: 1px solid #d1d5db !important; /* حدود رمادية صريحة */
+    border: 1px solid #d1d5db !important;
     box-shadow: none !important;
     margin: 2rem 0 !important;
     background-color: #ffffff !important;
-    direction: rtl;
+    direction: rtl !important; /* لضمان اتجاه الجدول من اليمين */
+    text-align: right !important;
 }
 
-/* رأس الجدول - تم تغميقه ليصبح رمادي متوسط (Silver/Gray) */
-:root[data-theme='light'] .sl-markdown-content thead {
-    background-color:  #f3f4f6 !important; /* درجة أغمق من السابق (Slate 100-200) */
-}
-
+/* رأس الجدول - جعل الخلفية أغمق (Darker Header) في الوضع الفاتح */
+:root[data-theme='light'] .sl-markdown-content thead,
 :root[data-theme='light'] .sl-markdown-content th {
-    background-color:  #f3f4f6 !important; /* درجة أغمق من السابق (Slate 100-200) */
-    color: #1f2937 !important; /* نص أسود كربوني غامق */
-    font-weight: 700 !important; /* سماكة أكبر للخط */
+    background-color: #f3f4f6 !important; /* رمادي داكن صريح للهيدر */
+    color: #1f2937 !important; /* نص أسود داكن جداً */
+    font-weight: 700 !important;
     font-size: 0.9rem !important;
     padding: 0.85rem 1.5rem !important;
-    text-align: right !important;
-    border: 1px solid #d1d5db !important; /* حدود الهيدر واضحة جداً */
-    direction: rtl;
+    text-align: right !important; /* محاذاة النص لليمين */
+    border: 1px solid #d1d5db !important;
 }
 
 /* تنسيق الخلايا (محتوى الجدول) */
@@ -40,52 +36,55 @@
     color: #111827 !important;
     border: 1px solid #dee2eb !important;
     background-color: #ffffff !important;
-    direction: rtl;
-
+    direction: rtl !important;
+    text-align: right !important; /* محاذاة النص لليمين */
 }
 
 /* إلغاء تظليل الصفوف المتبادل */
 .sl-markdown-content tr, 
 .sl-markdown-content tr:nth-child(2n) {
     background-color: #ffffff !important;
-    direction: rtl;
-
+    text-align: right !important;
 }
 
 /* 2. التنسيق المخصص للوضع الليلي (Dark Mode) 
-   الخلفية شفافة تماماً كما في صورة المطلوب
+   الخلفية شفافة تماماً والمحاذاة لليمين
    ========================================================================== */
 :root[data-theme='dark'] .sl-markdown-content table {
     background-color: transparent !important;
     border: 1px solid #374151 !important;
-    direction: rtl;
-
+    direction: rtl !important;
 }
 
 :root[data-theme='dark'] .sl-markdown-content thead {
-    background-color: #1f2937 !important; /* هيدر داكن متناسق مع الخلفية */
-    direction: rtl;
-
+    background-color: #1f2937 !important; 
 }
 
 :root[data-theme='dark'] .sl-markdown-content th {
     color: #d1d5db !important; 
     border: 1px solid #374151 !important;
     font-weight: 600 !important;
-    direction: rtl;
-
+    text-align: right !important;
 }
 
 :root[data-theme='dark'] .sl-markdown-content td {
     background-color: transparent !important;
     color: #f9fafb !important;
     border: 1px solid #374151 !important;
-    direction: rtl;
-
+    text-align: right !important;
 }
 
 :root[data-theme='dark'] .sl-markdown-content tr {
     background-color: transparent !important;
-    
-
+    text-align: right !important;
 }
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,7 @@ starlight-tabs {
     border-radius: 8px !important;
     overflow: hidden !important;
     display: block !important;
-    margin: 1.5rem 0 !important;
+    margin: 2.5rem 0 !important;
 }
 
 /* 2. شريط التبويبات (تغيير الخلفية والمحاذاة) */
@@ -20,12 +20,12 @@ starlight-tabs .tab > [role='tab'] {
     /* حذف الـ box-shadow الأصلي الذي كان يسبب النحافة */
     box-shadow: none !important; 
     border: none !important;
-    padding: 0.75rem 1.25rem !important;
+    padding: 0.7rem 0.5rem !important;
     color: var(--sl-color-gray-3) !important;
     font-size: 0.850rem !important;
     font-weight: 500 !important;
     position: relative !important;
-    transition: all 0.2s ease !important;
+    transition: all 0.5s ease !important;
 }
 
 /* 4. الحالة النشطة (الخط الأخضر السميك جداً) */
@@ -34,6 +34,18 @@ starlight-tabs .tab [role='tab'][aria-selected='true'] {
     font-weight: 700 !important;
     box-shadow: none !important; /* التأكد من حذف الظل القديم */
     padding-bottom: 0.5rem ;
+}
+[role='tablist'] a,
+[role='tablist'] a::after,
+.tab > [role='tab'],
+.tab > [role='tab']::after,
+starlight-tabs [role='tab'],
+starlight-tabs [role='tab']::after {
+    content: none !important;
+    display: flex !important; /* الحفاظ على تنسيق Flex الأصلي للتبويبات */
+    background-image: none !important;
+    gap: 0.5rem !important;
+    padding: 0.145rem !important; /* استعادة الحشو المذكور في الكود المصدري */
 }
 
 /* رسم الخط السميك (Thicker Line) */
@@ -45,13 +57,13 @@ starlight-tabs .tab [role='tab'][aria-selected='true']::after {
     right: 0 !important;
     height: 3px !important; /* سماكة الخط كما طلبت */
     background-color: #00987e !important;
-    /* border-radius: 2px 2px 0 0 !important; */
+    border-radius: 2px 2px 0 0 !important;
 }
 
 /* 5. تنسيق منطقة المحتوى بالأسفل */
 starlight-tabs .tablist-wrapper ~ :global([role='tabpanel']) {
     margin-top: 0.5rem !important;
-    padding: 1.5rem !important;
+    padding: 0.5rem !important;
 }
 
 /* 4. الحالة النشطة (إصلاح توازن النص مع الخط الأخضر) */
