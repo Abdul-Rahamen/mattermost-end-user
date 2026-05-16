@@ -18,81 +18,11 @@ hero:
       variant: secondary
 ---
 
-import { CardGrid, Card, LinkCard } from '@astrojs/starlight/components';
+import { CardGrid, Card, LinkCard, Icon } from '@astrojs/starlight/components';
 
 <div class="landing-section">
 
-## البداية السريعة
 
-<p class="section-desc">
-  ابدأ رحلتك مع منصة تعاون من خلال هذه المسارات السريعة
-</p>
-
-<div class="link-card-row">
-
-<LinkCard
-  title="دليل المستخدم النهائي"
-  description="دليل شامل يغطي جميع جوانب استخدام المنصة من البداية إلى الاحتراف"
-  href="/end-user-guide/end-user-guide"
-/>
-
-<LinkCard
-  title="بدء استخدام المراسلة"
-  description="تعلم أساسيات إرسال الرسائل والرد عليها وتنظيم المحادثات في القنوات"
-  href="/messaging-collaboration/communicate-with-messages-and-threads/send-messages"
-/>
-
-<LinkCard
-  title="إعداد حسابك وتخصيصه"
-  description="ضبط إعداداتك الشخصية، إدارة الإشعارات، وتخصيص واجهة المنصة حسب احتياجاتك"
-  href="/customize-your-preferences/customize-your-preferences"
-/>
-
-</div>
-
-</div>
-
-<div class="landing-section">
-
-## أقسام الدليل
-
-<p class="section-desc">
-  استعرض أقسام الدليل الرئيسية للوصول السريع إلى المعلومات التي تبحث عنها
-</p>
-
-<CardGrid>
-  <Card title="التعاون في المراسلة" icon="comment">
-    إدارة المحادثات، إنشاء القنوات، إرسال الرسائل، المشاركة بالملفات، والتنظيم باستخدام الفرق والمجموعات
-  </Card>
-
-  <Card title="الوصول إلى مساحة العمل" icon="download">
-    تثبيت تطبيق سطح المكتب وتطبيق Android المحمول، تسجيل الدخول، وتسجيل الخروج من مساحة العمل
-  </Card>
-
-  <Card title="إدارة المشاريع والمهام" icon="puzzle">
-    استخدام لوحات المهام، إدارة البطاقات والعروض، التصفية والفرز، واستيراد وتصدير البيانات
-  </Card>
-
-  <Card title="أتمتة سير العمل" icon="setting">
-    إنشاء وإدارة قوالب العمل التعاونية، تشغيل العمليات، إدارة المهام والمقاييس والأهداف
-  </Card>
-
-  <Card title="وكلاء الذكاء الاصطناعي" icon="star">
-    الاستفادة من وكلاء الذكاء الاصطناعي، إدارة السياق، وأفضل الممارسات للاستخدام الأمثل
-  </Card>
-
-  <Card title="تخصيص تفضيلاتك" icon="sun">
-    إدارة الإشعارات، تخصيص السمة والواجهة، ضبط الخصوصية والأمان، وإدارة الملف الشخصي
-  </Card>
-
-  <Card title="مشاركة الصوت والشاشة" icon="random">
-    إجراء المكالمات الصوتية والمرئية، مشاركة الشاشة، وإعدادات الصوت والفيديو
-  </Card>
-</CardGrid>
-
-</div>
-
-<div class="landing-section">
 
 ## إمكانيات المنصة
 
@@ -100,93 +30,60 @@ import { CardGrid, Card, LinkCard } from '@astrojs/starlight/components';
   اكتشف الإمكانيات المتقدمة التي توفرها منصة تعاون لتعزيز إنتاجية فريقك
 </p>
 
-<CardGrid stagger>
-  <Card title="تواصل فوري" icon="comment">
-    المراسلة في الوقت الحقيقي مع إمكانية الرد في سلاسل المحادثات، وإشعارات فورية للمتابعة
-  </Card>
+<div class="custom-features-grid">
+  <div class="custom-feature-card">
+    <div class="custom-feature-icon">
+      <Icon name="comment" />
+    </div>
+    <h3 class="custom-feature-title">تواصل فوري</h3>
+    <p class="custom-feature-desc">المراسلة في الوقت الحقيقي مع إمكانية الرد في سلاسل المحادثات، وإشعارات فورية للمتابعة</p>
+  </div>
 
-  <Card title="قنوات منظمة" icon="puzzle">
-    تنظيم المحادثات في قنوات عامة وخاصة، مع إمكانية تخصيص الأذونات وإدارة الأعضاء بسهولة
-  </Card>
+  <div class="custom-feature-card">
+    <div class="custom-feature-icon">
+      <Icon name="puzzle" />
+    </div>
+    <h3 class="custom-feature-title">قنوات منظمة</h3>
+    <p class="custom-feature-desc">تنظيم المحادثات في قنوات عامة وخاصة، مع إمكانية تخصيص الأذونات وإدارة الأعضاء بسهولة</p>
+  </div>
 
-  <Card title="إدارة المشاريع" icon="star">
-    لوحات مهام متكاملة مع بطاقات وعروض متعددة، وميزات التصفية والفرز لإدارة سير العمل
-  </Card>
+  <div class="custom-feature-card">
+    <div class="custom-feature-icon">
+      <Icon name="star" />
+    </div>
+    <h3 class="custom-feature-title">إدارة المشاريع</h3>
+    <p class="custom-feature-desc">لوحات مهام متكاملة مع بطاقات وعروض متعددة، وميزات التصفية والفرز لإدارة سير العمل</p>
+  </div>
 
-  <Card title="أتمتة ذكية" icon="setting">
-    قوالب عمل تعاونية لأتمتة العمليات المتكررة، مع متابعة المهام والمقاييس والأهداف
-  </Card>
+  <div class="custom-feature-card">
+    <div class="custom-feature-icon">
+      <Icon name="setting" />
+    </div>
+    <h3 class="custom-feature-title">أتمتة ذكية</h3>
+    <p class="custom-feature-desc">قوالب عمل تعاونية لأتمتة العمليات المتكررة، مع متابعة المهام والمقاييس والأهداف</p>
+  </div>
 
-  <Card title="ذكاء اصطناعي" icon="rocket">
-    وكلاء أذكياء لمساعدتك في إنجاز المهام وإدارة السياق وتحسين الإنتاجية
-  </Card>
+  <div class="custom-feature-card">
+    <div class="custom-feature-icon">
+      <Icon name="rocket" />
+    </div>
+    <h3 class="custom-feature-title">ذكاء اصطناعي</h3>
+    <p class="custom-feature-desc">وكلاء أذكياء لمساعدتك في إنجاز المهام وإدارة السياق وتحسين الإنتاجية</p>
+  </div>
 
-  <Card title="أمان متكامل" icon="heart">
-    حماية متقدمة للبيانات، وإدارة الهوية والوصول، مع خيارات شاملة للخصوصية والأمان
-  </Card>
-</CardGrid>
-
-</div>
-
-<div class="landing-section">
-
-## أدوار المستخدمين
-
-<p class="section-desc">
-  أدلة مخصصة تناسب دورك في المنصة — اختر المسار المناسب لك
-</p>
-
-<CardGrid>
-  <Card title="المستخدم النهائي">
-    دليل شامل لاستخدام المنصة في مهامك اليومية: المراسلة، التعاون، إدارة المهام، وتنظيم الأولويات
-  </Card>
-
-  <Card title="المشرف">
-    إدارة الفرق والقنوات، ضبط إعدادات الأمان والخصوصية، والإشراف على أداء الفريق
-  </Card>
-
-  <Card title="المطور">
-    التكامل مع الأنظمة الخارجية، استخدام واجهات API، وتوسيع إمكانيات المنصة عبر التطبيقات المخصصة
-  </Card>
-
-  <Card title="المدير">
-    متابعة مؤشرات الأداء، إعداد تقارير الإنتاجية، واتخاذ القرارات المبنية على البيانات
-  </Card>
-</CardGrid>
-
-</div>
-
-<div class="landing-section">
-
-## المساعدة والدعم
-
-<p class="section-desc">
-  وصلنا هنا لمساعدتك — اختر ما يناسبك من خيارات الدعم
-</p>
-
-<div class="link-card-row">
-
-<LinkCard
-  title="استكشاف الأخطاء وإصلاحها"
-  description="حلول للمشكلات الشائعة في الإشعارات، الاتصال، والصوت والفيديو"
-  href="/customize-your-preferences/manage-your-notifications/troubleshoot-notifications"
-/>
-
-<LinkCard
-  title="اختصارات لوحة المفاتيح"
-  description="زيادة إنتاجيتك مع اختصارات لوحة المفاتيح السريعة للتنقل والإجراءات"
-  href="/messaging-collaboration/keyboard-shortcuts/keyboard-shortcuts"
-/>
-
-<LinkCard
-  title="إمكانية الوصول"
-  description="ميزات إمكانية الوصول لضمان تجربة استخدام سلسة للجميع"
-  href="/messaging-collaboration/keyboard-shortcuts/keyboard-accessibility"
-/>
-
+  <div class="custom-feature-card">
+    <div class="custom-feature-icon">
+      <Icon name="heart" />
+    </div>
+    <h3 class="custom-feature-title">أمان متكامل</h3>
+    <p class="custom-feature-desc">حماية متقدمة للبيانات، وإدارة الهوية والوصول، مع خيارات شاملة للخصوصية والأمان</p>
+  </div>
 </div>
 
 </div>
+
+
+
 
 <div class="landing-footer-note">
   منصة تعـــــــاون — التواصل المؤسسي بكل سهولة
