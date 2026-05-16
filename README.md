@@ -1,49 +1,114 @@
-# Starlight Starter Kit: Basics
+# Taawon Workspace Documentation
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)
 
-```
-npm create astro@latest -- --template starlight
-```
+Welcome to the official documentation portal for **Taawon Workspace** (powered by Mattermost). This project serves as the primary end-user guide, delivering a premium, modern, and highly responsive documentation experience. It has been migrated from traditional Sphinx/reStructuredText (RST) to a component-driven architecture using [Astro Starlight](https://starlight.astro.build/) and MDX.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🌟 Key Features
 
-## 🚀 Project Structure
+- **Modern Tech Stack:** Built with Astro, Starlight, and MDX for blazing-fast performance and rich interactive content.
+- **Arabic Localization (RTL):** Fully native Right-to-Left (RTL) support with meticulous attention to UI layout, typography, and keyboard shortcut directionality.
+- **Premium Design System:**
+  - Responsive 12-column fixed-width grid system (>1536px) for precise alignment.
+  - Custom "squircle" icons, glassmorphism effects, and premium dark mode styling.
+  - Bespoke, interactive UI cards for the landing page (`index.mdx`).
+- **Enhanced UI Components:**
+  - Exclusive Sidebar Accordions.
+  - Centered, responsive Search Bar with optimized Pagefind integration.
+  - Interactive Tabs and Admonitions (Callouts).
+  - Dual-pane code block styling.
+- **Seamless Content Migration:** Automated and manual translation of legacy RST directives into modern Starlight MDX components.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## 🚀 Getting Started
 
-```
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm (Node Package Manager)
+
+### Local Development
+
+1. **Install Dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+2. **Start the Development Server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   _The local server will start at `http://localhost:4321/`._
+
+3. **Build for Production:**
+
+   ```bash
+   npm run build
+   ```
+
+   _This generates static files in the `./dist/` directory._
+
+4. **Preview Production Build:**
+   ```bash
+   npm run preview
+   ```
+
+## 📂 Project Structure
+
+```text
 .
-├── public/
+├── public/                # Static assets (favicons, etc.)
 ├── src/
-│   ├── assets/
+│   ├── assets/            # Local images and design assets
+│   ├── components/        # Custom Astro & UI components (Tabs, Accordions, FAIcon)
 │   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+│   │   └── docs/          # MDX documentation files (The actual content)
+│   ├── styles/            # CSS Architecture
+│   │   ├── global.css                 # Theme variables, RTL overrides, typography
+│   │   ├── landing.css                # Premium landing page styling
+│   │   └── searchbar-responsive.css   # Custom search bar layout
+│   └── content.config.ts  # Astro content collections schema
+├── astro.config.mjs       # Astro & Starlight configuration
+└── package.json           # Project dependencies and scripts
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## ✍️ Contribution & Editing Guidelines
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+If you are a developer or content editor working on this project, please adhere to the following guidelines established during the RST-to-MDX migration:
 
-Static assets, like favicons, can be placed in the `public/` directory.
+### 1. MDX & Starlight Components
 
-## 🧞 Commands
+- **Admonitions:** Use Starlight's syntax `:::note`, `:::tip`, `:::caution`, and `:::danger` instead of legacy `.. note::` directives.
+- **Tabs:** When using tabs, always import the component at the top of the MDX file:
 
-All commands are run from the root of the project, from a terminal:
+  ```mdx
+  import { Tabs, TabItem } from "@astrojs/starlight/components";
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+  <Tabs>
+    <TabItem label="Tab 1">Content</TabItem>
+  </Tabs>
+  ```
 
-## 👀 Want to learn more?
+### 2. Image Handling
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Images are referenced using external direct links from the legacy documentation server to avoid bloating the repository.
+
+- **Format:** `![Alt text](https://docs.mattermost.com/_images/filename.ext)`
+- _Do not use relative paths like `../images/` unless it is a new asset specific to the Taawon UI placed in `src/assets/`._
+
+### 3. Styling & CSS
+
+- **Design System:** Stick to the established CSS variables in `global.css` (e.g., brand color `#00987e`).
+- **Avoid Inline Styles:** Use existing classes or update the relevant CSS files (`landing.css`, etc.) for complex UI adjustments.
+- **TailwindCSS:** This project uses **Vanilla CSS** for maximum control and flexibility, tailored specifically for the Starlight DOM structure. Avoid injecting atomic utility classes unless part of an authorized component integration.
+
+### 4. File Naming
+
+Maintain the original file naming convention (kebab-case) from the RST docs to ensure link integrity (e.g., `user-guide-setup.mdx`).
+
+---
+
+**Need Help?**
+Refer to the [Astro Documentation](https://docs.astro.build/) or the [Starlight Documentation](https://starlight.astro.build/) for advanced framework-level configurations.
