@@ -41,7 +41,6 @@ export default defineConfig({
         'photoswipe/style.css',
         "./src/styles/global.css",
         "./src/styles/sidebar-scroll.css",
-        "./src/styles/headings.css",
         './src/styles/custom.css',
         './src/styles/layout-1532.css',
         './src/styles/image-zoom.css',
@@ -53,7 +52,6 @@ export default defineConfig({
         "./src/styles/code-style.css",       
          "./src/styles/tabs-filter.css",
         "./src/styles/landing.css",
-
       ],
       
       sidebar: [
@@ -82,7 +80,7 @@ export default defineConfig({
               slug: "access-your-workspace/install-the-android-mobile-app",
             },
             {
-              label: "توفر العميل",
+              label: " المميزات والخدمات",
               slug: "access-your-workspace/client-availability",
             },
             {
@@ -181,7 +179,7 @@ export default defineConfig({
                   slug: "messaging-collaboration/collaborate-within-channels/join-and-leave-channels",
                 },
                 {
-                  label: "إجراء مكالمات في منصة ",
+                  label: "إجراء مكالمات",
                   slug: "messaging-collaboration/collaborate-within-channels/make-calls",
                 },
                 {

@@ -17,7 +17,7 @@ import deleteMessage from "../../../../images/delete-and-edit-messages.gif";
 
 يمكنك إرسال رسائل في القنوات العامة والخاصة، وكذلك إلى مستخدمين آخرين في منصة تعاون. اعتماداً على توقيت إنشاء الرسالة، يمكنك إرسالها فوراً، أو [جدولتها لاحقاً](/messaging-collaboration/communicate-with-messages-and-threads/schedule-messages)، أو [تعيين أولوية الرسالة](/messaging-collaboration/communicate-with-messages-and-threads/set-message-priority).
 
-<Aside type="tip" title="تنبيهات التواجد">
+<Aside type="tip" >
 قد يعرض منصة تعاون تحذيراً عند محاولة إرسال رسالة لمستلم وضع حالته على [عدم الإزعاج](/end-user-guide/preferences/set-your-status-availability#set-your-availability) وكان الوقت المحلي للمستلم خارج ساعات العمل (بين الساعة 10 مساءً و 6 صباحاً). يظهر هذا التحذير فوق حقل كتابة الرسالة.
 </Aside>
 
@@ -45,20 +45,20 @@ import deleteMessage from "../../../../images/delete-and-edit-messages.gif";
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
     1. اضغط على حقل النص في أسفل تطبيق منصة تعاون لكتابة رسالة.
-       <Image 
+       {/* <Image 
          src={mobileTypeMessage} 
          alt="واجهة كتابة الرسالة على الهاتف" 
          height="450" 
          style={{ width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '20px auto' }} 
-       />
+       /> */}
 
     2. اضغط على **إرسال** <i class="fa-solid fa-paper-plane" style="color: #1c63ed;"></i> لإرسالها في القناة.
-       <Image 
+       {/* <Image 
          src={mobileSendingGif} 
          alt="عملية إرسال الرسالة من الهاتف" 
          height="450" 
          style={{ width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '20px auto' }} 
-       />
+       /> */}
     </Steps>
   </TabItem>
 </Tabs>
@@ -70,7 +70,7 @@ import deleteMessage from "../../../../images/delete-and-edit-messages.gif";
 يمكنك استخدام الذكاء الاصطناعي لتحسين رسائلك قبل إرسالها — مثل تحسين الأسلوب، تصحيح الأخطاء الإملائية، تعديل الطول، أو تحويل النص وفق احتياجات محددة.
 
 <Aside type="note" title="توفر الميزة">
-  <Badge text="v11.5+" variant="note" /> عند كتابة رد في سلسلة، يأخذ الذكاء الاصطناعي سياق السلسلة  بعين الاعتبار لتوليد اقتراحات مناسبة. يجب على مسؤول النظام [تكوين وكلاء الذكاء الاصطناعي](/administration-guide/configure/agents-admin-guide) لتفعيل الخيار.
+     v11.5+ عند كتابة رد في سلسلة، يأخذ الذكاء الاصطناعي سياق السلسلة  بعين الاعتبار لتوليد اقتراحات مناسبة. يجب على مسؤول النظام [تكوين وكلاء الذكاء الاصطناعي](/administration-guide/configure/agents-admin-guide) لتفعيل الخيار.
 </Aside>
 
 <Steps>
@@ -95,9 +95,6 @@ import deleteMessage from "../../../../images/delete-and-edit-messages.gif";
 
 ## رسائل "المسح عند القراءة" 
 
-<Aside type="note" title="توفر الخطط">
-  متوفر في خطط: <Badge text="Entry" variant="note" /> <Badge text="Enterprise Advanced" variant="note" />
-</Aside>
 
 بدءاً من الإصدار **v11.3**، تبقى هذه الرسائل مخفية حتى يختار المستلم كشفها، وبعد ذلك تُحذف تلقائياً عند انتهاء المؤقت. لا يمكن الرد عليها أو تعديلها.
 
@@ -143,13 +140,17 @@ import deleteMessage from "../../../../images/delete-and-edit-messages.gif";
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
-    عند تأليف رسالة والخروج، تبقى المسودة في حقل النص مع خيار **تحرير **. بدءاً من **v10.5**، ستجد المسودات المحلية تحت قسم **المسودات**.
+
+    <Aside type="note" title="تنبيه مهم">
+      هذا الميزة يجري عليها العمل حاليا  وستكون متوفره في الاصدر القادم
+    </Aside>
+    {/* عند تأليف رسالة والخروج، تبقى المسودة في حقل النص مع خيار **تحرير **. بدءاً من **v10.5**، ستجد المسودات المحلية تحت قسم **المسودات**.
     <Image 
       src={mobileDraftGif} 
       alt="المسودات على الهاتف" 
       height="450" 
       style={{ width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '20px auto' }} 
-    />
+    /> */}
   </TabItem>
 </Tabs>
 
