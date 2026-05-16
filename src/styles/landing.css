@@ -170,9 +170,8 @@
 
 /* Dark theme specific adjustments */
 :root[data-theme='dark'] .custom-feature-card {
-  background-color: #1e293b;
-  border-color: #334155;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background-color: #17181c;
+  border-color: oklch(37% 0.013 285.805);
 }
 
 :root[data-theme='dark'] .custom-feature-card:hover {
