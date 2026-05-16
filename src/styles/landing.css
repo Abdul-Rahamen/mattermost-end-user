@@ -40,6 +40,10 @@
   border-radius: 8px !important;
 }
 
+.sl-link-button:where(.astro-xwgiixxa).primary {
+  color: #fff !important;
+}
+
 .sl-link-button:where(.astro-xwgiixxa).primary:hover {
   background-color: rgb(5 128 108) !important;
 }
