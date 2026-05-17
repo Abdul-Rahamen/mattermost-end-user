@@ -40,6 +40,11 @@
         border-radius: 0 !important;
     }
 
+    /* إخفاء زر مسح البحث (Clear) الكبير الذي يحجب النص */
+    .pagefind-ui__search-clear {
+        display: none !important;
+    }
+
 }
 
 /* ضمان عدم اختفاء مبدل الثيمات أو تقلصه بشكل مشوه فوق 800px */

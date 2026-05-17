@@ -36,6 +36,23 @@
   gap: var(--yeds-spacing-4);
 }
 
+.sl-link-button:where(.astro-xwgiixxa) {
+  border-radius: 8px !important;
+}
+
+.sl-link-button:where(.astro-xwgiixxa).primary {
+  color: #fff !important;
+}
+
+.sl-link-button:where(.astro-xwgiixxa).primary:hover {
+  background-color: rgb(5 128 108) !important;
+}
+
+.sl-link-button:where(.astro-xwgiixxa).secondary:hover{
+  border-color: #00987e !important;
+  color: #00987e !important;
+}
+
 @media (min-width: 50rem) {
   .link-card-row {
     grid-template-columns: repeat(3, 1fr);
@@ -87,4 +104,93 @@
   .landing-section {
     margin-top: var(--yeds-spacing-10);
   }
+}
+
+/* ========================================================
+   Custom Feature Cards (Image Match)
+   ======================================================== */
+.custom-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 50rem) {
+  .custom-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.custom-feature-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Icon Wrapper: The squircle */
+.custom-feature-icon {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(0, 152, 126, 0.04);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  color: #00987e;
+  border: 1px solid rgba(0, 152, 126, 0.08);
+}
+
+.custom-feature-icon svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+/* Title */
+.custom-feature-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem 0 !important;
+}
+
+/* Description */
+.custom-feature-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0 !important;
+}
+
+/* Dark theme specific adjustments */
+:root[data-theme='dark'] .custom-feature-card {
+  background-color: #17181c;
+  border-color: oklch(37% 0.013 285.805);
+}
+
+:root[data-theme='dark'] .custom-feature-card:hover {
+  border-color: #475569;
+}
+
+:root[data-theme='dark'] .custom-feature-icon {
+  background-color: rgba(0, 152, 126, 0.15);
+  border-color: transparent;
+}
+
+:root[data-theme='dark'] .custom-feature-title {
+  color: #f8fafc;
+}
+
+:root[data-theme='dark'] .custom-feature-desc {
+  color: #94a3b8;
 }
