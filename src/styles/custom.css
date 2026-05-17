@@ -105,9 +105,20 @@ kbd, .kbd-shortcut {
 }
 
 /* تخصيص أيقونات البطاقات داخل CardGrid */
+/* تطبيق تصميم بطاقات Landing Page على بطاقات Starlight */
 .sl-markdown-content .card-grid .card {
     /* تغيير لون أيقونة الـ SVG إلى الأخضر */
-    --sl-icon-color:  #00987e !important; /* اللون الأخضر */
+    --sl-icon-color:  #00987e !important;
+    
+    /* تطبيق تأثيرات Hover من Landing Page */
+    border-radius: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.sl-markdown-content .card-grid .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-color: #00987e;
 }
 
 .sl-markdown-content .card-grid .card .icon {
@@ -116,15 +127,26 @@ kbd, .kbd-shortcut {
     
     /* إضافة حدود اختيارية لإبراز الدائرة البيضاء إذا كانت خلفية الموقع فاتحة */
     border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
     
     /* التأكد من أن الأيقونة نفسها تظهر باللون المختار */
     color: #00987e !important;
 }
 
 /* لضمان تناسق الألوان في الوضع الداكن أيضاً */
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card {
+    background-color: #17181c;
+    border: 1px solid oklch(37% 0.013 285.805);
+}
+
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card:hover {
+    border-color: #475569;
+}
+
 :root[data-theme='dark'] .sl-markdown-content .card-grid .card .icon {
-    background-color: #ffffff !important; /* تظل بيضاء */
-    color: #00987e !important; /* تظل الأيقونة خضراء */
+    background-color: rgba(0, 152, 126, 0.15) !important;
+    border-color: transparent;
+    color: #00987e !important;
 }
 /* مؤشر الماوس */
 .sl-markdown-content img:not(.icon) {
