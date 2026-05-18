@@ -22,6 +22,9 @@ import markdownTable1 from '../../../../images/markdownTable1.png';
 import latexInline from '../../../../images/latex-inline.png';
 import latexCodeblock from '../../../../images/latex-codeblock.png';
 import FAIcon from "../../../../components/FAIcon.astro";
+import dotBadge from "../../../../images/dot-badge.png";
+import numberedBadge from "../../../../images/numbered-badge.png";
+
 
 ## استخدم شريط أدوات تنسيق الرسائل 
 بدءًا من الإصدار **v7.0** من منصة تعاون، يمكنك تنسيق رسائلك باستخدام شريط أدوات تنسيق الرسائل دون الحاجة لكتابة ترميز Markdown يدويًا.
@@ -50,11 +53,6 @@ import FAIcon from "../../../../components/FAIcon.astro";
 
 يمكنك أيضًا تنسيق الرسائل باستخدام Markdown للتحكم في [نمط النص](#نمط-النص)، و [الروابط](#الروابط)، و [العناوين](#العناوين)، و [القوائم](#القوائم)، و [كتل الكود](#كتل-الكود)، و [الكود المضمن](#الكود-المضمن-in-line-code)، و [الصور المضمنة](#الصور-المضمنة-in-line-images)، و [الخطوط الأفقية](#الخطوط-الأفقية)، و [اقتباسات الكتل](#اقتباسات-الكتل)، و [الجداول](#الجداول)، و [الصيغ الرياضية](#الصيغ-الرياضية). استخدام Markdown سهل: اكتب رسالتك ثم استخدم قواعد التنسيق.
 
-<Image 
-  src={messagesTable1} 
-  alt="يتحكم تنسيق Markdown في مظهر وملمس الرسائل النصية." 
-  style={{ width: '100%', maxWidth: '700px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
-/>
 
 ### نمط النص 
 
@@ -305,7 +303,7 @@ func main() {
 
 تظهر كـ:
 
-> ![منصة تعاون](../../../../images/icon-76x76.png)
+<img src={dotBadge.src} alt="dot badge" style={{ width: '100px', height: '100px' }} />                                                                                                            
 
 #### صورة مضمنة مع رابط 
 
@@ -319,7 +317,7 @@ func main() {
 
 تظهر كـ:
 
-> [![image](../../../../images/icon-76x76.png)](https://github.com/mattermost/mattermost)
+<img src={dotBadge.src} alt="dot badge" style={{ width: '100px', height: '100px' }} />                                                                                                            
 
 #### صورة مضمنة مع عرض وارتفاع ثابتين 
 
@@ -330,7 +328,7 @@ func main() {
 ```
 
 تظهر كـ:
-> [![image](../../../../images/icon-50x76.png)](https://github.com/mattermost/mattermost)
+<img src={dotBadge.src} alt="dot badge" style={{ width: '100px', height: '100px' }} />                                                                                                            
 
 
 #### صورة مضمنة مع عرض ثابت 
@@ -342,16 +340,13 @@ func main() {
 ```
 
 تظهر كـ:
-
-> [![image](../../../../images/icon-76x76.png)](https://github.com/mattermost/mattermost)
+<img src={dotBadge.src} alt="dot badge" style={{ width: '100px', height: '100px' }} />                                                                                                            
 
 ### الخطوط الأفقية 
 
 أنشئ خطًا باستخدام ثلاث رموز من `*` أو `_` أو `-`.
 
 `***`
-
-تظهر كـ:
 
 ---
 
@@ -398,9 +393,9 @@ func main() {
 $X_k = \sum_{n=0}^{2N-1} x_n \cos \left[\frac{\pi}{N} \left(n+\frac{1}{2}+\frac{N}{2}\right) \left(k+\frac{1}{2}\right) \right]$
 ```
 
-تظهر كـ:
+{/* تظهر كـ:
 
-![عينة معادلة رياضية LaTeX مضمنة.](../../../../images/latex-inline.png)
+![عينة معادلة رياضية LaTeX مضمنة.](../../../../images/latex-inline.png) */}
 
 </div>
 
