@@ -9,11 +9,11 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "تعـــــــاون ",
-      components:{
+      components: {
         // @ts-ignore
-   
+
         Footer: "/src/components/Footer.astro",
-           },
+      },
       logo: {
         src: "./src/assets/logo-light.png",
         alt: "Taawon",
@@ -49,11 +49,11 @@ export default defineConfig({
         './src/fonts/font-face.css',
         './src/styles/searchbar-responsive.css',
         './src/styles/tables-rtl.css',
-        "./src/styles/code-style.css",       
-         "./src/styles/tabs-filter.css",
+        "./src/styles/code-style.css",
+        "./src/styles/tabs-filter.css",
         "./src/styles/landing.css",
       ],
-      
+
       sidebar: [
         {
           label: "دليل المستخدم النهائي",
@@ -510,9 +510,9 @@ export default defineConfig({
               slug: "customize-your-preferences/manage-your-plugin-preferences",
             },
             {
-             label: "الاتصال بمساحات عمل متعددة",
-             slug: "customize-your-preferences/connect-to-multiple-workspaces",
-           },
+              label: "الاتصال بمساحات عمل متعددة",
+              slug: "customize-your-preferences/connect-to-multiple-workspaces",
+            },
             {
               label: "تخصيص تجربة تطبيق سطح المكتب",
               slug: "customize-your-preferences/customize-your-desktop-app-experience",
@@ -520,6 +520,20 @@ export default defineConfig({
           ],
           collapsed: true,
         },
+        {
+          label: "الإضافات الخارجية والميزات المتقدمة",
+          items: [
+            {
+              label: "الإضافات المرتبطة بالقنوات",
+              slug: "plugins/tools-linke-to-channel",
+            },
+            {
+              label: "التعامل مع الملفات",
+              slug: "plugins/work-with-files",
+            },
+          ],
+          collapsed: true,
+        }
       ],
       locales: {
         root: {
