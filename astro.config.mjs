@@ -528,9 +528,17 @@ export default defineConfig({
               slug: "plugins/tools-linke-to-channel",
             },
             {
+              label: "ميزات التراسل المتقدمة",
+              slug: "plugins/advance-messageing",
+            },
+            {
               label: "التعامل مع الملفات",
               slug: "plugins/work-with-files",
             },
+            {
+              label: "التعامل مع الملفات المضغوطة",
+              slug: "plugins/compressed-files-explorer",
+            }
           ],
           collapsed: true,
         }
