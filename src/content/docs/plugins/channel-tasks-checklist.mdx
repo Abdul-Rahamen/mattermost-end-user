@@ -1,0 +1,84 @@
+---
+title: "قوائم التحقق وإدارة المهام داخل القنوات"
+description: "تعرف على كيفية إنشاء قوائم التحقق، وإسناد المهام، وتحديد المواعيد النهائية، وأتمتة الإجراءات داخل منصة تعاون."
+---
+
+import { Tabs, TabItem, Steps, Aside, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+{/* استيراد الصور المحلية الخاصة بالمهام وقوائم التحقق */}
+import channelTasksChecklistTemplate from '../../../images/channel-tasks-checklist-template.png';
+import channelATaskEmployeeAssignment from '../../../images/channel-a-task-employee-assignment.png';
+import channelATaskDurationExecution from '../../../images/channel-a-task-duration-execution.png';
+import channelATaskTargetCommand from '../../../images/channel-a-task-target-command.png';
+import channelATaskProcedures from '../../../images/channel-a-task-procedures.png';
+
+تتيح لك ميزة **قائمة تحقق** داخل منصة تعاون تنظيم أعمال الفريق، ومتابعة المشاريع، وأتمتة المهام اليومية مباشرة من واجهة القناة لضمان أعلى مستويات الإنتاجية.
+
+---
+
+## إنشاء قوائم التحقق والمهام
+
+يمكنك إنشاء قالب عمل متكامل يحتوي على أقسام رئيسية وتندرج تحتها مهام فرعية محددة.
+
+<Image 
+  src={channelTasksChecklistTemplate} 
+  alt="واجهة قالب قوائم التحقق وإضافة المهام" 
+  style={{ width: '100%', maxWidth: '450px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '20px auto' }} 
+/>
+
+### خطوات إعداد القائمة:
+<Steps>
+1. اضغط على **إضافة قسم** لتقسيم مشروعك إلى مراحل أساسية.
+2. اضغط على **إضافة مهمة** لإنشاء بند عمل جديد تحت القسم المحدد.
+3. أدخل **عنوان المهمة** ووصفاً اختيارياً يوضح المطلوب إنجازه.
+</Steps>
+
+---
+
+## تخصيص خيارات المهمة
+
+يوفر شريط الأدوات المصغر أسفل كل مهمة أربعة خيارات متقدمة لإدارتها بدقة:
+
+### 1. المسند إليه (تعيين المسؤول)
+اضغط على أيقونة المستخدم لفتح قائمة أعضاء القناة وتحديد المسؤول عن تنفيذ هذه المهمة. يمكنك البحث عن الاسم مباشرة باستخدام معرف المستخدم (`@username`).
+
+<Image 
+  src={channelATaskEmployeeAssignment} 
+  alt="قائمة تعيين الموظف المسند إليه المهمة" 
+  style={{ width: '100%', maxWidth: '400px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '20px auto' }} 
+/>
+
+### 2. تاريخ الاستحقاق
+اضغط على أيقونة التقويم لتحديد الموعد النهائي للتنفيذ. يوفر النظام خيارات سريعة مثل (اليوم، غداً، الأسبوع القادم) أو تحديد تاريخ مخصص وساعة محددة.
+
+<Image 
+  src={channelATaskDurationExecution} 
+  alt="نافذة تحديد تاريخ ووقت استحقاق المهمة" 
+  style={{ width: '100%', maxWidth: '400px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '20px auto' }} 
+/>
+
+### 3. تشغيل الأوامر 
+تسمح لك أيقونة الشرطة المائلة (`/`) بربط المهمة بأحد أوامر النظام التلقائية (مثل ضبط الحالة `away`، أو جلب أحداث التقويم `cal`، أو عرض كتل برمجية `code`) ليتم تنفيذ الأمر فور التفاعل مع المهمة.
+
+<Image 
+  src={channelATaskTargetCommand} 
+  alt="قائمة ربط المهام بأوامر النظام التلقائية" 
+  style={{ width: '100%', maxWidth: '400px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '20px auto' }} 
+/>
+
+### 4. إجراءات المهام (الأتمتة الذكية)
+تتيح لك أيقونة البرق (`⚡`) أتمتة الأنشطة بناءً على محفزات معينة. على سبيل المثال، يمكنك ضبط النظام ليقوم بـ **وضع علامة بأن المهمة مكتملة** تلقائياً عند نشر رسالة تحتوي على كلمات مفتاحية محددة داخل القناة.
+
+<Image 
+  src={channelATaskProcedures} 
+  alt="نافذة أتمتة إجراءات المهام بناءً على الكلمات المفتاحية" 
+  style={{ width: '100%', maxWidth: '700px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '20px auto' }} 
+/>
+
+---
+
+<Aside type="tip" title="متابعة الإنجاز">
+يظهر شريط تقدم علوي يوضح نسبة المهام المنجزة (مثال: `المهمام 1/1 منجزة`) ليعطي مؤشراً سريعاً لفريق العمل حول حالة تقدم المشروع الحالي.
+</Aside>
+

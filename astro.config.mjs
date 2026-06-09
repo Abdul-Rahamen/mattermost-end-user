@@ -521,11 +521,26 @@ export default defineConfig({
           collapsed: true,
         },
         {
-          label: "الإضافات الخارجية والميزات المتقدمة",
+          label: "الإضافات والميزات المتقدمة",
           items: [
             {
               label: "الإضافات المرتبطة بالقنوات",
               slug: "plugins/tools-linke-to-channel",
+            }, 
+            {
+              label:"قوائم التحقق وإدارة المهام داخل القنوات",
+              slug: "plugins/channel-tasks-checklist",
+            },
+            {
+              label: "إدارة الملاحظات",
+              slug: "plugins/channel-notes-management",
+            },    {
+              label: "إنشاء وإدارة استطلاعات الرأي",
+              slug: "plugins/channel-poll-and-vote-options",
+            },
+             {
+              label: "مشغل الصوتيات وإدارة قوائم التشغيل",
+              slug: "plugins/channel-sound-playlist-operator",
             },
             {
               label: "ميزات التراسل المتقدمة",
