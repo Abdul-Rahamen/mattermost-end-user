@@ -1,0 +1,378 @@
+﻿
+> build
+> astro build
+
+[2m┘ó┘í:┘ú┘¿:┘Ñ┘Ñ[22m [34m[content][39m Syncing content
+[2m┘ó┘í:┘ú┘¿:┘Ñ┘ª[22m [34m[content][39m Synced content
+[2m┘ó┘í:┘ú┘¿:┘Ñ┘ª[22m [34m[types][39m Generated [2m816ms[22m
+[2m┘ó┘í:┘ú┘¿:┘Ñ┘ª[22m [34m[build][39m output: [34m"static"[39m
+[2m┘ó┘í:┘ú┘¿:┘Ñ┘ª[22m [34m[build][39m mode: [34m"static"[39m
+[2m┘ó┘í:┘ú┘¿:┘Ñ┘ª[22m [34m[build][39m directory: [34mC:\Users\MO-Siraj\workspace\new\mattermost-end-user\dist\[39m
+[2m┘ó┘í:┘ú┘¿:┘Ñ┘ª[22m [34m[build][39m Collecting build info...
+[2m┘ó┘í:┘ú┘¿:┘Ñ┘ª[22m [34m[build][39m [32mΓ£ô Completed in 1.35s.[39m
+[2m┘ó┘í:┘ú┘¿:┘Ñ┘ª[22m [34m[build][39m Building static entrypoints...
+[2m┘ó┘í:┘ú┘⌐:┘á┘ñ[22m [34m[vite][39m [32mΓ£ô built in 7.81s[39m
+[2m┘ó┘í:┘ú┘⌐:┘á┘ñ[22m [34m[vite][39m [32mΓ£ô built in 443ms[39m
+[2m┘ó┘í:┘ú┘⌐:┘á┘ñ[22m [34m[build][39m Rearranging server assets...
+
+[42m[30m generating static routes [39m[49m
+node.exe : Entry docs ΓåÆ 404 was not found.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Entry docs ΓåÆ 404 was not found.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/404.html[22m [2m(+58ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/access-your-workspace/access-your-workspace/index.html[22m [2m(+151ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/access-your-workspace/client-availability/index.html[22m [2m(+19ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/access-your-workspace/install-the-android-mobile-app/index.html[22m [2m(+23ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/access-your-workspace/install-the-desktop-app/index.html[22m [2m(+18ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/access-your-workspace/log-out-of-workspace/index.html[22m [2m(+27ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/ai-agents/agents-context-management/index.html[22m [2m(+20ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/ai-agents/agents-usage-tips-and-best-practices/index.html[22m [2m(+19ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/ai-agents/ai-agent/index.html[22m [2m(+21ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/audio-and-screensharing/audio-and-screensharing/index.html[22m [2m(+19ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/connect-to-multiple-workspaces/index.html[22m [2m(+35ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/customize-your-channel-sidebar/index.html[22m [2m(+19ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/customize-your-desktop-app-experience/index.html[22m [2m(+82ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/customize-your-preferences/index.html[22m [2m(+16ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘ª[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/customize-your-theme/index.html[22m [2m(+162ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-advanced-options/index.html[22m [2m(+153ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-display-options/index.html[22m [2m(+97ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-notifications/manage-your-channelspecific-notifications/index.html[22m [2m(+69ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-notifications/manage-your-desktop-notifications/index.html[22m [2m(+18ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-notifications/manage-your-mention-keyword-notifications/index.html[22m [2m(+17ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-notifications/manage-your-mobile-notifications/index.html[22m [2m(+18ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-notifications/manage-your-notifications/index.html[22m [2m(+77ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-notifications/manage-your-thread-reply-notifications/index.html[22m [2m(+14ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-notifications/manage-your-web-notifications/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-notifications/troubleshoot-notifications/index.html[22m [2m(+224ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-plugin-preferences/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-profile/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-security-preferences/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/manage-your-sidebar-options/index.html[22m [2m(+55ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/customize-your-preferences/set-your-status-availability/index.html[22m [2m(+144ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/end-user-guide/end-user-guide/index.html[22m [2m(+18ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘º[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/archive-and-unarchive-channels/index.html[22m [2m(+24ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/autotranslate-messages/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/browse-channels/index.html[22m [2m(+32ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/channel-naming-conventions/index.html[22m [2m(+16ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/channel-types/index.html[22m [31m(+544ms)[39m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/collaborate-within-channels/index.html[22m [2m(+106ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/collaborate-within-connected-microsoft-teams/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/communicate-a-channels-focus-and-scope/index.html[22m [2m(+17ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/communicate-with-messages/index.html[22m [2m(+9ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/convert-group-messages-to-private-channels/index.html[22m [2m(+15ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/convert-public-channels-to-private-channels/index.html[22m [2m(+22ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/create-channels/index.html[22m [2m(+23ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/display-channel-banners/index.html[22m [2m(+17ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/join-and-leave-channels/index.html[22m [2m(+80ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/make-calls/index.html[22m [2m(+26ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/make-calls-in-taawon/index.html[22m [2m(+27ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘¿[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/manage-channel-bookmarks/index.html[22m [2m(+29ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/manage-channel-members/index.html[22m [2m(+30ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/mark-channels-as-favorites/index.html[22m [2m(+59ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/mark-channels-as-unread/index.html[22m [2m(+14ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/navigate-between-channels/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/collaborate-within-channels/rename-channels/index.html[22m [2m(+26ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/communicate-with-messages-and-threads/index.html[22m [2m(+23ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/flag-messages/index.html[22m [2m(+16ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/format-messages/index.html[22m [31m(+645ms)[39m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/forward-messages/index.html[22m [2m(+45ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/mark-messages-as-unread/index.html[22m [2m(+53ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/mention-people/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘á┘⌐[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/organize-conversations/index.html[22m [2m(+180ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/react-with-emojis-and-gifs/index.html[22m [2m(+84ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/reply-to-messages/index.html[22m [2m(+49ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/save-and-pin-messages/index.html[22m [2m(+157ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/schedule-messages/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/search-for-messages/index.html[22m [2m(+54ms)[22m 
+FAIcon: Icon "checked" with prefix "fas" not found.
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/send-messages/index.html[22m [2m(+232ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/set-message-priority/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/set-message-reminders/index.html[22m [2m(+46ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/share-files-in-messages/index.html[22m [2m(+14ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/communicate-with-messages-and-threads/share-links-to-channels-and-messages/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/extend-workspace-with-integrations/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/invite-people/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/keyboard-shortcuts/keyboard-accessibility/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/keyboard-shortcuts/keyboard-shortcuts/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/learn-about-taawon-roles/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/messaging-collaboration/index.html[22m [2m(+10ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/organize-using-custom-user-groups/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/organize-using-teams/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/organize-using-teams/organize-using-teams/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/organize-using-teams/team-keyboard-shortcuts/index.html[22m [2m(+22ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/organize-using-teams/team-settings/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/messaging-collaboration/view-system-information/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘á[22m   [34mΓö£ΓöÇ[39m [2m/plugins/advance-messageing/index.html[22m [2m(+46ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/plugins/channel-notes-management/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/plugins/channel-poll-and-vote-options/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/plugins/channel-sound-playlist-operator/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/plugins/channel-tasks-checklist/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/plugins/compressed-files-explorer/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/plugins/tools-linke-to-channel/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/plugins/work-with-files/index.html[22m [2m(+10ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/boards-settings/index.html[22m [2m(+141ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/import-export-and-migrate/index.html[22m [2m(+125ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/navigate-boards/index.html[22m [2m(+147ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/project-and-task-management/index.html[22m [2m(+10ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘í[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/share-and-collaborate/index.html[22m [31m(+603ms)[39m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/work-with-boards/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/work-with-calculations/index.html[22m [2m(+10ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/work-with-cards/index.html[22m [2m(+191ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/work-with-groups-filter-and-sort/index.html[22m [2m(+52ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/project-and-task-management/work-with-views/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/tool-integrations/built-in-slash-commands/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/tool-integrations/incoming-webhooks/index.html[22m [2m(+15ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/tool-integrations/outgoing-webhooks/index.html[22m [2m(+14ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/tool-integrations/run-slash-commands/index.html[22m [2m(+9ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/tool-integrations/slash-commands/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/tool-integrations/tool-integrations/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/tool-integrations/webhook-integrations/index.html[22m [2m(+10ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/interact-with-collaborative-playbooks/index.html[22m [2m(+12ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/learn-about-collaborative-playbooks/index.html[22m [2m(+49ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/share-and-collaborate/index.html[22m [2m(+81ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/share-links-to-playbooks/index.html[22m [2m(+10ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/work-with-collaborative-playbooks/index.html[22m [2m(+83ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/work-with-metrics-and-goals/index.html[22m [2m(+11ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/work-with-notifications-and-updates/index.html[22m [2m(+49ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/work-with-runs/index.html[22m [2m(+13ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/work-with-tasks/index.html[22m [2m(+96ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [34mΓö£ΓöÇ[39m [2m/workflow-automation/workflow-automation/index.html[22m [2m(+16ms)[22m 
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m [32mΓ£ô Completed in 6.75s.
+[39m
+[42m[30m generating optimized images [39m[49m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop-login.CFvrMbNP_tsAfN.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(1/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/light-login.DSCG2Jtb_Z1Rp4AL.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(2/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/dark-login.Cn4veIKs_Z1OrSG.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(3/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-home-page.W2cORKdy_Z1tdps4.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(4/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop-server-setup.29G2LTSJ_Z1ivULJ.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(5/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/profile-log-out.CQMrKGbx_ZRuedz.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(6/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop-main-interface.BDmfV19k_aK3im.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(7/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/profile-log-out-mobile.C3z4FtPy_Z1At4sM.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(8/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/agents-in-sidebar.mZnsQisy_JzCNT.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(9/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/agents-in-channels.D_F11sPX_1syPg4.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(10/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/rewrite-with-ai.BzmDDsmO_Z2d4pWv.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(11/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/start-presenting.OvsvNbOq_Z1dHdJE.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(12/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop-edit-server.O0Q9AyGt_xssTe.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(13/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/presenting-popup.DTm1Zn8F_Z1OtvEo.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(14/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/remote-access.C9G4ew4s_2eifj8.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(15/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop-server-add.BIL2TePU_238x6W.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(16/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mute-categories.wE6OHFb1_ZJspHc.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(17/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/sort-categories.pHbWefxl_2ljMa8.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(18/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/unreads.DbXKr7iI_Z1Mfm85.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(19/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop-app-settings.BuLSeC6u_Z23CrXB.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(20/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/MattermostDark.ClFwSa4r_1PMrBV.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(21/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/DiscordDarkTheme.CASlYYfn_2jFcyJ.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(22/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/channel-sidebar-update.DMYbOoKt_Hc7zH.webp [2m(reused cache entry)[22m [2m(+25ms)[22m [2m(23/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/multi-select-move.xvwXzqVM_17lrlD.webp [2m(reused cache entry)[22m [2m(+26ms)[22m [2m(24/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/keywords-trigger-mentions.DWBWOOfn_ZaOX5Y.webp [2m(reused cache entry)[22m [2m(+17ms)[22m [2m(25/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/channel-notification-settings.Bfes4JkT_Z6NjTC.webp [2m(reused cache entry)[22m [2m(+18ms)[22m [2m(26/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/chrome-mention-badge.Dix1XVtG_ZMmHXn.webp [2m(reused cache entry)[22m [2m(+21ms)[22m [2m(27/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/keywords-highlighted.DWT41JZh_Z1Mshah.webp [2m(reused cache entry)[22m [2m(+21ms)[22m [2m(28/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop-notification-check.BqDaQ-5H_1c0Sq6.webp [2m(reused cache entry)[22m [2m(+19ms)[22m [2m(29/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop-server-notification-check.DfXEZf_H_cgkg4.webp [2m(reused cache entry)[22m [2m(+18ms)[22m [2m(30/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop_notification_chart.2UzEWjwH_Z2stNay.webp [2m(reused cache entry)[22m [2m(+22ms)[22m [2m(31/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/email_notification_chart.BKWLNavq_1jfUxO.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(32/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/clear-custom-status.CTfbGpqJ_Z141aR7.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(33/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/push_notification_chart.UnDwkEpr_1WkIMN.webp [2m(reused cache entry)[22m [2m(+13ms)[22m [2m(34/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/set-your-availability-dnd.BdMLTdvp_d9ld3.webp [2m(reused cache entry)[22m [2m(+13ms)[22m [2m(35/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/Channels_Hero.DecJnPWT_Znvsd4.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(36/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/logo.B056RveP_Z1HYzg2.svg [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(37/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/archive-desktop-channels.B1ln9jEl_2a68kc.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(38/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-select-a-channel.BP-JABq9_2frfBm.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(39/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-select-more-options-for-a-channel.RBkVT83y_1pKMW0.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(40/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-select-view-info-for-a-channel.C_g50JQS_1t8gdS.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(41/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-edit-channel.C1jLpJSy_2fpnrU.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(42/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-confirm-archive-a-channel.Dqn9HxLD_1IDaeV.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(43/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/unarchive-desktop-channels.DJL0xeNH_ZclBex.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(44/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/create-channel-or-open-direct-message-on-mobile.DhPmAfVL_1PY1zd.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(45/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/browse-channels.DTYubtEX_6EhKc.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(46/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-browse-public-channels-using-search.Dppoi8No_Z2h5ARf.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(47/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-browse-public-channels.BqtEP2Uc_ZODa9f.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(48/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-select-a-channel.BP-JABq9_ZcVwhX.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(49/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-select-more-options-for-a-channel.RBkVT83y_40s8J.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(50/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-select-view-info-for-a-channel.C_g50JQS_1pjK7s.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(51/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/channel-purpose.CwdRJr32_1QaxoK.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(52/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/microsoft-teams-chat-notifications.B9_ci0HX_GlL2.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(53/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/microsoft-teams-chat-notifications.DbdCRY-c_ZxPfGn.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(54/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/convert-public-channel-to-private.CGT8TYO7_RKrF.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(55/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/teams_plugin_notification_settings.DR7y9u_w_Z1sRYoP.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(56/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-convert-to-private-channel.BMifOVFb_o7SIR.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(57/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-channel-update.CPkLOSKM_yN9Wd.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(58/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-confirm-convert-to-private-channel.BBB4IFIT_1vcGIy.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(59/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-confirm-convert-to-private-channel-alart.Ca5IDfEB_2frTDG.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(60/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/write-dm.Bb3idv9L_1ukvgd.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(61/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/private-channel-create.BiV08wE8_2qINCT.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(62/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/choose-group-members.Cf7EueTs_28DtDh.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(63/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/add-channels-button.Ci9fNs_k_Z1bpYMf.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(64/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/start-conversion.7P4ueugo_ZT1tr0.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(65/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/display-channels-banners.P3PmhN0C_Z187met.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(66/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/browse-channels.3I2mv17Y_Z2eorsl.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(67/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-browse-channels.CjBwCdoN_UChVV.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(68/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/join-channels.cCs5emga_Z2qltFz.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(69/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-select-view-info-for-a-leave.DhYU6Hce_Z16q10r.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(70/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-confirm-leave-a-channel.BcbgkOe8_2nYQtP.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(71/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/start-video-call.DXP2-DQi_1oLju6.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(72/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/video-call-settings-tab-general.LpvQK1mD_sax0D.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(73/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/video-call-settings-tab-notifactions.Bm49yJuS_Z1SEuup.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(74/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/voices-call-main.BouZYDa7_ZtNLMH.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(75/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/video-call-video-options.CqOGaGWT_3L7Tn.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(76/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/sound-call-options.D9HfhcT5_ZtXnlb.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(77/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/add-remark-bar.ByV5DHmw_1Ym8hp.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(78/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-add-first-channel-bookmark.Ccbgh6aY_qeE96.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(79/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-attach-a-channel-bookmark-link.C4yyuBab_ZwwMsp.webp [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(80/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-attach-a-channel-bookmark-file.CUYC4F3a_zuWBu.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(81/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/add-member-to-channel.DWPM_Tm5_Z1E812y.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(82/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-select-members-to-add-to-a-channel.sm9M1xy2_Z1kIkda.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(83/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/desktop-add-user-to-a-channel-by-mentioning.Cyg-2a-g_Z198j5z.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(84/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/leave-from-a-channel.CfThJk2B_Z1wRr8i.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(85/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/remove-member-from-channel.BFNCTjGO_ZAQBOJ.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(86/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-view-members-of-a-channel.DYRhtCPX_ZwXtxm.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(87/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-remove-user-from-a-channel.BZIuDfkk_qTQ4e.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(88/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-manage-channel-members-list.CDlFrNHF_Z1BgP99.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(89/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/mobile-confirm-remove-user-from-channel.C_GxKw2C_Z24LPos.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(90/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/favorites-list-sidebar.DjJ-imA1_Z2fWe53.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(91/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/favorite-channel-desktop.D5VpoOcK_5xwNS.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(92/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ó[22m   [32mΓû╢[39m /_astro/channel-more.CwyTHNp1_Z167KIY.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(93/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/switch-channels.BOEzlh-C_Z1aeVPp.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(94/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/chat-settings.BKoFOILM_Z27prY5.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(95/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/Headings2.DdUydBPC_1vol7t.webp [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(96/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/Headings1.B0kmtu9L_Z1kSh1Y.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(97/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/desktop-channel-rename.hxwMBKC4_n8jSQ.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(98/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/message-formatting-toolbar.RD9pCU-c_Z1NqJVh.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(99/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/syntax-highlighting-github.HyyWfAYH_1vJOb0.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(100/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/syntax-highlighting-sol-dark.BW_zTXi5_ZQkDCo.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(101/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/syntax-highlighting-sol-light.BqjPiGFc_Z23aWlN.webp [2m(reused cache entry)[22m [2m(+13ms)[22m [2m(102/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/syntax-highlighting-monokai.BzrkoKLa_Z1yd5o5.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(103/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/blockQuotes.D_56rJbb_1VLS9V.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(104/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/markdownTable1.y5VrkusR_xWXYO.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(105/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/latex-codeblock.DipK3u99_ck5sN.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(106/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/forwarded-previews.DY2rz4Qy_ZnRih3.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(107/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-messages-forward.S8lDW_uG_BQSxj.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(108/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/message-more.niYzUKw9_Z1C82g1.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(109/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mark-message-as-unread.D_q4JPQ7_Z2nPWCE.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(110/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/recent-mentions.e0Yhf53Q_Jpc9K.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(111/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/crt-following-thread.ClLGanbe_cRlUl.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(112/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/cirecle-gif.BgSaRclw_JCskN.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(113/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/desktop-unfollow-message-thread.BHjOT2kn_Z2stfrS.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(114/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/crt-thread-view.BH4qGAnb_Z7vsSg.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(115/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/message-more.niYzUKw9_1sPoaw.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(116/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/recent-emojis.BQipmanZ_Z1BjFYS.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(117/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/messages-gifs-comments.BOrBwcl2_1z5GNj.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(118/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/emojiautocomplete.CSYdNw7b_CbuNE.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(119/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/emoji-skin-tone.By3tBRBo_Z1dW94y.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(120/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-include-emojis-for-a-message-reaction.dN0w1nGj_R0E4J.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(121/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/add-custom-emoji1.Cz3tB1oE_17suUL.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(122/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/reply-to-message.ari4sLTa_2w5N2V.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(123/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/expand-sidebar.DtJZU0G8_Z296PDp.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(124/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-reply-to-a-message-using-reply.BbEPCc9s_Z2eeK0q.webp [2m(reused cache entry)[22m [2m(+13ms)[22m [2m(125/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/save-message.CdKzH1kc_JNySi.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(126/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/remove-from-saved-posts.CHP0eYsW_Ztl1nL.webp [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(127/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-save-a-message1.DCI71O-x_ozB6T.webp [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(128/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-unsave-a-message-from-saved-messages1.DJdRrBzB_ZzN6tM.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(129/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/pin-message-to-channel.Tb19Tm0t_ZnKPnt.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(130/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-unsave-a-message-from-the-channel.sjQqgbgY_Z9W33x.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(131/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/pinned-example-channel.D5qAt1al_ZgcuWW.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(132/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/pinned-example-rhs.1affyfza_2fGEJ4.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(133/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/pinned-posts.D4sTY8xD_20AKlh.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(134/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/unpin-message-from-channel.BMuWKe7V_nigi6.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(135/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-pin-a-message-to-the-channel.BKV1sf7Z_Z2kO2Vd.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(136/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-view-the-pinned-message-in-the-pinned-messages-list.Kk2gYSwa_ZJ7Q8l.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(137/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-unpin-a-message-from-the-channel.VyNGFaSf_Z1g5Mm0.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(138/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-unpin-a-message-from-pinned-messages.Bwt8URHX_Z1DUN9V.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(139/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/schedule-a-message.UPAyFxYR_2gk2OM.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(140/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/manage-scheduled-message.D0PGRBzV_H3VOW.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(141/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/search-messages.DUITbveT_Z68pio.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(142/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/calendar2.fPiKiZ8A_Z6zof1.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(143/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/jump-to-message.B54TNdly_ZkCyjD.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(144/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-search-for-messages.C8yWhVoI_2hrr7s.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(145/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-search-message-with-modifiers.DXMm7rOD_ZozS7k.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(146/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-search-message-criteria-with-hashtags._VPcYJCd_Z1lqPDo.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(147/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-search-message-results.BQ3r57aW_ZrMB4z.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(148/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/file-search-filter.D3t_8EID_22WKJA.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(149/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-files-filters.CRnxIoR4_10YdM5.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(150/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/more-actions.BrIQIiTD_Z1GroRL.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(151/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/Global-Drafts-Animated-GIF.CIp29nbe_Zhsl8Y.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(152/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/delete-and-edit-messages.Dp7sPrvw_Z1G4sIM.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(153/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/message-priority.DRP720Tu_ZHu4GS.webp [2m(reused cache entry)[22m [2m(+15ms)[22m [2m(154/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/permalink-previews.wwK-3lhl_Z1bomfu.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(155/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/message-remider.BNiYrGO5_Z2frR0J.webp [2m(reused cache entry)[22m [2m(+15ms)[22m [2m(156/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/invite-people.YsEkTzCV_x5Pi0.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(157/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/web-desktop-invite-people-to-the-team.ChSUOv4s_W4WvJ.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(158/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mobile-copy-a-link-to-the-message.DEHoSQWR_Z2mu7FM.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(159/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/navigation.BPcA5mpK_15dUpI.webp [2m(reused cache entry)[22m [2m(+15ms)[22m [2m(160/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/keyboard-shortcuts.BjmGac3n_ZX39RL.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(161/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/message-navigation.9MRY_LTY_Kv9im.webp [2m(reused cache entry)[22m [2m(+17ms)[22m [2m(162/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/access-user-groups.DBcjegPY_ZORANW.webp [2m(reused cache entry)[22m [2m(+18ms)[22m [2m(163/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/group-members.e1NQV3Gr_Z1kvioD.webp [2m(reused cache entry)[22m [2m(+17ms)[22m [2m(164/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/manage-user-groups.DipynSPY_Z8fMCc.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(165/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/add-members-to-a-group.BMULbNt1_Z2bKTix.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(166/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/remove-members-from-a-group.BKjfbSNP_Z1OulDf.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(167/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/edit-team-icon.BeT5m51X_ZzxIOY.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(168/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/team-settings.cBqeH8mA_1ORnK8.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(169/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/teams.2Aj2pZ2r_Z2kppgK.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(170/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/team-channel-access-settings.OFNyRTaP_Z1XKfG7.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(171/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/about-platform.ulg9zzE4_ESDK7.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(172/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/send-to-everyone.3lAX9KHL_1iIJ7U.webp [2m(reused cache entry)[22m [2m(+13ms)[22m [2m(173/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/send-to-mutiple-users-button.sXazjqoS_Z18jYor.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(174/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/disable-channel-tools.CJ26KqLR_F3VKv.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(175/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/add-multiple-users-to-message.VIt3qg9C_2tnKcm.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(176/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/desktop-type-note-on-a-channel.Bc-4mOCh_Z1hWM6q.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(177/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/desktop-my-notes-on-a-channel.HrSrr0tR_2edKOS.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(178/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-add-voting-options.Cc3mJMIx_1xcu5S.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(179/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-sound-operator-for-sounds-files.DAXJKBJ__Z1UCEHB.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(180/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-vote-view.BVHNO0Bc_ZVClDe.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(181/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-tasks-checklist-template.HRncFls-_1MRYrj.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(182/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-a-task-employee-assignment.DLPR1jRA_1Gf9Nt.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(183/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-a-task-duration-execution.BbDyiiug_Z1Ppfnm.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(184/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-a-task-target-command.C76vOt7z_Zg94sD.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(185/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/open-compressed-folders.CNWANE2l_ZVpHOm.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(186/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-a-task-procedures.Dhf9eO0n_Zz3cxl.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(187/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channels-linked-templates-switch.DB26BObx_27m4UG.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(188/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-add-or-create-link.XhQn_Cqs_Z29gRrm.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(189/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/channel-browse-or-create-template.j-K_pIgW_j84Xt.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(190/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/chat-file-options-list.9wuVRppE_Z1QycFE.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(191/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/chennel-create-new-template.BshJdjUE_1B77z1.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(192/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/chat-file-permissions-assignment.Bn-KS1eW_Z2aMPYY.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(193/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/chat-file-editor.ag_CSlMZ_Z23TJ3m.webp [2m(reused cache entry)[22m [2m(+15ms)[22m [2m(194/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/product-menu-integrations.ZkD2SGMv_18yB7x.webp [2m(reused cache entry)[22m [2m(+16ms)[22m [2m(195/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/manage-webhooks.BHtVFIpN_1hGqso.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(196/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/select-add-incoming-webhook.BRhe0xNu_ZS5xlV.webp [2m(reused cache entry)[22m [2m(+13ms)[22m [2m(197/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/create-incoming-webhook-details.DgCNzM4B_Z1dLMa1.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(198/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/incoming-webhook-created.CoATrVvZ_2n9kxA.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(199/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/github-incoming-webhook.DoEeazJg_ZT4I5u.webp [2m(reused cache entry)[22m [2m(+14ms)[22m [2m(200/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/jira-incoming-webhook.DCs6JeIr_yblWO.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(201/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/mattermost-incoming-webhook.wx4_oV4Q_6mNqv.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(202/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/weblate-incoming-webhook.CyE199He_ZCUlbj.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(203/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/fastlane-incoming-webhook.NJhi1fqR_1OG7Gx.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(204/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/incoming_webhooks_full_example.CX_tYwT2_urGK8.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(205/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/select-add-outgoing-webhook.C8bJihKl_Z2midSY.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(206/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/card-prop-example.CFCMeiev_Re6Ab.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(207/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/create-outgoing-webhook-details.gd7MRZUd_LQbwn.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(208/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/create-outgoing-webhook-details-more.teaZoUai_ZuMAbA.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(209/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/outgoing-webhook-created.DB80opuo_ZCGrO0.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(210/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/webhooksTable.Dx_MQjyE_Z2o8rYl.webp [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(211/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/playbook-attributes-create-first.DvFGJfQU_Z2624F2.webp [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(212/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/archive-a-playbook.DwnH15mI_1tnmPm.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(213/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/playbook-attributes-create-second.gCXs5k6A_2hTywC.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(214/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/playbook-attribute-actions.7jw5-v2I_82huJ.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(215/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/restore-an-archived-playbook.DXwn_Z0Y_Z1zorXJ.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(216/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/Retro.DJ-1lLf-_ZnbaHR.webp [2m(reused cache entry)[22m [2m(+13ms)[22m [2m(217/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/playbook-metrics.Baf8xA2E_Z1IRGs3.webp [2m(reused cache entry)[22m [2m(+12ms)[22m [2m(218/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/task-actions.C_aKmDCG_1coRDm.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(219/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/playbook-conditions-add.DGXtmlEq_Z1HXdlS.webp [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(220/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m   [32mΓû╢[39m /_astro/Playbooks_Hero.CpoiR3qD_6jPPA.webp [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(221/221)[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m [32mΓ£ô Completed in 249ms.
+[39m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m [34m[build][39m [32mΓ£ô Completed in 17.01s.[39m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m [34m[starlight:pagefind][39m Building search index with Pagefind...
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m [34m[starlight:pagefind][39m Found 119 HTML files.
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m [34m[starlight:pagefind][39m Finished building search index in 669ms.
+[33m[1m┘ó┘í:┘ú┘⌐:┘í┘ú[22m [WARN] [@astrojs/sitemap][39m The Sitemap integration requires the `site` astro.config option. Skipping.
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m [34m[build][39m 119 page(s) built in [1m19.19s[22m
+[2m┘ó┘í:┘ú┘⌐:┘í┘ú[22m [34m[build][39m [1mComplete![22m

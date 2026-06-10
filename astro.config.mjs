@@ -56,13 +56,17 @@ export default defineConfig({
 
       sidebar: [
         {
-          label: "دليل المستخدم النهائي",
-          items: [
-            {
-              label: "دليل المستخدم النهائي",
-              slug: "end-user-guide/end-user-guide",
-            },
-          ],
+        label: "دليل المستخدم النهائي",
+        items: [
+          {
+            label: "دليل المستخدم النهائي",
+            slug: "end-user-guide/end-user-guide",
+          },
+          {
+            label: "نظرة عامة",
+            slug: "end-user-guide/product-overview",
+          },
+        ],
         },
         {
           label: "الوصول إلى مساحة عملك",
@@ -406,6 +410,40 @@ export default defineConfig({
             {
               label: "إعدادات اللوحات",
               slug: "project-and-task-management/boards-settings",
+            },
+          ],
+          collapsed: true,
+        },
+        {
+          label: "التكاملات مع الأدوات الخارجية",
+          items: [
+            {
+              label: "نظرة عامة",
+              slug: "tool-integrations/tool-integrations",
+            },
+            {
+              label: "خطافات الويب",
+              slug: "tool-integrations/webhook-integrations",
+            },
+            {
+              label: "استقبال خطافات الويب",
+              slug: "tool-integrations/incoming-webhooks",
+            },
+            {
+              label: "إرسال خطافات الويب",
+              slug: "tool-integrations/outgoing-webhooks",
+            },
+            {
+              label: "الأوامر المائلة",
+              slug: "tool-integrations/slash-commands",
+            },
+            {
+              label: "تشغيل الأوامر المائلة",
+              slug: "tool-integrations/run-slash-commands",
+            },
+            {
+              label: "الأوامر المائلة المدمجة",
+              slug: "tool-integrations/built-in-slash-commands",
             },
           ],
           collapsed: true,
