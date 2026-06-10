@@ -537,6 +537,9 @@ export default defineConfig({
             },    {
               label: "إنشاء وإدارة استطلاعات الرأي",
               slug: "plugins/channel-poll-and-vote-options",
+            }, {
+              label: "الويب هوكس الصادرة ",
+              slug: "plugins/outgoing-webhooks",
             },
              {
               label: "مشغل الصوتيات وإدارة قوائم التشغيل",
