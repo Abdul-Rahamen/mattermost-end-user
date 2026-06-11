@@ -597,6 +597,10 @@ export default defineConfig({
             {
               label: "التعامل مع الملفات المضغوطة",
               slug: "plugins/compressed-files-explorer",
+            },
+            {
+              label:"محرر الصور ومقاطع الفيديو",
+              slug:"plugins/image-video-editor"
             }
           ],
           collapsed: true,
