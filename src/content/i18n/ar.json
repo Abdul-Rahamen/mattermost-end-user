@@ -1,0 +1,12 @@
+{
+  "pagefind.clear_search": "Clear",
+  "pagefind.load_more": "تحميل المزيد من النتائج",
+  "pagefind.search_label": "البحث في هذا الموقع",
+  "pagefind.filters_label": "Filters",
+  "pagefind.zero_results": "لا نتائج عن  [SEARCH_TERM]",
+  "pagefind.many_results": "[COUNT] نتيجة البحث عن [SEARCH_TERM]",
+  "pagefind.one_result": "[COUNT] نتيجة البحث عن [SEARCH_TERM]",
+  "pagefind.alt_search":  " لا نتائج عن [SEARCH_TERM]. Showing results for [DIFFERENT_TERM] instead",
+  "pagefind.search_suggestion": "لا نتائج بحث عن[SEARCH_TERM]. Try one of the following searches:",
+  "pagefind.searching": "البحث عن [SEARCH_TERM]..."
+}

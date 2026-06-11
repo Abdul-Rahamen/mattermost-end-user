@@ -56,13 +56,18 @@ export default defineConfig({
 
       sidebar: [
         {
-          label: "دليل المستخدم النهائي",
-          items: [
-            {
-              label: "دليل المستخدم النهائي",
-              slug: "end-user-guide/end-user-guide",
-            },
-          ],
+        label: "دليل المستخدم النهائي",
+        items: [ 
+          {
+            label: "نظرة عامة",
+            slug: "end-user-guide/product-overview",
+          },
+          {
+            label: "دليل المستخدم النهائي",
+            slug: "end-user-guide/end-user-guide",
+          },
+        
+        ],
         },
         {
           label: "الوصول إلى مساحة عملك",
@@ -411,6 +416,40 @@ export default defineConfig({
           collapsed: true,
         },
         {
+          label: "التكاملات مع الأدوات الخارجية",
+          items: [
+            {
+              label: "نظرة عامة",
+              slug: "tool-integrations/tool-integrations",
+            },
+            {
+              label: "الويب هوكات  ",
+              slug: "tool-integrations/webhook-integrations",
+            },
+            {
+              label: "الويب هوكات الواردة ",
+              slug: "tool-integrations/incoming-webhooks",
+            },
+            {
+              label: "الويب هوكات الصادرة",
+              slug: "tool-integrations/outgoing-webhooks",
+            },
+            {
+              label: "الأوامر المائلة",
+              slug: "tool-integrations/slash-commands",
+            },
+            {
+              label: "تشغيل الأوامر المائلة",
+              slug: "tool-integrations/run-slash-commands",
+            },
+            {
+              label: "الأوامر المائلة المدمجة",
+              slug: "tool-integrations/built-in-slash-commands",
+            },
+          ],
+          collapsed: true,
+        },
+        {
           label: "وكلاء الذكاء الاصطناعي",
           items: [
             {
@@ -537,9 +576,11 @@ export default defineConfig({
             },    {
               label: "إنشاء وإدارة استطلاعات الرأي",
               slug: "plugins/channel-poll-and-vote-options",
-            }, {
-              label: "الويب هوكس الصادرة ",
-              slug: "plugins/outgoing-webhooks",
+            }, 
+   
+            {
+              label:"جدولة الاحداث  والمواعيد",
+              slug: "plugins/channel-event-schedules",
             },
              {
               label: "مشغل الصوتيات وإدارة قوائم التشغيل",
