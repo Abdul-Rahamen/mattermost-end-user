@@ -45,12 +45,13 @@
 
   /* Left border — pinned to the left edge of the centered container */
   .page::before {
-    left: calc(50% - 768px);
+    /* left: calc(50% - 768px); */
+    display: none;
   }
 
   /* Right border — pinned to the right edge of the centered container */
   .page::after {
-    right: calc(50% - 768px);
+    display: none;
   }
 
   /* ──────────────────────────────────────────────
