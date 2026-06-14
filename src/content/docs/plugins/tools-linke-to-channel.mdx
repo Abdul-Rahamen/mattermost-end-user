@@ -1,86 +1,78 @@
 ---
-title: شريط الأدوات المرتبطة بالقنوات
-description: هذه الصفحة خاصة بشرح الأدوات المساعدة الموجودة في واجهة منصة التعاون والمتعلقة بالقنوات مثل قوالب العمل المرتبطة بالقنوات، قوائم التحقق الخاصة بمهام القناة، ملاحظات القناة، المفكرة ، مشغل الصوتيات ، الاستطلاعات ، واللوحة التفاعلية 
+title: "شريط الأدوات المرتبطة بالقنوات"
+description: "دليل شامل لشرح الأدوات المساعدة المدمجة في شريط قنوات منصة تعاون، بما في ذلك ربط قوالب وألواح العمل، وحوكمة المكونات البرمجية."
 ---
 
-                                           
-{/* استيراد الصور المحلية */}
-import desktopTypeNote from '../../../images/desktop-type-note-on-a-channel.png';
-import desktopMyNotes from '../../../images/desktop-my-notes-on-a-channel.png';
 import { Tabs, TabItem, Steps, Aside, CardGrid, LinkCard } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
-
-{/* استيراد صور اللوحات والقوالب */}
+{/* استيراد الأصول المرئية بأسلوب camelCase المتوافق مع معايير الأداء والتحميل الذكي */}
+import desktopTypeNote from '../../../images/desktop-type-note-on-a-channel.png';
+import desktopMyNotes from '../../../images/desktop-my-notes-on-a-channel.png';
 import channelsLinkedTemplatesSwitch from '../../../images/channels-linked-templates-switch.png';
 import channelAddOrCreateLink from '../../../images/channel-add-or-create-link.png';
 import channelBrowseOrCreateTemplate from '../../../images/channel-browse-or-create-template.png';
 import chennelCreateNewTemplate from '../../../images/chennel-create-new-template.png';
 
-{/* استيراد صور المهام وقوائم التحقق السابقة */}
-import channelTasksChecklistTemplate from '../../../images/channel-tasks-checklist-template.png';
-import channelATaskEmployeeAssignment from '../../../images/channel-a-task-employee-assignment.png';
-import channelATaskDurationExecution from '../../../images/channel-a-task-duration-execution.png';
-import channelATaskTargetCommand from '../../../images/channel-a-task-target-command.png';
-import channelATaskProcedures from '../../../images/channel-a-task-procedures.png';
-
-تتيح لك منصة تعاون ربط قنوات الاتصال بلوحات العمل المتقدمة وقوالب المشاريع المشتركة، مما يسهم في توحيد بيئة العمل ومتابعة المهام التنفيذية وقوائم التحقق في مكان واحد.
+تتيح لك **منصة تعاون** ربط قنوات الاتصال الحوارية بلوحات العمل المتقدمة، وقوالب المشاريع المشتركة، وقوائم التحقق، والمفكرات؛ مما يسهم في توحيد بيئة العمل، ومتابعة المهام التنفيذية، وإثراء المحتوى المعرفي للفريق في مكان واحد دون تشتيت.
 
 ---
 
-## ربط القوالب واللوحات بالقناة
+## 1. ربط القوالب واللوحات الرقمية بالقناة
 
-تستطيع ربط لوحة عمل برمجية أو قالب مشروع معين مباشرة بالقناة لتسهيل وصول الفريق إليها وتحديثها بصورة جماعية.
+تستطيع ربط لوحة عمل برمجية  أو قالب مشروع معين مباشرة بقناة دردشة محددة؛ لتسهيل وصول الفريق إليها وتحديث مخرجاتها بصورة جماعية ومتزامنة.
 
 <Image 
   src={channelsLinkedTemplatesSwitch} 
-  alt="واجهة القوالب المرتبطة داخل القناة" 
-  style={{ width: '100%', maxWidth: '450px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '20px auto' }} 
+  alt="واجهة استعراض القوالب والألواح المرتبطة داخل الشريط المساعد للقناة" 
+  style={{ width: '100%', maxWidth: '450px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '2rem auto' }} 
 />
 
-### خطوات ربط أو إنشاء لوح جديد:
+### خطوات ربط أو إنشاء لوح عمل جديد:
 <Steps>
-1. من تبويب **القوالب** داخل واجهة إدارة القناة، اضغط على زر **+ إضافة**.
-2. تفتح لك نافذة **ربط القوالب**. يمكنك البحث عن لوحة عمل قائمة لربطها مباشرة، أو الضغط على خيار **إنشاء لوح** لبدء مشروع جديد من الصفر.
+1. من **القوالب واللوحات** المتاح في الشريط المساعد للقناة، انقر فوق زر **+ إضافة**.
+2. ستظهر لك نافذة إدارة **ربط القوالب**. يمكنك البحث عن لوحة عمل قائمة في مساحة العمل لربطها فرياً، أو النقر فوق خيار **إنشاء لوح** لبدء مشروع جديد من الصفر.
 </Steps>
 
 <Image 
   src={channelAddOrCreateLink} 
-  alt="نافذة ربط القوالب وإلغاء الربط" 
-  style={{ width: '100%', maxWidth: '550px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '20px auto' }} 
+  alt="نافذة ربط قوالب العمل الحالية بالقناة أو بدء لوحة تتبع برمجية جديدة" 
+  style={{ width: '100%', maxWidth: '550px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '2rem auto' }} 
 />
 
 ---
 
-## تصفح القوالب وإنشاء الألواح الفارغة
+## 2. تصفح مستودع القوالب وبناء الألواح الفارغة
 
-عند اختيار إنشاء أو تصفح الألواح، يوفر لك النظام مستودعاً مركزياً لإدارة قوالب مشاريعك أو البدء بمساحة عمل مخصصة.
+عند اختيارك لتصفح أو إنشاء الألواح، يمنحك النظام بيئة مركزية متكاملة لإدارة قوالب مشاريعك التشغيلية أو التأسيس لمساحات عمل مرنة:
 
 <Image 
   src={channelBrowseOrCreateTemplate} 
-  alt="مستودع تصفح القوالب وإنشاء لوح جديد" 
-  style={{ width: '100%', maxWidth: '700px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '20px auto' }} 
+  alt="مستودع تصفح قوالب المشاريع الجاهزة وخيارات بناء الألواح المخصصة للفريق" 
+  style={{ width: '100%', maxWidth: '700px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '2rem auto' }} 
 />
 
-* **استخدام قالب جاهز**: تصفح القوالب المتاحة (مثل *قالب توثيق منصة تعاون*) ثم اضغط على زر **استخدم هذا القالب** لتطبيقه فوراً.
-* **البدء من الصفر**: إذا كنت ترغب في بناء هيكلية مخصصة، اضغط على خيار **إنشاء لوح فارغ**.
-* **تحرير النماذج**: تتيح لك بطاقة القالب المفتوحة تعيين عنوان مخصص (مثل تغيير اللوح الفرعي من وضعية *بدون عنوان*)، وتحديث الحالة، وإضافة التعليقات والمرفقات التوضيحية لزملائك في الفريق.
+* **تطبيق قالب جاهز**: تصفح الهياكل المتاحة في المعرض (مثل *قالب توثيق منصة تعاون*) ثم اضغط على زر **استخدم هذا القالب ** لاعتماده وتشغيله فوراً.
+* **التأسيس من الصفر**: إذا كنت ترغب في صياغة جدول مهام فريد وهيكلية حرة، انقر فوق خيار **إنشاء لوح فارغ **.
+* **تحرير النماذج والخصائص**: تتيح لك بطاقة القالب المفتوحة تخصيص المسميات (مثل تعديل عنوان اللوح الفرعي من وضعية *بدون عنوان - Untitled* إلى الاسم المطلوب)، وتحديث معايير الحالة (الحالة)، وتضمين المرفقات والتعليقات التوضيحية لزملائك.
 
 <Image 
   src={chennelCreateNewTemplate} 
-  alt="نافذة تحرير وإعداد قالب لوح جديد" 
-  style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '20px auto' }} 
+  alt="نافذة تحرير وإعداد معلمات قالب اللوح الجديد وتسمية حقوله" 
+  style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', border: '1px solid var(--sl-color-gray-5)', display: 'block', margin: '2rem auto' }} 
 />
 
-### إخفاء شريط الأدوات المرتبطة بالقنوات
-لإخفاء شريط الأدوات المرتبطة بالقنوات، يرجى اتباع الخطوات التالية:
+---
 
-1. اضغط على أيقونة **الترس** (الإعدادات) في الزاوية اليسرى من الشريط العلوي.
+## 3. إخفاء شريط الأدوات المرتبطة بالقنوات
+
+في حال رغبتك في تصفية واجهة المستخدم، وتوسيع مساحة قراءة الرسائل، وإخفاء شريط الأدوات الإضافية، يمكنك إيقاف وتصفية المكونات البرمجية الملحقة باتباع المسار التالي:
+
+<Steps>
+1. انقر فوق أيقونة **الترس (الإعدادات )** المتواجدة في الزاوية اليسرى من الشريط العلوي للواجهة.
 2. اختر **الإعدادات المتقدمة**.
-3. اختر **تصحيح الأخطاء**.
-
-![CheckPlugin](../../../images/disable-channel-tools.png)
-
-4. قم بالضغط على زر **تعطيل المكونات البرمجية** (أو تفعيل/إلغاء التفعيل حسب الحالة).
-5. اضغط على زر **حفظ**.
-
+3. انتقل إلى تبويب **تصحيح الأخطاء والمكونات**.
+4. ابحث عن خيار إدارة الملحقات، وانقر فوق زر **تعطيل المكونات البرمجية ** أو تهيئة التفعيل حسب متطلبات العرض لديك.
+   <Image src={import('../../../images/disable-channel-tools.png')} alt="شاشة الإعدادات المتقدمة لتعطيل وإلغاء تفعيل شريط المكونات البرمجية الملحقة بالقنوات" style={{ display: 'block', margin: '1.5rem auto' }} />
+5. انقر فوق زر **حفظ** لتطبيق التغييرات وتحديث مظهر مساحة عملك فوراً.
+</Steps>

@@ -1,9 +1,9 @@
 ---
-title: "أرشفة وإلغاء أرشفة القنوات "
-description: "تعرف على كيفية أرشفة القنوات العامة والخاصة   وإلغاء أرشفتها"
+title: "أرشفة القنوات وإلغاء أرشفتها"
+description: "تعرّف على كيفية أرشفة القنوات العامة والخاصة، وإلغاء أرشفتها في منصة تعاون."
 ---
 
-import { Tabs, TabItem, Steps,Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
 {/* استيراد الأصول المرئية */}
@@ -18,70 +18,69 @@ import unarchiveChannelImg from '../../../../images/unarchive-channel.png';
 import mobileUnarchive from '../../../../images/mobile-unarchive-a-channel.jpg';
 import mobileConfirmUnarchive from '../../../../images/mobile-confirm-unarchive-a-channel.jpg';
 
-### أرشفة قناة 
+## أرشفة قناة 
 
-أرشِف القنوات العامة والخاصة عندما لا تعود هناك حاجة إليها. الأرشفة تزيل القناة من الشريط الجانبي وتضعها في حالة قراءة فقط. أي عضو في القناة يمكنه أرشفتها ما لم يقم مسؤول النظام بتعطيل هذا الحق.
+يمكنك أرشفة القنوات العامة والخاصة عندما لا تعود هناك حاجة إليها. تؤدي أرشفة القناة إلى إزالتها من الشريط الجانبي وتحويلها إلى وضع القراءة فقط. يمكن لأي عضو في القناة أرشفتها ما لم يقم مسؤول النظام  بتقييد هذه الصلاحية.
 
-<Aside type="note" >
-    يمكنك الاستمرار في الوصول إلى القنوات المؤرشفة ما لم يُمنع ذلك بواسطة إعدادات النظام.
- </Aside>
-
+<Aside type="note">
+يمكنك الاستمرار في الوصول إلى محتوى القنوات المؤرشفة ما لم تمنع إعدادات النظام ذلك.
+</Aside>
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    لتأرشفة قناة: افتح قائمة القناة من اسم القناة في أعلى اللوحة المركزية ثم اختر **أرشفة القناة**.
-           <Image src={archiveDesktopChannelImg} alt="Step 1" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
-
+    لأرشفة قناة: انقر على اسم القناة في الجزء العلوي لفتح قائمة الخيارات، ثم حدد **أرشفة القناة**.
+    
+    <Image src={archiveDesktopChannelImg} alt="أرشفة القناة عبر الويب أو تطبيق سطح المكتب" />
   </TabItem>
 
-  <TabItem label="الهاتف المحمول " icon="mobile">
+  <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
-    1. اضغط على القناة التي تريد أرشفتها.
-       <Image src={mobileSelectChannel} alt="Step 1" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    1. افتح القناة التي ترغب في أرشفتها.
+       <Image src={mobileSelectChannel} alt="واجهة تحديد القناة في الجوال" class="phone-screenshots" />
 
-    2. اضغط علئ اسم القناه او المجموعة
-       <Image src={mobileMoreOptions} alt="Step 2" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    2. اضغط على اسم القناة في الجزء العلوي.
+       <Image src={mobileMoreOptions} alt="قائمة خيارات القناة" class="phone-screenshots" />
 
-    3. اضغط **اعدادت الدردشة**.
-       <Image src={mobileViewInfo} alt="Step 3" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    3. حدد **عرض المعلومات**.
+       <Image src={mobileViewInfo} alt="عرض معلومات القناة" class="phone-screenshots" />
 
-    4. اختر **أرشفة الدردشة**.
-       <Image src={mobileEditChannel} alt="Step 4" class="phone-screenshots" />
+    4. اختر **أرشفة القناة**.
+       <Image src={mobileEditChannel} alt="خيار أرشفة القناة" class="phone-screenshots" />
 
-    5. اضغط **نعم ** للتأكيد النهائي.
-       <Image src={mobileConfirmArchive} alt="Step 5" class="phone-screenshots"style={{ borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    5. اضغط على **نعم** (Yes) للتأكيد النهائي.
+       <Image src={mobileConfirmArchive} alt="رسالة تأكيد عملية الأرشفة" class="phone-screenshots" />
     </Steps>
   </TabItem>
 </Tabs>
 
-<Aside type="note" >
-    <ul style={{ listStyleType: 'disc', paddingInlineStart: '1.5rem' }}>
-      <li>عند تعطيل مستخدم، قد تُؤرشف قنوات الرسائل المباشرة المرتبطة به وتصبح للقراءة فقط.</li>
-      <li>لا يمكن أرشفة قنوات الرسائل الجماعية، ويمكن إغلاقها لإخفائها من الشريط الجانبي.</li>
-      <li>لا يمكن أرشفة قناة Town Square الافتراضية.</li>
-      <li>يمكن لمسؤولي النظام أرشفة القنوات عبر وحدة التحكم دون الانضمام إليها.</li>
-      <li>لا يمكن إعادة استخدام عنوان URL لقناة مؤرشفة عند إنشاء قناة جديدة باستخدام نفس الاسم.</li>
-    </ul>
- </Aside>
+<Aside type="note">
+* عند تعطيل حساب مستخدم، قد يتم أرشفة قنوات الرسائل المباشرة المرتبطة به لتصبح في وضع القراءة فقط.
+* لا يمكن أرشفة قنوات الرسائل الجماعية، ولكن يمكنك إغلاقها لإخفائها من الشريط الجانبي.
+* لا يمكن أرشفة قناة **الساحة العامة** الافتراضية.
+* يمكن لمسؤولي النظام أرشفة القنوات عبر وحدة تحكم النظام دون الحاجة للانضمام إليها.
+* لا يمكن إعادة استخدام عنوان URL الخاص بقناة مؤرشفة عند إنشاء قناة جديدة تحمل نفس الاسم.
+</Aside>
 
 ---
 
-### إلغاء أرشفة قناة 
+## إلغاء أرشفة قناة 
 
-
-يمكن لمسؤولي النظام ومسؤولي الفريق استعادة القنوات المؤرشفة — يتم استعادة العضويات والمحتوى ما لم تحذف الرسائل أو الملفات بواسطة سياسة الاحتفاظ.
+يمكن لمسؤولي النظام ومسؤولي الفريق استعادة القنوات المؤرشفة. عند استعادة القناة، يتم استرجاع جميع العضويات والمحتوى السابق، ما لم تكن الرسائل أو الملفات قد حُذفت مسبقًا بموجب سياسة الاحتفاظ بالبيانات.
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
-    1. للعثور على القناة، ابحث عنها ثم افتحها.
-    2. من قائمة القناة اختر **إلغاء أرشفة القناة**.
+    1. ابحث عن القناة المؤرشفة وافتحها.
+    2. من قائمة القناة، حدد **إلغاء أرشفة القناة**.
     </Steps>
-    <Image src={unarchiveDesktopChannelImg} alt="Unarchive Channel Web" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }}/>
+    
+    <Image src={unarchiveDesktopChannelImg} alt="إلغاء أرشفة القناة عبر الويب" />
   </TabItem>
 
-  <TabItem label="الهاتف المحمول " icon="mobile">
-الغاء الارشفة غير جاهزه  في تطبيق الهاتف حاليا ,  لا تزال  قيد التطوير
+  <TabItem label="الهاتف المحمول" icon="mobile">
+    <Aside type="note" title="قيد التطوير">
+    ميزة إلغاء الأرشفة عبر تطبيق الجوال غير مدعومة حاليًا ولا تزال قيد التطوير. يرجى استخدام متصفح الويب أو تطبيق سطح المكتب كبديل في الوقت الحالي.
+    </Aside>
 
     {/* <Steps>
     1. اضغط على القناة التي تريد إلغاء أرشفتها.
@@ -103,6 +102,6 @@ import mobileConfirmUnarchive from '../../../../images/mobile-confirm-unarchive-
   </TabItem>
 </Tabs>
 
-<Aside type="note" >
-    يمكن لمسؤولي النظام إلغاء أرشفة القنوات عبر `mmctl` والمسؤولون الآخرون عبر واجهة برمجة التطبيقات.
- </Aside>
+<Aside type="note">
+يمكن لمسؤولي النظام إلغاء أرشفة القنوات مركزيًا باستخدام أداة سطر الأوامر `mmctl`، بينما يمكن للمسؤولين الآخرين القيام بذلك برمجيًا عبر واجهة برمجة التطبيقات (API).
+</Aside>

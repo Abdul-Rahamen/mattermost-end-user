@@ -1,6 +1,6 @@
 ---
 title: "الانضمام إلى القنوات ومغادرتها"
-description: "تعرف على كيفية الانضمام إلى القنوات العامة والخاصة في منصة تعاون وكيفية مغادرتها بفاعلية."
+description: "تعرّف على كيفية الانضمام إلى القنوات العامة والخاصة في منصة تعاون، وكيفية مغادرتها بفاعلية."
 ---
 
 import { Tabs, TabItem, Steps, Aside, Badge, Card, CardGrid } from '@astrojs/starlight/components';
@@ -26,37 +26,37 @@ import mobileConfirmLeave from '../../../../images/mobile-confirm-leave-a-channe
 
 <CardGrid>
   <Card title="القنوات العامة" icon="seti:license">
-    يتم تمييزها بأيقونة الكرة  <FAIcon name="globe"/>. يمكن لأي عضو في المؤسسة البحث عنها والانضمام إليها في أي وقت.
+    يتم تمييزها بأيقونة الكرة الأرضية <FAIcon name="globe"/>. يمكن لأي عضو في المؤسسة البحث عنها والانضمام إليها في أي وقت.
   </Card>
   <Card title="القنوات الخاصة" icon="seti:lock">
-    يتم تمييزها بأيقونة القفل <i class="fa-solid fa-lock"></i>. لا تظهر في نتائج البحث، ويجب أن تتم دعوتك إليها يدوياً من قبل عضو موجود داخلها.
+    يتم تمييزها بأيقونة القفل <FAIcon name="lock" solid/>. لا تظهر هذه القنوات في نتائج البحث، ويجب أن تتم دعوتك إليها يدوياً من قبل عضو موجود داخلها.
   </Card>
 </CardGrid>
 
 ### كيفية الانضمام إلى قناة عامة
 
 <Tabs>
-  <TabItem label="الويب وسطح المكتب" icon="laptop">
+  <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
-    1. اضغط على زر **إضافة قنوات** في الشريط الجانبي، ثم اختر **تصفح القنوات**.
-       *(يمكنك أيضاً الضغط على أيقونة الزائد `+` في أعلى الشريط الجانبي).*
-       <Image src={browseChannels} alt="تصفح القنوات في نسخة سطح المكتب"  />
+    1. انقر على زر **إضافة قنوات** في الشريط الجانبي، ثم حدد **تصفح القنوات**.
+       *(يمكنك أيضاً النقر على أيقونة الإضافة `+` أعلى الشريط الجانبي).*
+       <Image src={browseChannels} alt="واجهة تصفح القنوات في نسخة سطح المكتب"  />
 
-    2. ابحث عن القناة المطلوبة واضغط على زر **انضمام**.
-       <Image src={joinChannels} alt="زر الانضمام للقنوات"  />
+    2. ابحث عن القناة المطلوبة وانقر على زر **انضمام**.
+       <Image src={joinChannels} alt="زر الانضمام إلى القنوات"  />
     </Steps>
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
-    1. اضغط على أيقونة الزائد `+` في الزاوية العلوية للتطبيق.
-       <Image src={mobileSelectChannel} alt="أيقونة الإضافة في الجوال" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
+    1. اضغط على أيقونة الإضافة `+` في الزاوية العلوية للتطبيق.
+       <Image src={mobileSelectChannel} alt="أيقونة الإضافة في تطبيق الجوال" class="phone-screenshots" />
 
-    2. اختر **تصفح القنوات**.
-       <Image src={mobileBrowseChannels} alt="قائمة القنوات العامة في الجوال" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
+    2. حدد **تصفح القنوات**.
+       <Image src={mobileBrowseChannels} alt="قائمة تصفح القنوات في الجوال" class="phone-screenshots" />
     
-    3. اضغط على اسم القناة التي تود الانضمام إليها من القائمة الظاهرة.
-       <Image src={mobileBrowsePublic} alt="قائمة القنوات العامة في الجوال" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
+    3. اضغط على اسم القناة التي تود الانضمام إليها من القائمة.
+       <Image src={mobileBrowsePublic} alt="واجهة الانضمام للقنوات العامة في الجوال" class="phone-screenshots" />
     </Steps>
   </TabItem>
 </Tabs>
@@ -71,23 +71,23 @@ import mobileConfirmLeave from '../../../../images/mobile-confirm-leave-a-channe
 
 يمكنك مغادرة أي قناة لم تعد تخدم أهدافك العملية، مع مراعاة القواعد التالية:
 
-* **القنوات الخاصة:** عند مغادرتها، ستختفي من شريطك الجانبي ولن تتمكن من العودة إليها إلا بدعوة جديدة.
-* **الساحة العامة:** هي القناة الوحيدة التي لا يمكن مغادرتها لأنها تضم جميع الموظفين وتُستخدم للإعلانات الرسمية للمؤسسة.
+* **القنوات الخاصة:** عند مغادرتها، ستختفي من شريطك الجانبي ولن تتمكن من العودة إليها إلا عبر دعوة جديدة.
+* **الساحة العامة:** هي القناة الوحيدة التي لا يمكن مغادرتها؛ لأنها تضم جميع الأعضاء وتُستخدم للإعلانات الرسمية للمؤسسة.
 
 <Tabs>
-  <TabItem label="الويب وسطح المكتب" icon="laptop">
-    اضغط على اسم القناة او المجموعة  في الأعلى لفتح القائمة المنسدلة، ثم اختر **مغادرة القناة**.
+  <TabItem label="الويب/سطح المكتب" icon="laptop">
+    انقر على اسم القناة أو المجموعة في الجزء العلوي لفتح قائمة الخيارات، ثم حدد **مغادرة القناة**.
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
     1. افتح القناة التي تود مغادرتها.
-    2. اضغط علئ اسم القناه او المجموعة
-       <Image src={mobileMoreOptions} alt="خيارات إضافية" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
-    3. اختر **عرض المعلومات** ثم اضغط على خيار **مغادرة المجموعة**.
-       <Image src={mobileViewInfo} alt="معلومات القناة والمغادرة" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
-    4. أكد العملية بالضغط على **مغادرة**.
-       <Image src={mobileConfirmLeave} alt="تأكيد المغادرة" style={{ height: '400px', width: 'auto', borderRadius: '15px', display: 'block', margin: '1.5rem auto' }} />
+    2. اضغط على اسم القناة أو المجموعة في الأعلى.
+       <Image src={mobileMoreOptions} alt="الوصول إلى خيارات القناة" class="phone-screenshots" />
+    3. اختر **عرض المعلومات**، ثم اضغط على خيار **مغادرة القناة**.
+       <Image src={mobileViewInfo} alt="معلومات القناة وخيار المغادرة" class="phone-screenshots" />
+    4. أكّد العملية بالضغط على **مغادرة**.
+       <Image src={mobileConfirmLeave} alt="رسالة تأكيد المغادرة" class="phone-screenshots" />
     </Steps>
   </TabItem>
 </Tabs>

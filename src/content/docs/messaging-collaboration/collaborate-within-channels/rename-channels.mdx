@@ -1,6 +1,6 @@
 ---
-title: "إعادة تسمية القنوات "
-description: "تعرف على كيفية إعادة تسمية القنوات وتحديث عناوين URL الخاصة بها في منصة تعاون لسهولة الاكتشاف."
+title: "إعادة تسمية القنوات"
+description: "تعرّف على كيفية إعادة تسمية القنوات وتحديث عناوين URL الخاصة بها في منصة تعاون لسهولة الاكتشاف."
 ---
 
 import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
@@ -19,53 +19,51 @@ import mobileRenameSave from '../../../../images/mobile-rename-channel-name-and-
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
-    1. اختر اسم القناة في أعلى اللوحة المركزية للوصول إلى القائمة المنسدلة.
-    2. اختر **إعدادات القناة**.
+    1. انقر على اسم القناة في الجزء العلوي لفتح قائمة الخيارات.
+    2. اختر **إعدادات القناة** أو **إعادة التسمية**.
     3. قم بتحديث المعلومات التالية في النافذة المنبثقة:
     </Steps>
 
-    - **اسم القناة :** الاسم الذي يظهر في واجهة مستخدم منصة تعاون لجميع الأعضاء. أدخل اسماً جديداً يعبر عن محتوى القناة.
-    - **عنوان URL للقناة :** الرابط المباشر للوصول إلى القناة عبر المتصفح. اختر **تحرير** لتعديل الرابط، ثم اضغط**تم**.
-       <Image src={desktopRenameChannels} alt="Step 3" />
+    * **اسم القناة:** الاسم الذي يظهر في واجهة مستخدم منصة تعاون لجميع الأعضاء. أدخل اسماً جديداً يعبر عن محتوى القناة.
+    * **عنوان URL للقناة:** الرابط المباشر للوصول إلى القناة عبر المتصفح. اختر **تعديل** لتغيير الرابط، ثم اضغط **تم**.
+    
+    <Image src={desktopRenameChannels} alt="خطوات إعادة تسمية القناة في متصفح الويب" />
 
     <Aside type="note" title="تنبيه بخصوص الروابط">
       إذا قام مسؤول النظام بتمكين عناوين URL المجهولة (بداية من النسخة <Badge text="v11.6.0" variant="note" />)، فسيتم تعيين الروابط تلقائياً ولن تعكس اسم القناة بالضرورة.
     </Aside>
 
-    
-
     ---
-    **مثال:**
-    يمكن تسمية القناة `تصميم تجربة المستخدم (UX Design)` ويكون الرابط الخاص بها:
-    `https://community.mattermost.com/core/channels/ux-design`
+    
+    **مثال للتسمية:**
+    يمكن تسمية القناة `تصميم تجربة المستخدم` ويكون الرابط الخاص بها:
+    `https://community.workspace.com/core/channels/ux-design`
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
-    1. اضغط على اسم القناة التي ترغب في إعادة تسميتها من القائمة.
-       <Image src={mobileSelectChannel} alt="Step 1" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    1. افتح القناة التي ترغب في إعادة تسميتها.
+       <Image src={mobileSelectChannel} alt="تحديد القناة في الجوال" class="phone-screenshots" />
 
-    2. اضغط علئ اسم القناه او المجموعة
-       <Image src={mobileMoreOptions} alt="Step 2" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    2. اضغط على اسم القناة أو المجموعة في الجزء العلوي.
+       <Image src={mobileMoreOptions} alt="فتح خيارات القناة" class="phone-screenshots" />
 
-    3. من القائمة الظاهرة، اختر **اعدادات الدردشة**.
-       <Image src={mobileViewInfo} alt="Step 3" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    3. من القائمة الظاهرة، اختر **عرض المعلومات** أو **إعدادات الدردشة**.
+       <Image src={mobileViewInfo} alt="الدخول إلى إعدادات القناة" class="phone-screenshots" />
 
-    4. اضغط على خيار **  معلومات الدردشة** لبدء التعديل.
-       <Image src={mobileEditChannel} alt="Step 4" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} />
+    4. اضغط على خيار **تعديل القناة** أو **معلومات الدردشة** لبدء التعديل.
+       <Image src={mobileEditChannel} alt="خيار تعديل القناة" class="phone-screenshots" />
 
-    5. قم بتعديل البيانات المطلوبة (الاسم، الغرض، أو الترويسة) ثم اضغط على **حفظ **.
+    5. قم بتعديل البيانات المطلوبة (الاسم، الغرض، أو الترويسة) ثم اضغط على **حفظ**.
     </Steps>
-{/* 
-    <Image src={mobileRenameSave} alt="Save Changes" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto' }} /> */}
-
+    
     <Aside type="tip">
-      تذكر أن تعديل **اسم القناة ** سيؤدي لتغيير ظهورها لدى جميع أعضاء الفريق فوراً.
+      تذكّر أن تعديل **اسم القناة** سيؤدي لتغيير طريقة ظهورها لدى جميع أعضاء الفريق على الفور.
     </Aside>
   </TabItem>
 </Tabs>
 
 ### مواضيع ذات صلة
 * [أنواع القنوات](/messaging-collaboration/collaborate-within-channels/channel-types)
-* [اصطلاحات تسمية القنوات](#)
+* [اصطلاحات تسمية القنوات](/messaging-collaboration/collaborate-within-channels/channel-naming-conventions)
 * [أرشفة القنوات وإلغاء أرشفتها](/messaging-collaboration/collaborate-within-channels/archive-and-unarchive-channels)
