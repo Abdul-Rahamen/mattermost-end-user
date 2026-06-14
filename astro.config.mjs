@@ -397,7 +397,7 @@ export default defineConfig({
               slug: "project-and-task-management/work-with-groups-filter-and-sort",
             },
             {
-              label: "إدارة الحسابات",
+              label: "إدارة العمليات الحسابية",
               slug: "project-and-task-management/work-with-calculations",
             },
             {
