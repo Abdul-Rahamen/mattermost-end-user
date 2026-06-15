@@ -52,7 +52,8 @@ export default defineConfig({
         './src/styles/tables-rtl.css',
         "./src/styles/code-style.css",
         "./src/styles/tabs-filter.css",
-        "./src/styles/landing.css",        "./src/styles/theme-switcher.css",      ],
+        "./src/styles/landing.css",
+           ],
 
       sidebar: [
         {
