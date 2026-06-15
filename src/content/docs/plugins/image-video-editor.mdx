@@ -5,11 +5,6 @@ description: "تعرف على كيفية تعديل الصور ومقاطع ال
 
 import FAIcon from "../../../components/FAIcon.astro";
 import {Aside} from "@astrojs/starlight/components";
-import { Image } from 'astro:assets';
-
-import editButton from "../../../images/edit-button.png";
-import imageEditor from "../../../images/image-editor.png";
-import videoEditor from "../../../images/video-editor.png";
 
 
 تتضمن منصة تعاون محركاً مدمجاً لتعديل الصور ومقاطع الفيديو قبل إرسالها، مما يتيح لك تحرير الوسائط، وقصها، والكتابة أو الرسم عليها، وإضافة الرموز التعبيرية مباشرةً من واجهة الدردشة دون الحاجة لاستخدام تطبيقات خارجية.
@@ -25,7 +20,9 @@ import videoEditor from "../../../images/video-editor.png";
 2. حدد ملف الصورة أو مقطع الفيديو الذي ترغب في إرساله من مستكشف الملفات الخاص بجهازك.
 3. ستظهر لك نافذة منبثقة لمعاينة الملف المرفوع. اضغط على زر **تعديل** المتواجد في زاوية نافذة المعاينة للانتقال مباشرةً إلى واجهة المحرر.
 
-<Image src={editButton} alt="زر التعديل على الوسائط قبل إرسالها" style={{ borderRadius: '10px', margin: '1rem 0' }} data-origin="dark" />
+
+![زر التعديل على الوسائط قبل إرسالها ](../../../images/edit-button.png)
+
 4. قم بإجراء التعديلات المطلوبة باستخدام شريط الأدوات العلوي، ثم اضغط على **حفظ** أو **إرسال** لمشاركة الملف المعدّل مع بقية أعضاء الفريق.
 
 
@@ -40,7 +37,7 @@ import videoEditor from "../../../images/video-editor.png";
 * **الرسم والتخطيط الحر:** لاستخدام القلم أو الفرشاة للإشارة إلى عناصر معينة في الصورة أو رسم أشكال هندسية وتوضيحية.
 * **إضافة الرموز التعبيرية (Emojis):** لإدراج التفاعلات والرموز التعبيرية على الصورة لجعل الرسالة أكثر تفاعلية ووضوحاً.
 
-<Image src={imageEditor} alt="واجهة محرر الصور" style={{ borderRadius: '10px', margin: '1rem 0' }} data-origin="dark" />
+![محرر الصور ](../../../images/image-editor.png)
 ---
 
 ## أدوات تحرير مقاطع الفيديو
@@ -51,7 +48,7 @@ import videoEditor from "../../../images/video-editor.png";
 * **إضافة الملصقات والإيموجي:** لوضع الرموز التعبيرية على واجهة تشغيل الفيديو وتعديل حجمها ومكان ظهورها.
 * **الرسم والكتابة على الفيديو:** لإضافة نصوص إرشادية أو شروحات مرسومة باليد تظهر متراكبة فوق إطارات الفيديو لتسهيل الفهم والمراجعة.
 
-<Image src={videoEditor} alt="أداة تعديل الفيديو" style={{ borderRadius: '10px', margin: '1rem 0' }} data-origin="dark" />
+![محرر الفيديو ](../../../images/video-editor.png)
 ---
 
 <Aside type="tip" title="تعديل آمن وسريع">
