@@ -1,0 +1,272 @@
+---
+// src/components/ThemeSelect.astro
+---
+
+<starlight-theme-select class="custom-theme-select" dir="rtl">
+  <button type="button" class="theme-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="اختر سمة">
+    <div class="trigger-content">
+      <svg id="trigger-icon" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>
+      <span class="theme-label" id="theme-label">تلقائي</span>
+    </div>
+    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+
+  <ul class="theme-dropdown" role="listbox" hidden>
+    <li class="theme-option" role="option" data-theme="dark" tabindex="0">
+      <svg class="option-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <span class="label">داكن</span>
+    </li>
+    <li class="theme-option" role="option" data-theme="light" tabindex="0">
+      <svg class="option-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <span class="label">فاتح</span>
+    </li>
+    <li class="theme-option" role="option" data-theme="auto" aria-selected="true" tabindex="0">
+      <svg class="option-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>
+      <span class="label">تلقائي</span>
+    </li>
+  </ul>
+</starlight-theme-select>
+
+<style>
+  .custom-theme-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: var(--yeds-typography-font-family, inherit);
+  }
+
+  .theme-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--yeds-spacing-4, 1rem);
+    background-color: transparent !important;
+    border: 1px solid var(--yeds-color-border-neutral-primary, #6c737f) !important;
+    border-radius: var(--yeds-effects-border-radius-md, 8px) !important;
+    padding: 0.35rem 0.5rem !important;
+    font-size: var(--yeds-typography-sizes-sm, 14px) !important;
+    cursor: pointer !important;
+    transition: border-color 0.2s ease, background-color 0.2s ease !important;
+    height: 38px !important;
+    min-width: 6.25em !important;
+    position: relative;
+  }
+
+  .trigger-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .theme-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    z-index: 999;
+    min-width: 100%;
+    width: 100px;
+    border: 1px solid var(--yeds-color-border-neutral-primary, #6c737f) !important;
+    border-radius: var(--yeds-effects-border-radius-md, 8px) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    padding: 0.25rem 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+  }
+
+  .theme-option {
+    position: relative;
+    padding: 0.5rem 0.75rem !important;
+    font-size: var(--yeds-typography-sizes-sm, 14px) !important;
+    font-weight: 400 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+    user-select: none !important;
+    margin: 0 !important;
+  }
+
+  .theme-option[aria-selected="true"] {
+    font-weight: 600 !important;
+    background-color: transparent !important;
+  }
+
+  .theme-option[aria-selected="true"]::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 15% !important;
+    bottom: 15% !important;
+    width: 4px !important;
+    border-radius: 0 4px 4px 0 !important;
+  }
+
+  /* LIGHT THEME COLORS */
+  :global([data-theme="light"]) .theme-trigger {
+    color: #161616 !important;
+  }
+  :global([data-theme="light"]) .theme-trigger:hover {
+    border-color: #00987e !important;
+    background-color: #ffffff !important;
+  }
+  :global([data-theme="light"]) .theme-dropdown {
+    background-color: #ffffff !important;
+  }
+  :global([data-theme="light"]) .theme-option {
+    color: #161616 !important;
+  }
+  :global([data-theme="light"]) .theme-option:hover {
+    background-color: #f3f4f6 !important;
+  }
+  :global([data-theme="light"]) .theme-option[aria-selected="true"] {
+    color: #00987e !important;
+  }
+  :global([data-theme="light"]) .theme-option[aria-selected="true"]::before {
+    background-color: #00987e !important;
+  }
+
+  /* DARK THEME COLORS */
+  :global([data-theme="dark"]) .theme-trigger {
+    color: #ffffff !important;
+  }
+  :global([data-theme="dark"]) .theme-trigger:hover {
+    border-color: #00987e !important;
+    background-color: #161616 !important;
+  }
+  :global([data-theme="dark"]) .theme-dropdown {
+    background-color: #1f2a37 !important;
+  }
+  :global([data-theme="dark"]) .theme-option {
+    color: #ffffff !important;
+  }
+  :global([data-theme="dark"]) .theme-option:hover {
+    background-color: #374151 !important;
+  }
+  :global([data-theme="dark"]) .theme-option[aria-selected="true"] {
+    color: #00987e !important;
+  }
+  :global([data-theme="dark"]) .theme-option[aria-selected="true"]::before {
+    background-color: #00987e !important;
+  }
+</style>
+
+<script>
+  type Theme = 'auto' | 'dark' | 'light';
+  const storageKey = 'starlight-theme';
+
+  const parseTheme = (theme: unknown): Theme =>
+    theme === 'auto' || theme === 'dark' || theme === 'light' ? theme : 'auto';
+
+  const loadTheme = (): Theme =>
+    parseTheme(typeof localStorage !== 'undefined' && localStorage.getItem(storageKey));
+
+  const storeTheme = (theme: Theme): void => {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(storageKey, theme === 'light' || theme === 'dark' ? theme : '');
+    }
+  };
+
+  const getPreferredColorScheme = (): Theme =>
+    matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+
+  function onThemeChange(theme: Theme): void {
+    // @ts-ignore
+    if (window.StarlightThemeProvider) {
+      // @ts-ignore
+      window.StarlightThemeProvider.updatePickers(theme);
+    }
+    document.documentElement.dataset.theme = theme === 'auto' ? getPreferredColorScheme() : theme;
+    storeTheme(theme);
+  }
+
+  class CustomStarlightThemeSelect extends HTMLElement {
+    isOpen = false;
+    
+    constructor() {
+      super();
+      const trigger = this.querySelector('.theme-trigger');
+      const dropdown = this.querySelector('.theme-dropdown');
+      const options = this.querySelectorAll('.theme-option');
+      const label = this.querySelector('.theme-label');
+      
+      const currentTheme = loadTheme();
+      
+      const updateSelection = (theme: Theme) => {
+        options.forEach(opt => {
+          if (opt instanceof HTMLElement) {
+            if (opt.dataset.theme === theme) {
+              opt.setAttribute('aria-selected', 'true');
+              if (label) label.textContent = opt.textContent?.trim() || '';
+            } else {
+              opt.setAttribute('aria-selected', 'false');
+            }
+          }
+        });
+      };
+
+      updateSelection(currentTheme);
+      onThemeChange(currentTheme);
+
+      const toggleDropdown = () => {
+        this.isOpen = !this.isOpen;
+        trigger?.setAttribute('aria-expanded', this.isOpen.toString());
+        if (this.isOpen) {
+          dropdown?.removeAttribute('hidden');
+        } else {
+          dropdown?.setAttribute('hidden', '');
+        }
+      };
+
+      const closeDropdown = () => {
+        this.isOpen = false;
+        trigger?.setAttribute('aria-expanded', 'false');
+        dropdown?.setAttribute('hidden', '');
+      };
+
+      trigger?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleDropdown();
+      });
+
+      options.forEach(opt => {
+        opt.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (opt instanceof HTMLElement) {
+            const theme = opt.dataset.theme as Theme;
+            updateSelection(theme);
+            onThemeChange(theme);
+            closeDropdown();
+          }
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!this.contains(e.target as Node)) {
+          closeDropdown();
+        }
+      });
+
+      window.addEventListener('storage', (e) => {
+        if (e.key === storageKey) {
+          updateSelection(loadTheme());
+        }
+      });
+    }
+  }
+  
+  // Define custom element, but only if not already defined (avoids HMR errors during dev)
+  if (!customElements.get('starlight-theme-select')) {
+    customElements.define('starlight-theme-select', CustomStarlightThemeSelect);
+  }
+</script>

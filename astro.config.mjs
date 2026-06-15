@@ -13,6 +13,7 @@ export default defineConfig({
         // @ts-ignore
 
         Footer: "/src/components/Footer.astro",
+        ThemeSelect: "/src/components/ThemeSelect.astro",
       },
       logo: {
         src: "./src/assets/logo-light.png",
@@ -51,8 +52,7 @@ export default defineConfig({
         './src/styles/tables-rtl.css',
         "./src/styles/code-style.css",
         "./src/styles/tabs-filter.css",
-        "./src/styles/landing.css",
-      ],
+        "./src/styles/landing.css",        "./src/styles/theme-switcher.css",      ],
 
       sidebar: [
         {
