@@ -1,6 +1,6 @@
 ---
-title: "تمييز القنوات كمفضلة "
-description: "تعرف على كيفية تمييز القنوات والرسائل كقنوات مفضلة في منصة تعاون للوصول السريع إليها من الشريط الجانبي."
+title: "تمييز القنوات كمفضلة"
+description: "تعرّف على كيفية تمييز القنوات والرسائل كقنوات مفضلة في منصة تعاون للوصول السريع إليها من الشريط الجانبي."
 ---
 
 import { Image } from 'astro:assets';
@@ -12,60 +12,45 @@ import favoriteDesktop from '../../../../images/favorite-channel-desktop.png';
 import mobileSelectChannel from '../../../../images/mobile-select-a-channel.jpg';
 import mobileMoreOptions from '../../../../images/mobile-select-more-options-for-a-channel.jpg';
 import mobileViewInfo from '../../../../images/mobile-select-view-info-for-a-channel.jpg';
-import mobileFavoriteWithin from '../../../../images/mobile-favorite-a-channel-within-channel.jpg';
-import mobileUnfavorite from '../../../../images/mobile-unfavorite-a-channel.jpg';
-import mobileUnfavoriteWithin from '../../../../images/mobile-unfavorite-a-channel-from-within-the-channel.jpg';
 
-يمكنك تمييز القنوات العامة والخاصة، بالإضافة إلى الرسائل المباشرة والجماعية، كقنوات مفضلة ليسهل الوصول إليها لاحقًا. تظهر القنوات المفضلة في فئة **المفضلة** في الشريط الجانبي للقناة.
+يمكنك تمييز القنوات العامة والخاصة، بالإضافة إلى الرسائل المباشرة والجماعية، كقنوات مفضلة ليسهل الوصول إليها لاحقًا. تظهر القنوات المفضلة في فئة **المفضلة**  في الشريط الجانبي للقنوات.
 
-<Image 
-  style={{ height: 'auto', maxHeight: '650px', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '20px auto' }}
-  src={favoritesSidebar} 
-  alt="تظهر القنوات المفضلة في الشريط الجانبي للقناة." 
-  width={300} 
-/>
+<Image src={favoritesSidebar} alt="تظهر القنوات المفضلة في الشريط الجانبي للقناة." />
 
 ---
 
-##  كيفية تمييز قناة كمفضلة
+## كيفية تمييز قناة كمفضلة
 
-لتمييز قناة كـ **مفضلة**، اتبع التعليمات حسب نوع جهازك:
+لتمييز قناة كـ **مفضلة** اتبع التعليمات بحسب نوع جهازك:
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
-      1. افتح القناة التي تريد تمييزها.
-      2. انقر على **أيقونة النجمة** بجانب اسم القناة في الجزء العلوي.
+      1. افتح القناة التي ترغب في تمييزها.
+      2. انقر على **أيقونة النجمة** الموجودة بجوار اسم القناة في الجزء العلوي.
     </Steps>
 
-    بمجرد النقر، ستتحول الأيقونة إلى <FAIcon name="heart" /> (أو نجمة ممتلئة حسب السمة) بجانب اسم القناة.
+    بمجرد النقر، ستتحول الأيقونة إلى نجمة ممتلئة <FAIcon name="star" /> بجانب اسم القناة.
 
-    <Image 
-      src={favoriteDesktop} 
-      alt="تميز القناة كقناة مفضلة على سطح المكتب." 
-      width={600} 
-      style={{ borderRadius: '8px', border: '1px solid #eee' }}
-    />
+    <Image src={favoriteDesktop} alt="تمييز القناة كقناة مفضلة في متصفح الويب أو تطبيق سطح المكتب." />
 
     <Aside type="tip">
-      * لإزالة قناة من المفضلة، انقر على الأيقونة مرة أخرى.
-      * **طريقة بديلة:** اختر اسم القناة > أيقونة **عرض المعلومات ** <i class="fa-solid fa-info-circle"></i> > ثم اختر **مفضلة** من اللوحة الجانبية اليمنى.
+      * لإزالة قناة من قائمة المفضلة، انقر على الأيقونة مرة أخرى.
+      * **طريقة بديلة:** انقر على اسم القناة لفتح قائمة الخيارات، ثم اختر **عرض المعلومات**، وقم بتفعيل خيار **المفضلة** من اللوحة الجانبية اليمنى.
     </Aside>
   </TabItem>
 
-  <TabItem label="الهاتف المحمول " icon="mobile">
-    ### الطريقة الأولى: من قائمة الخيارات
+  <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
-      1. اضغط على القناة التي تريد تمييزها.
-         <Image src={mobileSelectChannel} alt="اختر القناة." width={300} style={{ borderRadius: '10px' }} />
+      1. افتح القناة التي تريد تمييزها.
+         <Image src={mobileSelectChannel} alt="اختيار القناة في تطبيق الجوال" class="phone-screenshots" />
 
-    2. اضغط علئ اسم القناه او المجموعة
-         <Image src={mobileMoreOptions} alt="قائمة المزيد." width={300} style={{ borderRadius: '10px' }} />
+      2. اضغط على اسم القناة أو المجموعة في الجزء العلوي.
+         <Image src={mobileMoreOptions} alt="فتح قائمة الخيارات" class="phone-screenshots" />
 
-      3. اضغط على **تفضيل**.
-         <Image src={mobileViewInfo} alt="تفعيل المفضلة." width={300} style={{ borderRadius: '10px' }} />
+      3. اضغط على خيار **المفضلة**.
+         <Image src={mobileViewInfo} alt="تفعيل خيار المفضلة" class="phone-screenshots" />
     </Steps>
-
   </TabItem>
 </Tabs>
 

@@ -1,13 +1,13 @@
 ---
-title: "تنظيم المحادثات باستخدام المناقشات المتسلسلة"
-description: "تعرف على كيفية استخدام سلاسل الرسائل (threads) لتنظيم المحادثات في منصة تعاون وتقليل الضوضاء في القنوات."
+title: "تنظيم المحادثات باستخدام المناقشات المواضيوع"
+description: "تعرف على كيفية استخدام موضيع الرسائل (Threads) لتنظيم المحادثات في منصة تعاون وتقليل الضوضاء في القنوات."
 ---
 
-import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 import FAIcon from "../../../../components/FAIcon.astro";
 
-{/* استيراد الصور المحلية */}
+{/* استيراد الأصول المرئية بأسلوب camelCase المتوافق مع معايير الأداء والتحميل الذكي */}
 import collapsedThreadsGif from '../../../../images/cirecle-gif.gif';
 import crtFollowingThread from '../../../../images/crt-following-thread.png';
 import crtFollowingThreadJpg from '../../../../images/crt-following-thread.jpg';
@@ -19,118 +19,98 @@ import mobileUnfollowGif from '../../../../images/mobile-unfollow-a-message-thre
 import mobileUnfollowTapGif from '../../../../images/mobile-unfollow-a-message-thread-by-tapping-following.gif';
 import crtThreadViewJpg from '../../../../images/crt-thread-view.jpg';
 
-تعد سلاسل الرسائل  جزءاً أساسياً من تجربة المراسلة في منصة تعاون. تُستخدم لتنظيم المحادثات وتمكين المستخدمين من مناقشة الموضوعات دون إضافة ضوضاء إلى القنوات أو الرسائل المباشرة.
+تعد موضيع الرسائل ركيزة أساسية لتنظيم تدفق العمل داخل **منصة تعاون**؛ إذ تُمكن فِرق العمل من مناقشة موضوعات جانبية متعددة بعمق ودون التسبب في تشتيت الانتباه أو تكديس الرسائل داخل القنوات العامة والمحادثات المباشرة.
 
-توفر المناقشات المتسلسلة تجربة محسنة تتضمن صندوق وارد موحد للسلاسل لقراءة جميع المحادثات في عرض واحد، مما يحسن القدرة على معالجة محتوى القناة والعثور على المحادثات واستئنافها بسهولة.
+توفر هذه الميزة صندوقاً موحداً لاستعراض كافة الموضيع التي تشارك فيها، مما يمنحك نظرة شاملة لمعالجة تحديثات القنوات، ومتابعة المناقشات، واستئنافها بسهولة وبأقل مجهود.
 
 <Image 
   data-origin="dark"
   src={collapsedThreadsGif} 
-  alt="تنظيم المحادثات باستخدام المناقشات المتسلسلة" 
+  alt="مفهوم تنظيم المحادثات وفصل النقاشات الفرعية عبر الموضيع المتداخلة" 
   style={{ width: '100%', maxWidth: '600px', borderRadius: '10px', display: 'block', margin: '20px auto', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} 
 />
 
 <Aside type="note" title="توفر الميزة">
-  * <FAIcon name="code-branch"/>بدءاً من الإصدار **v7.0**، يتم تمكين المناقشات المتسلسلة افتراضياً.
-  * يمكن لجميع المستخدمين إنشاء سلاسل جديدة ما لم يقم المسؤول بـ [تعطيلها](/administration-guide/configure/site-configuration-settings#threaded-discussions).
+* بدءاً من الإصدار **v7.0**، يتم تفعيل المناقشات المواضيوع بشكل افتراضي لكافة بيئات العمل.
+* يمتلك جميع المستخدمين صلاحية بدء الموضيع أو التفاعل معها، ما لم يقم مسؤول النظام بتعطيلها من لوحة التحكم.
 </Aside>
 
 ---
 
-## بدء أو الرد على السلاسل
+## بدء الموضيع أو الرد عليها
 
-يتم طي [الردود على الرسائل](/messaging-collaboration/communicate-with-messages-and-threads/reply-to-messages/) تحت الرسالة الأولى في السلسلة. يمكنك فتح السلسلة بالضغط على الرسالة أو عدد الردود.
+يتم تلقائياً طي وتجميع كافة التعليقات التابعة تحت الرسالة الأصلية (الأم) لتوفير مساحة تصفح نظيفة داخل القناة. يمكنك في أي وقت فتح ال موضوعة الكاملة واستعراض ردودها بالضغط على الرسالة نفسها أو على رابط "عدد الردود" المتواجد أسفلها.
 
-<Aside type="tip">
-  **جديد في v11.2:** يمكنك فتح الرسائل المباشرةفي نوافذ متصفح منفصلة عبر أيقونة **نافذة جديدة** < <FAIcon name="arrow-up-right-from-square"/> في ترويسة السلسلة لمتابعة محادثات متعددة في وقت واحد.
+<Aside type="tip" title="تعدد المهام والنوافذ المنفصلة">
+**ميزة الإصدار v11.2:** يمكنك الآن عزل وسحب أي سلسلة نقاش وفتحها في نافذة متصفح مستقلة عبر النقر على أيقونة **نافذة جديدة** <FAIcon name="arrow-up-right-from-square"/> المتواجدة في ترويسة المواضيوعة، مما يتيح لك تتبع محادثات حيوية متعددة في آن واحد دون الانتقال المتكرر بين القنوات.
 </Aside>
 
 ---
 
-## متابعة الرسائل المباشرةوالرسائل
+## متابعة الموضيع وتلقي التحديثات (Following Threads)
 
-ستتابع تلقائياً كل سلسلة تشارك فيها أو تُذكر فيها. تضمن المتابعة تلقي [الإشعارات](/customize-your-preferences/manage-your-notifications/manage-your-notifications/) عند وجود نشاط جديد.
-
+يقوم النظام تلقائياً بإدراجك في قائمة المتابعة لأي سلسلة رسائل تشارك فيها بكتابة رد، أو يتم الإشارة إليك (`@mention`) داخلها. تضمن لك المتابعة الحصول على [إشعارات فورية](/customize-your-preferences/manage-your-notifications/manage-your-notifications/) عند حدوث أي نشاط أو تعليق جديد.
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
+    يمكنك تفعيل متابعة أي سلسلة بشكل يدوّي بإحدى طريقتين:
+    
     <Steps>
-    1. قم بتبديل خيار **متابعة** في ترويسة السلسلة.
-    2. أو اختر **متابعة السلسلة** من قائمة **المزيد** <i class="fa-solid fa-ellipsis-vertical"></i>.
+    1. انقر على زر **متابعة** المتواجد في الترويسة العلوية للوحة المواضيوعة الجانبية.
+    2. أو انقر على أيقونة **المزيد** <FAIcon name="ellipsis-vertical"/> الخاصة بالرسالة الأصلية، وحدد **متابعة المواضيوعة**.
     </Steps>
-    <Image src={crtFollowingThreadJpg} alt="إلغاء متابعة السلاسل" style={{ borderRadius: '8px', margin: '10px auto', display: 'block' }} />
-    <Aside type="note">
-      < <FAIcon name="circle-info"/> يمكنك متابعة الرسائل التي لا تحتوي على ردود ليتم إخطارك فور بدء نقاش عليها.
+
+    <Image src={crtFollowingThreadJpg} alt="خطوات تفعيل وتغيير وضع متابعة الموضيع عبر واجهة الويب" style={{ borderRadius: '8px', margin: '2rem auto', display: 'block', maxWidth: '100%' }} />
+    
+    <Aside type="note" title="متابعة المنشورات الاستباقية">
+      يمكنك متابعة الرسائل القياسية التي لم تتلقَّ أي ردود بعد؛ لضمان وصول تنبيه إليك فور قيام أي زميل ببدء نقاش أو تعليق عليها.
     </Aside>
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
-    1. اضغط مطولاً على الرسالة، ثم اختر **متابعة السلسلة**.
-       {/* <Image src={mobileFollowGif} alt="متابعة السلسلة جولة" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} /> */}
-    2. بدلاً من ذلك، اضغط على مؤشر **متابعة** أسفل السلسلة.
-       {/* <Image src={mobileFollowTapGif} alt="تبديل المتابعة" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} /> */}
+    1. اضغط مطولاً على الرسالة المطلوبة لفتح قائمة السياق، ثم اختر **متابعة المواضيوعة**.
+    2. بدلاً من ذلك، يمكنك النقر مباشرة على مؤشر **متابعة** الظاهر أسفل نص المواضيوعة المفتوحة.
     </Steps>
-    {/* <Aside type="note">
-      لمتابعة رسالة بدون ردود:
-      <Image src={mobileFollowNoRepliesGif} alt="بدون ردود" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} />
-    </Aside> */}
   </TabItem>
 </Tabs>
 
 ---
 
-##  إلغاء متابعة السلاسل
+## إلغاء متابعة الموضيع
 
-إذا لم تعد مهتماً بنقاش معين، يمكنك إلغاء المتابعة للتوقف عن تلقي الإشعارات.
+إذا أصبحت سلسلة الرسائل غير ذات صلة بمهامك الحالية وترغب في تصفية الإشعارات الواردة، يمكنك إلغاء المتابعة للتوقف عن تلقي التنبيهات الخاصة بها.
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
     <Steps>
-    1. قم بتبديل مؤشر **متابع** في السلسلة.
-    2. أو اختر **إلغاء متابعة السلسلة** من قائمة **المزيد** <FAIcon name="ellipsis-vertical"/>.
+    1. انقر على مؤشر **متابع** في أعلى اللوحة الجانبية للسلسلة لإلغاء تنشيطه.
+    2. أو افتح قائمة **المزيد** <FAIcon name="ellipsis-vertical"/> على الرسالة وحدد **إلغاء متابعة المواضيوعة**.
     </Steps>
-    <Image src={desktopUnfollowJpg} alt="إلغاء المتابعة سطح المكتب" style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '15px auto' }} />
+
+    <Image src={desktopUnfollowJpg} alt="واجهة إلغاء متابعة الموضيع لتقليل الإشعارات الفائضة" style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '2rem auto' }} />
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
-    1. اضغط مطولاً على الرسالة واختر **إلغاء متابعة السلسلة**.
-       {/* <Image src={mobileUnfollowGif} alt="إلغاء المتابعة" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} /> */}
-    2. أو اضغط مباشرة على مؤشر **متابع** أسفل السلسلة.
-       {/* <Image src={mobileUnfollowTapGif} alt="تبديل المتابع" height="450" style={{ width: 'auto', borderRadius: '15px', display: 'block', margin: '15px auto' }} /> */}
+    1. اضغط مطولاً على الرسالة الرئيسية داخل مسار القناة ثم حدد **إلغاء متابعة المواضيوعة**.
+    2. أو اضغط مباشرة على شارة **متابع** المتواجدة أسفل المنشور لإزالتها فوراً.
     </Steps>
   </TabItem>
 </Tabs>
 
 ---
 
-##  عرض جميع الرسائل المباشرة
+## عرض وإدارة كافة الموضيع
 
-اختر **الرسائل المباشرة**  <FAIcon name="layer-group"/> في أعلى الشريط الجانبي لرؤية جميع المحادثات التي تتابعها في الفريق الحالي. تظهر الرسائل المباشرةذات الردود الأحدث في المقدمة.
+للرجوع إلى كافة النقاشات المواضيوع التي تتابعها، انقر على قسم **الموضيع** <FAIcon name="layer-group"/> المتواجد في أعلى الشريط الجانبي الأيسر. يجمع هذا القسم كافة المحادثات المرتبطة بك في لوحة موحدة، مع تقديم الموضيع التي تحتوي على ردود حديثة إلى مقدمة القائمة تلقائياً.
 
-<Aside type="tip">
-  استخدم تصفية **غير مقروءة** للتركيز فقط على المحادثات التي تحتوي على ردود جديدة لم ترها بعد.
+<Aside type="tip" title="تصفية المحادثات غير المقروءة">
+استخدم زر التصفية **غير مقروءة** المتواجد أعلى القائمة الموحدة لعزل المحادثات المستقرة، والتركيز فقط على الموضيع التي تتضمن تعليقات جديدة لم تقم بالاطلاع عليها بعد.
 </Aside>
 
 <Image 
   src={crtThreadViewJpg} 
-  alt="عرض الرسائل المباشرةفي الشريط الجانبي" 
-  style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
+  alt="طريقة عرض وإدارة مركز الموضيع الموحد من الشريط الجانبي للمنصة" 
+  style={{ width: '100%', maxWidth: '600px', borderRadius: '8px', display: 'block', margin: '2rem auto' }} 
 />
-
-{/* ---
-
-## فيديو تعليمي
-
-<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-  <iframe 
-    src="https://fast.wistia.net/embed/iframe/5gjgi10rr0" 
-    title="Threaded Discussions Tutorial" 
-    allow="autoplay; fullscreen" 
-    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
-  ></iframe>
-</div> */}
-
----
-

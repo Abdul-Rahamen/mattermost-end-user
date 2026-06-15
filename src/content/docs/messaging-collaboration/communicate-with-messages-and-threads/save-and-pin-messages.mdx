@@ -1,13 +1,13 @@
 ---
-title: "حفظ وتثبيت الرسائل "
+title: "حفظ وتثبيت الرسائل"
 description: "تعرف على كيفية حفظ الرسائل لاستخدامك الشخصي أو تثبيتها في القنوات ليشاهدها جميع أعضاء الفريق في منصة تعاون."
 ---
 
-import { Tabs, TabItem,Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 import FAIcon from "../../../../components/FAIcon.astro";
 
-{/* استيراد الأصول المرئية */}
+{/* استيراد الأصول المرئية بأسلوب camelCase لتتوافق مع معايير الأداء */}
 import saveMessage from '../../../../images/save-message.png';
 import removeSavedPost from '../../../../images/remove-from-saved-posts.png';
 import mobileSaveGif from '../../../../images/mobile-save-a-message1.gif';
@@ -28,93 +28,120 @@ import mobileViewPinned from '../../../../images/mobile-view-the-pinned-message-
 import mobileUnpinGif from '../../../../images/mobile-unpin-a-message-from-pinned-messages.gif';
 import mobileUnpinChannelGif from '../../../../images/mobile-unpin-a-message-from-the-channel.gif';
 
-لديك طريقتان لتمييز منشور ليسهل العثور عليه لاحقًا:
+توفر **منصة تعاون** آليتين لتمييز المنشورات الهامة وتسهيل الرجوع إليها لاحقاً بناءً على نطاق الاستخدام:
 
-- [حفظ رسالة](#حفظ-الرسائل) يحفظها لك وحدك.
-- [تثبيت رسالة](#تثبيت-الرسائل) يميزها للقناة بأكملها.
+* **حفظ الرسائل**: لحفظ المراجع والمهمات الخاصة بك بشكل شخصي وسري.
+* **تثبيت الرسائل**: للإشارة إلى الإعلانات واللوائح الهامة وتسهيل وصول كافة أعضاء القناة إليها.
 
-## حفظ الرسائل 
+---
+
+## حفظ الرسائل
+
+تتيح لك هذه الميزة أرشفة الرسائل التي تحتاج إلى متابعتها لاحقاً دون إشعار بقية أعضاء الفريق.
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    احفظ الرسائل للمتابعة اللاحقة عن طريق اختيار أيقونة **حفظ**   بجانب الرسالة.
+    <Steps>
+    1. مرّر مؤشر الفأرة فوق الرسالة التي ترغب في حفظها لفتح شريط الإجراءات السريع.
+    2. انقر على أيقونة **الحفظ** المتواجدة بجانب الرسالة.
+    </Steps>
 
-    <Image src={saveMessage} alt="حفظ الرسائل للمتابعة اللاحقة" width={600} style={{ display: 'block', margin: '2rem auto' }} />
+    <Image src={saveMessage} alt="حفظ الرسائل للمتابعة اللاحقة" style={{ display: 'block', margin: '2rem auto', maxWidth: '100%' }} />
 
-    لرؤية جميع رسائلك المحفوظة، اختر أيقونة **الإشارة المرجعية** الموجودة على يسار صورة ملفك الشخصي. سيفتح الشريط الجانبي الأيمن لعرض قائمة الرسائل المحفوظة.
+    ### عرض الرسائل المحفوظة وإدارتها:
+    * لرؤية جميع رسائلك المحفوظة، انقر على أيقونة **الإشارة المرجعية** المتواجدة في الجزء العلوي من الشريط الجانبي الأيسر (بجوار صورة ملفك الشخصي)، ليفتح لك النظام اللوحة الجانبية اليمنى التي تعرض كافة العناصر المؤرشفة.
+    * لإزالة أي منشور من القائمة، انقر مجدداً على أيقونة **الحفظ** لإلغاء تفعيلها وحذف الرسالة من اللوحة.
 
-    قم بإزالة عنصر من قائمة **المنشورات المحفوظة** عن طريق اختيار أيقونة **حفظ** بجانب الرسالة لمسحها.
-
-    <Image src={removeSavedPost} alt="إزالة الرسائل المحفوظة" width={600} style={{ display: 'block', margin: '2rem auto' }} />
+    <Image src={removeSavedPost} alt="واجهة إزالة الرسائل من قائمة المحفوظات" style={{ display: 'block', margin: '2rem auto', maxWidth: '100%' }} />
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
-    اضغط مطولاً على رسالة، ثم اختر **حفظ**.
+    <Steps>
+    1. اضغط مطولاً على الرسالة المستهدفة لفتح قائمة السياق.
+    2. اختر خيار **حفظ**. 
+    </Steps>
 
-    <Image src={mobileSaveGif} alt="حفظ رسالة في الجوال" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    <Image src={mobileSaveGif} alt="طريقة حفظ الرسالة عبر تطبيق الجوال" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
 
-    لرؤية جميع رسائلك المحفوظة، اضغط على أيقونة **حفظ**  <FAIcon name="save" /> في أسفل التطبيق.
-    <Image src={mobileUnsaveGif} alt="إلغاء الحفظ من القائمة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    ### عرض المحفوظات وإلغائها:
+    * للوصول إلى كافة المنشورات المحفوظة، اضغط على أيقونة **المحفوظات** <FAIcon name="save" /> المتواجدة في شريط التنقل السفلي للتطبيق.
+    * يمكنك إلغاء حفظ أي رسالة مباشرة من قائمة المحفوظات عبر النقر على شارة الحفظ المثبتة عليها.
 
-    بدلاً من ذلك، يمكنك أيضًا الضغط على الرسالة المحفوظة في القناة ثم الضغط على أيقونة **تم الحفظ**<FAIcon name="save" /> أسفلها لإلغاء الحفظ.
+    <Image src={mobileUnsaveGif} alt="إلغاء حفظ الرسائل من قائمة المحفوظات على الجوال" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
 
-    <Image src={mobileUnsaveChannelGif} alt="إلغاء الحفظ من القناة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    * بدلاً من ذلك، يمكنك الانتقال إلى الرسالة الأصلية داخل القناة والضغط على أيقونة شارة **تم الحفظ** المتواجدة أسفل نص المنشور لإزالتها فوراً.
+
+    <Image src={mobileUnsaveChannelGif} alt="إلغاء حفظ الرسالة مباشرة من محادثة القناة" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
   </TabItem>
 </Tabs>
 
-## تثبيت الرسائل 
+---
 
-يمكن لجميع أعضاء القناة تثبيت رسائل مهمة أو مفيدة في تلك القناة. تكون قائمة الرسائل المثبتة مرئية لجميع أعضاء القناة.
+## تثبيت الرسائل
+
+يمتلك جميع أعضاء القناة صلاحية تثبيت الرسائل الأساسية أو الروابط المرجعية لتسهيل وصول بقية زملائهم إليها في أي وقت.
 
 <Tabs>
   <TabItem label="الويب/سطح المكتب" icon="laptop">
-    1. مرّر مؤشر الفأرة فوق الرسالة التي تريد تثبيتها. يظهر رابط أيقونة **المزيد** <FAIcon name="ellipsis-vertical" />.
-    2. اختر خيار **المزيد**، ثم اختر**تثبيت**
-    <Image src={pinMessageImg} alt="تثبيت الرسائل" width={600} style={{ display: 'block', margin: '2rem auto' }} />
+    ### لتثبيت رسالة في القناة:
+    <Steps>
+    1. مرّر مؤشر الفأرة فوق الرسالة المُراد تثبيتها وانقر على خيار **المزيد** <FAIcon name="ellipsis-vertical" />.
+    2. حدد خيار **تثبيت في القناة**.
+    </Steps>
 
-    تتميز الرسائل المثبتة بأيقونة التثبيت. على سبيل المثال:
+    <Image src={pinMessageImg} alt="خطوات تثبيت الرسائل من قائمة الخيارات" style={{ display: 'block', margin: '2rem auto', maxWidth: '100%' }} />
 
-    <Image src={pinnedExampleImg} alt="رسالة مثبتة في قناة" width={600} style={{ display: 'block', margin: '2rem auto' }} />
+    تتميز الرسائل المثبتة بوجود شارة تثبيت مرئية بوضوح فوق نص المنشور لتمييزها عن بقية المحادثات الدورية كالتالي:
 
-    لرؤية جميع الرسائل المثبتة في قناة، اختر أيقونة **المنشورات المثبتة** في ترويسة القناة.
+    <Image src={pinnedExampleImg} alt="معاينة ظهور الرسالة المثبتة داخل مسار المحادثة" style={{ display: 'block', margin: '2rem auto', maxWidth: '100%' }} />
 
-    <Image src={pinnedPostsImg} alt="فتح الرسائل المثبتة" width={600} style={{ display: 'block', margin: '2rem auto' }} />
+    ### استعراض القائمة الكاملة وإلغاء التثبيت:
+    * لمراجعة كافة العناصر المثبتة، انقر على أيقونة **الرسائل المثبتة** المتواجدة في ترويسة القناة العلوية.
 
-    يفتح الشريط الجانبي الأيمن لعرض قائمة الرسائل المثبتة:
+    <Image src={pinnedPostsImg} alt="موقع زر عرض الرسائل المثبتة في الترويسة" style={{ display: 'block', margin: '2rem auto', maxWidth: '100%' }} />
 
-    <Image src={pinnedExampleRhs} alt="قائمة الرسائل المثبتة" width={600} style={{ display: 'block', margin: '2rem auto' }} />
+    * سيقوم النظام بفتح لوحة جانبية يمنى تجمع كافة المنشورات المثبتة للرجوع السريع:
 
-    لإلغاء تثبيت رسالة:
-    1. مرّر مؤشر الفأرة فوق الرسالة وافتح أيقونة **المزيد**.
-    2. اختر **إلغاء التثبيت من القناة**.
+    <Image src={pinnedExampleRhs} alt="عرض قائمة الرسائل المثبتة داخل اللوحة الجانبية" style={{ display: 'block', margin: '2rem auto', maxWidth: '100%' }} />
 
-    <Image src={unpinMessageImg} alt="إلغاء تثبيت الرسائل" width={600} style={{ display: 'block', margin: '2rem auto' }} />
+    * لإلغاء تثبيت أي عنصر، افتح قائمة **المزيد** الخاصة بالمنشور المعني <FAIcon name="ellipsis-vertical" /> ثم حدد **إلغاء التثبيت من القناة**.
+
+    <Image src={unpinMessageImg} alt="إلغاء تثبيت الرسائل عبر واجهة سطح المكتب" style={{ display: 'block', margin: '2rem auto', maxWidth: '100%' }} />
   </TabItem>
 
   <TabItem label="الهاتف المحمول" icon="mobile">
-    اضغط مطولاً على رسالة، ثم اختر **تثبيت في القناة**.
-    <Image src={mobilePinGif} alt="تثبيت رسالة جوال" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    ### لتثبيت رسالة:
+    <Steps>
+    1. اضغط مطولاً على الرسالة المطلوبة داخل القناة، ثم حدد **تثبيت في القناة**.
+    </Steps>
 
-    لرؤية الرسائل المثبتة:
-    1. اضغط على القناة المطلوبة.
-    <Image src={mobileSelectChannel} alt="اختيار القناة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    <Image src={mobilePinGif} alt="طريقة تثبيت الرسائل عبر قائمة الضغط المطول على الجوال" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
+
+    ### لعرض الرسائل المثبتة وإدارتها:
+    <Steps>
+    1. اضغط على اسم القناة الحالية لفتح واجهة الإعدادات.
+       <Image src={mobileSelectChannel} alt="الخطوة الأولى: تحديد القناة" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
     
-    2. اضغط على أيقونة **المزيد**<FAIcon name="ellipsis-vertical" /> في الزاوية العلوية اليمنى.
-    <Image src={mobileMoreOptions} alt="خيارات القناة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    2. اضغط على أيقونة **المزيد** <FAIcon name="ellipsis-vertical" /> المتواجدة في الزاوية العلوية اليمنى.
+       <Image src={mobileMoreOptions} alt="الخطوة الثانية: فتح قائمة المزيد" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
 
-    4. اضغط على **الرسائل المثبتة**.
-    <Image src={mobileViewInfo} alt="عرض المعلومات" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    3. حدد خيار **عرض المعلومات** للوصول إلى تفاصيل القناة، ثم اضغط على **الرسائل المثبتة**.
+       <Image src={mobileViewInfo} alt="الخطوة الثالثة: الانتقال إلى تفاصيل القناة وقائمة المثبتات" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
+    </Steps>
 
-    <Image src={mobileViewPinned} alt="عرض القائمة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    تظهر لك بعد ذلك واجهة مخصصة تسرد كافة العناصر المثبتة بانتظام:
 
-    لإلغاء التثبيت، اضغط مطولاً على الرسالة في القائمة أو القناة واختر **إلغاء التثبيت من الرسائل المثبته**.
-    <Image src={mobileUnpinChannelGif} alt="إلغاء تثبيت من القناة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
-        لإلغاء التثبيت، اضغط مطولاً على الرسالة في القائمة أو القناة واختر **إلغاء التثبيت من القناة**.
-    <Image src={mobileUnpinGif} alt="إلغاء تثبيت من القائمة" width={300} style={{ display: 'block', margin: '2rem auto' }} />
+    <Image src={mobileViewPinned} alt="واجهة استعراض الرسائل المثبتة على تطبيق الجوال" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
+
+    ### لإلغاء تثبيت المنشورات:
+    * يمكنك الضغط مطولاً على الرسالة مباشرة من الجدول الزمني للمحادثة واختيار **إلغاء التثبيت من القناة**. 
+      <Image src={mobileUnpinChannelGif} alt="إلغاء التثبيت مباشرة من المحادثة" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
+    
+    * أو يمكنك إجراء ذلك مباشرة من داخل قائمة العناصر المثبتة بالضغط المطول وتحديد خيار إلغاء التثبيت.
+      <Image src={mobileUnpinGif} alt="إلغاء التثبيت من داخل قائمة المثبتات المخصصة" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
   </TabItem>
 </Tabs>
 
-<Aside type="note">  
-  بدءًا من الإصدار v10.2 من منصة تعاون، يتم إخفاء أيقونة **المثبتة**  تلقائياً عندما لا توجد رسائل مثبتة في القناة.
+<Aside type="note" title="تحديثات الواجهة الذكية">  
+بدءاً من الإصدار **v10.2** من **منصة تعاون**، تختفي أيقونة الرسائل المثبتة تلقائياً من ترويسة القناة في حال خلوّ القناة من أي رسائل مثبتة، وذلك للحفاظ على واجهة عمل نظيفة ومنظمة للمستخدمين.
 </Aside>
-  
