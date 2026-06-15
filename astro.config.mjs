@@ -1,4 +1,3 @@
-// @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
@@ -440,12 +439,16 @@ export default defineConfig({
               slug: "tool-integrations/slash-commands",
             },
             {
+              label: "الأوامر المائلة المدمجة",
+              slug: "tool-integrations/built-in-slash-commands",
+            },
+            {
               label: "تشغيل الأوامر المائلة",
               slug: "tool-integrations/run-slash-commands",
             },
             {
-              label: "الأوامر المائلة المدمجة",
-              slug: "tool-integrations/built-in-slash-commands",
+              label: "محرر الملفات المدمج",
+              slug: "tool-integrations/integrated-office",
             },
           ],
           collapsed: true,
