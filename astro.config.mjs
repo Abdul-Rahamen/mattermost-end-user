@@ -1,4 +1,3 @@
-// @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
@@ -13,6 +12,7 @@ export default defineConfig({
         // @ts-ignore
 
         Footer: "/src/components/Footer.astro",
+        ThemeSelect: "/src/components/ThemeSelect.astro",
       },
       logo: {
         src: "./src/assets/logo-light.png",
@@ -52,9 +52,13 @@ export default defineConfig({
         "./src/styles/code-style.css",
         "./src/styles/tabs-filter.css",
         "./src/styles/landing.css",
+<<<<<<< HEAD
         "./src/styles/custom-ui-dropdown.css",
         "./src/styles/landing-page.css",
       ],
+=======
+           ],
+>>>>>>> 5d058bcf032d1aabaa5c95c22d9599d9d2b6b922
 
       sidebar: [
         {
@@ -441,12 +445,16 @@ export default defineConfig({
               slug: "tool-integrations/slash-commands",
             },
             {
+              label: "الأوامر المائلة المدمجة",
+              slug: "tool-integrations/built-in-slash-commands",
+            },
+            {
               label: "تشغيل الأوامر المائلة",
               slug: "tool-integrations/run-slash-commands",
             },
             {
-              label: "الأوامر المائلة المدمجة",
-              slug: "tool-integrations/built-in-slash-commands",
+              label: "محرر الملفات المدمج",
+              slug: "tool-integrations/integrated-office",
             },
           ],
           collapsed: true,
