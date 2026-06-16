@@ -1,52 +1,38 @@
-@import "photoswipe/style.css";
-/* 1. تصفير الخلفية لكل الحالات الممكنة للعنصر النشط */
+/* @import "photoswipe/style.css";
+
 .sidebar-content a[aria-current="page"],
 .sidebar-content a[aria-current="page"]:hover,
 .sidebar-content a[aria-current="page"]:focus,
 [aria-current="page"] {
     background-color: transparent !important;
-    /* تحويل النص إلى شكل رابط */
     color: var(--sl-color-text-accent) !important;
-    text-decoration: none !important; /* إلغاء الخط السفلي */
+    text-decoration: none !important; 
     font-weight: 600 !important;
 }
 
-/* 2. معالجة الطبقة الخلفية (التي تسبب اللون الأخضر في الصورة) */
 .sidebar-content li a[aria-current="page"] {
     background: none !important;
     box-shadow: none !important;
 }
 
-/* 3. تعديل المسافات بين عناصر القائمة لتطابق التصميم النظيف */
 .sidebar-content li {
     margin-bottom: 4px !important; 
     border: none !important;
 }
 
-/* 4. إزالة الخط السفلي عند الوقوف على الروابط في السايد بار */
 .sidebar-content a:hover {
     background-color: var(--sl-color-gray-6) !important;
     text-decoration: none !important;
 }
 
-/* 5. تعديل عرض السايد بار وجدول المحتويات */
 :root {
-    /* جعل المتغير نفسه مرناً (بين 18rem و 22rem) ويتناسب مع عرض الشاشة (20vw) */
     --sl-sidebar-width: clamp(18rem, 20vw, 22rem); 
     --sl-toc-width: 14rem;    
 }
 
 
 
-/* ============================ 
-    تنسيق اختصارات الكيبورد بشكل كامل 
-    وذلك لضمان وضوحها وسهولة قرائتها
-    في اللغة العربية.
-    ============================
-*/
 
-
-/* 6. تنسيق اختصارات لوحة المفاتيح لضمان الاتجاه من اليسار لليمن (LTR) */
 kbd, .kbd-shortcut {
     direction: ltr !important;
     display: inline-block !important;
@@ -64,16 +50,11 @@ kbd, .kbd-shortcut {
     vertical-align: middle !important;
 }
 
-/* ضمان بقاء ترتيب المفاتيح صحيحاً داخل الجداول العربية */
 [dir=""] kbd, [dir="rtl"] .kbd-shortcut {
     text-align: left !important;
 }
 
-/* ==========================================================================
-   تحسين التسلسل الهرمي في السايد بار (Sidebar Hierarchy & Guide Lines)
-   ========================================================================== */
 
-/* 1. إضافة خط إرشادي عمودي للقوائم المتداخلة لتمييز المستويات */
 .sidebar-content details ul {
     border-inline-start: 3px solid var(--sl-color-gray-5) !important;
     margin-inline-start: 0.8rem !important;
@@ -81,12 +62,11 @@ kbd, .kbd-shortcut {
     list-style: none !important;
 }
 
-/* 1.1 Remove outer guideline entirely when nested active group exists */
 .sidebar-content details:has(a[aria-current="page"]):has(details a[aria-current="page"]) > ul {
     border-inline-start: none !important;
 }
 
-/* 2. تمييز العناوين الرئيسية (المستوى الأول) */
+
 .sidebar-content > ul > li > details > summary {
     font-weight: 700 !important;
     font-size: 1.05rem !important;
@@ -95,27 +75,23 @@ kbd, .kbd-shortcut {
     padding-bottom: 0.5rem !important;
 }
 
-/* 3. تمييز العناوين الفرعية (المستوى الثاني وما بعده) */
 .sidebar-content details details summary {
     font-weight: 500 !important;
     font-size: 0.95rem !important;
     color: var(--sl-color-gray-2) !important;
 }
 
-/* 4. Highlight the guide line for ONLY the innermost active group */
+
 .sidebar-content details:has(a[aria-current="page"]):not(:has(details a[aria-current="page"])) > ul {
     border-inline-start-color: var(--sl-color-text-accent) !important;
     border-inline-start-width: 1.5px !important;
     padding-block: 0.5rem !important;
 }
 
-/* تخصيص أيقونات البطاقات داخل CardGrid */
-/* تطبيق تصميم بطاقات Landing Page على بطاقات Starlight */
+
 .sl-markdown-content .card-grid .card {
-    /* تغيير لون أيقونة الـ SVG إلى الأخضر */
     --sl-icon-color:  #00987e !important;
     
-    /* تطبيق تأثيرات Hover من Landing Page */
     border-radius: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -127,18 +103,15 @@ kbd, .kbd-shortcut {
 }
 
 .sl-markdown-content .card-grid .card .icon {
-    /* تغيير لون خلفية الدائرة المحيطة بالأيقونة إلى الأبيض */
     background-color: #ffffff !important;
     
-    /* إضافة حدود اختيارية لإبراز الدائرة البيضاء إذا كانت خلفية الموقع فاتحة */
     border: 1px solid #e2e8f0;
     border-radius: 1.25rem;
     
-    /* التأكد من أن الأيقونة نفسها تظهر باللون المختار */
     color: #00987e !important;
 }
 
-/* لضمان تناسق الألوان في الوضع الداكن أيضاً */
+
 :root[data-theme='dark'] .sl-markdown-content .card-grid .card {
     background-color: #17181c;
     border: 1px solid oklch(37% 0.013 285.805);
@@ -153,88 +126,66 @@ kbd, .kbd-shortcut {
     border-color: transparent;
     color: #00987e !important;
 }
-/* مؤشر الماوس */
+
 .sl-markdown-content img:not(.icon) {
   cursor: zoom-in;
 }
 
-/* ضمان ظهور الصورة المكبرة فوق كل شيء */
 .medium-zoom-overlay {
   z-index: 100 !important;
 }
 
-/* 7. جعل السايدبار متجاوب يتقلص  */
 @media (max-width: 800px) {
     site-sidebar {
         display: none !important;
     }
 }
 
-/* 7. تحسين المسافات العامة لجعل التصميم يبدو "نظيفاً" */
 .sidebar-content summary {
     margin-bottom: 2px !important;
 }
 
 
-/* تحويل السايد بار إلى أكورديون عبر CSS 
-  ملاحظة: هذا الكود سيجعل الأقسام تفتح وتغلق بسلاسة 
-*/
-
-/* استهداف القوائم الجانبية فقط */
 .sidebar-content details {
   transition: all 0.2s ease-out;
 }
 
-/* لمنع الصور من أن تبدو باهتة جداً */
 :root[data-theme='dark'] .sl-markdown-content img {
-  mix-blend-mode: normal; /* جرب تغييرها إلى lighten إذا كانت الخلفية سوداء تماماً */
+  mix-blend-mode: normal; 
 }
-/* 1. الحالة الأولى: الموقع في الوضع الداكن والصورة "فاتحة" (تحتاج لعكس) */
 
-
-/* 3. الحالة الثالثة: الموقع في الوضع الفاتح والصورة أصلاً "داكنة" (تحتاج لعكس لتصبح فاتحة) */
 :root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
   filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
 }
 :root[data-theme='light'] .sl-markdown-content :global(img[data-origin="dark"]) {
   filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(1.2) !important;
-  mix-blend-mode: multiply; /* يزيل الحواف البيضاء الزائدة */
+  mix-blend-mode: multiply; 
 }
 
-/* 2. عندما يكون الموقع في الوضع الداكن (Dark Mode) */
-/* نتركها كما هي (Origin Mode) لأنها داكنة أصلاً */
-
-/* 3. ضمان أن الصور الأخرى (الفاتحة) تعمل بشكل طبيعي */
-/* إذا أردت عكس الصور الفاتحة لتصبح داكنة في الوضع الليلي */
 :root[data-theme='light'] .sl-markdown-content img[data-origin="dark"] {
     filter: invert(1) hue-rotate(180deg) contrast(1.3) brightness(1.1) !important;
     background-color: #000 !important;
     mix-blend-mode: plus-lighter;
 }
-/* عندما يتم فتح الصورة (المكتبة تضيف هذا الكلاس تلقائياً) */
+
 .medium-zoom-image--opened {
     z-index: 1000 !important;
-    /* إلغاء أي قيود من Starlight أثناء التكبير */
     max-width: none !important;
     max-height: none !important;
     cursor: zoom-out !important;
 }
 
-/* طبقة الخلفية السوداء */
 .medium-zoom-overlay {
     z-index: 999 !important;
     cursor: zoom-out !important;
-    /* إضافة بلور خفيف للخلفية لتركيز النظر على الصورة */
     backdrop-filter: blur(8px);
 }
 
-/* تحسين شكل الصورة قبل الضغط */
 .sl-markdown-content img:not(.icon) {
     cursor: zoom-in;
     transition: transform 0.2s ease-in-out !important;
 }
 
-/* تجنب اهتزاز الصورة عند الوقوف عليها */
 .sl-markdown-content img:not(.icon):hover {
     opacity: 0.9;
 }
@@ -246,7 +197,6 @@ kbd, .kbd-shortcut {
 
 
 
-/* إضافة حد سفلي للهيدر في الوضع الليلي */
 [data-theme="dark"] header.header {
     border-bottom: 1px solid var(--sl-color-gray-5) !important;
 }
@@ -254,4 +204,257 @@ kbd, .kbd-shortcut {
 .social-icons:where(.astro-kmkmnagf):after {
     display: none !important;
 }
+ */
+@import "photoswipe/style.css";
 
+/* ==========================================================================
+   1. تنسيق عناصر القائمة الجانبية (Sidebar Active States & Layout)
+   ========================================================================== */
+
+/* تصفير الخلفية لكل الحالات الممكنة للعنصر النشط الحالي */
+.sidebar-content a[aria-current="page"],
+.sidebar-content a[aria-current="page"]:hover,
+.sidebar-content a[aria-current="page"]:focus,
+[aria-current="page"] {
+    background-color: transparent !important;
+    color: var(--sl-color-text-accent) !important;
+    text-decoration: none !important; /* إلغاء الخط السفلي */
+    font-weight: 600 !important;
+}
+
+/* معالجة الطبقة الخلفية لمنع ظهور الألوان العشوائية للفكرة الافتراضية */
+.sidebar-content li a[aria-current="page"] {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* تعديل المسافات بين عناصر القائمة لتطابق التصميم النظيف */
+.sidebar-content li {
+    margin-bottom: 4px !important; 
+    border: none !important;
+}
+
+.sidebar-content summary {
+    margin-bottom: 2px !important;
+}
+
+/* تأثير المرور (Hover) وإزالة الخط السفلي للروابط العادية */
+.sidebar-content a:hover {
+    background-color: var(--sl-color-gray-6) !important;
+    text-decoration: none !important;
+}
+
+/* تحويل السايد بار إلى أكورديون مرن بسلاسة حركية */
+.sidebar-content details {
+    transition: all 0.2s ease-out;
+}
+
+/* عزل وتجاوب القائمة الجانبية على الشاشات الصغيرة */
+@media (max-width: 800px) {
+    site-sidebar {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   2. أبعاد مساحة العمل والمتغيرات الجذرية (Root Variables)
+   ========================================================================== */
+:root {
+    /* جعل المتغير مرناً يتناسب مع عرض الشاشة */
+    --sl-sidebar-width: clamp(18rem, 20vw, 22rem); 
+    --sl-toc-width: 14rem;    
+}
+
+/* حد سفلي مخصص للهيدر في الوضع الداكن لزيادة التباين */
+[data-theme="dark"] header.header {
+    border-bottom: 1px solid var(--sl-color-gray-5) !important;
+}
+
+/* إزالة الفواصل أو العناصر الزائدة بجانب أيقونات التواصل الاجتماعي */
+.social-icons:where(.astro-kmkmnagf):after {
+    display: none !important;
+}
+
+/* ==========================================================================
+   3. تنسيق اختصارات لوحة المفاتيح (KBD Shortcuts)
+   ========================================================================== */
+kbd, .kbd-shortcut {
+    direction: ltr !important;
+    display: inline-block !important;
+    unicode-bidi: isolate !important;
+    font-family: var(--sl-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace) !important;
+    background-color: var(--sl-color-gray-6) !important;
+    color: var(--sl-color-gray-2) !important;
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--sl-color-gray-4) !important;
+    box-shadow: 0 1px 0 var(--sl-color-gray-4) !important;
+    font-size: 0.85em !important;
+    white-space: nowrap !important;
+    margin: 0 2px !important;
+    vertical-align: middle !important;
+}
+
+/* ضمان بقاء اتجاه المفاتيح من اليسار إلى اليمين داخل الجداول والواجهات العربية */
+[dir="rtl"] kbd, [dir="rtl"] .kbd-shortcut {
+    text-align: left !important;
+}
+
+/* ==========================================================================
+   4. الهيكلية البصرية والخطوط الإرشادية (Sidebar Hierarchy & Guide Lines)
+   ========================================================================== */
+
+/* إضافة خط إرشادي عمودي للقوائم المتداخلة لتمييز المستويات */
+.sidebar-content details ul {
+    border-inline-start: 3px solid var(--sl-color-gray-5) !important;
+    margin-inline-start: 0.8rem !important;
+    padding-inline-start: 0.5rem !important;
+    list-style: none !important;
+}
+
+/* إخفاء الخط الإرشادي الخارجي تماماً عند وجود مجموعة نشطة متداخلة عميقاً */
+.sidebar-content details:has(a[aria-current="page"]):has(details a[aria-current="page"]) > ul {
+    border-inline-start: none !important;
+}
+
+/* تمييز العناوين الرئيسية (المستوى الأول) */
+.sidebar-content > ul > li > details > summary {
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    color: var(--sl-color-white) !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* تمييز العناوين الفرعية (المستوى الثاني وما بعده) */
+.sidebar-content details details summary {
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    color: var(--sl-color-gray-2) !important;
+}
+
+/* إبراز وتلوين الخط الإرشادي للمجموعة النشطة الداخلية فقط باللون الأساسي المختار */
+.sidebar-content details:has(a[aria-current="page"]):not(:has(details a[aria-current="page"])) > ul {
+    border-inline-start-color: var(--sl-color-text-accent) !important;
+    border-inline-start-width: 1.5px !important;
+    padding-block: 0.5rem !important;
+}
+
+/* ==========================================================================
+   5. بطاقات المكونات الشبكية (CardGrid Customizations)
+   ========================================================================== */
+.sl-markdown-content .card-grid .card {
+    --sl-icon-color: #00987e !important;
+    border-radius: 1.5rem;
+}
+/* ==========================================================================
+   5. بطاقات المكونات الشبكية (CardGrid Customizations)
+   ========================================================================== */
+.sl-markdown-content .card-grid .card {
+    --sl-icon-color: #00987e !important;
+    border-radius: 1.5rem;
+}
+
+.sl-markdown-content .card-grid .card:hover {
+    border-color: rgba(16, 185, 129, 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sl-markdown-content .card-grid .card .icon {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    color: #00987e !important;
+}
+
+/* توافق مظهر البطاقات مع الوضع الداكن (Dark Mode) */
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card {
+    background-color: #17181c;
+    border: 1px solid oklch(37% 0.013 285.805);
+}
+
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card:hover {
+    border-color: #475569;
+}
+
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card .icon {
+    background-color: rgba(0, 152, 126, 0.15) !important;
+    border-color: transparent;
+    color: #00987e !important;
+}
+
+.sl-markdown-content .card-grid .card .icon {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    color: #00987e !important;
+}
+
+/* توافق مظهر البطاقات مع الوضع الداكن (Dark Mode) */
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card {
+    background-color: #17181c;
+    border: 1px solid oklch(37% 0.013 285.805);
+}
+
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card:hover {
+    border-color: #475569;
+}
+
+:root[data-theme='dark'] .sl-markdown-content .card-grid .card .icon {
+    background-color: rgba(0, 152, 126, 0.15) !important;
+    border-color: transparent;
+    color: #00987e !important;
+}
+
+/* ==========================================================================
+   6. التحكم الفني في معالجة الصور وفلاتر تبديل الأوضاع (Image Filters)
+   ========================================================================== */
+
+/* منع بهتان الصور الافتراضية في الوضع الداكن */
+:root[data-theme='dark'] .sl-markdown-content img {
+    mix-blend-mode: normal;
+}
+
+/* عند تفعيل الوضع الفاتح: عكس ألوان الصور المصممة أساساً للخلفيات الداكنة لتلائم البياض */
+:root[data-theme='light'] .sl-markdown-content img[src*="dark"],
+:root[data-theme='light'] .sl-markdown-content img[data-origin="dark"] {
+    filter: invert(1) hue-rotate(180deg) contrast(1.2) brightness(1.1) !important;
+    mix-blend-mode: multiply; /* تنظيف الحواف وإزالة الرتوش البيضاء الزائدة */
+}
+
+/* عند تفعيل الوضع الداكن: إيقاف الفلاتر تماماً وإعادة إظهار الصور الداكنة بطبيعتها الأصلية */
+:root[data-theme='dark'] .sl-markdown-content img[data-origin="dark"] {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    background-color: transparent !important;
+}
+
+/* ==========================================================================
+   7. تكبير الصور التفاعلي وعناصر المظهر (Medium Zoom Control)
+   ========================================================================== */
+
+/* تحسين شكل ومؤشر الماوس فوق الصور القابلة للتكبير */
+.sl-markdown-content img:not(.icon) {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out !important;
+}
+
+.sl-markdown-content img:not(.icon):hover {
+    opacity: 0.9;
+}
+
+/* واجهة الصورة المفتوحة والمكبرة بالكامل فوق بقية عناصر التوثيق */
+.medium-zoom-image--opened {
+    z-index: 1000 !important;
+    max-width: none !important;
+    max-height: none !important;
+    cursor: zoom-out !important;
+}
+
+/* طبقة التعتيم الخلفية الداكنة عند تكبير الصور مع إضافة تأثير ضبابي */
+.medium-zoom-overlay {
+    z-index: 999 !important;
+    cursor: zoom-out !important;
+    backdrop-filter: blur(8px);
+}

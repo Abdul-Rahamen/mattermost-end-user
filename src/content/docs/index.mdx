@@ -1,90 +1,93 @@
 ---
-title: تعـــــــاون
-description: الدليل الارشادي الشامل لاستخدام منصة التواصل المؤسسي تعاون للمستخدم النهائي
+title: الدليل الإرشادي لمنصة تعاون
+description: الحل المؤسسي المتكامل لإدارة المهام والتواصل بأمان وفعالية.
 template: splash
-hero:
-  title: منصة تعـــــــاون
-  tagline: الدليل الارشادي الشامل لاستخدام منصة التواصل المؤسسي - كل ما تحتاج لمعرفته للعمل والتواصل بكفاءة 
-  image:
-    file: ../../assets/logo.svg
-    alt: شعار منصة تعاون
-  actions:
-    - text: ابدأ الآن
-      link: /end-user-guide/end-user-guide
-      icon: right-arrow
-      variant: primary
-    - text: دليل المراسلة
-      link: /messaging-collaboration/messaging-collaboration
-      variant: secondary
 ---
 
-import { CardGrid, Card, LinkCard, Icon } from '@astrojs/starlight/components';
+{/* كود CSS مدمج لإخفاء عنوان Starlight الافتراضي المكرر في هذه الصفحة فقط */}
+<style>{`
+  .sl-markdown-content h1:not(.taawon-hero-title),
+  main h1:not(.taawon-hero-title),
+  .page h1:not(.taawon-hero-title) {
+    display: none !important;
+    position: absolute !important;
+    visibility: hidden !important;
+  }
+`}</style>
 
-<div class="landing-section">
+<div class="taawon-landing-container">
 
-
-
-## إمكانيات المنصة
-
-<p class="section-desc">
-  اكتشف الإمكانيات المتقدمة التي توفرها منصة تعاون لتعزيز إنتاجية فريقك
-</p>
-
-<div class="custom-features-grid">
-  <div class="custom-feature-card">
-    <div class="custom-feature-icon">
-      <Icon name="comment" />
+  {/* ================= قسم الهيرو الرئيسي (Hero Section) ================= */}
+  <header class="taawon-hero-section">
+    <div class="taawon-announcement-badge">
+      <span class="pulse-dot"></span>
+      <span>الإصدار الجديد متاح الآن 11.6.0</span>
     </div>
-    <h3 class="custom-feature-title">تواصل فوري</h3>
-    <p class="custom-feature-desc">المراسلة في الوقت الحقيقي مع إمكانية الرد في موضيع المحادثات، وإشعارات فورية للمتابعة</p>
-  </div>
-
-  <div class="custom-feature-card">
-    <div class="custom-feature-icon">
-      <Icon name="puzzle" />
+    
+    <h1 class="taawon-hero-title">
+      منصة تعاون <br />
+      <span class="taawon-text-gradient">الدليل الإرشادي الشامل</span>
+    </h1>
+    
+    <h2 class="taawon-hero-subtitle">
+      ارتقِ بإنتاجية فريقك مع منصة تعاون. الحل المؤسسي المتكامل الذي يجمع بين التواصل الفوري، إدارة المهام، والأتمتة الذكية في بيئة عمل واحدة آمنة.
+    </h2>
+    
+    <div class="taawon-action-wrapper">
+      <a href="/end-user-guide/product-overview/" class="taawon-btn taawon-btn-primary">
+        ابدأ الآن
+        <span class="arrow-icon">←</span>
+      </a>
+      <a href="/messaging-collaboration/messaging-collaboration/" class="taawon-btn taawon-btn-secondary">
+         دليل المراسلة +
+      </a>
     </div>
-    <h3 class="custom-feature-title">قنوات منظمة</h3>
-    <p class="custom-feature-desc">تنظيم المحادثات في قنوات عامة وخاصة، مع إمكانية تخصيص الأذونات وإدارة الأعضاء بسهولة</p>
-  </div>
+  </header>
 
-  <div class="custom-feature-card">
-    <div class="custom-feature-icon">
-      <Icon name="star" />
+  {/* ================= قسم المميزات الأربعة (Features Grid) ================= */}
+  <section class="taawon-features-wrapper">
+    <div class="taawon-features-header">
+      <h2>مميزات صُممت للمؤسسات</h2>
+      <p>كل ما تحتاجه لإدارة فريقك بفعالية وسلاسة</p>
     </div>
-    <h3 class="custom-feature-title">إدارة المشاريع</h3>
-    <p class="custom-feature-desc">لوحات مهام متكاملة مع بطاقات وعروض متعددة، وميزات التصفية والفرز لإدارة سير العمل</p>
-  </div>
 
-  <div class="custom-feature-card">
-    <div class="custom-feature-icon">
-      <Icon name="setting" />
+    <div class="taawon-grid-layout">
+      {/* الميزة الأولى: إدارة المشاريع */}
+      <div class="taawon-card-item">
+        <div class="taawon-icon-box icon-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+        </div>
+        <h3>إدارة المشاريع</h3>
+        <p>تتبع تقدم العمل بسهولة. قم بتعيين المهام، تحديد المواعيد النهائية، وعرض سير العمل بلوحات مرئية متقدمة.</p>
+      </div>
+
+      {/* الميزة الثانية: أتمتة ذكية */}
+      <div class="taawon-card-item">
+        <div class="taawon-icon-box icon-violet">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        </div>
+        <h3>أتمتة ذكية</h3>
+        <p>وفّر وقتك وجهدك. قم بتعيين المهام الروتينية واربط منصة تعاون مع أدواتك المفضلة لتجربة عمل متكاملة.</p>
+      </div>
+
+      {/* الميزة الثالثة: تواصل فوري */}
+      <div class="taawon-card-item">
+        <div class="taawon-icon-box icon-azure">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <h3>تواصل فوري</h3>
+        <p>مراسلة سريعة وآمنة. شارك الملفات، أجرِ مكالمات فيديو، وتعاون في الوقت الفعلي مع أعضاء فريقك أينما كانوا.</p>
+      </div>
+
+      {/* الميزة الرابعة: قنوات منظمة */}
+      <div class="taawon-card-item">
+        <div class="taawon-icon-box icon-teal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
+        </div>
+        <h3>قنوات منظمة</h3>
+        <p>أنشئ قنوات مخصصة للفرق، المشاريع، أو المواضيع. حافظ على تنظيم النقاشات وسهولة الوصول للمعلومات.</p>
+      </div>
     </div>
-    <h3 class="custom-feature-title">أتمتة ذكية</h3>
-    <p class="custom-feature-desc">قوالب عمل تعاونية لأتمتة العمليات المتكررة، مع متابعة المهام والمقاييس والأهداف</p>
-  </div>
+  </section>
 
-  <div class="custom-feature-card">
-    <div class="custom-feature-icon">
-      <Icon name="rocket" />
-    </div>
-    <h3 class="custom-feature-title">ذكاء اصطناعي</h3>
-    <p class="custom-feature-desc">وكلاء أذكياء لمساعدتك في إنجاز المهام وإدارة السياق وتحسين الإنتاجية</p>
-  </div>
-
-  <div class="custom-feature-card">
-    <div class="custom-feature-icon">
-      <Icon name="heart" />
-    </div>
-    <h3 class="custom-feature-title">أمان متكامل</h3>
-    <p class="custom-feature-desc">حماية متقدمة للبيانات، وإدارة الهوية والوصول، مع خيارات شاملة للخصوصية والأمان</p>
-  </div>
-</div>
-
-</div>
-
-
-
-
-<div class="landing-footer-note">
-  منصة تعـــــــاون — التواصل المؤسسي بكل سهولة
 </div>

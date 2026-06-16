@@ -1,0 +1,38 @@
+/* ==========================================================================
+   الحل الجذري والحديث: كسر حماية المتصفح وتحويل القائمة لتصميم مخصص بالكامل
+   ========================================================================== */
+
+/* 1. إخبار المتصفح بالسماح لـ CSS بتنسيق القائمة المنبثقة داخلياً */
+starlight-theme-select select,
+.sidebar-content select {
+    
+}
+
+/* 2. استهداف خيارات القائمة (Options) وتنسيق أبعادها وزواياها النظيفة */
+starlight-theme-select select option,
+.sidebar-content select option {
+    background-color: var(--sl-color-bg) !important;
+    color: var(--sl-color-gray-2) !important;
+    padding: 8px 12px !important;
+    margin: 2px 0 !important;
+    border-radius: 6px !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer !important;
+    
+}
+
+/* 3. إجبار المتصفح على تلوين الخلفية بالأخضر (#00987e) عند حركة الماوس (Hover) أو الاختيار (Checked) */
+starlight-theme-select select option:hover,
+starlight-theme-select select option:focus,
+starlight-theme-select select option:active
+ {
+    background-color: #131918 !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+    
+    /* حيلة إضافية لمتصفحات Chromium لضمان طمس التظليل الأزرق المدمج */
+    outline: none !important;
+    box-shadow: 0 0 0 20px #2e3736 inset !important; 
+}
+
+/* 4. إزالة الإطار الأزرق المزعج عند النقر على القائمة بالكامل */

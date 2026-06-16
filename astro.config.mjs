@@ -52,22 +52,24 @@ export default defineConfig({
         "./src/styles/code-style.css",
         "./src/styles/tabs-filter.css",
         "./src/styles/landing.css",
+        "./src/styles/custom-ui-dropdown.css",
+        "./src/styles/landing-page.css",
       ],
 
       sidebar: [
         {
-        label: "دليل المستخدم النهائي",
-        items: [ 
-          {
-            label: "نظرة عامة",
-            slug: "end-user-guide/product-overview",
-          },
-          {
-            label: "دليل المستخدم النهائي",
-            slug: "end-user-guide/end-user-guide",
-          },
-        
-        ],
+          label: "دليل المستخدم النهائي",
+          items: [
+            {
+              label: "نظرة عامة",
+              slug: "end-user-guide/product-overview",
+            },
+            {
+              label: "دليل المستخدم النهائي",
+              slug: "end-user-guide/end-user-guide",
+            },
+
+          ],
         },
         {
           label: "الوصول إلى مساحة عملك",
@@ -450,18 +452,18 @@ export default defineConfig({
           collapsed: true,
         },
         {
-          label: "وكلاء الذكاء الاصطناعي",
+          label: "مساعدو الذكاء الاصطناعي",
           items: [
             {
-              label: "وكلاء الذكاء الاصطناعي",
+              label: "مساعدو الذكاء الاصطناعي",
               slug: "ai-agents/ai-agent"
             },
             {
-              label: "نصائح استخدام الوكلاء وأفضل الممارسات",
+              label: "نصائح استخدام المساعدين وأفضل الممارسات",
               slug: "ai-agents/agents-usage-tips-and-best-practices",
             },
             {
-              label: "إدارة سياق الوكلاء",
+              label: "إدارة سياق المساعدين",
               slug: "ai-agents/agents-context-management",
             },
           ],
@@ -565,24 +567,24 @@ export default defineConfig({
             {
               label: "الإضافات المرتبطة بالقنوات",
               slug: "plugins/tools-linke-to-channel",
-            }, 
+            },
             {
-              label:"قوائم التحقق وإدارة المهام داخل القنوات",
+              label: "قوائم التحقق وإدارة المهام داخل القنوات",
               slug: "plugins/channel-tasks-checklist",
             },
             {
               label: "إدارة الملاحظات",
               slug: "plugins/channel-notes-management",
-            },    {
+            }, {
               label: "إنشاء وإدارة استطلاعات الرأي",
               slug: "plugins/channel-poll-and-vote-options",
-            }, 
-   
+            },
+
             {
-              label:"جدولة الاحداث  والمواعيد",
+              label: "جدولة الاحداث  والمواعيد",
               slug: "plugins/channel-event-schedules",
             },
-             {
+            {
               label: "مشغل الصوتيات وإدارة قوائم التشغيل",
               slug: "plugins/channel-sound-playlist-operator",
             },
@@ -599,8 +601,8 @@ export default defineConfig({
               slug: "plugins/compressed-files-explorer",
             },
             {
-              label:"محرر الصور ومقاطع الفيديو",
-              slug:"plugins/image-video-editor"
+              label: "محرر الصور ومقاطع الفيديو",
+              slug: "plugins/image-video-editor"
             }
           ],
           collapsed: true,

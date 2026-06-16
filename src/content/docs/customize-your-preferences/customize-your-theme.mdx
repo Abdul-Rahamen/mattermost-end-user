@@ -5,6 +5,8 @@ description: "تعرف على كيفية تخصيص واجهة منصة تعاو
 
 import { Tabs, TabItem } from "@astrojs/starlight/components";
 import FAIcon from "../../../components/FAIcon.astro";
+import { Image } from 'astro:assets';
+import TaawonDark from '../../../images/TaawonDark.png';
 
 تتوافق ألوان واجهة منصة تعاون مع التخصيص. يمكنك الاختيار من بين خمس سمات قياسية مصممة خصيصاً لمنصة تعاون، أو تصميم سمة مخصصة خاصة بك. يتم تطبيق تغييرات السمات الخاصة بك على جميع الفرق التي تنتمي إليها، وتكون مرئية عبر جميع عملاء منصة تعاون. يمكن لعملاء مستوى Enterprise تكوين سمة مختلفة لكل فريق ينتمون إليه.
 
@@ -36,7 +38,7 @@ import FAIcon from "../../../components/FAIcon.astro";
 
 ## أمثلة على السمات المخصصة
 
-تخصّص ألوان السمات الخاصة بك وشاركها مع الآخرين. فيما يلي بعض الأمثلة مع الرموز البرمجية (JSON) الخاصة بها:
+تخصّص ألوان السمات الخاصة بك وشاركها مع الآخرين. فيما يلي بعض الأمثلة مع الرموز البرمجية  الخاصة بها:
 
 ### منصة تعاون
 
@@ -103,7 +105,7 @@ import FAIcon from "../../../components/FAIcon.astro";
 
 ### منصة تعاون الداكنة
 
-![منصة تعاون الداكنة](../../../images/TaawonDark.png)
+<Image src={TaawonDark} alt="منصة تعاون الداكنة" data-origin="light"/>
 
 ```css
 {
