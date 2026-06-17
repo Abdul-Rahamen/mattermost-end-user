@@ -24,7 +24,7 @@
 
 
 /* 3. الحالة الثالثة: الموقع في الوضع الفاتح والصورة أصلاً "داكنة" (تحتاج لعكس لتصبح فاتحة) */
-:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
+:root[data-theme='light'] .sl-markdown-content :global(img[src="dark"]) {
   filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
 }
 
@@ -61,7 +61,7 @@
 
 
 /* 3. الحالة الثالثة: الموقع في الوضع الفاتح والصورة أصلاً "داكنة" (تحتاج لعكس لتصبح فاتحة) */
-:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
+:root[data-theme='light'] .sl-markdown-content :global(img[src="dark"]) {
   filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
 }
 :root[data-theme='light'] .sl-markdown-content :global(img[data-origin="dark"]) {
