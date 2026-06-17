@@ -1,24 +1,4 @@
-/* ==========================================================================
-   إصلاح الحاويات وكسر تضييق الصفحات الافتراضي في Starlight
-   ========================================================================== */
-[data-template="splash"] .main-frame {
-    max-width: 100% !important;
-    padding: 0 !important;
-}
 
-[data-template="splash"] .sl-container {
-    max-width: 1240px !important;
-    margin: 0 auto !important;
-    padding-inline: 1.5rem !important;
-}
-
-[data-template="splash"] .sl-markdown-content {
-    max-width: 100% !important;
-}
-
-[data-template="splash"] .sl-markdown-content > h1:first-child {
-    display: none !important;
-}
 
 /* ==========================================================================
    تنسيقات الواجهة الفاخرة والألوان المتطابقة (Premium Theme Style)
@@ -34,6 +14,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 5rem 1rem 2rem 1rem; /* بادينج متناسق لقسم الهيرو */
 }
 
 /* البادج العلوي الدائري المضيء */
@@ -41,7 +22,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 14px;
+    padding: 6px 14px;
     border-radius: 100px;
     background-color: rgba(16, 185, 129, 0.06);
     color: #3dd2b6;
@@ -49,7 +30,7 @@
     font-weight: 600;
     border: 1px solid rgba(16, 185, 129, 0.18);
     
-    /* 1. المسافة بين البادج والعنوان الرئيسي أسفله */
+    /* مسافة أمان موجبة أسفل البادج */
     margin-bottom: 1.5rem !important; 
 }
 
@@ -64,13 +45,13 @@
 /* ستايل العناوين وتدرج الألوان المتطابق */
 .taawon-hero-title {
     font-size: clamp(2.2rem, 5.5vw, 3.8rem) !important;
-    font-weight: 800 !important; /* تصحيح القيمة الزائدة */
-    line-height: 1.35 !important; /* حماية الأسطر من التداخل عند الالتفاف */
+    font-weight: 800 !important; 
+    line-height: 1.3 !important; /* تباعد أسطر مثالي لمنع التداخل */
     color: var(--sl-color-white) !important;
     margin-top: 0 !important;
     
-    /* 2. المسافة بين العنوان الرئيسي ونص الوصف التابع له */
-    margin-bottom: 1.2rem !important; 
+    /* مسافة موجبة دقيقة ومدروسة تفصل العنوان عن الوصف بدلاً من السوالب */
+    margin-bottom: 1.5rem !important; 
 }
 
 .taawon-text-gradient {
@@ -83,14 +64,15 @@
 
 /* نص الوصف البيني (Subtitle) */
 .taawon-hero-subtitle {
-    /* تصحيح الحجم العملاق ليتطابق مع الموك أب الفعلي الفاخر */
-    font-size: clamp(1.05rem, 2.2vw, 1.25rem) !important; 
+    font-size: clamp(1.05rem, 2.2vw, 1.22rem) !important; 
     color: var(--sl-color-gray-3) !important;
-    font-weight: 400 !important; /* وزن ناعم ومريح للعين للقراءة */
+    font-weight: 400 !important; 
     line-height: 1.7 !important;
-    max-width: 780px !important; /* منع النص من التمدد العريض المشوه للمظهر */
-    margin-top: -40px !important;
+    max-width: 780px !important; 
     
+    /* تم تصفير الهامش العلوي تماماً، والتحكم بالمسافة عبر العنوان والأزرار */
+    margin-top: 0 !important;
+    margin-bottom: 2.2rem !important; 
 }
 
 /* أزرار العمليات وتأثير التوهج (Shadow Glow) */
@@ -98,27 +80,27 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-top: 30px !important;
+    margin-top: 0 !important;
 }
 
 .taawon-btn {
-    padding: 0rem 1.5rem; /* زيادة الطول قليلاً لمظهر أكثر احترافية */
+    /* ضبط البادج ليكون متماثلاً (أعلى/أسفل ويمين/يسار) لحماية النص عند الزووم */
+    padding: 0.6rem 2rem !important; 
     border-radius: 10px;
     font-weight: 600;
-    align-items: center;
-    text-align: center;
     font-size: 0.95rem;
     text-decoration: none !important;
     transition: all 0.2s ease;
-    margin-top: -20px;
-    padding-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0 !important; /* حذف السوالب */
 }
 
 .taawon-btn-primary {
     background-color: #10b981;
     color: #ffffff !important;
     box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
-    display: inline-flex;
     gap: 8px;
 }
 
@@ -176,7 +158,7 @@
 /* إجبار الشبكة على التموضع الأفقي الرباعي */
 .taawon-grid-layout {
     display: grid;
-    grid-template-columns: repeat(4, 1fr) !important; /* تصحيح قيمة الـ 3fr الخطأ */
+    grid-template-columns: repeat(2, 1fr) !important; 
     gap: 1.5rem;
 }
 
@@ -265,4 +247,112 @@
 
 [data-template="splash"] .sl-markdown-content h1:first-of-type + hr {
     display: none !important;
+}
+
+
+
+
+/* استدعاء خط Cairo الاحترافي ليتطابق مع مظهر الصورة */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+
+.taawon-landing-container {
+    direction: rtl;
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif !important;
+}
+
+/* ==========================================================================
+   تنسيق النصوص والخطوط الفاخرة (Exact Typography & Gradients)
+   ========================================================================== */
+
+.taawon-hero-title {
+    font-family: 'Cairo', system-ui, sans-serif !important;
+    font-size: clamp(2.3rem, 5.5vw, 4rem) !important;
+    font-weight: 800 !important; /* سمك الخط المتناسق والمودرن */
+    line-height: 1.25 !important; /* تقريب الأسطر لمنع التباعد الكبير */
+    color: #ffffff !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* التدرج اللوني الدقيق من الأخضر النعناعي إلى السيان الأزرق الفاتح */
+.taawon-text-gradient {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+    display: inline-block !important;
+}
+
+.taawon-hero-subtitle {
+    font-family: 'Cairo', system-ui, sans-serif !important;
+    font-size: clamp(0.95rem, 2vw, 1.12rem) !important;
+    color: #94a3b8 !important; /* لون رمادي مزرق هادئ يطابق الصورة تماماً */
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+    max-width: 680px !important; /* كسر السطر في نفس مكان الصورة الأصلية */
+    margin: 0 auto 1rem auto !important;
+}
+
+/* ==========================================================================
+   تنسيق الأزرار وتأثير التوهج النيوني (Pill Buttons & Neon Glow)
+   ========================================================================== */
+
+.taawon-action-wrapper {
+    display: flex !important;
+    gap: 1.2rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* إلغاء خواص روابط Starlight الافتراضية المزعجة */
+.taawon-action-wrapper a.taawon-btn {
+    font-family: 'Cairo', system-ui, sans-serif !important;
+    padding: 0.3rem 2.2rem !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.25s ease-in-out !important;
+}
+
+/* الزر الأساسي الأخضر المضيء */
+a.taawon-btn-primary {
+    background: linear-gradient(to left, #04c8a2, #00987e) !important;
+    color: #ffffff !important;
+    border: none !important;
+    gap: 8px !important;
+    /* هالة الإضاءة المضيئة أسفل الزر الأخضر المأخوذة من الموك أب */
+    box-shadow: 0 8px 25px rgba(61, 210, 182, 0.35) !important;
+}
+
+a.taawon-btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 30px rgba(61, 210, 182, 0.5) !important;
+}
+
+/* الزر الثانوي الشفاف الفاخر */
+a.taawon-btn-secondary {
+    background-color: rgba(15, 23, 42, 0.4) !important; /* خلفية داكنة خفيفة */
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important; /* إطار نحيف جداً */
+}
+
+a.taawon-btn-secondary:hover {
+    background-color: rgba(30, 41, 59, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* اتجاه الأيقونات داخل الأزرار */
+.arrow-icon {
+    font-size: 1.1rem !important;
+    display: inline-block !important;
+    transition: transform 0.2s ease !important;
+}
+
+a.taawon-btn-primary:hover .arrow-icon {
+    transform: translateX(-4px) !important; /* حركة السهم باتجاه الإشارة لليسار */
 }
