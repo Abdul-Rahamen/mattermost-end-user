@@ -52,13 +52,9 @@ export default defineConfig({
         "./src/styles/code-style.css",
         "./src/styles/tabs-filter.css",
         "./src/styles/landing.css",
-<<<<<<< HEAD
         "./src/styles/custom-ui-dropdown.css",
         "./src/styles/landing-page.css",
       ],
-=======
-           ],
->>>>>>> 5d058bcf032d1aabaa5c95c22d9599d9d2b6b922
 
       sidebar: [
         {

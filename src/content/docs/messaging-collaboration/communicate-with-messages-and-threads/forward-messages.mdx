@@ -10,7 +10,8 @@ import FAIcon from '../../../../components/FAIcon.astro';
 {/* استيراد الأصول المرئية بأسلوب camelCase المتوافق مع معايير الأداء والتحميل الذكي */}
 import forwardMessageImg from '../../../../images/forward-message.png';
 import permalinkPreviewsImg from '../../../../images/forwarded-previews.png';
-import mobileForwardMessages from '../../../../images/mobile-messages-forward.gif';
+import mobileForwardMessagesoption from '../../../../images/forward-mobile-option.png';
+import mobileForwardMessagesMembersList from '../../../../images/mobile-forward-list-names.png';
 
 تتيح لك ميزة إعادة التوجيه مشاركة الرسائل الهامة والإعلانات بسرعة من القنوات العامة إلى مسارات عمل وقنوات أخرى داخل **منصة تعاون**، مع إمكانية إضافة تعليق توضيحي مصاحب للرسالة الموجهة.
 
@@ -38,15 +39,15 @@ import mobileForwardMessages from '../../../../images/mobile-messages-forward.gi
   <TabItem label="الهاتف المحمول" icon="mobile">
     <Steps>
     1. اضغط مطولاً على الرسالة المستهدفة داخل المحادثة لفتح قائمة السياق.
-    2. حدد خيار **إعادة توجيه الرسالة**.
+    2. حدد خيار **إعادة توجيه الرسالة**
+    </Steps>
+    <Image src={mobileForwardMessagesMembersList} alt="طريقة إعادة توجيه الرسائل وإضافة تعليق عبر تطبيق الجوال" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}  />
+    <Steps>
     3. حدد وجهة الإرسال الجديدة واضغط على تأكيد البث.
     </Steps>
+    <Image src={mobileForwardMessagesoption} alt="طريقة إعادة توجيه الرسائل وإضافة تعليق عبر تطبيق الجوال" style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} />
 
-    <Image 
-      src={mobileForwardMessages} 
-      alt="طريقة إعادة توجيه الرسائل وإضافة تعليق عبر تطبيق الجوال" 
-      style={{ height: '450px', width: 'auto', borderRadius: '15px', border: '1px solid #ddd', display: 'block', margin: '2rem auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} 
-    />
+
   </TabItem>
 </Tabs>
 
