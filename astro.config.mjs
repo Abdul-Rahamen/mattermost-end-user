@@ -282,10 +282,7 @@ export default defineConfig({
                 {
                   label: "تعيين أولوية الرسالة",
                   slug: "messaging-collaboration/communicate-with-messages-and-threads/set-message-priority",
-                  badge: {
-                    text: "Stop",
-                    variant: "danger",
-                  },
+                 
                 },
                 {
                   label: "الإشارة للأشخاص",

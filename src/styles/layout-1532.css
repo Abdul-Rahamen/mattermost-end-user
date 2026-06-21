@@ -8,16 +8,20 @@
    viewport with left/right border lines — similar to how premium documentation 
    sites like Stripe, Tailwind, etc. constrain their content.
    
-   [FIXED]: Changed selector to body:not([data-template="splash"]) 
+   Grid Column Breakdown (12 columns × 128px = 1536px):
+     - Left sidebar (nav):     3 cols = 384px
+     - Main content:           6 cols = 768px
+     - Right sidebar (TOC):    3 cols = 384px
+
    ========================================================================== */
 
 @media (min-width: 1537px) {
 
   /* ──────────────────────────────────────────────
      1. The outer page wrapper — constrain the max width
-        and center it in the viewport (Docs Pages Only)
+        and center it in the viewport
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) .page {
+  .page {
     max-width: 1536px;
     margin-inline: auto;
     position: relative;
@@ -25,9 +29,10 @@
 
   /* ──────────────────────────────────────────────
      2. Left + Right page border lines
+        Creates the "framed" look on wide screens
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) .page::before,
-  body:not([data-template="splash"]) .page::after {
+  .page::before,
+  .page::after {
     content: '';
     position: fixed;
     top: 0;
@@ -38,30 +43,36 @@
     pointer-events: none;
   }
 
-  body:not([data-template="splash"]) .page::before {
+  /* Left border — pinned to the left edge of the centered container */
+  .page::before {
+    /* left: calc(50% - 768px); */
     display: none;
   }
 
-  body:not([data-template="splash"]) .page::after {
+  /* Right border — pinned to the right edge of the centered container */
+  .page::after {
     display: none;
   }
 
   /* ──────────────────────────────────────────────
      3. Header — constrain to 1536px, centered
+        Override the default full-width fixed header
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) .header {
+  .header {
     max-width: 1536px;
     margin-inline: auto;
     inset-inline-start: calc(50% - 768px) !important;
     width: 1536px !important;
+    /* Add border to match left/right page borders */
     border-inline-start: 1px solid var(--sl-color-hairline);
     border-inline-end: 1px solid var(--sl-color-hairline);
   }
 
   /* ──────────────────────────────────────────────
      3.1 Header Content Alignment
+         Match header internal grid to the page grid (384 | 768 | 384)
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) .header .header {
+  .header .header {
     display: grid !important;
     grid-template-columns: 384px 768px 384px !important;
     align-items: center !important;
@@ -70,18 +81,20 @@
     gap: 0 !important;
   }
 
-  body:not([data-template="splash"]) .header .title-wrapper {
+  .header .title-wrapper {
     padding-inline: var(--sl-nav-pad-x) !important;
     width: 384px !important;
   }
 
-  body:not([data-template="splash"]) .header .header > div.sl-flex:nth-child(2) {
+  /* Search container in header */
+  .header .header > div.sl-flex:nth-child(2) {
     width: 768px !important;
     justify-content: center !important;
     margin: 0 !important;
   }
 
-  body:not([data-template="splash"]) .header .right-group {
+  /* Right group (Theme toggle, etc.) */
+  .header .right-group {
     width: 384px !important;
     padding-inline: 0 !important;
     justify-content: flex-end !important;
@@ -89,8 +102,9 @@
 
   /* ──────────────────────────────────────────────
      4. Left Sidebar (Nav) — constrain within the grid
+        Override the default fixed full-height sidebar
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) nav.sidebar .sidebar-pane {
+  nav.sidebar .sidebar-pane {
     width: 384px !important;
     inset-inline-start: calc(50% - 768px) !important;
   }
@@ -98,60 +112,64 @@
   /* ──────────────────────────────────────────────
      5. Main frame — set left offset to the fixed sidebar width
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) .main-frame {
+  .main-frame {
     --sl-content-inline-start: 384px;
     padding-inline-start: 384px !important;
   }
 
   /* ──────────────────────────────────────────────
      6. TwoColumnContent — Convert to CSS Grid
+        The wrapper for main-pane + right-sidebar-container
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) .main-frame > .lg\:sl-flex {
+  .main-frame > .lg\:sl-flex {
     display: grid !important;
+    /* 6 cols for main content (768px) + 3 cols for TOC (384px) */
     grid-template-columns: 1fr 384px;
-    max-width: calc(1536px - 384px); 
+    max-width: calc(1536px - 384px); /* Total minus left sidebar */
     width: 100%;
   }
 
   /* ──────────────────────────────────────────────
-     7. Main Content Pane
+     7. Main Content Pane — fills the first grid column
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) .main-pane {
+  .main-pane {
     order: 1 !important;
     width: 100% !important;
-    margin-inline: 0 !important; 
-    min-width: 0; 
+    margin-inline: 0 !important; /* Reset Starlight default margins */
+    min-width: 0; /* Prevent grid blowout */
   }
 
   /* ──────────────────────────────────────────────
-     8. Right Sidebar (TOC)
+     8. Right Sidebar (TOC) — fixed 384px in the second column
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) .right-sidebar-container {
+  .right-sidebar-container {
     order: 2 !important;
     width: 384px !important;
   }
 
-  body:not([data-template="splash"]) .right-sidebar {
+  .right-sidebar {
     width: 384px !important;
+    /* Position it relative to the center of the viewport to avoid scrollbar shifts */
     inset-inline-end: calc(50% - 768px) !important;
     inset-inline-start: auto !important;
   }
 
   /* ──────────────────────────────────────────────
-     9. Content Panel
+     9. Content Panel — ensure max-width matches content zone
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) .content-panel .sl-container {
+  .content-panel .sl-container {
     max-width: 100%;
   }
 
   /* ──────────────────────────────────────────────
-     10. Override sidebar width CSS variable (Docs Pages Only)
+     10. Override sidebar width CSS variable
+         so Starlight internal calculations work correctly
      ────────────────────────────────────────────── */
-  body:not([data-template="splash"]) {
+  :root {
     --sl-sidebar-width: 384px;
   }
 
-  body:not([data-template="splash"]) div.header {
+  div.header{
     border-left: none !important;
     border-right: none !important;
   }

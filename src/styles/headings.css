@@ -1,0 +1,62 @@
+/* ================= 1. تحسين شكل السايد بار (تنسيق العناوين) ================= */
+.sidebar-content details summary {
+    font-weight: 700 !important;
+    color: var(--sl-color-white) !important;
+    padding-block: 0.5rem !important;
+}
+
+/* ================= 2. عكس الصور الفاتحة العامة في الوضع الداكن ================= */
+/* يتم استهداف الصور الافتراضية فقط، مع استثناء كافة الكلاسات الخاصة لمنع أي تعارض */
+:root[data-theme='dark'] .sl-markdown-content img:not(.dark_light):not(.dark-only):not(.light-only),
+:root[data-theme='dark'] .sl-markdown-content picture img:not(.dark_light):not(.dark-only):not(.light-only) {
+    filter: invert(0.9) hue-rotate(180deg) brightness(1.1) !important;
+    transition: filter 0.3s ease-in-out;
+}
+
+/* لمنع الصور العامة المعكوسة من أن تبدو باهتة */
+:root[data-theme='dark'] .sl-markdown-content img:not(.dark_light):not(.dark-only):not(.light-only) {
+    mix-blend-mode: normal; 
+}
+
+/* ================= 3. ميزة التبديل بين صورتين (صفحة التسجيل مثلاً) ================= */
+.sl-markdown-content .light-only,
+.sl-markdown-content .dark-only {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    opacity: 1 !important;
+    display: block;
+    margin: 2rem auto;
+}
+
+/* التحكم في العرض والإخفاء في الوضع الفاتح (Light Mode) */
+:root[data-theme='light'] .sl-markdown-content .dark-only {
+    display: none !important;
+}
+:root[data-theme='light'] .sl-markdown-content .light-only {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+/* التحكم في العرض والإخفاء في الوضع الداكن (Dark Mode) */
+:root[data-theme='dark'] .sl-markdown-content .light-only {
+    display: none !important;
+}
+:root[data-theme='dark'] .sl-markdown-content .dark-only {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    background-color: transparent !important;
+}
+
+/* ================= 4. حماية كلاس .dark_light (صور تبقى داكنة دائماً) ================= */
+/* إلغاء ومنع أي فلاتر أو تأثيرات على هذا الكلاس لضمان ثبات ألوانه الداكنة في كل الأوضاع */
+.sl-markdown-content img.dark_light,
+.sl-markdown-content .dark_light,
+.sl-markdown-content :global(img.dark_light),
+:root[data-theme='light'] .sl-markdown-content img.dark_light,
+:root[data-theme='dark'] .sl-markdown-content img.dark_light {
+    filter: none !important;
+    -webkit-filter: none !important;
+    mix-blend-mode: normal !important;
+    opacity: 1 !important;
+    background-color: transparent !important;
+}

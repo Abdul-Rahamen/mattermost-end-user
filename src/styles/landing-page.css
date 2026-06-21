@@ -1,358 +1,241 @@
 
 
-/* ==========================================================================
-   تنسيقات الواجهة الفاخرة والألوان المتطابقة (Premium Theme Style)
-   ========================================================================== */
-.taawon-landing-container {
+  /* الحاوية الرئيسية للتنسيق وضمان التوافق التام مع اللغة العربية */
+  .taawon-landing-container {
     direction: rtl;
-    font-family: var(--sl-font), system-ui, sans-serif;
-    padding-bottom: 6rem;
-}
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-.taawon-hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  /* قسم الهيرو الرئيسي */
+  .taawon-hero-section {
     text-align: center;
-    padding: 5rem 1rem 2rem 1rem; /* بادينج متناسق لقسم الهيرو */
-}
+    padding: 4rem 1rem 3rem 1rem;
+  }
 
-/* البادج العلوي الدائري المضيء */
-.taawon-announcement-badge {
+  /* شارة الإشعار العلوية */
+  .taawon-announcement-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
-    border-radius: 100px;
-    background-color: rgba(16, 185, 129, 0.06);
-    color: #3dd2b6;
-    font-size: 0.82rem;
-    font-weight: 600;
-    border: 1px solid rgba(16, 185, 129, 0.18);
-    
-    /* مسافة أمان موجبة أسفل البادج */
-    margin-bottom: 1.5rem !important; 
-}
+    gap: 0.5rem;
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
 
-.pulse-dot {
-    width: 6px;
-    height: 6px;
+  /* نقطة النبض المتحركة للشارة */
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
     background-color: #10b981;
     border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
-}
+    display: inline-block;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: pulse 2s infinite;
+  }
 
-/* ستايل العناوين وتدرج الألوان المتطابق */
-.taawon-hero-title {
-    font-size: clamp(2.2rem, 5.5vw, 3.8rem) !important;
-    font-weight: 800 !important; 
-    line-height: 1.3 !important; /* تباعد أسطر مثالي لمنع التداخل */
+  @keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  }
+
+  /* عناوين الهيرو والنصوص الرئيسية */
+  .taawon-hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    margin-top:20px;
+    margin-bottom: 1.5rem !important;
     color: var(--sl-color-white) !important;
-    margin-top: 0 !important;
-    
-    /* مسافة موجبة دقيقة ومدروسة تفصل العنوان عن الوصف بدلاً من السوالب */
-    margin-bottom: 1.5rem !important; 
-}
+  }
 
-.taawon-text-gradient {
-    background: linear-gradient(195deg, #3dd2b6 0%, #10b981 100%);
+  :root[data-theme='light'] .taawon-hero-title {
+    color: #0f172a !important;
+  }
+
+  .taawon-text-gradient {
+    background: linear-gradient(to right, #06b6d4, #10b981);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
-    font-family: var(--sl-font-heading) !important;
-}
+    background-clip: text;
+  }
 
-/* نص الوصف البيني (Subtitle) */
-.taawon-hero-subtitle {
-    font-size: clamp(1.05rem, 2.2vw, 1.22rem) !important; 
+  .taawon-hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.25rem) !important;
+    font-weight: 400 !important;
     color: var(--sl-color-gray-3) !important;
-    font-weight: 400 !important; 
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto !important;
     line-height: 1.7 !important;
-    max-width: 780px !important; 
-    
-    /* تم تصفير الهامش العلوي تماماً، والتحكم بالمسافة عبر العنوان والأزرار */
-    margin-top: 0 !important;
-    margin-bottom: 2.2rem !important; 
-}
+    border: none !important;
+  }
 
-/* أزرار العمليات وتأثير التوهج (Shadow Glow) */
-.taawon-action-wrapper {
+  /* أزرار التحكم والروابط الرئيسية */
+  .taawon-action-wrapper {
     display: flex;
-    gap: 1rem;
     justify-content: center;
-    margin-top: 0 !important;
-}
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
 
-.taawon-btn {
-    /* ضبط البادج ليكون متماثلاً (أعلى/أسفل ويمين/يسار) لحماية النص عند الزووم */
-    padding: 0.6rem 2rem !important; 
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none !important;
-    transition: all 0.2s ease;
+  .taawon-btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 0 !important; /* حذف السوالب */
-}
+    gap: 0.5rem;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    font-weight: 600;
+    font-size: larger;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+  }
 
-.taawon-btn-primary {
-    background-color: #10b981;
-    color: #ffffff !important;
-    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
-    gap: 8px;
-}
+  .taawon-btn-primary {
+    background-color: #05806C;
+    color: white !important;
+  }
 
-.taawon-btn-primary:hover {
-    background-color: #059669;
+  .taawon-btn-primary:hover {
+    background-color:#00987E ;
     transform: translateY(-1px);
-    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.45);
-}
+  }
 
-.arrow-icon {
-    font-size: 1rem;
-    transition: transform 0.2s ease;
-}
-.taawon-btn-primary:hover .arrow-icon {
-    transform: translateX(-3px);
-}
-
-.taawon-btn-secondary {
-    background-color: transparent;
+  .taawon-btn-secondary {
+    background-color: var(--sl-color-gray-6);
     color: var(--sl-color-white) !important;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-}
+    border: 1px solid var(--sl-color-gray-5);
+  }
 
-.taawon-btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.3);
-}
+  .taawon-btn-secondary:hover {
+    background-color: var(--sl-color-gray-5);
+    transform: translateY(-1px);
+  }
 
-/* ==========================================================================
-   تنسيق وإجبار الكروت على الامتداد العريض مع محاذاة يمين كاملة لضبط المحتوى
-   ========================================================================== */
-.taawon-features-wrapper {
-    margin-top: 4rem;
-    padding-top: 3.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
+  /* روابط الاستكشاف والأسهم داخل كروت المميزات */
+  .taawon-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    color: #10b981 !important;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: gap 0.2s ease;
+  }
 
-.taawon-features-header {
+  .taawon-card-link:hover {
+    gap: 0.75rem;
+  }
+
+  /* قسم شبكة المميزات للمؤسسات */
+  .taawon-features-wrapper {
+    margin-top: 2rem;
+  }
+
+  .taawon-features-header {
     text-align: center;
-    margin-bottom: 3.5rem;
-}
+    margin-bottom: 3rem;
+  }
 
-.taawon-features-header h2 {
+  .taawon-features-header h2 {
     font-size: 2rem !important;
     font-weight: 700 !important;
     color: var(--sl-color-white) !important;
-    margin-bottom: 0.6rem !important;
-}
+    margin-bottom: 0.5rem !important;
+    border: none !important;
+  }
 
-.taawon-features-header p {
+  :root[data-theme='light'] .taawon-features-header h2 {
+    color: #0f172a !important;
+  }
+
+  .taawon-features-header p {
     color: var(--sl-color-gray-3) !important;
-    font-size: 1rem;
-}
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
 
-/* إجبار الشبكة على التموضع الأفقي الرباعي */
-.taawon-grid-layout {
+  /* تنسيق توزيع الكروت (المميزات الأربعة) */
+  .taawon-grid-layout {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) !important; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-}
+  }
 
-/* تصميم الكارت: محاذاة يمين حقيقية وتطابق هيكلي */
-.taawon-card-item {
-    background-color: rgba(255, 255, 255, 0.02) !important;
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
-    border-radius: 16px !important;
-    padding: 2rem 1.5rem !important;
+  /* تصميم الكرت المفرد وتأثير الحوام فوقه */
+  .taawon-card-item {
+    background-color:#1F2A37;
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start !important; 
-    text-align: right !important;      
-    transition: all 0.25s ease;
-}
+    align-items: flex-start;
+    text-align: right;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
 
-.taawon-card-item:hover {
-    transform: translateY(-4px);
-    border-color: rgba(16, 185, 129, 0.25) !important;
-    background-color: rgba(255, 255, 255, 0.04) !important;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
+  :root[data-theme='light'] .taawon-card-item {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+  }
 
-/* الأيقونات الدائرية الملونة بدقة كما في الموك أب */
-.taawon-icon-box {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+  .taawon-card-item:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .taawon-card-item h3 {
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    margin: 1.5rem 0 0.75rem 0 !important;
+    color: var(--sl-color-white) !important;
+  }
+
+  :root[data-theme='light'] .taawon-card-item h3 {
+    color: #0f172a !important;
+  }
+
+  .taawon-card-item p {
+    color: var(--sl-color-gray-3) !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* حاويات الأيقونات الملونة العلوية */
+  .taawon-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.25rem;
-}
+  }
 
-/* قيم الألوان والحدود للأيقونات المطابقة تماماً للمطلوب */
-.icon-orange { background-color: rgba(245, 158, 11, 0.08); color: #f59e0b; }
-.icon-violet { background-color: rgba(139, 92, 246, 0.08); color: #8b5cf6; }
-.icon-azure  { background-color: rgba(59, 130, 246, 0.08); color: #3b82f6; }
-.icon-teal   { background-color: rgba(16, 185, 129, 0.08); color: #10b981; }
-
-.taawon-card-item h3 {
-    font-size: 1.2rem !important;
-    font-weight: 700 !important;
-    color: var(--sl-color-white) !important;
-    margin-bottom: 0.75rem !important;
-    margin-top: 0 !important;
-}
-
-.taawon-card-item p {
-    font-size: 0.9rem !important;
-    color: var(--sl-color-gray-3) !important;
-    line-height: 1.6 !important;
-    margin: 0 !important;
-}
-
-/* ==========================================================================
-   استجابة شاشات العرض المتنوعة (Responsive Layout)
-   ========================================================================== */
-@media (max-width: 1024px) {
-    .taawon-grid-layout {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-}
-
-@media (max-width: 640px) {
-    .taawon-grid-layout {
-        grid-template-columns: 1fr !important;
-    }
-    .taawon-action-wrapper {
-        flex-direction: column;
-        width: 100%;
-        max-width: 280px;
-    }
-}
-
-/* ==========================================================================
-   إخفاء عنوان الصفحة الافتراضي (H1) تماماً في الصفحة الرئيسية فقط
-   ========================================================================== */
-[data-template="splash"] h1:not(.taawon-hero-title) {
-    display: none !important;
-}
-
-[data-template="splash"] .sl-markdown-content h1:first-of-type:not(.taawon-hero-title) {
-    display: none !important;
-}
-
-[data-template="splash"] .sl-markdown-content h1:first-of-type + hr {
-    display: none !important;
-}
-
-
-
-
-/* استدعاء خط Cairo الاحترافي ليتطابق مع مظهر الصورة */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
-
-.taawon-landing-container {
-    direction: rtl;
-    font-family: 'Cairo', system-ui, -apple-system, sans-serif !important;
-}
-
-/* ==========================================================================
-   تنسيق النصوص والخطوط الفاخرة (Exact Typography & Gradients)
-   ========================================================================== */
-
-.taawon-hero-title {
-    font-family: 'Cairo', system-ui, sans-serif !important;
-    font-size: clamp(2.3rem, 5.5vw, 4rem) !important;
-    font-weight: 800 !important; /* سمك الخط المتناسق والمودرن */
-    line-height: 1.25 !important; /* تقريب الأسطر لمنع التباعد الكبير */
-    color: #ffffff !important;
-    margin-top: 0 !important;
-    margin-bottom: 1.5rem !important;
-    letter-spacing: -0.01em !important;
-}
-
-/* التدرج اللوني الدقيق من الأخضر النعناعي إلى السيان الأزرق الفاتح */
-.taawon-text-gradient {
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    color: transparent !important;
-    display: inline-block !important;
-}
-
-.taawon-hero-subtitle {
-    font-family: 'Cairo', system-ui, sans-serif !important;
-    font-size: clamp(0.95rem, 2vw, 1.12rem) !important;
-    color: #94a3b8 !important; /* لون رمادي مزرق هادئ يطابق الصورة تماماً */
-    font-weight: 400 !important;
-    line-height: 1.7 !important;
-    max-width: 680px !important; /* كسر السطر في نفس مكان الصورة الأصلية */
-    margin: 0 auto 1rem auto !important;
-}
-
-/* ==========================================================================
-   تنسيق الأزرار وتأثير التوهج النيوني (Pill Buttons & Neon Glow)
-   ========================================================================== */
-
-.taawon-action-wrapper {
-    display: flex !important;
-    gap: 1.2rem !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-/* إلغاء خواص روابط Starlight الافتراضية المزعجة */
-.taawon-action-wrapper a.taawon-btn {
-    font-family: 'Cairo', system-ui, sans-serif !important;
-    padding: 0.3rem 2.2rem !important;
-    font-weight: 700 !important;
-    font-size: 1rem !important;
-    text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    transition: all 0.25s ease-in-out !important;
-}
-
-/* الزر الأساسي الأخضر المضيء */
-a.taawon-btn-primary {
-    background: linear-gradient(to left, #04c8a2, #00987e) !important;
-    color: #ffffff !important;
-    border: none !important;
-    gap: 8px !important;
-    /* هالة الإضاءة المضيئة أسفل الزر الأخضر المأخوذة من الموك أب */
-    box-shadow: 0 8px 25px rgba(61, 210, 182, 0.35) !important;
-}
-
-a.taawon-btn-primary:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 12px 30px rgba(61, 210, 182, 0.5) !important;
-}
-
-/* الزر الثانوي الشفاف الفاخر */
-a.taawon-btn-secondary {
-    background-color: rgba(15, 23, 42, 0.4) !important; /* خلفية داكنة خفيفة */
-    color: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important; /* إطار نحيف جداً */
-}
-
-a.taawon-btn-secondary:hover {
-    background-color: rgba(30, 41, 59, 0.8) !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
-    transform: translateY(-2px) !important;
-}
-
-/* اتجاه الأيقونات داخل الأزرار */
-.arrow-icon {
-    font-size: 1.1rem !important;
-    display: inline-block !important;
-    transition: transform 0.2s ease !important;
-}
-
-a.taawon-btn-primary:hover .arrow-icon {
-    transform: translateX(-4px) !important; /* حركة السهم باتجاه الإشارة لليسار */
-}
+  /* تدرجات ألوان الأيقونات بناء على التصميم */
+  .icon-green {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+  }
+  .icon-blue {
+    background-color: rgba(14, 165, 233, 0.1);
+    color: #0ea5e9;
+  }
+  .icon-purple {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+  }
+  .icon-red {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+  }
