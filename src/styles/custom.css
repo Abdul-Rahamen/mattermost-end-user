@@ -150,19 +150,19 @@ kbd, .kbd-shortcut {
   transition: all 0.2s ease-out;
 }
 
-:root[data-theme='dark'] .sl-markdown-content img {
+:root[data-theme='dark'] .sl-markdown-content img:not(.always-dark) {
   mix-blend-mode: normal; 
 }
 
-:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]) {
+:root[data-theme='light'] .sl-markdown-content :global(img[src*="dark"]:not(.always-dark)) {
   filter: invert(1) hue-rotate(180deg) contrast(1.2) !important;
 }
-:root[data-theme='light'] .sl-markdown-content :global(img[data-origin="dark"]) {
+:root[data-theme='light'] .sl-markdown-content :global(img[data-origin="dark"]:not(.always-dark)) {
   filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(1.2) !important;
   mix-blend-mode: multiply; 
 }
 
-:root[data-theme='light'] .sl-markdown-content img[data-origin="dark"] {
+:root[data-theme='light'] .sl-markdown-content img[data-origin="dark"]:not(.always-dark) {
     filter: invert(1) hue-rotate(180deg) contrast(1.3) brightness(1.1) !important;
     background-color: #000 !important;
     mix-blend-mode: plus-lighter;
@@ -412,19 +412,19 @@ kbd, .kbd-shortcut {
    ========================================================================== */
 
 /* منع بهتان الصور الافتراضية في الوضع الداكن */
-:root[data-theme='dark'] .sl-markdown-content img {
+:root[data-theme='dark'] .sl-markdown-content img:not(.always-dark) {
     mix-blend-mode: normal;
 }
 
 /* عند تفعيل الوضع الفاتح: عكس ألوان الصور المصممة أساساً للخلفيات الداكنة لتلائم البياض */
-:root[data-theme='light'] .sl-markdown-content img[src*="dark"],
-:root[data-theme='light'] .sl-markdown-content img[data-origin="dark"] {
+:root[data-theme='light'] .sl-markdown-content img[src*="dark"]:not(.always-dark),
+:root[data-theme='light'] .sl-markdown-content img[data-origin="dark"]:not(.always-dark) {
     filter: invert(1) hue-rotate(180deg) contrast(1.2) brightness(1.1) !important;
     mix-blend-mode: multiply; /* تنظيف الحواف وإزالة الرتوش البيضاء الزائدة */
 }
 
 /* عند تفعيل الوضع الداكن: إيقاف الفلاتر تماماً وإعادة إظهار الصور الداكنة بطبيعتها الأصلية */
-:root[data-theme='dark'] .sl-markdown-content img[data-origin="dark"] {
+:root[data-theme='dark'] .sl-markdown-content img[data-origin="dark"]:not(.always-dark) {
     filter: none !important;
     mix-blend-mode: normal !important;
     background-color: transparent !important;
@@ -457,4 +457,15 @@ kbd, .kbd-shortcut {
     z-index: 999 !important;
     cursor: zoom-out !important;
     backdrop-filter: blur(8px);
+}
+
+/* ==========================================================================
+   8. استثناء الصور التي يجب أن تظهر دائماً بنمطها الداكن الأصلي
+   ========================================================================== */
+
+:root[data-theme] .sl-markdown-content img.always-dark {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    opacity: 1 !important;
+    background-color: transparent !important;
 }

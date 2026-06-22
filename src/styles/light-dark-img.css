@@ -16,6 +16,11 @@
 /* لمنع الصور العامة المعكوسة من أن تبدو باهتة */
 :root[data-theme='dark'] .sl-markdown-content img:not(.dark_light):not(.dark-only):not(.light-only) {
     mix-blend-mode: normal; 
+    filter: none !important;
+    -webkit-filter: none !important;
+    mix-blend-mode: normal !important;
+    opacity: 1 !important;
+    background-color: transparent !important;
 }
 
 /* ================= 3. ميزة التبديل بين صورتين (صفحة التسجيل مثلاً) ================= */
@@ -40,6 +45,7 @@
 /* التحكم في العرض والإخفاء في الوضع الداكن (Dark Mode) */
 :root[data-theme='dark'] .sl-markdown-content .light-only {
     display: none !important;
+    
 }
 :root[data-theme='dark'] .sl-markdown-content .dark-only {
     filter: none !important;
@@ -60,3 +66,5 @@
     opacity: 1 !important;
     background-color: transparent !important;
 }
+/* ================= 4. حماية كلاس .dark_light (صور تبقى داكنة دائماً) ================= */
+/* إلغاء ومنع أي فلاتر أو تأثيرات على هذا الكلاس لضمان ثبات ألوانه الداكنة في كل الأوضاع */

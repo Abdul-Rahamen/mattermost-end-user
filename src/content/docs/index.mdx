@@ -12,7 +12,29 @@ template: splash
     display: none !important;
     position: absolute !important;
     visibility: hidden !important;
-  }`}</style>
+  }
+
+  /* إخفاء العناوين الافتراضية لمنع التكرار */
+  .sl-markdown-content h1:not(.taawon-hero-title),
+  main h1:not(.taawon-hero-title),
+  .page h1:not(.taawon-hero-title) {
+    display: none !important;
+    position: absolute !important;
+    visibility: hidden !important;
+  }
+
+  /* إخفاء الخط الصغير الافتراضي الناتج عن حدود الحاويات في ستارلايت */
+  .content-panel {
+    border-top: none !important;
+  }
+
+  /* إلغاء أي حدود سفلية قد تأتي من الهيدر الافتراضي للملف */
+  main header, 
+  .content-panel:first-of-type {
+    border: none !important;
+  }
+
+  `}</style>
 <div class="taawon-landing-container">
 
   {/* ================= قسم الهيرو الرئيسي (Hero Section) ================= */}
